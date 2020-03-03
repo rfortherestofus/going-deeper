@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Advanced Data Wrangling and Analysis</title>
+    <meta charset="utf-8" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+    <script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Advanced Data Wrangling and Analysis
+## Going Deeper with R
+
+---
+
+
+
+
+
+layout: true
+  
+&lt;div class="dk-footer"&gt;
+&lt;span&gt;
+&lt;a href="https://rfortherestofus.com/" target="_blank"&gt;R for the Rest of Us
+&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt; 
+
+---
+
+
+
+
+class: center, middle, dk-section-title
+
+background-image:url("images/data.jpg")
+
+# Importing Data
+
+---
+
+## Downloading Data Directly
+
+The `download.file()` function lets us download files directly from websites.
+
+
+```r
+download.file(url, destfile = "data-raw/name-of-file.xlsx")
+```
+
+???
+
+Benefit = reproducibility
+
+---
+
+## Importing Excel Files
+
+.center[
+![](images/readxl-logo.png)
+]
+
+---
+
+## Importing Excel Files
+
+
+```r
+data_frame &lt;- read_excel(path = "directory_name/file_name.xlsx",
+                         sheet = "name of sheet")
+```
+
+---
+
+## Importing Excel Files
+
+
+
+```r
+german_speakers &lt;- read_excel(path = "data-raw/German and French Speakers.xlsx",
+                              sheet = "German speakers") %&gt;% 
+  clean_names()
+```
+
+--
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number_of_german_speakers_2017"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number_of_german_speakers_2018"],"name":[3],"type":["chr"],"align":["left"]},{"label":["number_of_german_speakers_2019"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Alabama","2":"426","3":"395","4":"711"},{"1":"Alaska","2":"331","3":"201","4":"131"},{"1":"Arizona","2":"636","3":"858","4":"136"},{"1":"Arkansas","2":"-","3":"635","4":"557"},{"1":"California","2":"440","3":"318","4":"854"},{"1":"Colorado","2":"251","3":"498","4":"768"},{"1":"Connecticut","2":"187","3":"334","4":"586"},{"1":"Delaware","2":"-","3":"998","4":"453"},{"1":"District of Columbia","2":"799","3":"745","4":"180"},{"1":"Florida","2":"399","3":"924","4":"958"},{"1":"Georgia","2":"910","3":"293","4":"821"},{"1":"Hawaii","2":"-","3":"303","4":"931"},{"1":"Idaho","2":"301","3":"349","4":"-"},{"1":"Illinois","2":"156","3":"573","4":"827"},{"1":"Indiana","2":"469","3":"188","4":"728"},{"1":"Iowa","2":"816","3":"330","4":"657"},{"1":"Kansas","2":"328","3":"546","4":"501"},{"1":"Kentucky","2":"299","3":"976","4":"332"},{"1":"Louisiana","2":"266","3":"-","4":"490"},{"1":"Maine","2":"376","3":"127","4":"206"},{"1":"Montana","2":"598","3":"296","4":"527"},{"1":"Nebraska","2":"252","3":"726","4":"232"},{"1":"Nevada","2":"910","3":"526","4":"647"},{"1":"New Hampshire","2":"896","3":"109","4":"818"},{"1":"New Jersey","2":"380","3":"961","4":"168"},{"1":"New Mexico","2":"574","3":"771","4":"336"},{"1":"New York","2":"135","3":"637","4":"207"},{"1":"North Carolina","2":"609","3":"970","4":"508"},{"1":"North Dakota","2":"891","3":"307","4":"652"},{"1":"Ohio","2":"960","3":"900","4":"186"},{"1":"Oklahoma","2":"769","3":"699","4":"621"},{"1":"Oregon","2":"864","3":"762","4":"471"},{"1":"Maryland","2":"247","3":"106","4":"507"},{"1":"Massachusetts","2":"775","3":"507","4":"859"},{"1":"Michigan","2":"776","3":"503","4":"467"},{"1":"Minnesota","2":"752","3":"344","4":"251"},{"1":"Mississippi","2":"945","3":"246","4":"372"},{"1":"Missouri","2":"699","3":"250","4":"972"},{"1":"Pennsylvania","2":"930","3":"475","4":"956"},{"1":"Rhode Island","2":"529","3":"852","4":"900"},{"1":"South Carolina","2":"617","3":"815","4":"182"},{"1":"South Dakota","2":"262","3":"601","4":"584"},{"1":"Tennessee","2":"153","3":"568","4":"476"},{"1":"Texas","2":"732","3":"571","4":"292"},{"1":"Utah","2":"669","3":"486","4":"758"},{"1":"Vermont","2":"698","3":"470","4":"158"},{"1":"Virginia","2":"125","3":"105","4":"432"},{"1":"Washington","2":"495","3":"474","4":"615"},{"1":"West Virginia","2":"603","3":"600","4":"974"},{"1":"Wisconsin","2":"582","3":"997","4":"842"},{"1":"Wyoming","2":"451","3":"593","4":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+
+
+---
+
+
+## Other Packages for Importing Data
+
+.pull-left[
+Got SAS, Stata, or SPSS data? Use the [haven package](https://haven.tidyverse.org/).
+]
+
+.pull-right[
+.center[
+![](images/haven-logo.png)
+]
+]
+
+---
+
+## Other Packages for Importing Data
+
+.pull-left[
+The [rio package](https://github.com/leeper/rio) makes it as simple as possible to import and export data. 
+
+You give it the location of the data file in the `import()` function and it auto-detects the file type. 
+]
+
+.pull-right[
+.center[
+![](images/rio-logo.png)
+]
+]
+
+---
+
+class: my-turn
+
+## My Turn
+
+1. I'll create a new project
+
+---
+
+class: my-turn
+
+## My Turn (continued)
+
+I'll be working with the following data: [State of Oregon 2018-2019 school attendance data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/fallmembershipreport_20182019.xlsx) and [State of Oregon 2018-2019 3rd grade math proficiency data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/regularattenders_report_1819.xlsx)
+
+--
+
+I'll do the following:
+
+1. Download the two files above manually and put them in the data folder
+
+--
+
+1. Download the two files above using the download.file() function (in the process, I'll overwrite the files I downloaded before)
+
+--
+
+1. Create a new R script file where I'll do my data importing, wrangling, and cleaning, and import the files into two data frames
+
+--
+
+1. Import the data into two data frames (`math_scores` and `attendance`)
+
+???
+
+TK: I took this out. Make sure it's ok.
+
+I'm ultimately going to compare third grade math scores and rates of chronic absenteeism.
+
+---
+
+class: inverse
+
+## Your Turn
+
+1. Create a new project. Make sure you put it somehwere you'll be able to find it again later!
+
+---
+
+class: inverse
+
+## Your Turn (continued)
+
+You'll be working with the following data:
+
+1. [State of Oregon 3rd grade 2018-2019 enrollment data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/fallmembershipreport_20182019.xlsx)
+
+2. [State of Oregon 3rd grade 2018-2019 reading proficiency data](https://www.oregon.gov/ode/educator-resources/assessment/Documents/TestResults2019/pagr_Districts_ELA_1819.xlsx)
+
+--
+
+Do the following:
+
+--
+
+1. Download the two files above using the download.file() function (in the process, I'll overwrite the files I downloaded before)
+
+--
+
+1. Create a new R script file where to do my data importing, wrangling, and cleaning, and import the files into two data frames
+
+--
+
+1. Import the data into two data frames (`enrollment` and `reading_scores`)
+
+
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/berries.jpg")
+
+# Tidy Data
+
+---
+
+## Untidy Data
+
+
+
+
+--
+
+
+```r
+german_speakers_numeric
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number_of_german_speakers_2017"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["number_of_german_speakers_2018"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["number_of_german_speakers_2019"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"426","3":"395","4":"711"},{"1":"Alaska","2":"331","3":"201","4":"131"},{"1":"Arizona","2":"636","3":"858","4":"136"},{"1":"Arkansas","2":"NA","3":"635","4":"557"},{"1":"California","2":"440","3":"318","4":"854"},{"1":"Colorado","2":"251","3":"498","4":"768"},{"1":"Connecticut","2":"187","3":"334","4":"586"},{"1":"Delaware","2":"NA","3":"998","4":"453"},{"1":"District of Columbia","2":"799","3":"745","4":"180"},{"1":"Florida","2":"399","3":"924","4":"958"},{"1":"Georgia","2":"910","3":"293","4":"821"},{"1":"Hawaii","2":"NA","3":"303","4":"931"},{"1":"Idaho","2":"301","3":"349","4":"NA"},{"1":"Illinois","2":"156","3":"573","4":"827"},{"1":"Indiana","2":"469","3":"188","4":"728"},{"1":"Iowa","2":"816","3":"330","4":"657"},{"1":"Kansas","2":"328","3":"546","4":"501"},{"1":"Kentucky","2":"299","3":"976","4":"332"},{"1":"Louisiana","2":"266","3":"NA","4":"490"},{"1":"Maine","2":"376","3":"127","4":"206"},{"1":"Montana","2":"598","3":"296","4":"527"},{"1":"Nebraska","2":"252","3":"726","4":"232"},{"1":"Nevada","2":"910","3":"526","4":"647"},{"1":"New Hampshire","2":"896","3":"109","4":"818"},{"1":"New Jersey","2":"380","3":"961","4":"168"},{"1":"New Mexico","2":"574","3":"771","4":"336"},{"1":"New York","2":"135","3":"637","4":"207"},{"1":"North Carolina","2":"609","3":"970","4":"508"},{"1":"North Dakota","2":"891","3":"307","4":"652"},{"1":"Ohio","2":"960","3":"900","4":"186"},{"1":"Oklahoma","2":"769","3":"699","4":"621"},{"1":"Oregon","2":"864","3":"762","4":"471"},{"1":"Maryland","2":"247","3":"106","4":"507"},{"1":"Massachusetts","2":"775","3":"507","4":"859"},{"1":"Michigan","2":"776","3":"503","4":"467"},{"1":"Minnesota","2":"752","3":"344","4":"251"},{"1":"Mississippi","2":"945","3":"246","4":"372"},{"1":"Missouri","2":"699","3":"250","4":"972"},{"1":"Pennsylvania","2":"930","3":"475","4":"956"},{"1":"Rhode Island","2":"529","3":"852","4":"900"},{"1":"South Carolina","2":"617","3":"815","4":"182"},{"1":"South Dakota","2":"262","3":"601","4":"584"},{"1":"Tennessee","2":"153","3":"568","4":"476"},{"1":"Texas","2":"732","3":"571","4":"292"},{"1":"Utah","2":"669","3":"486","4":"758"},{"1":"Vermont","2":"698","3":"470","4":"158"},{"1":"Virginia","2":"125","3":"105","4":"432"},{"1":"Washington","2":"495","3":"474","4":"615"},{"1":"West Virginia","2":"603","3":"600","4":"974"},{"1":"Wisconsin","2":"582","3":"997","4":"842"},{"1":"Wyoming","2":"451","3":"593","4":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## Untidy Data
+
+--
+
+
+```r
+german_speakers_numeric %&gt;% 
+  group_by(state) %&gt;% 
+  mutate(total = number_of_german_speakers_2017 + number_of_german_speakers_2018 + number_of_german_speakers_2019) %&gt;% 
+  select(state, total)
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["total"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"1532"},{"1":"Alaska","2":"663"},{"1":"Arizona","2":"1630"},{"1":"Arkansas","2":"NA"},{"1":"California","2":"1612"},{"1":"Colorado","2":"1517"},{"1":"Connecticut","2":"1107"},{"1":"Delaware","2":"NA"},{"1":"District of Columbia","2":"1724"},{"1":"Florida","2":"2281"},{"1":"Georgia","2":"2024"},{"1":"Hawaii","2":"NA"},{"1":"Idaho","2":"NA"},{"1":"Illinois","2":"1556"},{"1":"Indiana","2":"1385"},{"1":"Iowa","2":"1803"},{"1":"Kansas","2":"1375"},{"1":"Kentucky","2":"1607"},{"1":"Louisiana","2":"NA"},{"1":"Maine","2":"709"},{"1":"Montana","2":"1421"},{"1":"Nebraska","2":"1210"},{"1":"Nevada","2":"2083"},{"1":"New Hampshire","2":"1823"},{"1":"New Jersey","2":"1509"},{"1":"New Mexico","2":"1681"},{"1":"New York","2":"979"},{"1":"North Carolina","2":"2087"},{"1":"North Dakota","2":"1850"},{"1":"Ohio","2":"2046"},{"1":"Oklahoma","2":"2089"},{"1":"Oregon","2":"2097"},{"1":"Maryland","2":"860"},{"1":"Massachusetts","2":"2141"},{"1":"Michigan","2":"1746"},{"1":"Minnesota","2":"1347"},{"1":"Mississippi","2":"1563"},{"1":"Missouri","2":"1921"},{"1":"Pennsylvania","2":"2361"},{"1":"Rhode Island","2":"2281"},{"1":"South Carolina","2":"1614"},{"1":"South Dakota","2":"1447"},{"1":"Tennessee","2":"1197"},{"1":"Texas","2":"1595"},{"1":"Utah","2":"1913"},{"1":"Vermont","2":"1326"},{"1":"Virginia","2":"662"},{"1":"Washington","2":"1584"},{"1":"West Virginia","2":"2177"},{"1":"Wisconsin","2":"2421"},{"1":"Wyoming","2":"1475"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+???
+
+But what if we have 10 or 20 years of data? Are we going to write out a all of those years individually?
+
+
+
+---
+
+## Tidy Data
+
+
+
+
+
+```r
+german_speakers_tidy
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["number"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"2017","3":"426"},{"1":"Alabama","2":"2018","3":"395"},{"1":"Alabama","2":"2019","3":"711"},{"1":"Alaska","2":"2017","3":"331"},{"1":"Alaska","2":"2018","3":"201"},{"1":"Alaska","2":"2019","3":"131"},{"1":"Arizona","2":"2017","3":"636"},{"1":"Arizona","2":"2018","3":"858"},{"1":"Arizona","2":"2019","3":"136"},{"1":"Arkansas","2":"2017","3":"NA"},{"1":"Arkansas","2":"2018","3":"635"},{"1":"Arkansas","2":"2019","3":"557"},{"1":"California","2":"2017","3":"440"},{"1":"California","2":"2018","3":"318"},{"1":"California","2":"2019","3":"854"},{"1":"Colorado","2":"2017","3":"251"},{"1":"Colorado","2":"2018","3":"498"},{"1":"Colorado","2":"2019","3":"768"},{"1":"Connecticut","2":"2017","3":"187"},{"1":"Connecticut","2":"2018","3":"334"},{"1":"Connecticut","2":"2019","3":"586"},{"1":"Delaware","2":"2017","3":"NA"},{"1":"Delaware","2":"2018","3":"998"},{"1":"Delaware","2":"2019","3":"453"},{"1":"District of Columbia","2":"2017","3":"799"},{"1":"District of Columbia","2":"2018","3":"745"},{"1":"District of Columbia","2":"2019","3":"180"},{"1":"Florida","2":"2017","3":"399"},{"1":"Florida","2":"2018","3":"924"},{"1":"Florida","2":"2019","3":"958"},{"1":"Georgia","2":"2017","3":"910"},{"1":"Georgia","2":"2018","3":"293"},{"1":"Georgia","2":"2019","3":"821"},{"1":"Hawaii","2":"2017","3":"NA"},{"1":"Hawaii","2":"2018","3":"303"},{"1":"Hawaii","2":"2019","3":"931"},{"1":"Idaho","2":"2017","3":"301"},{"1":"Idaho","2":"2018","3":"349"},{"1":"Idaho","2":"2019","3":"NA"},{"1":"Illinois","2":"2017","3":"156"},{"1":"Illinois","2":"2018","3":"573"},{"1":"Illinois","2":"2019","3":"827"},{"1":"Indiana","2":"2017","3":"469"},{"1":"Indiana","2":"2018","3":"188"},{"1":"Indiana","2":"2019","3":"728"},{"1":"Iowa","2":"2017","3":"816"},{"1":"Iowa","2":"2018","3":"330"},{"1":"Iowa","2":"2019","3":"657"},{"1":"Kansas","2":"2017","3":"328"},{"1":"Kansas","2":"2018","3":"546"},{"1":"Kansas","2":"2019","3":"501"},{"1":"Kentucky","2":"2017","3":"299"},{"1":"Kentucky","2":"2018","3":"976"},{"1":"Kentucky","2":"2019","3":"332"},{"1":"Louisiana","2":"2017","3":"266"},{"1":"Louisiana","2":"2018","3":"NA"},{"1":"Louisiana","2":"2019","3":"490"},{"1":"Maine","2":"2017","3":"376"},{"1":"Maine","2":"2018","3":"127"},{"1":"Maine","2":"2019","3":"206"},{"1":"Montana","2":"2017","3":"598"},{"1":"Montana","2":"2018","3":"296"},{"1":"Montana","2":"2019","3":"527"},{"1":"Nebraska","2":"2017","3":"252"},{"1":"Nebraska","2":"2018","3":"726"},{"1":"Nebraska","2":"2019","3":"232"},{"1":"Nevada","2":"2017","3":"910"},{"1":"Nevada","2":"2018","3":"526"},{"1":"Nevada","2":"2019","3":"647"},{"1":"New Hampshire","2":"2017","3":"896"},{"1":"New Hampshire","2":"2018","3":"109"},{"1":"New Hampshire","2":"2019","3":"818"},{"1":"New Jersey","2":"2017","3":"380"},{"1":"New Jersey","2":"2018","3":"961"},{"1":"New Jersey","2":"2019","3":"168"},{"1":"New Mexico","2":"2017","3":"574"},{"1":"New Mexico","2":"2018","3":"771"},{"1":"New Mexico","2":"2019","3":"336"},{"1":"New York","2":"2017","3":"135"},{"1":"New York","2":"2018","3":"637"},{"1":"New York","2":"2019","3":"207"},{"1":"North Carolina","2":"2017","3":"609"},{"1":"North Carolina","2":"2018","3":"970"},{"1":"North Carolina","2":"2019","3":"508"},{"1":"North Dakota","2":"2017","3":"891"},{"1":"North Dakota","2":"2018","3":"307"},{"1":"North Dakota","2":"2019","3":"652"},{"1":"Ohio","2":"2017","3":"960"},{"1":"Ohio","2":"2018","3":"900"},{"1":"Ohio","2":"2019","3":"186"},{"1":"Oklahoma","2":"2017","3":"769"},{"1":"Oklahoma","2":"2018","3":"699"},{"1":"Oklahoma","2":"2019","3":"621"},{"1":"Oregon","2":"2017","3":"864"},{"1":"Oregon","2":"2018","3":"762"},{"1":"Oregon","2":"2019","3":"471"},{"1":"Maryland","2":"2017","3":"247"},{"1":"Maryland","2":"2018","3":"106"},{"1":"Maryland","2":"2019","3":"507"},{"1":"Massachusetts","2":"2017","3":"775"},{"1":"Massachusetts","2":"2018","3":"507"},{"1":"Massachusetts","2":"2019","3":"859"},{"1":"Michigan","2":"2017","3":"776"},{"1":"Michigan","2":"2018","3":"503"},{"1":"Michigan","2":"2019","3":"467"},{"1":"Minnesota","2":"2017","3":"752"},{"1":"Minnesota","2":"2018","3":"344"},{"1":"Minnesota","2":"2019","3":"251"},{"1":"Mississippi","2":"2017","3":"945"},{"1":"Mississippi","2":"2018","3":"246"},{"1":"Mississippi","2":"2019","3":"372"},{"1":"Missouri","2":"2017","3":"699"},{"1":"Missouri","2":"2018","3":"250"},{"1":"Missouri","2":"2019","3":"972"},{"1":"Pennsylvania","2":"2017","3":"930"},{"1":"Pennsylvania","2":"2018","3":"475"},{"1":"Pennsylvania","2":"2019","3":"956"},{"1":"Rhode Island","2":"2017","3":"529"},{"1":"Rhode Island","2":"2018","3":"852"},{"1":"Rhode Island","2":"2019","3":"900"},{"1":"South Carolina","2":"2017","3":"617"},{"1":"South Carolina","2":"2018","3":"815"},{"1":"South Carolina","2":"2019","3":"182"},{"1":"South Dakota","2":"2017","3":"262"},{"1":"South Dakota","2":"2018","3":"601"},{"1":"South Dakota","2":"2019","3":"584"},{"1":"Tennessee","2":"2017","3":"153"},{"1":"Tennessee","2":"2018","3":"568"},{"1":"Tennessee","2":"2019","3":"476"},{"1":"Texas","2":"2017","3":"732"},{"1":"Texas","2":"2018","3":"571"},{"1":"Texas","2":"2019","3":"292"},{"1":"Utah","2":"2017","3":"669"},{"1":"Utah","2":"2018","3":"486"},{"1":"Utah","2":"2019","3":"758"},{"1":"Vermont","2":"2017","3":"698"},{"1":"Vermont","2":"2018","3":"470"},{"1":"Vermont","2":"2019","3":"158"},{"1":"Virginia","2":"2017","3":"125"},{"1":"Virginia","2":"2018","3":"105"},{"1":"Virginia","2":"2019","3":"432"},{"1":"Washington","2":"2017","3":"495"},{"1":"Washington","2":"2018","3":"474"},{"1":"Washington","2":"2019","3":"615"},{"1":"West Virginia","2":"2017","3":"603"},{"1":"West Virginia","2":"2018","3":"600"},{"1":"West Virginia","2":"2019","3":"974"},{"1":"Wisconsin","2":"2017","3":"582"},{"1":"Wisconsin","2":"2018","3":"997"},{"1":"Wisconsin","2":"2019","3":"842"},{"1":"Wyoming","2":"2017","3":"451"},{"1":"Wyoming","2":"2018","3":"593"},{"1":"Wyoming","2":"2019","3":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## Tidy Data
+
+
+
+```r
+german_speakers_tidy %&gt;% 
+  group_by(state) %&gt;% 
+  summarize(total = sum(number))
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["total"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"1532"},{"1":"Alaska","2":"663"},{"1":"Arizona","2":"1630"},{"1":"Arkansas","2":"NA"},{"1":"California","2":"1612"},{"1":"Colorado","2":"1517"},{"1":"Connecticut","2":"1107"},{"1":"Delaware","2":"NA"},{"1":"District of Columbia","2":"1724"},{"1":"Florida","2":"2281"},{"1":"Georgia","2":"2024"},{"1":"Hawaii","2":"NA"},{"1":"Idaho","2":"NA"},{"1":"Illinois","2":"1556"},{"1":"Indiana","2":"1385"},{"1":"Iowa","2":"1803"},{"1":"Kansas","2":"1375"},{"1":"Kentucky","2":"1607"},{"1":"Louisiana","2":"NA"},{"1":"Maine","2":"709"},{"1":"Maryland","2":"860"},{"1":"Massachusetts","2":"2141"},{"1":"Michigan","2":"1746"},{"1":"Minnesota","2":"1347"},{"1":"Mississippi","2":"1563"},{"1":"Missouri","2":"1921"},{"1":"Montana","2":"1421"},{"1":"Nebraska","2":"1210"},{"1":"Nevada","2":"2083"},{"1":"New Hampshire","2":"1823"},{"1":"New Jersey","2":"1509"},{"1":"New Mexico","2":"1681"},{"1":"New York","2":"979"},{"1":"North Carolina","2":"2087"},{"1":"North Dakota","2":"1850"},{"1":"Ohio","2":"2046"},{"1":"Oklahoma","2":"2089"},{"1":"Oregon","2":"2097"},{"1":"Pennsylvania","2":"2361"},{"1":"Rhode Island","2":"2281"},{"1":"South Carolina","2":"1614"},{"1":"South Dakota","2":"1447"},{"1":"Tennessee","2":"1197"},{"1":"Texas","2":"1595"},{"1":"Utah","2":"1913"},{"1":"Vermont","2":"1326"},{"1":"Virginia","2":"662"},{"1":"Washington","2":"1584"},{"1":"West Virginia","2":"2177"},{"1":"Wisconsin","2":"2421"},{"1":"Wyoming","2":"1475"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+
+???
+
+The tidyverse wants data in a certain format: tidy. With data in this format, it becomes much easier to work with. 
+
+---
+
+## The Three Rules of Tidy Data
+
+--
+
+1. Each variable forms a column.
+
+--
+
+2. Each observation forms a row.
+
+--
+
+3. Each type of observational unit forms a table.
+
+--
+
+*We'll focus on #1 and #3. To read about examples of untidy data, check out the [Tidy Data vignette](https://tidyr.tidyverse.org/articles/tidy-data.html).*
+
+---
+
+class: my-turn
+
+## My Turn
+
+Let's take a look at my data and see which principles of tidy data it violates
+
+
+---
+
+## Your Turn
+
+--
+
+1. Read the [Tidy Data vignette](https://tidyr.tidyverse.org/articles/tidy-data.html)
+
+--
+
+1. Take a look at your data and see which principles of tidy data it violates
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/shape.jpg")
+
+# Reshaping Data
+
+---
+
+## Reshaping Data: `pivot_longer()`
+
+The `pivot_longer()` function helps us in situations where column headers are values, not variable names.
+
+--
+
+
+```r
+data_frame %&gt;% 
+* pivot_longer(cols = columns_to_use)
+```
+
+--
+
+
+```r
+data_frame %&gt;% 
+  pivot_longer(cols = columns_to_use,
+*              names_to = "name_of_identifer_variable")
+```
+
+--
+
+
+```r
+data_frame %&gt;% 
+  pivot_longer(cols = columns_to_use,
+               names_to = "name_of_identifer_variable",
+*              values_to = "name_of_value_variable")
+```
+
+
+---
+
+## Reshaping Data: `pivot_longer()`
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number_of_german_speakers_2017"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number_of_german_speakers_2018"],"name":[3],"type":["chr"],"align":["left"]},{"label":["number_of_german_speakers_2019"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Alabama","2":"426","3":"395","4":"711"},{"1":"Alaska","2":"331","3":"201","4":"131"},{"1":"Arizona","2":"636","3":"858","4":"136"},{"1":"Arkansas","2":"-","3":"635","4":"557"},{"1":"California","2":"440","3":"318","4":"854"},{"1":"Colorado","2":"251","3":"498","4":"768"},{"1":"Connecticut","2":"187","3":"334","4":"586"},{"1":"Delaware","2":"-","3":"998","4":"453"},{"1":"District of Columbia","2":"799","3":"745","4":"180"},{"1":"Florida","2":"399","3":"924","4":"958"},{"1":"Georgia","2":"910","3":"293","4":"821"},{"1":"Hawaii","2":"-","3":"303","4":"931"},{"1":"Idaho","2":"301","3":"349","4":"-"},{"1":"Illinois","2":"156","3":"573","4":"827"},{"1":"Indiana","2":"469","3":"188","4":"728"},{"1":"Iowa","2":"816","3":"330","4":"657"},{"1":"Kansas","2":"328","3":"546","4":"501"},{"1":"Kentucky","2":"299","3":"976","4":"332"},{"1":"Louisiana","2":"266","3":"-","4":"490"},{"1":"Maine","2":"376","3":"127","4":"206"},{"1":"Montana","2":"598","3":"296","4":"527"},{"1":"Nebraska","2":"252","3":"726","4":"232"},{"1":"Nevada","2":"910","3":"526","4":"647"},{"1":"New Hampshire","2":"896","3":"109","4":"818"},{"1":"New Jersey","2":"380","3":"961","4":"168"},{"1":"New Mexico","2":"574","3":"771","4":"336"},{"1":"New York","2":"135","3":"637","4":"207"},{"1":"North Carolina","2":"609","3":"970","4":"508"},{"1":"North Dakota","2":"891","3":"307","4":"652"},{"1":"Ohio","2":"960","3":"900","4":"186"},{"1":"Oklahoma","2":"769","3":"699","4":"621"},{"1":"Oregon","2":"864","3":"762","4":"471"},{"1":"Maryland","2":"247","3":"106","4":"507"},{"1":"Massachusetts","2":"775","3":"507","4":"859"},{"1":"Michigan","2":"776","3":"503","4":"467"},{"1":"Minnesota","2":"752","3":"344","4":"251"},{"1":"Mississippi","2":"945","3":"246","4":"372"},{"1":"Missouri","2":"699","3":"250","4":"972"},{"1":"Pennsylvania","2":"930","3":"475","4":"956"},{"1":"Rhode Island","2":"529","3":"852","4":"900"},{"1":"South Carolina","2":"617","3":"815","4":"182"},{"1":"South Dakota","2":"262","3":"601","4":"584"},{"1":"Tennessee","2":"153","3":"568","4":"476"},{"1":"Texas","2":"732","3":"571","4":"292"},{"1":"Utah","2":"669","3":"486","4":"758"},{"1":"Vermont","2":"698","3":"470","4":"158"},{"1":"Virginia","2":"125","3":"105","4":"432"},{"1":"Washington","2":"495","3":"474","4":"615"},{"1":"West Virginia","2":"603","3":"600","4":"974"},{"1":"Wisconsin","2":"582","3":"997","4":"842"},{"1":"Wyoming","2":"451","3":"593","4":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## Reshaping Data: `pivot_longer()`
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state)
+```
+
+--
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["name"],"name":[2],"type":["chr"],"align":["left"]},{"label":["value"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"Alabama","2":"number_of_german_speakers_2017","3":"426"},{"1":"Alabama","2":"number_of_german_speakers_2018","3":"395"},{"1":"Alabama","2":"number_of_german_speakers_2019","3":"711"},{"1":"Alaska","2":"number_of_german_speakers_2017","3":"331"},{"1":"Alaska","2":"number_of_german_speakers_2018","3":"201"},{"1":"Alaska","2":"number_of_german_speakers_2019","3":"131"},{"1":"Arizona","2":"number_of_german_speakers_2017","3":"636"},{"1":"Arizona","2":"number_of_german_speakers_2018","3":"858"},{"1":"Arizona","2":"number_of_german_speakers_2019","3":"136"},{"1":"Arkansas","2":"number_of_german_speakers_2017","3":"-"},{"1":"Arkansas","2":"number_of_german_speakers_2018","3":"635"},{"1":"Arkansas","2":"number_of_german_speakers_2019","3":"557"},{"1":"California","2":"number_of_german_speakers_2017","3":"440"},{"1":"California","2":"number_of_german_speakers_2018","3":"318"},{"1":"California","2":"number_of_german_speakers_2019","3":"854"},{"1":"Colorado","2":"number_of_german_speakers_2017","3":"251"},{"1":"Colorado","2":"number_of_german_speakers_2018","3":"498"},{"1":"Colorado","2":"number_of_german_speakers_2019","3":"768"},{"1":"Connecticut","2":"number_of_german_speakers_2017","3":"187"},{"1":"Connecticut","2":"number_of_german_speakers_2018","3":"334"},{"1":"Connecticut","2":"number_of_german_speakers_2019","3":"586"},{"1":"Delaware","2":"number_of_german_speakers_2017","3":"-"},{"1":"Delaware","2":"number_of_german_speakers_2018","3":"998"},{"1":"Delaware","2":"number_of_german_speakers_2019","3":"453"},{"1":"District of Columbia","2":"number_of_german_speakers_2017","3":"799"},{"1":"District of Columbia","2":"number_of_german_speakers_2018","3":"745"},{"1":"District of Columbia","2":"number_of_german_speakers_2019","3":"180"},{"1":"Florida","2":"number_of_german_speakers_2017","3":"399"},{"1":"Florida","2":"number_of_german_speakers_2018","3":"924"},{"1":"Florida","2":"number_of_german_speakers_2019","3":"958"},{"1":"Georgia","2":"number_of_german_speakers_2017","3":"910"},{"1":"Georgia","2":"number_of_german_speakers_2018","3":"293"},{"1":"Georgia","2":"number_of_german_speakers_2019","3":"821"},{"1":"Hawaii","2":"number_of_german_speakers_2017","3":"-"},{"1":"Hawaii","2":"number_of_german_speakers_2018","3":"303"},{"1":"Hawaii","2":"number_of_german_speakers_2019","3":"931"},{"1":"Idaho","2":"number_of_german_speakers_2017","3":"301"},{"1":"Idaho","2":"number_of_german_speakers_2018","3":"349"},{"1":"Idaho","2":"number_of_german_speakers_2019","3":"-"},{"1":"Illinois","2":"number_of_german_speakers_2017","3":"156"},{"1":"Illinois","2":"number_of_german_speakers_2018","3":"573"},{"1":"Illinois","2":"number_of_german_speakers_2019","3":"827"},{"1":"Indiana","2":"number_of_german_speakers_2017","3":"469"},{"1":"Indiana","2":"number_of_german_speakers_2018","3":"188"},{"1":"Indiana","2":"number_of_german_speakers_2019","3":"728"},{"1":"Iowa","2":"number_of_german_speakers_2017","3":"816"},{"1":"Iowa","2":"number_of_german_speakers_2018","3":"330"},{"1":"Iowa","2":"number_of_german_speakers_2019","3":"657"},{"1":"Kansas","2":"number_of_german_speakers_2017","3":"328"},{"1":"Kansas","2":"number_of_german_speakers_2018","3":"546"},{"1":"Kansas","2":"number_of_german_speakers_2019","3":"501"},{"1":"Kentucky","2":"number_of_german_speakers_2017","3":"299"},{"1":"Kentucky","2":"number_of_german_speakers_2018","3":"976"},{"1":"Kentucky","2":"number_of_german_speakers_2019","3":"332"},{"1":"Louisiana","2":"number_of_german_speakers_2017","3":"266"},{"1":"Louisiana","2":"number_of_german_speakers_2018","3":"-"},{"1":"Louisiana","2":"number_of_german_speakers_2019","3":"490"},{"1":"Maine","2":"number_of_german_speakers_2017","3":"376"},{"1":"Maine","2":"number_of_german_speakers_2018","3":"127"},{"1":"Maine","2":"number_of_german_speakers_2019","3":"206"},{"1":"Montana","2":"number_of_german_speakers_2017","3":"598"},{"1":"Montana","2":"number_of_german_speakers_2018","3":"296"},{"1":"Montana","2":"number_of_german_speakers_2019","3":"527"},{"1":"Nebraska","2":"number_of_german_speakers_2017","3":"252"},{"1":"Nebraska","2":"number_of_german_speakers_2018","3":"726"},{"1":"Nebraska","2":"number_of_german_speakers_2019","3":"232"},{"1":"Nevada","2":"number_of_german_speakers_2017","3":"910"},{"1":"Nevada","2":"number_of_german_speakers_2018","3":"526"},{"1":"Nevada","2":"number_of_german_speakers_2019","3":"647"},{"1":"New Hampshire","2":"number_of_german_speakers_2017","3":"896"},{"1":"New Hampshire","2":"number_of_german_speakers_2018","3":"109"},{"1":"New Hampshire","2":"number_of_german_speakers_2019","3":"818"},{"1":"New Jersey","2":"number_of_german_speakers_2017","3":"380"},{"1":"New Jersey","2":"number_of_german_speakers_2018","3":"961"},{"1":"New Jersey","2":"number_of_german_speakers_2019","3":"168"},{"1":"New Mexico","2":"number_of_german_speakers_2017","3":"574"},{"1":"New Mexico","2":"number_of_german_speakers_2018","3":"771"},{"1":"New Mexico","2":"number_of_german_speakers_2019","3":"336"},{"1":"New York","2":"number_of_german_speakers_2017","3":"135"},{"1":"New York","2":"number_of_german_speakers_2018","3":"637"},{"1":"New York","2":"number_of_german_speakers_2019","3":"207"},{"1":"North Carolina","2":"number_of_german_speakers_2017","3":"609"},{"1":"North Carolina","2":"number_of_german_speakers_2018","3":"970"},{"1":"North Carolina","2":"number_of_german_speakers_2019","3":"508"},{"1":"North Dakota","2":"number_of_german_speakers_2017","3":"891"},{"1":"North Dakota","2":"number_of_german_speakers_2018","3":"307"},{"1":"North Dakota","2":"number_of_german_speakers_2019","3":"652"},{"1":"Ohio","2":"number_of_german_speakers_2017","3":"960"},{"1":"Ohio","2":"number_of_german_speakers_2018","3":"900"},{"1":"Ohio","2":"number_of_german_speakers_2019","3":"186"},{"1":"Oklahoma","2":"number_of_german_speakers_2017","3":"769"},{"1":"Oklahoma","2":"number_of_german_speakers_2018","3":"699"},{"1":"Oklahoma","2":"number_of_german_speakers_2019","3":"621"},{"1":"Oregon","2":"number_of_german_speakers_2017","3":"864"},{"1":"Oregon","2":"number_of_german_speakers_2018","3":"762"},{"1":"Oregon","2":"number_of_german_speakers_2019","3":"471"},{"1":"Maryland","2":"number_of_german_speakers_2017","3":"247"},{"1":"Maryland","2":"number_of_german_speakers_2018","3":"106"},{"1":"Maryland","2":"number_of_german_speakers_2019","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2017","3":"775"},{"1":"Massachusetts","2":"number_of_german_speakers_2018","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2019","3":"859"},{"1":"Michigan","2":"number_of_german_speakers_2017","3":"776"},{"1":"Michigan","2":"number_of_german_speakers_2018","3":"503"},{"1":"Michigan","2":"number_of_german_speakers_2019","3":"467"},{"1":"Minnesota","2":"number_of_german_speakers_2017","3":"752"},{"1":"Minnesota","2":"number_of_german_speakers_2018","3":"344"},{"1":"Minnesota","2":"number_of_german_speakers_2019","3":"251"},{"1":"Mississippi","2":"number_of_german_speakers_2017","3":"945"},{"1":"Mississippi","2":"number_of_german_speakers_2018","3":"246"},{"1":"Mississippi","2":"number_of_german_speakers_2019","3":"372"},{"1":"Missouri","2":"number_of_german_speakers_2017","3":"699"},{"1":"Missouri","2":"number_of_german_speakers_2018","3":"250"},{"1":"Missouri","2":"number_of_german_speakers_2019","3":"972"},{"1":"Pennsylvania","2":"number_of_german_speakers_2017","3":"930"},{"1":"Pennsylvania","2":"number_of_german_speakers_2018","3":"475"},{"1":"Pennsylvania","2":"number_of_german_speakers_2019","3":"956"},{"1":"Rhode Island","2":"number_of_german_speakers_2017","3":"529"},{"1":"Rhode Island","2":"number_of_german_speakers_2018","3":"852"},{"1":"Rhode Island","2":"number_of_german_speakers_2019","3":"900"},{"1":"South Carolina","2":"number_of_german_speakers_2017","3":"617"},{"1":"South Carolina","2":"number_of_german_speakers_2018","3":"815"},{"1":"South Carolina","2":"number_of_german_speakers_2019","3":"182"},{"1":"South Dakota","2":"number_of_german_speakers_2017","3":"262"},{"1":"South Dakota","2":"number_of_german_speakers_2018","3":"601"},{"1":"South Dakota","2":"number_of_german_speakers_2019","3":"584"},{"1":"Tennessee","2":"number_of_german_speakers_2017","3":"153"},{"1":"Tennessee","2":"number_of_german_speakers_2018","3":"568"},{"1":"Tennessee","2":"number_of_german_speakers_2019","3":"476"},{"1":"Texas","2":"number_of_german_speakers_2017","3":"732"},{"1":"Texas","2":"number_of_german_speakers_2018","3":"571"},{"1":"Texas","2":"number_of_german_speakers_2019","3":"292"},{"1":"Utah","2":"number_of_german_speakers_2017","3":"669"},{"1":"Utah","2":"number_of_german_speakers_2018","3":"486"},{"1":"Utah","2":"number_of_german_speakers_2019","3":"758"},{"1":"Vermont","2":"number_of_german_speakers_2017","3":"698"},{"1":"Vermont","2":"number_of_german_speakers_2018","3":"470"},{"1":"Vermont","2":"number_of_german_speakers_2019","3":"158"},{"1":"Virginia","2":"number_of_german_speakers_2017","3":"125"},{"1":"Virginia","2":"number_of_german_speakers_2018","3":"105"},{"1":"Virginia","2":"number_of_german_speakers_2019","3":"432"},{"1":"Washington","2":"number_of_german_speakers_2017","3":"495"},{"1":"Washington","2":"number_of_german_speakers_2018","3":"474"},{"1":"Washington","2":"number_of_german_speakers_2019","3":"615"},{"1":"West Virginia","2":"number_of_german_speakers_2017","3":"603"},{"1":"West Virginia","2":"number_of_german_speakers_2018","3":"600"},{"1":"West Virginia","2":"number_of_german_speakers_2019","3":"974"},{"1":"Wisconsin","2":"number_of_german_speakers_2017","3":"582"},{"1":"Wisconsin","2":"number_of_german_speakers_2018","3":"997"},{"1":"Wisconsin","2":"number_of_german_speakers_2019","3":"842"},{"1":"Wyoming","2":"number_of_german_speakers_2017","3":"451"},{"1":"Wyoming","2":"number_of_german_speakers_2018","3":"593"},{"1":"Wyoming","2":"number_of_german_speakers_2019","3":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+
+---
+
+## Reshaping Data: `pivot_longer()`
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+*              names_to = "year",
+*              values_to = "number")
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"Alabama","2":"number_of_german_speakers_2017","3":"426"},{"1":"Alabama","2":"number_of_german_speakers_2018","3":"395"},{"1":"Alabama","2":"number_of_german_speakers_2019","3":"711"},{"1":"Alaska","2":"number_of_german_speakers_2017","3":"331"},{"1":"Alaska","2":"number_of_german_speakers_2018","3":"201"},{"1":"Alaska","2":"number_of_german_speakers_2019","3":"131"},{"1":"Arizona","2":"number_of_german_speakers_2017","3":"636"},{"1":"Arizona","2":"number_of_german_speakers_2018","3":"858"},{"1":"Arizona","2":"number_of_german_speakers_2019","3":"136"},{"1":"Arkansas","2":"number_of_german_speakers_2017","3":"-"},{"1":"Arkansas","2":"number_of_german_speakers_2018","3":"635"},{"1":"Arkansas","2":"number_of_german_speakers_2019","3":"557"},{"1":"California","2":"number_of_german_speakers_2017","3":"440"},{"1":"California","2":"number_of_german_speakers_2018","3":"318"},{"1":"California","2":"number_of_german_speakers_2019","3":"854"},{"1":"Colorado","2":"number_of_german_speakers_2017","3":"251"},{"1":"Colorado","2":"number_of_german_speakers_2018","3":"498"},{"1":"Colorado","2":"number_of_german_speakers_2019","3":"768"},{"1":"Connecticut","2":"number_of_german_speakers_2017","3":"187"},{"1":"Connecticut","2":"number_of_german_speakers_2018","3":"334"},{"1":"Connecticut","2":"number_of_german_speakers_2019","3":"586"},{"1":"Delaware","2":"number_of_german_speakers_2017","3":"-"},{"1":"Delaware","2":"number_of_german_speakers_2018","3":"998"},{"1":"Delaware","2":"number_of_german_speakers_2019","3":"453"},{"1":"District of Columbia","2":"number_of_german_speakers_2017","3":"799"},{"1":"District of Columbia","2":"number_of_german_speakers_2018","3":"745"},{"1":"District of Columbia","2":"number_of_german_speakers_2019","3":"180"},{"1":"Florida","2":"number_of_german_speakers_2017","3":"399"},{"1":"Florida","2":"number_of_german_speakers_2018","3":"924"},{"1":"Florida","2":"number_of_german_speakers_2019","3":"958"},{"1":"Georgia","2":"number_of_german_speakers_2017","3":"910"},{"1":"Georgia","2":"number_of_german_speakers_2018","3":"293"},{"1":"Georgia","2":"number_of_german_speakers_2019","3":"821"},{"1":"Hawaii","2":"number_of_german_speakers_2017","3":"-"},{"1":"Hawaii","2":"number_of_german_speakers_2018","3":"303"},{"1":"Hawaii","2":"number_of_german_speakers_2019","3":"931"},{"1":"Idaho","2":"number_of_german_speakers_2017","3":"301"},{"1":"Idaho","2":"number_of_german_speakers_2018","3":"349"},{"1":"Idaho","2":"number_of_german_speakers_2019","3":"-"},{"1":"Illinois","2":"number_of_german_speakers_2017","3":"156"},{"1":"Illinois","2":"number_of_german_speakers_2018","3":"573"},{"1":"Illinois","2":"number_of_german_speakers_2019","3":"827"},{"1":"Indiana","2":"number_of_german_speakers_2017","3":"469"},{"1":"Indiana","2":"number_of_german_speakers_2018","3":"188"},{"1":"Indiana","2":"number_of_german_speakers_2019","3":"728"},{"1":"Iowa","2":"number_of_german_speakers_2017","3":"816"},{"1":"Iowa","2":"number_of_german_speakers_2018","3":"330"},{"1":"Iowa","2":"number_of_german_speakers_2019","3":"657"},{"1":"Kansas","2":"number_of_german_speakers_2017","3":"328"},{"1":"Kansas","2":"number_of_german_speakers_2018","3":"546"},{"1":"Kansas","2":"number_of_german_speakers_2019","3":"501"},{"1":"Kentucky","2":"number_of_german_speakers_2017","3":"299"},{"1":"Kentucky","2":"number_of_german_speakers_2018","3":"976"},{"1":"Kentucky","2":"number_of_german_speakers_2019","3":"332"},{"1":"Louisiana","2":"number_of_german_speakers_2017","3":"266"},{"1":"Louisiana","2":"number_of_german_speakers_2018","3":"-"},{"1":"Louisiana","2":"number_of_german_speakers_2019","3":"490"},{"1":"Maine","2":"number_of_german_speakers_2017","3":"376"},{"1":"Maine","2":"number_of_german_speakers_2018","3":"127"},{"1":"Maine","2":"number_of_german_speakers_2019","3":"206"},{"1":"Montana","2":"number_of_german_speakers_2017","3":"598"},{"1":"Montana","2":"number_of_german_speakers_2018","3":"296"},{"1":"Montana","2":"number_of_german_speakers_2019","3":"527"},{"1":"Nebraska","2":"number_of_german_speakers_2017","3":"252"},{"1":"Nebraska","2":"number_of_german_speakers_2018","3":"726"},{"1":"Nebraska","2":"number_of_german_speakers_2019","3":"232"},{"1":"Nevada","2":"number_of_german_speakers_2017","3":"910"},{"1":"Nevada","2":"number_of_german_speakers_2018","3":"526"},{"1":"Nevada","2":"number_of_german_speakers_2019","3":"647"},{"1":"New Hampshire","2":"number_of_german_speakers_2017","3":"896"},{"1":"New Hampshire","2":"number_of_german_speakers_2018","3":"109"},{"1":"New Hampshire","2":"number_of_german_speakers_2019","3":"818"},{"1":"New Jersey","2":"number_of_german_speakers_2017","3":"380"},{"1":"New Jersey","2":"number_of_german_speakers_2018","3":"961"},{"1":"New Jersey","2":"number_of_german_speakers_2019","3":"168"},{"1":"New Mexico","2":"number_of_german_speakers_2017","3":"574"},{"1":"New Mexico","2":"number_of_german_speakers_2018","3":"771"},{"1":"New Mexico","2":"number_of_german_speakers_2019","3":"336"},{"1":"New York","2":"number_of_german_speakers_2017","3":"135"},{"1":"New York","2":"number_of_german_speakers_2018","3":"637"},{"1":"New York","2":"number_of_german_speakers_2019","3":"207"},{"1":"North Carolina","2":"number_of_german_speakers_2017","3":"609"},{"1":"North Carolina","2":"number_of_german_speakers_2018","3":"970"},{"1":"North Carolina","2":"number_of_german_speakers_2019","3":"508"},{"1":"North Dakota","2":"number_of_german_speakers_2017","3":"891"},{"1":"North Dakota","2":"number_of_german_speakers_2018","3":"307"},{"1":"North Dakota","2":"number_of_german_speakers_2019","3":"652"},{"1":"Ohio","2":"number_of_german_speakers_2017","3":"960"},{"1":"Ohio","2":"number_of_german_speakers_2018","3":"900"},{"1":"Ohio","2":"number_of_german_speakers_2019","3":"186"},{"1":"Oklahoma","2":"number_of_german_speakers_2017","3":"769"},{"1":"Oklahoma","2":"number_of_german_speakers_2018","3":"699"},{"1":"Oklahoma","2":"number_of_german_speakers_2019","3":"621"},{"1":"Oregon","2":"number_of_german_speakers_2017","3":"864"},{"1":"Oregon","2":"number_of_german_speakers_2018","3":"762"},{"1":"Oregon","2":"number_of_german_speakers_2019","3":"471"},{"1":"Maryland","2":"number_of_german_speakers_2017","3":"247"},{"1":"Maryland","2":"number_of_german_speakers_2018","3":"106"},{"1":"Maryland","2":"number_of_german_speakers_2019","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2017","3":"775"},{"1":"Massachusetts","2":"number_of_german_speakers_2018","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2019","3":"859"},{"1":"Michigan","2":"number_of_german_speakers_2017","3":"776"},{"1":"Michigan","2":"number_of_german_speakers_2018","3":"503"},{"1":"Michigan","2":"number_of_german_speakers_2019","3":"467"},{"1":"Minnesota","2":"number_of_german_speakers_2017","3":"752"},{"1":"Minnesota","2":"number_of_german_speakers_2018","3":"344"},{"1":"Minnesota","2":"number_of_german_speakers_2019","3":"251"},{"1":"Mississippi","2":"number_of_german_speakers_2017","3":"945"},{"1":"Mississippi","2":"number_of_german_speakers_2018","3":"246"},{"1":"Mississippi","2":"number_of_german_speakers_2019","3":"372"},{"1":"Missouri","2":"number_of_german_speakers_2017","3":"699"},{"1":"Missouri","2":"number_of_german_speakers_2018","3":"250"},{"1":"Missouri","2":"number_of_german_speakers_2019","3":"972"},{"1":"Pennsylvania","2":"number_of_german_speakers_2017","3":"930"},{"1":"Pennsylvania","2":"number_of_german_speakers_2018","3":"475"},{"1":"Pennsylvania","2":"number_of_german_speakers_2019","3":"956"},{"1":"Rhode Island","2":"number_of_german_speakers_2017","3":"529"},{"1":"Rhode Island","2":"number_of_german_speakers_2018","3":"852"},{"1":"Rhode Island","2":"number_of_german_speakers_2019","3":"900"},{"1":"South Carolina","2":"number_of_german_speakers_2017","3":"617"},{"1":"South Carolina","2":"number_of_german_speakers_2018","3":"815"},{"1":"South Carolina","2":"number_of_german_speakers_2019","3":"182"},{"1":"South Dakota","2":"number_of_german_speakers_2017","3":"262"},{"1":"South Dakota","2":"number_of_german_speakers_2018","3":"601"},{"1":"South Dakota","2":"number_of_german_speakers_2019","3":"584"},{"1":"Tennessee","2":"number_of_german_speakers_2017","3":"153"},{"1":"Tennessee","2":"number_of_german_speakers_2018","3":"568"},{"1":"Tennessee","2":"number_of_german_speakers_2019","3":"476"},{"1":"Texas","2":"number_of_german_speakers_2017","3":"732"},{"1":"Texas","2":"number_of_german_speakers_2018","3":"571"},{"1":"Texas","2":"number_of_german_speakers_2019","3":"292"},{"1":"Utah","2":"number_of_german_speakers_2017","3":"669"},{"1":"Utah","2":"number_of_german_speakers_2018","3":"486"},{"1":"Utah","2":"number_of_german_speakers_2019","3":"758"},{"1":"Vermont","2":"number_of_german_speakers_2017","3":"698"},{"1":"Vermont","2":"number_of_german_speakers_2018","3":"470"},{"1":"Vermont","2":"number_of_german_speakers_2019","3":"158"},{"1":"Virginia","2":"number_of_german_speakers_2017","3":"125"},{"1":"Virginia","2":"number_of_german_speakers_2018","3":"105"},{"1":"Virginia","2":"number_of_german_speakers_2019","3":"432"},{"1":"Washington","2":"number_of_german_speakers_2017","3":"495"},{"1":"Washington","2":"number_of_german_speakers_2018","3":"474"},{"1":"Washington","2":"number_of_german_speakers_2019","3":"615"},{"1":"West Virginia","2":"number_of_german_speakers_2017","3":"603"},{"1":"West Virginia","2":"number_of_german_speakers_2018","3":"600"},{"1":"West Virginia","2":"number_of_german_speakers_2019","3":"974"},{"1":"Wisconsin","2":"number_of_german_speakers_2017","3":"582"},{"1":"Wisconsin","2":"number_of_german_speakers_2018","3":"997"},{"1":"Wisconsin","2":"number_of_german_speakers_2019","3":"842"},{"1":"Wyoming","2":"number_of_german_speakers_2017","3":"451"},{"1":"Wyoming","2":"number_of_german_speakers_2018","3":"593"},{"1":"Wyoming","2":"number_of_german_speakers_2019","3":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## Reshaping Data: `pivot_wider()`
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year",
+               values_to = "number") %&gt;% 
+* pivot_wider(names_from = "state",
+*             values_from = "number")
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["year"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Alabama"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Alaska"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Arizona"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Arkansas"],"name":[5],"type":["chr"],"align":["left"]},{"label":["California"],"name":[6],"type":["chr"],"align":["left"]},{"label":["Colorado"],"name":[7],"type":["chr"],"align":["left"]},{"label":["Connecticut"],"name":[8],"type":["chr"],"align":["left"]},{"label":["Delaware"],"name":[9],"type":["chr"],"align":["left"]},{"label":["District of Columbia"],"name":[10],"type":["chr"],"align":["left"]},{"label":["Florida"],"name":[11],"type":["chr"],"align":["left"]},{"label":["Georgia"],"name":[12],"type":["chr"],"align":["left"]},{"label":["Hawaii"],"name":[13],"type":["chr"],"align":["left"]},{"label":["Idaho"],"name":[14],"type":["chr"],"align":["left"]},{"label":["Illinois"],"name":[15],"type":["chr"],"align":["left"]},{"label":["Indiana"],"name":[16],"type":["chr"],"align":["left"]},{"label":["Iowa"],"name":[17],"type":["chr"],"align":["left"]},{"label":["Kansas"],"name":[18],"type":["chr"],"align":["left"]},{"label":["Kentucky"],"name":[19],"type":["chr"],"align":["left"]},{"label":["Louisiana"],"name":[20],"type":["chr"],"align":["left"]},{"label":["Maine"],"name":[21],"type":["chr"],"align":["left"]},{"label":["Montana"],"name":[22],"type":["chr"],"align":["left"]},{"label":["Nebraska"],"name":[23],"type":["chr"],"align":["left"]},{"label":["Nevada"],"name":[24],"type":["chr"],"align":["left"]},{"label":["New Hampshire"],"name":[25],"type":["chr"],"align":["left"]},{"label":["New Jersey"],"name":[26],"type":["chr"],"align":["left"]},{"label":["New Mexico"],"name":[27],"type":["chr"],"align":["left"]},{"label":["New York"],"name":[28],"type":["chr"],"align":["left"]},{"label":["North Carolina"],"name":[29],"type":["chr"],"align":["left"]},{"label":["North Dakota"],"name":[30],"type":["chr"],"align":["left"]},{"label":["Ohio"],"name":[31],"type":["chr"],"align":["left"]},{"label":["Oklahoma"],"name":[32],"type":["chr"],"align":["left"]},{"label":["Oregon"],"name":[33],"type":["chr"],"align":["left"]},{"label":["Maryland"],"name":[34],"type":["chr"],"align":["left"]},{"label":["Massachusetts"],"name":[35],"type":["chr"],"align":["left"]},{"label":["Michigan"],"name":[36],"type":["chr"],"align":["left"]},{"label":["Minnesota"],"name":[37],"type":["chr"],"align":["left"]},{"label":["Mississippi"],"name":[38],"type":["chr"],"align":["left"]},{"label":["Missouri"],"name":[39],"type":["chr"],"align":["left"]},{"label":["Pennsylvania"],"name":[40],"type":["chr"],"align":["left"]},{"label":["Rhode Island"],"name":[41],"type":["chr"],"align":["left"]},{"label":["South Carolina"],"name":[42],"type":["chr"],"align":["left"]},{"label":["South Dakota"],"name":[43],"type":["chr"],"align":["left"]},{"label":["Tennessee"],"name":[44],"type":["chr"],"align":["left"]},{"label":["Texas"],"name":[45],"type":["chr"],"align":["left"]},{"label":["Utah"],"name":[46],"type":["chr"],"align":["left"]},{"label":["Vermont"],"name":[47],"type":["chr"],"align":["left"]},{"label":["Virginia"],"name":[48],"type":["chr"],"align":["left"]},{"label":["Washington"],"name":[49],"type":["chr"],"align":["left"]},{"label":["West Virginia"],"name":[50],"type":["chr"],"align":["left"]},{"label":["Wisconsin"],"name":[51],"type":["chr"],"align":["left"]},{"label":["Wyoming"],"name":[52],"type":["chr"],"align":["left"]}],"data":[{"1":"number_of_german_speakers_2017","2":"426","3":"331","4":"636","5":"-","6":"440","7":"251","8":"187","9":"-","10":"799","11":"399","12":"910","13":"-","14":"301","15":"156","16":"469","17":"816","18":"328","19":"299","20":"266","21":"376","22":"598","23":"252","24":"910","25":"896","26":"380","27":"574","28":"135","29":"609","30":"891","31":"960","32":"769","33":"864","34":"247","35":"775","36":"776","37":"752","38":"945","39":"699","40":"930","41":"529","42":"617","43":"262","44":"153","45":"732","46":"669","47":"698","48":"125","49":"495","50":"603","51":"582","52":"451"},{"1":"number_of_german_speakers_2018","2":"395","3":"201","4":"858","5":"635","6":"318","7":"498","8":"334","9":"998","10":"745","11":"924","12":"293","13":"303","14":"349","15":"573","16":"188","17":"330","18":"546","19":"976","20":"-","21":"127","22":"296","23":"726","24":"526","25":"109","26":"961","27":"771","28":"637","29":"970","30":"307","31":"900","32":"699","33":"762","34":"106","35":"507","36":"503","37":"344","38":"246","39":"250","40":"475","41":"852","42":"815","43":"601","44":"568","45":"571","46":"486","47":"470","48":"105","49":"474","50":"600","51":"997","52":"593"},{"1":"number_of_german_speakers_2019","2":"711","3":"131","4":"136","5":"557","6":"854","7":"768","8":"586","9":"453","10":"180","11":"958","12":"821","13":"931","14":"-","15":"827","16":"728","17":"657","18":"501","19":"332","20":"490","21":"206","22":"527","23":"232","24":"647","25":"818","26":"168","27":"336","28":"207","29":"508","30":"652","31":"186","32":"621","33":"471","34":"507","35":"859","36":"467","37":"251","38":"372","39":"972","40":"956","41":"900","42":"182","43":"584","44":"476","45":"292","46":"758","47":"158","48":"432","49":"615","50":"974","51":"842","52":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+???
+
+I mostly use it to present data in tables
+
+---
+
+class: my-turn
+
+## My Turn
+
+I'll do the following to create a new data frame called `math_percent_not_proficient`: 
+
+--
+
+1. Use `filter()` to only keep rows where the `student_group` variable is "Total Population (All Students)"
+
+--
+
+1. Use `filter()` to only keep third grade students
+
+--
+
+1. Use `select()` to only keep variables related to percent of students who are proficient
+
+--
+
+1. Use `pivot_longer()` to make my data frame tidy
+
+---
+
+class: inverse
+
+## Your Turn
+
+Do the following to create a new data frame called `enrollment_by_race`: 
+
+--
+
+1. select() the variables from county to district as well as all variables about grade (hint: use the [`contains()` helper function](https://dplyr.tidyverse.org/reference/select.html#useful-functions) within `select()`)
+
+--
+
+1. Use `pivot_longer()` to convert all of the grade variables into one variable
+
+--
+
+1. Within `pivot_longer()`, use the names_to argument to call that variable `race_ethnicity`
+
+--
+
+1. Within `pivot_longer()`, use the values_to argument to call that variable `number_of_students`
+
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/missing.jpg")
+
+# Dealing with Missing Data
+
+---
+
+## Dealing with Missing Data: `na_if()`
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number")
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"Alabama","2":"number_of_german_speakers_2017","3":"426"},{"1":"Alabama","2":"number_of_german_speakers_2018","3":"395"},{"1":"Alabama","2":"number_of_german_speakers_2019","3":"711"},{"1":"Alaska","2":"number_of_german_speakers_2017","3":"331"},{"1":"Alaska","2":"number_of_german_speakers_2018","3":"201"},{"1":"Alaska","2":"number_of_german_speakers_2019","3":"131"},{"1":"Arizona","2":"number_of_german_speakers_2017","3":"636"},{"1":"Arizona","2":"number_of_german_speakers_2018","3":"858"},{"1":"Arizona","2":"number_of_german_speakers_2019","3":"136"},{"1":"Arkansas","2":"number_of_german_speakers_2017","3":"-"},{"1":"Arkansas","2":"number_of_german_speakers_2018","3":"635"},{"1":"Arkansas","2":"number_of_german_speakers_2019","3":"557"},{"1":"California","2":"number_of_german_speakers_2017","3":"440"},{"1":"California","2":"number_of_german_speakers_2018","3":"318"},{"1":"California","2":"number_of_german_speakers_2019","3":"854"},{"1":"Colorado","2":"number_of_german_speakers_2017","3":"251"},{"1":"Colorado","2":"number_of_german_speakers_2018","3":"498"},{"1":"Colorado","2":"number_of_german_speakers_2019","3":"768"},{"1":"Connecticut","2":"number_of_german_speakers_2017","3":"187"},{"1":"Connecticut","2":"number_of_german_speakers_2018","3":"334"},{"1":"Connecticut","2":"number_of_german_speakers_2019","3":"586"},{"1":"Delaware","2":"number_of_german_speakers_2017","3":"-"},{"1":"Delaware","2":"number_of_german_speakers_2018","3":"998"},{"1":"Delaware","2":"number_of_german_speakers_2019","3":"453"},{"1":"District of Columbia","2":"number_of_german_speakers_2017","3":"799"},{"1":"District of Columbia","2":"number_of_german_speakers_2018","3":"745"},{"1":"District of Columbia","2":"number_of_german_speakers_2019","3":"180"},{"1":"Florida","2":"number_of_german_speakers_2017","3":"399"},{"1":"Florida","2":"number_of_german_speakers_2018","3":"924"},{"1":"Florida","2":"number_of_german_speakers_2019","3":"958"},{"1":"Georgia","2":"number_of_german_speakers_2017","3":"910"},{"1":"Georgia","2":"number_of_german_speakers_2018","3":"293"},{"1":"Georgia","2":"number_of_german_speakers_2019","3":"821"},{"1":"Hawaii","2":"number_of_german_speakers_2017","3":"-"},{"1":"Hawaii","2":"number_of_german_speakers_2018","3":"303"},{"1":"Hawaii","2":"number_of_german_speakers_2019","3":"931"},{"1":"Idaho","2":"number_of_german_speakers_2017","3":"301"},{"1":"Idaho","2":"number_of_german_speakers_2018","3":"349"},{"1":"Idaho","2":"number_of_german_speakers_2019","3":"-"},{"1":"Illinois","2":"number_of_german_speakers_2017","3":"156"},{"1":"Illinois","2":"number_of_german_speakers_2018","3":"573"},{"1":"Illinois","2":"number_of_german_speakers_2019","3":"827"},{"1":"Indiana","2":"number_of_german_speakers_2017","3":"469"},{"1":"Indiana","2":"number_of_german_speakers_2018","3":"188"},{"1":"Indiana","2":"number_of_german_speakers_2019","3":"728"},{"1":"Iowa","2":"number_of_german_speakers_2017","3":"816"},{"1":"Iowa","2":"number_of_german_speakers_2018","3":"330"},{"1":"Iowa","2":"number_of_german_speakers_2019","3":"657"},{"1":"Kansas","2":"number_of_german_speakers_2017","3":"328"},{"1":"Kansas","2":"number_of_german_speakers_2018","3":"546"},{"1":"Kansas","2":"number_of_german_speakers_2019","3":"501"},{"1":"Kentucky","2":"number_of_german_speakers_2017","3":"299"},{"1":"Kentucky","2":"number_of_german_speakers_2018","3":"976"},{"1":"Kentucky","2":"number_of_german_speakers_2019","3":"332"},{"1":"Louisiana","2":"number_of_german_speakers_2017","3":"266"},{"1":"Louisiana","2":"number_of_german_speakers_2018","3":"-"},{"1":"Louisiana","2":"number_of_german_speakers_2019","3":"490"},{"1":"Maine","2":"number_of_german_speakers_2017","3":"376"},{"1":"Maine","2":"number_of_german_speakers_2018","3":"127"},{"1":"Maine","2":"number_of_german_speakers_2019","3":"206"},{"1":"Montana","2":"number_of_german_speakers_2017","3":"598"},{"1":"Montana","2":"number_of_german_speakers_2018","3":"296"},{"1":"Montana","2":"number_of_german_speakers_2019","3":"527"},{"1":"Nebraska","2":"number_of_german_speakers_2017","3":"252"},{"1":"Nebraska","2":"number_of_german_speakers_2018","3":"726"},{"1":"Nebraska","2":"number_of_german_speakers_2019","3":"232"},{"1":"Nevada","2":"number_of_german_speakers_2017","3":"910"},{"1":"Nevada","2":"number_of_german_speakers_2018","3":"526"},{"1":"Nevada","2":"number_of_german_speakers_2019","3":"647"},{"1":"New Hampshire","2":"number_of_german_speakers_2017","3":"896"},{"1":"New Hampshire","2":"number_of_german_speakers_2018","3":"109"},{"1":"New Hampshire","2":"number_of_german_speakers_2019","3":"818"},{"1":"New Jersey","2":"number_of_german_speakers_2017","3":"380"},{"1":"New Jersey","2":"number_of_german_speakers_2018","3":"961"},{"1":"New Jersey","2":"number_of_german_speakers_2019","3":"168"},{"1":"New Mexico","2":"number_of_german_speakers_2017","3":"574"},{"1":"New Mexico","2":"number_of_german_speakers_2018","3":"771"},{"1":"New Mexico","2":"number_of_german_speakers_2019","3":"336"},{"1":"New York","2":"number_of_german_speakers_2017","3":"135"},{"1":"New York","2":"number_of_german_speakers_2018","3":"637"},{"1":"New York","2":"number_of_german_speakers_2019","3":"207"},{"1":"North Carolina","2":"number_of_german_speakers_2017","3":"609"},{"1":"North Carolina","2":"number_of_german_speakers_2018","3":"970"},{"1":"North Carolina","2":"number_of_german_speakers_2019","3":"508"},{"1":"North Dakota","2":"number_of_german_speakers_2017","3":"891"},{"1":"North Dakota","2":"number_of_german_speakers_2018","3":"307"},{"1":"North Dakota","2":"number_of_german_speakers_2019","3":"652"},{"1":"Ohio","2":"number_of_german_speakers_2017","3":"960"},{"1":"Ohio","2":"number_of_german_speakers_2018","3":"900"},{"1":"Ohio","2":"number_of_german_speakers_2019","3":"186"},{"1":"Oklahoma","2":"number_of_german_speakers_2017","3":"769"},{"1":"Oklahoma","2":"number_of_german_speakers_2018","3":"699"},{"1":"Oklahoma","2":"number_of_german_speakers_2019","3":"621"},{"1":"Oregon","2":"number_of_german_speakers_2017","3":"864"},{"1":"Oregon","2":"number_of_german_speakers_2018","3":"762"},{"1":"Oregon","2":"number_of_german_speakers_2019","3":"471"},{"1":"Maryland","2":"number_of_german_speakers_2017","3":"247"},{"1":"Maryland","2":"number_of_german_speakers_2018","3":"106"},{"1":"Maryland","2":"number_of_german_speakers_2019","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2017","3":"775"},{"1":"Massachusetts","2":"number_of_german_speakers_2018","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2019","3":"859"},{"1":"Michigan","2":"number_of_german_speakers_2017","3":"776"},{"1":"Michigan","2":"number_of_german_speakers_2018","3":"503"},{"1":"Michigan","2":"number_of_german_speakers_2019","3":"467"},{"1":"Minnesota","2":"number_of_german_speakers_2017","3":"752"},{"1":"Minnesota","2":"number_of_german_speakers_2018","3":"344"},{"1":"Minnesota","2":"number_of_german_speakers_2019","3":"251"},{"1":"Mississippi","2":"number_of_german_speakers_2017","3":"945"},{"1":"Mississippi","2":"number_of_german_speakers_2018","3":"246"},{"1":"Mississippi","2":"number_of_german_speakers_2019","3":"372"},{"1":"Missouri","2":"number_of_german_speakers_2017","3":"699"},{"1":"Missouri","2":"number_of_german_speakers_2018","3":"250"},{"1":"Missouri","2":"number_of_german_speakers_2019","3":"972"},{"1":"Pennsylvania","2":"number_of_german_speakers_2017","3":"930"},{"1":"Pennsylvania","2":"number_of_german_speakers_2018","3":"475"},{"1":"Pennsylvania","2":"number_of_german_speakers_2019","3":"956"},{"1":"Rhode Island","2":"number_of_german_speakers_2017","3":"529"},{"1":"Rhode Island","2":"number_of_german_speakers_2018","3":"852"},{"1":"Rhode Island","2":"number_of_german_speakers_2019","3":"900"},{"1":"South Carolina","2":"number_of_german_speakers_2017","3":"617"},{"1":"South Carolina","2":"number_of_german_speakers_2018","3":"815"},{"1":"South Carolina","2":"number_of_german_speakers_2019","3":"182"},{"1":"South Dakota","2":"number_of_german_speakers_2017","3":"262"},{"1":"South Dakota","2":"number_of_german_speakers_2018","3":"601"},{"1":"South Dakota","2":"number_of_german_speakers_2019","3":"584"},{"1":"Tennessee","2":"number_of_german_speakers_2017","3":"153"},{"1":"Tennessee","2":"number_of_german_speakers_2018","3":"568"},{"1":"Tennessee","2":"number_of_german_speakers_2019","3":"476"},{"1":"Texas","2":"number_of_german_speakers_2017","3":"732"},{"1":"Texas","2":"number_of_german_speakers_2018","3":"571"},{"1":"Texas","2":"number_of_german_speakers_2019","3":"292"},{"1":"Utah","2":"number_of_german_speakers_2017","3":"669"},{"1":"Utah","2":"number_of_german_speakers_2018","3":"486"},{"1":"Utah","2":"number_of_german_speakers_2019","3":"758"},{"1":"Vermont","2":"number_of_german_speakers_2017","3":"698"},{"1":"Vermont","2":"number_of_german_speakers_2018","3":"470"},{"1":"Vermont","2":"number_of_german_speakers_2019","3":"158"},{"1":"Virginia","2":"number_of_german_speakers_2017","3":"125"},{"1":"Virginia","2":"number_of_german_speakers_2018","3":"105"},{"1":"Virginia","2":"number_of_german_speakers_2019","3":"432"},{"1":"Washington","2":"number_of_german_speakers_2017","3":"495"},{"1":"Washington","2":"number_of_german_speakers_2018","3":"474"},{"1":"Washington","2":"number_of_german_speakers_2019","3":"615"},{"1":"West Virginia","2":"number_of_german_speakers_2017","3":"603"},{"1":"West Virginia","2":"number_of_german_speakers_2018","3":"600"},{"1":"West Virginia","2":"number_of_german_speakers_2019","3":"974"},{"1":"Wisconsin","2":"number_of_german_speakers_2017","3":"582"},{"1":"Wisconsin","2":"number_of_german_speakers_2018","3":"997"},{"1":"Wisconsin","2":"number_of_german_speakers_2019","3":"842"},{"1":"Wyoming","2":"number_of_german_speakers_2017","3":"451"},{"1":"Wyoming","2":"number_of_german_speakers_2018","3":"593"},{"1":"Wyoming","2":"number_of_german_speakers_2019","3":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## Dealing with Missing Data: `na_if()`
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %&gt;% 
+* mutate(number = na_if(number, "-"))
+```
+
+---
+
+## Dealing with Missing Data: `na_if()`
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %&gt;% 
+* mutate(number = na_if(number, "-"))
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"Alabama","2":"number_of_german_speakers_2017","3":"426"},{"1":"Alabama","2":"number_of_german_speakers_2018","3":"395"},{"1":"Alabama","2":"number_of_german_speakers_2019","3":"711"},{"1":"Alaska","2":"number_of_german_speakers_2017","3":"331"},{"1":"Alaska","2":"number_of_german_speakers_2018","3":"201"},{"1":"Alaska","2":"number_of_german_speakers_2019","3":"131"},{"1":"Arizona","2":"number_of_german_speakers_2017","3":"636"},{"1":"Arizona","2":"number_of_german_speakers_2018","3":"858"},{"1":"Arizona","2":"number_of_german_speakers_2019","3":"136"},{"1":"Arkansas","2":"number_of_german_speakers_2017","3":"NA"},{"1":"Arkansas","2":"number_of_german_speakers_2018","3":"635"},{"1":"Arkansas","2":"number_of_german_speakers_2019","3":"557"},{"1":"California","2":"number_of_german_speakers_2017","3":"440"},{"1":"California","2":"number_of_german_speakers_2018","3":"318"},{"1":"California","2":"number_of_german_speakers_2019","3":"854"},{"1":"Colorado","2":"number_of_german_speakers_2017","3":"251"},{"1":"Colorado","2":"number_of_german_speakers_2018","3":"498"},{"1":"Colorado","2":"number_of_german_speakers_2019","3":"768"},{"1":"Connecticut","2":"number_of_german_speakers_2017","3":"187"},{"1":"Connecticut","2":"number_of_german_speakers_2018","3":"334"},{"1":"Connecticut","2":"number_of_german_speakers_2019","3":"586"},{"1":"Delaware","2":"number_of_german_speakers_2017","3":"NA"},{"1":"Delaware","2":"number_of_german_speakers_2018","3":"998"},{"1":"Delaware","2":"number_of_german_speakers_2019","3":"453"},{"1":"District of Columbia","2":"number_of_german_speakers_2017","3":"799"},{"1":"District of Columbia","2":"number_of_german_speakers_2018","3":"745"},{"1":"District of Columbia","2":"number_of_german_speakers_2019","3":"180"},{"1":"Florida","2":"number_of_german_speakers_2017","3":"399"},{"1":"Florida","2":"number_of_german_speakers_2018","3":"924"},{"1":"Florida","2":"number_of_german_speakers_2019","3":"958"},{"1":"Georgia","2":"number_of_german_speakers_2017","3":"910"},{"1":"Georgia","2":"number_of_german_speakers_2018","3":"293"},{"1":"Georgia","2":"number_of_german_speakers_2019","3":"821"},{"1":"Hawaii","2":"number_of_german_speakers_2017","3":"NA"},{"1":"Hawaii","2":"number_of_german_speakers_2018","3":"303"},{"1":"Hawaii","2":"number_of_german_speakers_2019","3":"931"},{"1":"Idaho","2":"number_of_german_speakers_2017","3":"301"},{"1":"Idaho","2":"number_of_german_speakers_2018","3":"349"},{"1":"Idaho","2":"number_of_german_speakers_2019","3":"NA"},{"1":"Illinois","2":"number_of_german_speakers_2017","3":"156"},{"1":"Illinois","2":"number_of_german_speakers_2018","3":"573"},{"1":"Illinois","2":"number_of_german_speakers_2019","3":"827"},{"1":"Indiana","2":"number_of_german_speakers_2017","3":"469"},{"1":"Indiana","2":"number_of_german_speakers_2018","3":"188"},{"1":"Indiana","2":"number_of_german_speakers_2019","3":"728"},{"1":"Iowa","2":"number_of_german_speakers_2017","3":"816"},{"1":"Iowa","2":"number_of_german_speakers_2018","3":"330"},{"1":"Iowa","2":"number_of_german_speakers_2019","3":"657"},{"1":"Kansas","2":"number_of_german_speakers_2017","3":"328"},{"1":"Kansas","2":"number_of_german_speakers_2018","3":"546"},{"1":"Kansas","2":"number_of_german_speakers_2019","3":"501"},{"1":"Kentucky","2":"number_of_german_speakers_2017","3":"299"},{"1":"Kentucky","2":"number_of_german_speakers_2018","3":"976"},{"1":"Kentucky","2":"number_of_german_speakers_2019","3":"332"},{"1":"Louisiana","2":"number_of_german_speakers_2017","3":"266"},{"1":"Louisiana","2":"number_of_german_speakers_2018","3":"NA"},{"1":"Louisiana","2":"number_of_german_speakers_2019","3":"490"},{"1":"Maine","2":"number_of_german_speakers_2017","3":"376"},{"1":"Maine","2":"number_of_german_speakers_2018","3":"127"},{"1":"Maine","2":"number_of_german_speakers_2019","3":"206"},{"1":"Montana","2":"number_of_german_speakers_2017","3":"598"},{"1":"Montana","2":"number_of_german_speakers_2018","3":"296"},{"1":"Montana","2":"number_of_german_speakers_2019","3":"527"},{"1":"Nebraska","2":"number_of_german_speakers_2017","3":"252"},{"1":"Nebraska","2":"number_of_german_speakers_2018","3":"726"},{"1":"Nebraska","2":"number_of_german_speakers_2019","3":"232"},{"1":"Nevada","2":"number_of_german_speakers_2017","3":"910"},{"1":"Nevada","2":"number_of_german_speakers_2018","3":"526"},{"1":"Nevada","2":"number_of_german_speakers_2019","3":"647"},{"1":"New Hampshire","2":"number_of_german_speakers_2017","3":"896"},{"1":"New Hampshire","2":"number_of_german_speakers_2018","3":"109"},{"1":"New Hampshire","2":"number_of_german_speakers_2019","3":"818"},{"1":"New Jersey","2":"number_of_german_speakers_2017","3":"380"},{"1":"New Jersey","2":"number_of_german_speakers_2018","3":"961"},{"1":"New Jersey","2":"number_of_german_speakers_2019","3":"168"},{"1":"New Mexico","2":"number_of_german_speakers_2017","3":"574"},{"1":"New Mexico","2":"number_of_german_speakers_2018","3":"771"},{"1":"New Mexico","2":"number_of_german_speakers_2019","3":"336"},{"1":"New York","2":"number_of_german_speakers_2017","3":"135"},{"1":"New York","2":"number_of_german_speakers_2018","3":"637"},{"1":"New York","2":"number_of_german_speakers_2019","3":"207"},{"1":"North Carolina","2":"number_of_german_speakers_2017","3":"609"},{"1":"North Carolina","2":"number_of_german_speakers_2018","3":"970"},{"1":"North Carolina","2":"number_of_german_speakers_2019","3":"508"},{"1":"North Dakota","2":"number_of_german_speakers_2017","3":"891"},{"1":"North Dakota","2":"number_of_german_speakers_2018","3":"307"},{"1":"North Dakota","2":"number_of_german_speakers_2019","3":"652"},{"1":"Ohio","2":"number_of_german_speakers_2017","3":"960"},{"1":"Ohio","2":"number_of_german_speakers_2018","3":"900"},{"1":"Ohio","2":"number_of_german_speakers_2019","3":"186"},{"1":"Oklahoma","2":"number_of_german_speakers_2017","3":"769"},{"1":"Oklahoma","2":"number_of_german_speakers_2018","3":"699"},{"1":"Oklahoma","2":"number_of_german_speakers_2019","3":"621"},{"1":"Oregon","2":"number_of_german_speakers_2017","3":"864"},{"1":"Oregon","2":"number_of_german_speakers_2018","3":"762"},{"1":"Oregon","2":"number_of_german_speakers_2019","3":"471"},{"1":"Maryland","2":"number_of_german_speakers_2017","3":"247"},{"1":"Maryland","2":"number_of_german_speakers_2018","3":"106"},{"1":"Maryland","2":"number_of_german_speakers_2019","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2017","3":"775"},{"1":"Massachusetts","2":"number_of_german_speakers_2018","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2019","3":"859"},{"1":"Michigan","2":"number_of_german_speakers_2017","3":"776"},{"1":"Michigan","2":"number_of_german_speakers_2018","3":"503"},{"1":"Michigan","2":"number_of_german_speakers_2019","3":"467"},{"1":"Minnesota","2":"number_of_german_speakers_2017","3":"752"},{"1":"Minnesota","2":"number_of_german_speakers_2018","3":"344"},{"1":"Minnesota","2":"number_of_german_speakers_2019","3":"251"},{"1":"Mississippi","2":"number_of_german_speakers_2017","3":"945"},{"1":"Mississippi","2":"number_of_german_speakers_2018","3":"246"},{"1":"Mississippi","2":"number_of_german_speakers_2019","3":"372"},{"1":"Missouri","2":"number_of_german_speakers_2017","3":"699"},{"1":"Missouri","2":"number_of_german_speakers_2018","3":"250"},{"1":"Missouri","2":"number_of_german_speakers_2019","3":"972"},{"1":"Pennsylvania","2":"number_of_german_speakers_2017","3":"930"},{"1":"Pennsylvania","2":"number_of_german_speakers_2018","3":"475"},{"1":"Pennsylvania","2":"number_of_german_speakers_2019","3":"956"},{"1":"Rhode Island","2":"number_of_german_speakers_2017","3":"529"},{"1":"Rhode Island","2":"number_of_german_speakers_2018","3":"852"},{"1":"Rhode Island","2":"number_of_german_speakers_2019","3":"900"},{"1":"South Carolina","2":"number_of_german_speakers_2017","3":"617"},{"1":"South Carolina","2":"number_of_german_speakers_2018","3":"815"},{"1":"South Carolina","2":"number_of_german_speakers_2019","3":"182"},{"1":"South Dakota","2":"number_of_german_speakers_2017","3":"262"},{"1":"South Dakota","2":"number_of_german_speakers_2018","3":"601"},{"1":"South Dakota","2":"number_of_german_speakers_2019","3":"584"},{"1":"Tennessee","2":"number_of_german_speakers_2017","3":"153"},{"1":"Tennessee","2":"number_of_german_speakers_2018","3":"568"},{"1":"Tennessee","2":"number_of_german_speakers_2019","3":"476"},{"1":"Texas","2":"number_of_german_speakers_2017","3":"732"},{"1":"Texas","2":"number_of_german_speakers_2018","3":"571"},{"1":"Texas","2":"number_of_german_speakers_2019","3":"292"},{"1":"Utah","2":"number_of_german_speakers_2017","3":"669"},{"1":"Utah","2":"number_of_german_speakers_2018","3":"486"},{"1":"Utah","2":"number_of_german_speakers_2019","3":"758"},{"1":"Vermont","2":"number_of_german_speakers_2017","3":"698"},{"1":"Vermont","2":"number_of_german_speakers_2018","3":"470"},{"1":"Vermont","2":"number_of_german_speakers_2019","3":"158"},{"1":"Virginia","2":"number_of_german_speakers_2017","3":"125"},{"1":"Virginia","2":"number_of_german_speakers_2018","3":"105"},{"1":"Virginia","2":"number_of_german_speakers_2019","3":"432"},{"1":"Washington","2":"number_of_german_speakers_2017","3":"495"},{"1":"Washington","2":"number_of_german_speakers_2018","3":"474"},{"1":"Washington","2":"number_of_german_speakers_2019","3":"615"},{"1":"West Virginia","2":"number_of_german_speakers_2017","3":"603"},{"1":"West Virginia","2":"number_of_german_speakers_2018","3":"600"},{"1":"West Virginia","2":"number_of_german_speakers_2019","3":"974"},{"1":"Wisconsin","2":"number_of_german_speakers_2017","3":"582"},{"1":"Wisconsin","2":"number_of_german_speakers_2018","3":"997"},{"1":"Wisconsin","2":"number_of_german_speakers_2019","3":"842"},{"1":"Wyoming","2":"number_of_german_speakers_2017","3":"451"},{"1":"Wyoming","2":"number_of_german_speakers_2018","3":"593"},{"1":"Wyoming","2":"number_of_german_speakers_2019","3":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+
+???
+
+The `na_if()` function turns values that represent missing data into actual NAs
+
+You can also do this with na arguments in read_excel etc
+
+---
+
+## Dealing with Missing Data: `replace_na()`
+
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %&gt;% 
+  mutate(number = na_if(number, "-")) %&gt;% 
+* mutate(number = replace_na(number, 0))
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"Alabama","2":"number_of_german_speakers_2017","3":"426"},{"1":"Alabama","2":"number_of_german_speakers_2018","3":"395"},{"1":"Alabama","2":"number_of_german_speakers_2019","3":"711"},{"1":"Alaska","2":"number_of_german_speakers_2017","3":"331"},{"1":"Alaska","2":"number_of_german_speakers_2018","3":"201"},{"1":"Alaska","2":"number_of_german_speakers_2019","3":"131"},{"1":"Arizona","2":"number_of_german_speakers_2017","3":"636"},{"1":"Arizona","2":"number_of_german_speakers_2018","3":"858"},{"1":"Arizona","2":"number_of_german_speakers_2019","3":"136"},{"1":"Arkansas","2":"number_of_german_speakers_2017","3":"0"},{"1":"Arkansas","2":"number_of_german_speakers_2018","3":"635"},{"1":"Arkansas","2":"number_of_german_speakers_2019","3":"557"},{"1":"California","2":"number_of_german_speakers_2017","3":"440"},{"1":"California","2":"number_of_german_speakers_2018","3":"318"},{"1":"California","2":"number_of_german_speakers_2019","3":"854"},{"1":"Colorado","2":"number_of_german_speakers_2017","3":"251"},{"1":"Colorado","2":"number_of_german_speakers_2018","3":"498"},{"1":"Colorado","2":"number_of_german_speakers_2019","3":"768"},{"1":"Connecticut","2":"number_of_german_speakers_2017","3":"187"},{"1":"Connecticut","2":"number_of_german_speakers_2018","3":"334"},{"1":"Connecticut","2":"number_of_german_speakers_2019","3":"586"},{"1":"Delaware","2":"number_of_german_speakers_2017","3":"0"},{"1":"Delaware","2":"number_of_german_speakers_2018","3":"998"},{"1":"Delaware","2":"number_of_german_speakers_2019","3":"453"},{"1":"District of Columbia","2":"number_of_german_speakers_2017","3":"799"},{"1":"District of Columbia","2":"number_of_german_speakers_2018","3":"745"},{"1":"District of Columbia","2":"number_of_german_speakers_2019","3":"180"},{"1":"Florida","2":"number_of_german_speakers_2017","3":"399"},{"1":"Florida","2":"number_of_german_speakers_2018","3":"924"},{"1":"Florida","2":"number_of_german_speakers_2019","3":"958"},{"1":"Georgia","2":"number_of_german_speakers_2017","3":"910"},{"1":"Georgia","2":"number_of_german_speakers_2018","3":"293"},{"1":"Georgia","2":"number_of_german_speakers_2019","3":"821"},{"1":"Hawaii","2":"number_of_german_speakers_2017","3":"0"},{"1":"Hawaii","2":"number_of_german_speakers_2018","3":"303"},{"1":"Hawaii","2":"number_of_german_speakers_2019","3":"931"},{"1":"Idaho","2":"number_of_german_speakers_2017","3":"301"},{"1":"Idaho","2":"number_of_german_speakers_2018","3":"349"},{"1":"Idaho","2":"number_of_german_speakers_2019","3":"0"},{"1":"Illinois","2":"number_of_german_speakers_2017","3":"156"},{"1":"Illinois","2":"number_of_german_speakers_2018","3":"573"},{"1":"Illinois","2":"number_of_german_speakers_2019","3":"827"},{"1":"Indiana","2":"number_of_german_speakers_2017","3":"469"},{"1":"Indiana","2":"number_of_german_speakers_2018","3":"188"},{"1":"Indiana","2":"number_of_german_speakers_2019","3":"728"},{"1":"Iowa","2":"number_of_german_speakers_2017","3":"816"},{"1":"Iowa","2":"number_of_german_speakers_2018","3":"330"},{"1":"Iowa","2":"number_of_german_speakers_2019","3":"657"},{"1":"Kansas","2":"number_of_german_speakers_2017","3":"328"},{"1":"Kansas","2":"number_of_german_speakers_2018","3":"546"},{"1":"Kansas","2":"number_of_german_speakers_2019","3":"501"},{"1":"Kentucky","2":"number_of_german_speakers_2017","3":"299"},{"1":"Kentucky","2":"number_of_german_speakers_2018","3":"976"},{"1":"Kentucky","2":"number_of_german_speakers_2019","3":"332"},{"1":"Louisiana","2":"number_of_german_speakers_2017","3":"266"},{"1":"Louisiana","2":"number_of_german_speakers_2018","3":"0"},{"1":"Louisiana","2":"number_of_german_speakers_2019","3":"490"},{"1":"Maine","2":"number_of_german_speakers_2017","3":"376"},{"1":"Maine","2":"number_of_german_speakers_2018","3":"127"},{"1":"Maine","2":"number_of_german_speakers_2019","3":"206"},{"1":"Montana","2":"number_of_german_speakers_2017","3":"598"},{"1":"Montana","2":"number_of_german_speakers_2018","3":"296"},{"1":"Montana","2":"number_of_german_speakers_2019","3":"527"},{"1":"Nebraska","2":"number_of_german_speakers_2017","3":"252"},{"1":"Nebraska","2":"number_of_german_speakers_2018","3":"726"},{"1":"Nebraska","2":"number_of_german_speakers_2019","3":"232"},{"1":"Nevada","2":"number_of_german_speakers_2017","3":"910"},{"1":"Nevada","2":"number_of_german_speakers_2018","3":"526"},{"1":"Nevada","2":"number_of_german_speakers_2019","3":"647"},{"1":"New Hampshire","2":"number_of_german_speakers_2017","3":"896"},{"1":"New Hampshire","2":"number_of_german_speakers_2018","3":"109"},{"1":"New Hampshire","2":"number_of_german_speakers_2019","3":"818"},{"1":"New Jersey","2":"number_of_german_speakers_2017","3":"380"},{"1":"New Jersey","2":"number_of_german_speakers_2018","3":"961"},{"1":"New Jersey","2":"number_of_german_speakers_2019","3":"168"},{"1":"New Mexico","2":"number_of_german_speakers_2017","3":"574"},{"1":"New Mexico","2":"number_of_german_speakers_2018","3":"771"},{"1":"New Mexico","2":"number_of_german_speakers_2019","3":"336"},{"1":"New York","2":"number_of_german_speakers_2017","3":"135"},{"1":"New York","2":"number_of_german_speakers_2018","3":"637"},{"1":"New York","2":"number_of_german_speakers_2019","3":"207"},{"1":"North Carolina","2":"number_of_german_speakers_2017","3":"609"},{"1":"North Carolina","2":"number_of_german_speakers_2018","3":"970"},{"1":"North Carolina","2":"number_of_german_speakers_2019","3":"508"},{"1":"North Dakota","2":"number_of_german_speakers_2017","3":"891"},{"1":"North Dakota","2":"number_of_german_speakers_2018","3":"307"},{"1":"North Dakota","2":"number_of_german_speakers_2019","3":"652"},{"1":"Ohio","2":"number_of_german_speakers_2017","3":"960"},{"1":"Ohio","2":"number_of_german_speakers_2018","3":"900"},{"1":"Ohio","2":"number_of_german_speakers_2019","3":"186"},{"1":"Oklahoma","2":"number_of_german_speakers_2017","3":"769"},{"1":"Oklahoma","2":"number_of_german_speakers_2018","3":"699"},{"1":"Oklahoma","2":"number_of_german_speakers_2019","3":"621"},{"1":"Oregon","2":"number_of_german_speakers_2017","3":"864"},{"1":"Oregon","2":"number_of_german_speakers_2018","3":"762"},{"1":"Oregon","2":"number_of_german_speakers_2019","3":"471"},{"1":"Maryland","2":"number_of_german_speakers_2017","3":"247"},{"1":"Maryland","2":"number_of_german_speakers_2018","3":"106"},{"1":"Maryland","2":"number_of_german_speakers_2019","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2017","3":"775"},{"1":"Massachusetts","2":"number_of_german_speakers_2018","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2019","3":"859"},{"1":"Michigan","2":"number_of_german_speakers_2017","3":"776"},{"1":"Michigan","2":"number_of_german_speakers_2018","3":"503"},{"1":"Michigan","2":"number_of_german_speakers_2019","3":"467"},{"1":"Minnesota","2":"number_of_german_speakers_2017","3":"752"},{"1":"Minnesota","2":"number_of_german_speakers_2018","3":"344"},{"1":"Minnesota","2":"number_of_german_speakers_2019","3":"251"},{"1":"Mississippi","2":"number_of_german_speakers_2017","3":"945"},{"1":"Mississippi","2":"number_of_german_speakers_2018","3":"246"},{"1":"Mississippi","2":"number_of_german_speakers_2019","3":"372"},{"1":"Missouri","2":"number_of_german_speakers_2017","3":"699"},{"1":"Missouri","2":"number_of_german_speakers_2018","3":"250"},{"1":"Missouri","2":"number_of_german_speakers_2019","3":"972"},{"1":"Pennsylvania","2":"number_of_german_speakers_2017","3":"930"},{"1":"Pennsylvania","2":"number_of_german_speakers_2018","3":"475"},{"1":"Pennsylvania","2":"number_of_german_speakers_2019","3":"956"},{"1":"Rhode Island","2":"number_of_german_speakers_2017","3":"529"},{"1":"Rhode Island","2":"number_of_german_speakers_2018","3":"852"},{"1":"Rhode Island","2":"number_of_german_speakers_2019","3":"900"},{"1":"South Carolina","2":"number_of_german_speakers_2017","3":"617"},{"1":"South Carolina","2":"number_of_german_speakers_2018","3":"815"},{"1":"South Carolina","2":"number_of_german_speakers_2019","3":"182"},{"1":"South Dakota","2":"number_of_german_speakers_2017","3":"262"},{"1":"South Dakota","2":"number_of_german_speakers_2018","3":"601"},{"1":"South Dakota","2":"number_of_german_speakers_2019","3":"584"},{"1":"Tennessee","2":"number_of_german_speakers_2017","3":"153"},{"1":"Tennessee","2":"number_of_german_speakers_2018","3":"568"},{"1":"Tennessee","2":"number_of_german_speakers_2019","3":"476"},{"1":"Texas","2":"number_of_german_speakers_2017","3":"732"},{"1":"Texas","2":"number_of_german_speakers_2018","3":"571"},{"1":"Texas","2":"number_of_german_speakers_2019","3":"292"},{"1":"Utah","2":"number_of_german_speakers_2017","3":"669"},{"1":"Utah","2":"number_of_german_speakers_2018","3":"486"},{"1":"Utah","2":"number_of_german_speakers_2019","3":"758"},{"1":"Vermont","2":"number_of_german_speakers_2017","3":"698"},{"1":"Vermont","2":"number_of_german_speakers_2018","3":"470"},{"1":"Vermont","2":"number_of_german_speakers_2019","3":"158"},{"1":"Virginia","2":"number_of_german_speakers_2017","3":"125"},{"1":"Virginia","2":"number_of_german_speakers_2018","3":"105"},{"1":"Virginia","2":"number_of_german_speakers_2019","3":"432"},{"1":"Washington","2":"number_of_german_speakers_2017","3":"495"},{"1":"Washington","2":"number_of_german_speakers_2018","3":"474"},{"1":"Washington","2":"number_of_german_speakers_2019","3":"615"},{"1":"West Virginia","2":"number_of_german_speakers_2017","3":"603"},{"1":"West Virginia","2":"number_of_german_speakers_2018","3":"600"},{"1":"West Virginia","2":"number_of_german_speakers_2019","3":"974"},{"1":"Wisconsin","2":"number_of_german_speakers_2017","3":"582"},{"1":"Wisconsin","2":"number_of_german_speakers_2018","3":"997"},{"1":"Wisconsin","2":"number_of_german_speakers_2019","3":"842"},{"1":"Wyoming","2":"number_of_german_speakers_2017","3":"451"},{"1":"Wyoming","2":"number_of_german_speakers_2018","3":"593"},{"1":"Wyoming","2":"number_of_german_speakers_2019","3":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+???
+
+The `replace_na()` function does the opposite: turns NAs into values.
+
+
+---
+
+class: my-turn
+
+## My Turn
+
+1. Convert all of the missing values (they should show up as "-") in the `percent_proficient` variable to NA using `na_if()`
+
+*I don't have any values where using `replace_na()` makes sense, but you'll use it shortly!*
+
+---
+
+class: inverse
+
+## Your Turn
+
+--
+
+1. Convert all of the missing values (they should show up as "-") in the `number_of_students` variable to NA using `na_if()`
+
+--
+
+1. Convert all of the NA values you just made to 0 using `replace_na()`.
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/types.jpg")
+
+# Changing Variable Types
+
+---
+
+## Changing Variable Types
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %&gt;% 
+  mutate(number = na_if(number, "-")) %&gt;% 
+  mutate(number = replace_na(number, 0)) %&gt;% 
+  summarize(total = sum(number))
+```
+
+--
+
+&lt;p class="error-text"&gt;Error in sum(number) : invalid 'type' (character) of argument&lt;/p&gt;
+
+---
+
+## Changing Variable Types
+
+To change variable types, you use the `mutate()` function combined with `as.numeric()`, `as.character()`, etc.
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %&gt;% 
+  mutate(number = na_if(number, "-")) %&gt;% 
+  mutate(number = replace_na(number, 0)) %&gt;% 
+* mutate(number = as.numeric(number)) %&gt;%
+  summarize(total = sum(number))
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["total"],"name":[1],"type":["dbl"],"align":["right"]}],"data":[{"1":"80314"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+
+---
+
+class: inverse
+
+## My Turn
+
+Convert the `percent_proficient` variable to numeric by using `as.numeric()`
+
+---
+
+class: inverse
+
+## Your Turn
+
+--
+
+1. Convert the `number_of_students` variable to numeric by using `as.numeric()`
+
+--
+
+1. Use `mutate()` to calculate a new variable called `pct` that is the percent of the total enrollment for students in each race/ethnicity group
+
+
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/throwing-pot.jpg")
+
+# Advanced Variable Creation
+
+---
+
+## `recode()`
+
+
+```r
+data_frame %&gt;% 
+  mutate(var = recode(variable, "old_value" = "new_value"))
+```
+
+---
+
+## `recode()`
+
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %&gt;% 
+  mutate(number = na_if(number, "-")) %&gt;% 
+  mutate(number = replace_na(number, 0)) %&gt;% 
+  mutate(number = as.numeric(number)) %&gt;% 
+  mutate(year = recode(year, 
+*                      "2017-number-of-german-speakers" = "2017",
+*                      "2018-number-of-german-speakers" = "2018",
+*                      "2019-number-of-german-speakers" = "2019"))
+```
+
+---
+
+## `recode()`
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"number_of_german_speakers_2017","3":"426"},{"1":"Alabama","2":"number_of_german_speakers_2018","3":"395"},{"1":"Alabama","2":"number_of_german_speakers_2019","3":"711"},{"1":"Alaska","2":"number_of_german_speakers_2017","3":"331"},{"1":"Alaska","2":"number_of_german_speakers_2018","3":"201"},{"1":"Alaska","2":"number_of_german_speakers_2019","3":"131"},{"1":"Arizona","2":"number_of_german_speakers_2017","3":"636"},{"1":"Arizona","2":"number_of_german_speakers_2018","3":"858"},{"1":"Arizona","2":"number_of_german_speakers_2019","3":"136"},{"1":"Arkansas","2":"number_of_german_speakers_2017","3":"0"},{"1":"Arkansas","2":"number_of_german_speakers_2018","3":"635"},{"1":"Arkansas","2":"number_of_german_speakers_2019","3":"557"},{"1":"California","2":"number_of_german_speakers_2017","3":"440"},{"1":"California","2":"number_of_german_speakers_2018","3":"318"},{"1":"California","2":"number_of_german_speakers_2019","3":"854"},{"1":"Colorado","2":"number_of_german_speakers_2017","3":"251"},{"1":"Colorado","2":"number_of_german_speakers_2018","3":"498"},{"1":"Colorado","2":"number_of_german_speakers_2019","3":"768"},{"1":"Connecticut","2":"number_of_german_speakers_2017","3":"187"},{"1":"Connecticut","2":"number_of_german_speakers_2018","3":"334"},{"1":"Connecticut","2":"number_of_german_speakers_2019","3":"586"},{"1":"Delaware","2":"number_of_german_speakers_2017","3":"0"},{"1":"Delaware","2":"number_of_german_speakers_2018","3":"998"},{"1":"Delaware","2":"number_of_german_speakers_2019","3":"453"},{"1":"District of Columbia","2":"number_of_german_speakers_2017","3":"799"},{"1":"District of Columbia","2":"number_of_german_speakers_2018","3":"745"},{"1":"District of Columbia","2":"number_of_german_speakers_2019","3":"180"},{"1":"Florida","2":"number_of_german_speakers_2017","3":"399"},{"1":"Florida","2":"number_of_german_speakers_2018","3":"924"},{"1":"Florida","2":"number_of_german_speakers_2019","3":"958"},{"1":"Georgia","2":"number_of_german_speakers_2017","3":"910"},{"1":"Georgia","2":"number_of_german_speakers_2018","3":"293"},{"1":"Georgia","2":"number_of_german_speakers_2019","3":"821"},{"1":"Hawaii","2":"number_of_german_speakers_2017","3":"0"},{"1":"Hawaii","2":"number_of_german_speakers_2018","3":"303"},{"1":"Hawaii","2":"number_of_german_speakers_2019","3":"931"},{"1":"Idaho","2":"number_of_german_speakers_2017","3":"301"},{"1":"Idaho","2":"number_of_german_speakers_2018","3":"349"},{"1":"Idaho","2":"number_of_german_speakers_2019","3":"0"},{"1":"Illinois","2":"number_of_german_speakers_2017","3":"156"},{"1":"Illinois","2":"number_of_german_speakers_2018","3":"573"},{"1":"Illinois","2":"number_of_german_speakers_2019","3":"827"},{"1":"Indiana","2":"number_of_german_speakers_2017","3":"469"},{"1":"Indiana","2":"number_of_german_speakers_2018","3":"188"},{"1":"Indiana","2":"number_of_german_speakers_2019","3":"728"},{"1":"Iowa","2":"number_of_german_speakers_2017","3":"816"},{"1":"Iowa","2":"number_of_german_speakers_2018","3":"330"},{"1":"Iowa","2":"number_of_german_speakers_2019","3":"657"},{"1":"Kansas","2":"number_of_german_speakers_2017","3":"328"},{"1":"Kansas","2":"number_of_german_speakers_2018","3":"546"},{"1":"Kansas","2":"number_of_german_speakers_2019","3":"501"},{"1":"Kentucky","2":"number_of_german_speakers_2017","3":"299"},{"1":"Kentucky","2":"number_of_german_speakers_2018","3":"976"},{"1":"Kentucky","2":"number_of_german_speakers_2019","3":"332"},{"1":"Louisiana","2":"number_of_german_speakers_2017","3":"266"},{"1":"Louisiana","2":"number_of_german_speakers_2018","3":"0"},{"1":"Louisiana","2":"number_of_german_speakers_2019","3":"490"},{"1":"Maine","2":"number_of_german_speakers_2017","3":"376"},{"1":"Maine","2":"number_of_german_speakers_2018","3":"127"},{"1":"Maine","2":"number_of_german_speakers_2019","3":"206"},{"1":"Montana","2":"number_of_german_speakers_2017","3":"598"},{"1":"Montana","2":"number_of_german_speakers_2018","3":"296"},{"1":"Montana","2":"number_of_german_speakers_2019","3":"527"},{"1":"Nebraska","2":"number_of_german_speakers_2017","3":"252"},{"1":"Nebraska","2":"number_of_german_speakers_2018","3":"726"},{"1":"Nebraska","2":"number_of_german_speakers_2019","3":"232"},{"1":"Nevada","2":"number_of_german_speakers_2017","3":"910"},{"1":"Nevada","2":"number_of_german_speakers_2018","3":"526"},{"1":"Nevada","2":"number_of_german_speakers_2019","3":"647"},{"1":"New Hampshire","2":"number_of_german_speakers_2017","3":"896"},{"1":"New Hampshire","2":"number_of_german_speakers_2018","3":"109"},{"1":"New Hampshire","2":"number_of_german_speakers_2019","3":"818"},{"1":"New Jersey","2":"number_of_german_speakers_2017","3":"380"},{"1":"New Jersey","2":"number_of_german_speakers_2018","3":"961"},{"1":"New Jersey","2":"number_of_german_speakers_2019","3":"168"},{"1":"New Mexico","2":"number_of_german_speakers_2017","3":"574"},{"1":"New Mexico","2":"number_of_german_speakers_2018","3":"771"},{"1":"New Mexico","2":"number_of_german_speakers_2019","3":"336"},{"1":"New York","2":"number_of_german_speakers_2017","3":"135"},{"1":"New York","2":"number_of_german_speakers_2018","3":"637"},{"1":"New York","2":"number_of_german_speakers_2019","3":"207"},{"1":"North Carolina","2":"number_of_german_speakers_2017","3":"609"},{"1":"North Carolina","2":"number_of_german_speakers_2018","3":"970"},{"1":"North Carolina","2":"number_of_german_speakers_2019","3":"508"},{"1":"North Dakota","2":"number_of_german_speakers_2017","3":"891"},{"1":"North Dakota","2":"number_of_german_speakers_2018","3":"307"},{"1":"North Dakota","2":"number_of_german_speakers_2019","3":"652"},{"1":"Ohio","2":"number_of_german_speakers_2017","3":"960"},{"1":"Ohio","2":"number_of_german_speakers_2018","3":"900"},{"1":"Ohio","2":"number_of_german_speakers_2019","3":"186"},{"1":"Oklahoma","2":"number_of_german_speakers_2017","3":"769"},{"1":"Oklahoma","2":"number_of_german_speakers_2018","3":"699"},{"1":"Oklahoma","2":"number_of_german_speakers_2019","3":"621"},{"1":"Oregon","2":"number_of_german_speakers_2017","3":"864"},{"1":"Oregon","2":"number_of_german_speakers_2018","3":"762"},{"1":"Oregon","2":"number_of_german_speakers_2019","3":"471"},{"1":"Maryland","2":"number_of_german_speakers_2017","3":"247"},{"1":"Maryland","2":"number_of_german_speakers_2018","3":"106"},{"1":"Maryland","2":"number_of_german_speakers_2019","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2017","3":"775"},{"1":"Massachusetts","2":"number_of_german_speakers_2018","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2019","3":"859"},{"1":"Michigan","2":"number_of_german_speakers_2017","3":"776"},{"1":"Michigan","2":"number_of_german_speakers_2018","3":"503"},{"1":"Michigan","2":"number_of_german_speakers_2019","3":"467"},{"1":"Minnesota","2":"number_of_german_speakers_2017","3":"752"},{"1":"Minnesota","2":"number_of_german_speakers_2018","3":"344"},{"1":"Minnesota","2":"number_of_german_speakers_2019","3":"251"},{"1":"Mississippi","2":"number_of_german_speakers_2017","3":"945"},{"1":"Mississippi","2":"number_of_german_speakers_2018","3":"246"},{"1":"Mississippi","2":"number_of_german_speakers_2019","3":"372"},{"1":"Missouri","2":"number_of_german_speakers_2017","3":"699"},{"1":"Missouri","2":"number_of_german_speakers_2018","3":"250"},{"1":"Missouri","2":"number_of_german_speakers_2019","3":"972"},{"1":"Pennsylvania","2":"number_of_german_speakers_2017","3":"930"},{"1":"Pennsylvania","2":"number_of_german_speakers_2018","3":"475"},{"1":"Pennsylvania","2":"number_of_german_speakers_2019","3":"956"},{"1":"Rhode Island","2":"number_of_german_speakers_2017","3":"529"},{"1":"Rhode Island","2":"number_of_german_speakers_2018","3":"852"},{"1":"Rhode Island","2":"number_of_german_speakers_2019","3":"900"},{"1":"South Carolina","2":"number_of_german_speakers_2017","3":"617"},{"1":"South Carolina","2":"number_of_german_speakers_2018","3":"815"},{"1":"South Carolina","2":"number_of_german_speakers_2019","3":"182"},{"1":"South Dakota","2":"number_of_german_speakers_2017","3":"262"},{"1":"South Dakota","2":"number_of_german_speakers_2018","3":"601"},{"1":"South Dakota","2":"number_of_german_speakers_2019","3":"584"},{"1":"Tennessee","2":"number_of_german_speakers_2017","3":"153"},{"1":"Tennessee","2":"number_of_german_speakers_2018","3":"568"},{"1":"Tennessee","2":"number_of_german_speakers_2019","3":"476"},{"1":"Texas","2":"number_of_german_speakers_2017","3":"732"},{"1":"Texas","2":"number_of_german_speakers_2018","3":"571"},{"1":"Texas","2":"number_of_german_speakers_2019","3":"292"},{"1":"Utah","2":"number_of_german_speakers_2017","3":"669"},{"1":"Utah","2":"number_of_german_speakers_2018","3":"486"},{"1":"Utah","2":"number_of_german_speakers_2019","3":"758"},{"1":"Vermont","2":"number_of_german_speakers_2017","3":"698"},{"1":"Vermont","2":"number_of_german_speakers_2018","3":"470"},{"1":"Vermont","2":"number_of_german_speakers_2019","3":"158"},{"1":"Virginia","2":"number_of_german_speakers_2017","3":"125"},{"1":"Virginia","2":"number_of_german_speakers_2018","3":"105"},{"1":"Virginia","2":"number_of_german_speakers_2019","3":"432"},{"1":"Washington","2":"number_of_german_speakers_2017","3":"495"},{"1":"Washington","2":"number_of_german_speakers_2018","3":"474"},{"1":"Washington","2":"number_of_german_speakers_2019","3":"615"},{"1":"West Virginia","2":"number_of_german_speakers_2017","3":"603"},{"1":"West Virginia","2":"number_of_german_speakers_2018","3":"600"},{"1":"West Virginia","2":"number_of_german_speakers_2019","3":"974"},{"1":"Wisconsin","2":"number_of_german_speakers_2017","3":"582"},{"1":"Wisconsin","2":"number_of_german_speakers_2018","3":"997"},{"1":"Wisconsin","2":"number_of_german_speakers_2019","3":"842"},{"1":"Wyoming","2":"number_of_german_speakers_2017","3":"451"},{"1":"Wyoming","2":"number_of_german_speakers_2018","3":"593"},{"1":"Wyoming","2":"number_of_german_speakers_2019","3":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## `if_else()`
+
+
+```r
+data_frame %&gt;% 
+  mutate(var = if_else(variable == "some_value", "if_true_value" = "else_value"))
+```
+
+---
+
+## `if_else()`
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %&gt;% 
+  mutate(number = na_if(number, "-")) %&gt;% 
+  mutate(number = replace_na(number, 0)) %&gt;% 
+  mutate(number = as.numeric(number)) %&gt;% 
+* mutate(year = if_else(year == "2017-number-of-german-speakers", "2017", year)) %&gt;%
+* mutate(year = if_else(year == "2018-number-of-german-speakers", "2018", year)) %&gt;%
+* mutate(year = if_else(year == "2019-number-of-german-speakers", "2019", year))
+```
+
+---
+
+## `if_else()`
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"number_of_german_speakers_2017","3":"426"},{"1":"Alabama","2":"number_of_german_speakers_2018","3":"395"},{"1":"Alabama","2":"number_of_german_speakers_2019","3":"711"},{"1":"Alaska","2":"number_of_german_speakers_2017","3":"331"},{"1":"Alaska","2":"number_of_german_speakers_2018","3":"201"},{"1":"Alaska","2":"number_of_german_speakers_2019","3":"131"},{"1":"Arizona","2":"number_of_german_speakers_2017","3":"636"},{"1":"Arizona","2":"number_of_german_speakers_2018","3":"858"},{"1":"Arizona","2":"number_of_german_speakers_2019","3":"136"},{"1":"Arkansas","2":"number_of_german_speakers_2017","3":"0"},{"1":"Arkansas","2":"number_of_german_speakers_2018","3":"635"},{"1":"Arkansas","2":"number_of_german_speakers_2019","3":"557"},{"1":"California","2":"number_of_german_speakers_2017","3":"440"},{"1":"California","2":"number_of_german_speakers_2018","3":"318"},{"1":"California","2":"number_of_german_speakers_2019","3":"854"},{"1":"Colorado","2":"number_of_german_speakers_2017","3":"251"},{"1":"Colorado","2":"number_of_german_speakers_2018","3":"498"},{"1":"Colorado","2":"number_of_german_speakers_2019","3":"768"},{"1":"Connecticut","2":"number_of_german_speakers_2017","3":"187"},{"1":"Connecticut","2":"number_of_german_speakers_2018","3":"334"},{"1":"Connecticut","2":"number_of_german_speakers_2019","3":"586"},{"1":"Delaware","2":"number_of_german_speakers_2017","3":"0"},{"1":"Delaware","2":"number_of_german_speakers_2018","3":"998"},{"1":"Delaware","2":"number_of_german_speakers_2019","3":"453"},{"1":"District of Columbia","2":"number_of_german_speakers_2017","3":"799"},{"1":"District of Columbia","2":"number_of_german_speakers_2018","3":"745"},{"1":"District of Columbia","2":"number_of_german_speakers_2019","3":"180"},{"1":"Florida","2":"number_of_german_speakers_2017","3":"399"},{"1":"Florida","2":"number_of_german_speakers_2018","3":"924"},{"1":"Florida","2":"number_of_german_speakers_2019","3":"958"},{"1":"Georgia","2":"number_of_german_speakers_2017","3":"910"},{"1":"Georgia","2":"number_of_german_speakers_2018","3":"293"},{"1":"Georgia","2":"number_of_german_speakers_2019","3":"821"},{"1":"Hawaii","2":"number_of_german_speakers_2017","3":"0"},{"1":"Hawaii","2":"number_of_german_speakers_2018","3":"303"},{"1":"Hawaii","2":"number_of_german_speakers_2019","3":"931"},{"1":"Idaho","2":"number_of_german_speakers_2017","3":"301"},{"1":"Idaho","2":"number_of_german_speakers_2018","3":"349"},{"1":"Idaho","2":"number_of_german_speakers_2019","3":"0"},{"1":"Illinois","2":"number_of_german_speakers_2017","3":"156"},{"1":"Illinois","2":"number_of_german_speakers_2018","3":"573"},{"1":"Illinois","2":"number_of_german_speakers_2019","3":"827"},{"1":"Indiana","2":"number_of_german_speakers_2017","3":"469"},{"1":"Indiana","2":"number_of_german_speakers_2018","3":"188"},{"1":"Indiana","2":"number_of_german_speakers_2019","3":"728"},{"1":"Iowa","2":"number_of_german_speakers_2017","3":"816"},{"1":"Iowa","2":"number_of_german_speakers_2018","3":"330"},{"1":"Iowa","2":"number_of_german_speakers_2019","3":"657"},{"1":"Kansas","2":"number_of_german_speakers_2017","3":"328"},{"1":"Kansas","2":"number_of_german_speakers_2018","3":"546"},{"1":"Kansas","2":"number_of_german_speakers_2019","3":"501"},{"1":"Kentucky","2":"number_of_german_speakers_2017","3":"299"},{"1":"Kentucky","2":"number_of_german_speakers_2018","3":"976"},{"1":"Kentucky","2":"number_of_german_speakers_2019","3":"332"},{"1":"Louisiana","2":"number_of_german_speakers_2017","3":"266"},{"1":"Louisiana","2":"number_of_german_speakers_2018","3":"0"},{"1":"Louisiana","2":"number_of_german_speakers_2019","3":"490"},{"1":"Maine","2":"number_of_german_speakers_2017","3":"376"},{"1":"Maine","2":"number_of_german_speakers_2018","3":"127"},{"1":"Maine","2":"number_of_german_speakers_2019","3":"206"},{"1":"Montana","2":"number_of_german_speakers_2017","3":"598"},{"1":"Montana","2":"number_of_german_speakers_2018","3":"296"},{"1":"Montana","2":"number_of_german_speakers_2019","3":"527"},{"1":"Nebraska","2":"number_of_german_speakers_2017","3":"252"},{"1":"Nebraska","2":"number_of_german_speakers_2018","3":"726"},{"1":"Nebraska","2":"number_of_german_speakers_2019","3":"232"},{"1":"Nevada","2":"number_of_german_speakers_2017","3":"910"},{"1":"Nevada","2":"number_of_german_speakers_2018","3":"526"},{"1":"Nevada","2":"number_of_german_speakers_2019","3":"647"},{"1":"New Hampshire","2":"number_of_german_speakers_2017","3":"896"},{"1":"New Hampshire","2":"number_of_german_speakers_2018","3":"109"},{"1":"New Hampshire","2":"number_of_german_speakers_2019","3":"818"},{"1":"New Jersey","2":"number_of_german_speakers_2017","3":"380"},{"1":"New Jersey","2":"number_of_german_speakers_2018","3":"961"},{"1":"New Jersey","2":"number_of_german_speakers_2019","3":"168"},{"1":"New Mexico","2":"number_of_german_speakers_2017","3":"574"},{"1":"New Mexico","2":"number_of_german_speakers_2018","3":"771"},{"1":"New Mexico","2":"number_of_german_speakers_2019","3":"336"},{"1":"New York","2":"number_of_german_speakers_2017","3":"135"},{"1":"New York","2":"number_of_german_speakers_2018","3":"637"},{"1":"New York","2":"number_of_german_speakers_2019","3":"207"},{"1":"North Carolina","2":"number_of_german_speakers_2017","3":"609"},{"1":"North Carolina","2":"number_of_german_speakers_2018","3":"970"},{"1":"North Carolina","2":"number_of_german_speakers_2019","3":"508"},{"1":"North Dakota","2":"number_of_german_speakers_2017","3":"891"},{"1":"North Dakota","2":"number_of_german_speakers_2018","3":"307"},{"1":"North Dakota","2":"number_of_german_speakers_2019","3":"652"},{"1":"Ohio","2":"number_of_german_speakers_2017","3":"960"},{"1":"Ohio","2":"number_of_german_speakers_2018","3":"900"},{"1":"Ohio","2":"number_of_german_speakers_2019","3":"186"},{"1":"Oklahoma","2":"number_of_german_speakers_2017","3":"769"},{"1":"Oklahoma","2":"number_of_german_speakers_2018","3":"699"},{"1":"Oklahoma","2":"number_of_german_speakers_2019","3":"621"},{"1":"Oregon","2":"number_of_german_speakers_2017","3":"864"},{"1":"Oregon","2":"number_of_german_speakers_2018","3":"762"},{"1":"Oregon","2":"number_of_german_speakers_2019","3":"471"},{"1":"Maryland","2":"number_of_german_speakers_2017","3":"247"},{"1":"Maryland","2":"number_of_german_speakers_2018","3":"106"},{"1":"Maryland","2":"number_of_german_speakers_2019","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2017","3":"775"},{"1":"Massachusetts","2":"number_of_german_speakers_2018","3":"507"},{"1":"Massachusetts","2":"number_of_german_speakers_2019","3":"859"},{"1":"Michigan","2":"number_of_german_speakers_2017","3":"776"},{"1":"Michigan","2":"number_of_german_speakers_2018","3":"503"},{"1":"Michigan","2":"number_of_german_speakers_2019","3":"467"},{"1":"Minnesota","2":"number_of_german_speakers_2017","3":"752"},{"1":"Minnesota","2":"number_of_german_speakers_2018","3":"344"},{"1":"Minnesota","2":"number_of_german_speakers_2019","3":"251"},{"1":"Mississippi","2":"number_of_german_speakers_2017","3":"945"},{"1":"Mississippi","2":"number_of_german_speakers_2018","3":"246"},{"1":"Mississippi","2":"number_of_german_speakers_2019","3":"372"},{"1":"Missouri","2":"number_of_german_speakers_2017","3":"699"},{"1":"Missouri","2":"number_of_german_speakers_2018","3":"250"},{"1":"Missouri","2":"number_of_german_speakers_2019","3":"972"},{"1":"Pennsylvania","2":"number_of_german_speakers_2017","3":"930"},{"1":"Pennsylvania","2":"number_of_german_speakers_2018","3":"475"},{"1":"Pennsylvania","2":"number_of_german_speakers_2019","3":"956"},{"1":"Rhode Island","2":"number_of_german_speakers_2017","3":"529"},{"1":"Rhode Island","2":"number_of_german_speakers_2018","3":"852"},{"1":"Rhode Island","2":"number_of_german_speakers_2019","3":"900"},{"1":"South Carolina","2":"number_of_german_speakers_2017","3":"617"},{"1":"South Carolina","2":"number_of_german_speakers_2018","3":"815"},{"1":"South Carolina","2":"number_of_german_speakers_2019","3":"182"},{"1":"South Dakota","2":"number_of_german_speakers_2017","3":"262"},{"1":"South Dakota","2":"number_of_german_speakers_2018","3":"601"},{"1":"South Dakota","2":"number_of_german_speakers_2019","3":"584"},{"1":"Tennessee","2":"number_of_german_speakers_2017","3":"153"},{"1":"Tennessee","2":"number_of_german_speakers_2018","3":"568"},{"1":"Tennessee","2":"number_of_german_speakers_2019","3":"476"},{"1":"Texas","2":"number_of_german_speakers_2017","3":"732"},{"1":"Texas","2":"number_of_german_speakers_2018","3":"571"},{"1":"Texas","2":"number_of_german_speakers_2019","3":"292"},{"1":"Utah","2":"number_of_german_speakers_2017","3":"669"},{"1":"Utah","2":"number_of_german_speakers_2018","3":"486"},{"1":"Utah","2":"number_of_german_speakers_2019","3":"758"},{"1":"Vermont","2":"number_of_german_speakers_2017","3":"698"},{"1":"Vermont","2":"number_of_german_speakers_2018","3":"470"},{"1":"Vermont","2":"number_of_german_speakers_2019","3":"158"},{"1":"Virginia","2":"number_of_german_speakers_2017","3":"125"},{"1":"Virginia","2":"number_of_german_speakers_2018","3":"105"},{"1":"Virginia","2":"number_of_german_speakers_2019","3":"432"},{"1":"Washington","2":"number_of_german_speakers_2017","3":"495"},{"1":"Washington","2":"number_of_german_speakers_2018","3":"474"},{"1":"Washington","2":"number_of_german_speakers_2019","3":"615"},{"1":"West Virginia","2":"number_of_german_speakers_2017","3":"603"},{"1":"West Virginia","2":"number_of_german_speakers_2018","3":"600"},{"1":"West Virginia","2":"number_of_german_speakers_2019","3":"974"},{"1":"Wisconsin","2":"number_of_german_speakers_2017","3":"582"},{"1":"Wisconsin","2":"number_of_german_speakers_2018","3":"997"},{"1":"Wisconsin","2":"number_of_german_speakers_2019","3":"842"},{"1":"Wyoming","2":"number_of_german_speakers_2017","3":"451"},{"1":"Wyoming","2":"number_of_german_speakers_2018","3":"593"},{"1":"Wyoming","2":"number_of_german_speakers_2019","3":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+
+---
+
+## `case_when()`
+
+
+```r
+data_frame %&gt;% 
+  mutate(var = case_when(
+    variable == "some_value" ~ "new_value",
+    variable == "some_other_value" ~ "new_value_2",
+    variable == "some_third_value" ~ "new_value_3",
+    TRUE ~ "value_for_all_observations_that_dont_match_any_above_criteria"
+  ))
+```
+
+---
+
+
+
+## `case_when()`
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %&gt;% 
+  mutate(number = na_if(number, "-")) %&gt;% 
+  mutate(number = replace_na(number, 0)) %&gt;% 
+  mutate(number = as.numeric(number)) %&gt;% 
+* mutate(year = case_when(
+*   year == "2017-number-of-german-speakers" ~ "2017",
+*   year == "2018-number-of-german-speakers" ~ "2018",
+*   year == "2019-number-of-german-speakers" ~ "2019"
+* ))
+```
+
+---
+
+## `case_when()`
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"NA","3":"426"},{"1":"Alabama","2":"NA","3":"395"},{"1":"Alabama","2":"NA","3":"711"},{"1":"Alaska","2":"NA","3":"331"},{"1":"Alaska","2":"NA","3":"201"},{"1":"Alaska","2":"NA","3":"131"},{"1":"Arizona","2":"NA","3":"636"},{"1":"Arizona","2":"NA","3":"858"},{"1":"Arizona","2":"NA","3":"136"},{"1":"Arkansas","2":"NA","3":"0"},{"1":"Arkansas","2":"NA","3":"635"},{"1":"Arkansas","2":"NA","3":"557"},{"1":"California","2":"NA","3":"440"},{"1":"California","2":"NA","3":"318"},{"1":"California","2":"NA","3":"854"},{"1":"Colorado","2":"NA","3":"251"},{"1":"Colorado","2":"NA","3":"498"},{"1":"Colorado","2":"NA","3":"768"},{"1":"Connecticut","2":"NA","3":"187"},{"1":"Connecticut","2":"NA","3":"334"},{"1":"Connecticut","2":"NA","3":"586"},{"1":"Delaware","2":"NA","3":"0"},{"1":"Delaware","2":"NA","3":"998"},{"1":"Delaware","2":"NA","3":"453"},{"1":"District of Columbia","2":"NA","3":"799"},{"1":"District of Columbia","2":"NA","3":"745"},{"1":"District of Columbia","2":"NA","3":"180"},{"1":"Florida","2":"NA","3":"399"},{"1":"Florida","2":"NA","3":"924"},{"1":"Florida","2":"NA","3":"958"},{"1":"Georgia","2":"NA","3":"910"},{"1":"Georgia","2":"NA","3":"293"},{"1":"Georgia","2":"NA","3":"821"},{"1":"Hawaii","2":"NA","3":"0"},{"1":"Hawaii","2":"NA","3":"303"},{"1":"Hawaii","2":"NA","3":"931"},{"1":"Idaho","2":"NA","3":"301"},{"1":"Idaho","2":"NA","3":"349"},{"1":"Idaho","2":"NA","3":"0"},{"1":"Illinois","2":"NA","3":"156"},{"1":"Illinois","2":"NA","3":"573"},{"1":"Illinois","2":"NA","3":"827"},{"1":"Indiana","2":"NA","3":"469"},{"1":"Indiana","2":"NA","3":"188"},{"1":"Indiana","2":"NA","3":"728"},{"1":"Iowa","2":"NA","3":"816"},{"1":"Iowa","2":"NA","3":"330"},{"1":"Iowa","2":"NA","3":"657"},{"1":"Kansas","2":"NA","3":"328"},{"1":"Kansas","2":"NA","3":"546"},{"1":"Kansas","2":"NA","3":"501"},{"1":"Kentucky","2":"NA","3":"299"},{"1":"Kentucky","2":"NA","3":"976"},{"1":"Kentucky","2":"NA","3":"332"},{"1":"Louisiana","2":"NA","3":"266"},{"1":"Louisiana","2":"NA","3":"0"},{"1":"Louisiana","2":"NA","3":"490"},{"1":"Maine","2":"NA","3":"376"},{"1":"Maine","2":"NA","3":"127"},{"1":"Maine","2":"NA","3":"206"},{"1":"Montana","2":"NA","3":"598"},{"1":"Montana","2":"NA","3":"296"},{"1":"Montana","2":"NA","3":"527"},{"1":"Nebraska","2":"NA","3":"252"},{"1":"Nebraska","2":"NA","3":"726"},{"1":"Nebraska","2":"NA","3":"232"},{"1":"Nevada","2":"NA","3":"910"},{"1":"Nevada","2":"NA","3":"526"},{"1":"Nevada","2":"NA","3":"647"},{"1":"New Hampshire","2":"NA","3":"896"},{"1":"New Hampshire","2":"NA","3":"109"},{"1":"New Hampshire","2":"NA","3":"818"},{"1":"New Jersey","2":"NA","3":"380"},{"1":"New Jersey","2":"NA","3":"961"},{"1":"New Jersey","2":"NA","3":"168"},{"1":"New Mexico","2":"NA","3":"574"},{"1":"New Mexico","2":"NA","3":"771"},{"1":"New Mexico","2":"NA","3":"336"},{"1":"New York","2":"NA","3":"135"},{"1":"New York","2":"NA","3":"637"},{"1":"New York","2":"NA","3":"207"},{"1":"North Carolina","2":"NA","3":"609"},{"1":"North Carolina","2":"NA","3":"970"},{"1":"North Carolina","2":"NA","3":"508"},{"1":"North Dakota","2":"NA","3":"891"},{"1":"North Dakota","2":"NA","3":"307"},{"1":"North Dakota","2":"NA","3":"652"},{"1":"Ohio","2":"NA","3":"960"},{"1":"Ohio","2":"NA","3":"900"},{"1":"Ohio","2":"NA","3":"186"},{"1":"Oklahoma","2":"NA","3":"769"},{"1":"Oklahoma","2":"NA","3":"699"},{"1":"Oklahoma","2":"NA","3":"621"},{"1":"Oregon","2":"NA","3":"864"},{"1":"Oregon","2":"NA","3":"762"},{"1":"Oregon","2":"NA","3":"471"},{"1":"Maryland","2":"NA","3":"247"},{"1":"Maryland","2":"NA","3":"106"},{"1":"Maryland","2":"NA","3":"507"},{"1":"Massachusetts","2":"NA","3":"775"},{"1":"Massachusetts","2":"NA","3":"507"},{"1":"Massachusetts","2":"NA","3":"859"},{"1":"Michigan","2":"NA","3":"776"},{"1":"Michigan","2":"NA","3":"503"},{"1":"Michigan","2":"NA","3":"467"},{"1":"Minnesota","2":"NA","3":"752"},{"1":"Minnesota","2":"NA","3":"344"},{"1":"Minnesota","2":"NA","3":"251"},{"1":"Mississippi","2":"NA","3":"945"},{"1":"Mississippi","2":"NA","3":"246"},{"1":"Mississippi","2":"NA","3":"372"},{"1":"Missouri","2":"NA","3":"699"},{"1":"Missouri","2":"NA","3":"250"},{"1":"Missouri","2":"NA","3":"972"},{"1":"Pennsylvania","2":"NA","3":"930"},{"1":"Pennsylvania","2":"NA","3":"475"},{"1":"Pennsylvania","2":"NA","3":"956"},{"1":"Rhode Island","2":"NA","3":"529"},{"1":"Rhode Island","2":"NA","3":"852"},{"1":"Rhode Island","2":"NA","3":"900"},{"1":"South Carolina","2":"NA","3":"617"},{"1":"South Carolina","2":"NA","3":"815"},{"1":"South Carolina","2":"NA","3":"182"},{"1":"South Dakota","2":"NA","3":"262"},{"1":"South Dakota","2":"NA","3":"601"},{"1":"South Dakota","2":"NA","3":"584"},{"1":"Tennessee","2":"NA","3":"153"},{"1":"Tennessee","2":"NA","3":"568"},{"1":"Tennessee","2":"NA","3":"476"},{"1":"Texas","2":"NA","3":"732"},{"1":"Texas","2":"NA","3":"571"},{"1":"Texas","2":"NA","3":"292"},{"1":"Utah","2":"NA","3":"669"},{"1":"Utah","2":"NA","3":"486"},{"1":"Utah","2":"NA","3":"758"},{"1":"Vermont","2":"NA","3":"698"},{"1":"Vermont","2":"NA","3":"470"},{"1":"Vermont","2":"NA","3":"158"},{"1":"Virginia","2":"NA","3":"125"},{"1":"Virginia","2":"NA","3":"105"},{"1":"Virginia","2":"NA","3":"432"},{"1":"Washington","2":"NA","3":"495"},{"1":"Washington","2":"NA","3":"474"},{"1":"Washington","2":"NA","3":"615"},{"1":"West Virginia","2":"NA","3":"603"},{"1":"West Virginia","2":"NA","3":"600"},{"1":"West Virginia","2":"NA","3":"974"},{"1":"Wisconsin","2":"NA","3":"582"},{"1":"Wisconsin","2":"NA","3":"997"},{"1":"Wisconsin","2":"NA","3":"842"},{"1":"Wyoming","2":"NA","3":"451"},{"1":"Wyoming","2":"NA","3":"593"},{"1":"Wyoming","2":"NA","3":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## More complicated `case_when()`
+
+
+```r
+german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %&gt;% 
+  mutate(number = na_if(number, "-")) %&gt;% 
+  mutate(number = replace_na(number, 0)) %&gt;% 
+  mutate(number = as.numeric(number)) %&gt;% 
+* mutate(number_categorical = case_when(
+*   number &lt; 500 ~ "Less than 500",
+*   between(number, 500, 1000) ~ "Between 500 and 1000",
+*   number &gt; 1000 ~ "Greater than 1000"
+* ))
+```
+
+---
+
+## More complicated `case_when()`
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["number_categorical"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Alabama","2":"number_of_german_speakers_2017","3":"426","4":"Less than 500"},{"1":"Alabama","2":"number_of_german_speakers_2018","3":"395","4":"Less than 500"},{"1":"Alabama","2":"number_of_german_speakers_2019","3":"711","4":"Between 500 and 1000"},{"1":"Alaska","2":"number_of_german_speakers_2017","3":"331","4":"Less than 500"},{"1":"Alaska","2":"number_of_german_speakers_2018","3":"201","4":"Less than 500"},{"1":"Alaska","2":"number_of_german_speakers_2019","3":"131","4":"Less than 500"},{"1":"Arizona","2":"number_of_german_speakers_2017","3":"636","4":"Between 500 and 1000"},{"1":"Arizona","2":"number_of_german_speakers_2018","3":"858","4":"Between 500 and 1000"},{"1":"Arizona","2":"number_of_german_speakers_2019","3":"136","4":"Less than 500"},{"1":"Arkansas","2":"number_of_german_speakers_2017","3":"0","4":"Less than 500"},{"1":"Arkansas","2":"number_of_german_speakers_2018","3":"635","4":"Between 500 and 1000"},{"1":"Arkansas","2":"number_of_german_speakers_2019","3":"557","4":"Between 500 and 1000"},{"1":"California","2":"number_of_german_speakers_2017","3":"440","4":"Less than 500"},{"1":"California","2":"number_of_german_speakers_2018","3":"318","4":"Less than 500"},{"1":"California","2":"number_of_german_speakers_2019","3":"854","4":"Between 500 and 1000"},{"1":"Colorado","2":"number_of_german_speakers_2017","3":"251","4":"Less than 500"},{"1":"Colorado","2":"number_of_german_speakers_2018","3":"498","4":"Less than 500"},{"1":"Colorado","2":"number_of_german_speakers_2019","3":"768","4":"Between 500 and 1000"},{"1":"Connecticut","2":"number_of_german_speakers_2017","3":"187","4":"Less than 500"},{"1":"Connecticut","2":"number_of_german_speakers_2018","3":"334","4":"Less than 500"},{"1":"Connecticut","2":"number_of_german_speakers_2019","3":"586","4":"Between 500 and 1000"},{"1":"Delaware","2":"number_of_german_speakers_2017","3":"0","4":"Less than 500"},{"1":"Delaware","2":"number_of_german_speakers_2018","3":"998","4":"Between 500 and 1000"},{"1":"Delaware","2":"number_of_german_speakers_2019","3":"453","4":"Less than 500"},{"1":"District of Columbia","2":"number_of_german_speakers_2017","3":"799","4":"Between 500 and 1000"},{"1":"District of Columbia","2":"number_of_german_speakers_2018","3":"745","4":"Between 500 and 1000"},{"1":"District of Columbia","2":"number_of_german_speakers_2019","3":"180","4":"Less than 500"},{"1":"Florida","2":"number_of_german_speakers_2017","3":"399","4":"Less than 500"},{"1":"Florida","2":"number_of_german_speakers_2018","3":"924","4":"Between 500 and 1000"},{"1":"Florida","2":"number_of_german_speakers_2019","3":"958","4":"Between 500 and 1000"},{"1":"Georgia","2":"number_of_german_speakers_2017","3":"910","4":"Between 500 and 1000"},{"1":"Georgia","2":"number_of_german_speakers_2018","3":"293","4":"Less than 500"},{"1":"Georgia","2":"number_of_german_speakers_2019","3":"821","4":"Between 500 and 1000"},{"1":"Hawaii","2":"number_of_german_speakers_2017","3":"0","4":"Less than 500"},{"1":"Hawaii","2":"number_of_german_speakers_2018","3":"303","4":"Less than 500"},{"1":"Hawaii","2":"number_of_german_speakers_2019","3":"931","4":"Between 500 and 1000"},{"1":"Idaho","2":"number_of_german_speakers_2017","3":"301","4":"Less than 500"},{"1":"Idaho","2":"number_of_german_speakers_2018","3":"349","4":"Less than 500"},{"1":"Idaho","2":"number_of_german_speakers_2019","3":"0","4":"Less than 500"},{"1":"Illinois","2":"number_of_german_speakers_2017","3":"156","4":"Less than 500"},{"1":"Illinois","2":"number_of_german_speakers_2018","3":"573","4":"Between 500 and 1000"},{"1":"Illinois","2":"number_of_german_speakers_2019","3":"827","4":"Between 500 and 1000"},{"1":"Indiana","2":"number_of_german_speakers_2017","3":"469","4":"Less than 500"},{"1":"Indiana","2":"number_of_german_speakers_2018","3":"188","4":"Less than 500"},{"1":"Indiana","2":"number_of_german_speakers_2019","3":"728","4":"Between 500 and 1000"},{"1":"Iowa","2":"number_of_german_speakers_2017","3":"816","4":"Between 500 and 1000"},{"1":"Iowa","2":"number_of_german_speakers_2018","3":"330","4":"Less than 500"},{"1":"Iowa","2":"number_of_german_speakers_2019","3":"657","4":"Between 500 and 1000"},{"1":"Kansas","2":"number_of_german_speakers_2017","3":"328","4":"Less than 500"},{"1":"Kansas","2":"number_of_german_speakers_2018","3":"546","4":"Between 500 and 1000"},{"1":"Kansas","2":"number_of_german_speakers_2019","3":"501","4":"Between 500 and 1000"},{"1":"Kentucky","2":"number_of_german_speakers_2017","3":"299","4":"Less than 500"},{"1":"Kentucky","2":"number_of_german_speakers_2018","3":"976","4":"Between 500 and 1000"},{"1":"Kentucky","2":"number_of_german_speakers_2019","3":"332","4":"Less than 500"},{"1":"Louisiana","2":"number_of_german_speakers_2017","3":"266","4":"Less than 500"},{"1":"Louisiana","2":"number_of_german_speakers_2018","3":"0","4":"Less than 500"},{"1":"Louisiana","2":"number_of_german_speakers_2019","3":"490","4":"Less than 500"},{"1":"Maine","2":"number_of_german_speakers_2017","3":"376","4":"Less than 500"},{"1":"Maine","2":"number_of_german_speakers_2018","3":"127","4":"Less than 500"},{"1":"Maine","2":"number_of_german_speakers_2019","3":"206","4":"Less than 500"},{"1":"Montana","2":"number_of_german_speakers_2017","3":"598","4":"Between 500 and 1000"},{"1":"Montana","2":"number_of_german_speakers_2018","3":"296","4":"Less than 500"},{"1":"Montana","2":"number_of_german_speakers_2019","3":"527","4":"Between 500 and 1000"},{"1":"Nebraska","2":"number_of_german_speakers_2017","3":"252","4":"Less than 500"},{"1":"Nebraska","2":"number_of_german_speakers_2018","3":"726","4":"Between 500 and 1000"},{"1":"Nebraska","2":"number_of_german_speakers_2019","3":"232","4":"Less than 500"},{"1":"Nevada","2":"number_of_german_speakers_2017","3":"910","4":"Between 500 and 1000"},{"1":"Nevada","2":"number_of_german_speakers_2018","3":"526","4":"Between 500 and 1000"},{"1":"Nevada","2":"number_of_german_speakers_2019","3":"647","4":"Between 500 and 1000"},{"1":"New Hampshire","2":"number_of_german_speakers_2017","3":"896","4":"Between 500 and 1000"},{"1":"New Hampshire","2":"number_of_german_speakers_2018","3":"109","4":"Less than 500"},{"1":"New Hampshire","2":"number_of_german_speakers_2019","3":"818","4":"Between 500 and 1000"},{"1":"New Jersey","2":"number_of_german_speakers_2017","3":"380","4":"Less than 500"},{"1":"New Jersey","2":"number_of_german_speakers_2018","3":"961","4":"Between 500 and 1000"},{"1":"New Jersey","2":"number_of_german_speakers_2019","3":"168","4":"Less than 500"},{"1":"New Mexico","2":"number_of_german_speakers_2017","3":"574","4":"Between 500 and 1000"},{"1":"New Mexico","2":"number_of_german_speakers_2018","3":"771","4":"Between 500 and 1000"},{"1":"New Mexico","2":"number_of_german_speakers_2019","3":"336","4":"Less than 500"},{"1":"New York","2":"number_of_german_speakers_2017","3":"135","4":"Less than 500"},{"1":"New York","2":"number_of_german_speakers_2018","3":"637","4":"Between 500 and 1000"},{"1":"New York","2":"number_of_german_speakers_2019","3":"207","4":"Less than 500"},{"1":"North Carolina","2":"number_of_german_speakers_2017","3":"609","4":"Between 500 and 1000"},{"1":"North Carolina","2":"number_of_german_speakers_2018","3":"970","4":"Between 500 and 1000"},{"1":"North Carolina","2":"number_of_german_speakers_2019","3":"508","4":"Between 500 and 1000"},{"1":"North Dakota","2":"number_of_german_speakers_2017","3":"891","4":"Between 500 and 1000"},{"1":"North Dakota","2":"number_of_german_speakers_2018","3":"307","4":"Less than 500"},{"1":"North Dakota","2":"number_of_german_speakers_2019","3":"652","4":"Between 500 and 1000"},{"1":"Ohio","2":"number_of_german_speakers_2017","3":"960","4":"Between 500 and 1000"},{"1":"Ohio","2":"number_of_german_speakers_2018","3":"900","4":"Between 500 and 1000"},{"1":"Ohio","2":"number_of_german_speakers_2019","3":"186","4":"Less than 500"},{"1":"Oklahoma","2":"number_of_german_speakers_2017","3":"769","4":"Between 500 and 1000"},{"1":"Oklahoma","2":"number_of_german_speakers_2018","3":"699","4":"Between 500 and 1000"},{"1":"Oklahoma","2":"number_of_german_speakers_2019","3":"621","4":"Between 500 and 1000"},{"1":"Oregon","2":"number_of_german_speakers_2017","3":"864","4":"Between 500 and 1000"},{"1":"Oregon","2":"number_of_german_speakers_2018","3":"762","4":"Between 500 and 1000"},{"1":"Oregon","2":"number_of_german_speakers_2019","3":"471","4":"Less than 500"},{"1":"Maryland","2":"number_of_german_speakers_2017","3":"247","4":"Less than 500"},{"1":"Maryland","2":"number_of_german_speakers_2018","3":"106","4":"Less than 500"},{"1":"Maryland","2":"number_of_german_speakers_2019","3":"507","4":"Between 500 and 1000"},{"1":"Massachusetts","2":"number_of_german_speakers_2017","3":"775","4":"Between 500 and 1000"},{"1":"Massachusetts","2":"number_of_german_speakers_2018","3":"507","4":"Between 500 and 1000"},{"1":"Massachusetts","2":"number_of_german_speakers_2019","3":"859","4":"Between 500 and 1000"},{"1":"Michigan","2":"number_of_german_speakers_2017","3":"776","4":"Between 500 and 1000"},{"1":"Michigan","2":"number_of_german_speakers_2018","3":"503","4":"Between 500 and 1000"},{"1":"Michigan","2":"number_of_german_speakers_2019","3":"467","4":"Less than 500"},{"1":"Minnesota","2":"number_of_german_speakers_2017","3":"752","4":"Between 500 and 1000"},{"1":"Minnesota","2":"number_of_german_speakers_2018","3":"344","4":"Less than 500"},{"1":"Minnesota","2":"number_of_german_speakers_2019","3":"251","4":"Less than 500"},{"1":"Mississippi","2":"number_of_german_speakers_2017","3":"945","4":"Between 500 and 1000"},{"1":"Mississippi","2":"number_of_german_speakers_2018","3":"246","4":"Less than 500"},{"1":"Mississippi","2":"number_of_german_speakers_2019","3":"372","4":"Less than 500"},{"1":"Missouri","2":"number_of_german_speakers_2017","3":"699","4":"Between 500 and 1000"},{"1":"Missouri","2":"number_of_german_speakers_2018","3":"250","4":"Less than 500"},{"1":"Missouri","2":"number_of_german_speakers_2019","3":"972","4":"Between 500 and 1000"},{"1":"Pennsylvania","2":"number_of_german_speakers_2017","3":"930","4":"Between 500 and 1000"},{"1":"Pennsylvania","2":"number_of_german_speakers_2018","3":"475","4":"Less than 500"},{"1":"Pennsylvania","2":"number_of_german_speakers_2019","3":"956","4":"Between 500 and 1000"},{"1":"Rhode Island","2":"number_of_german_speakers_2017","3":"529","4":"Between 500 and 1000"},{"1":"Rhode Island","2":"number_of_german_speakers_2018","3":"852","4":"Between 500 and 1000"},{"1":"Rhode Island","2":"number_of_german_speakers_2019","3":"900","4":"Between 500 and 1000"},{"1":"South Carolina","2":"number_of_german_speakers_2017","3":"617","4":"Between 500 and 1000"},{"1":"South Carolina","2":"number_of_german_speakers_2018","3":"815","4":"Between 500 and 1000"},{"1":"South Carolina","2":"number_of_german_speakers_2019","3":"182","4":"Less than 500"},{"1":"South Dakota","2":"number_of_german_speakers_2017","3":"262","4":"Less than 500"},{"1":"South Dakota","2":"number_of_german_speakers_2018","3":"601","4":"Between 500 and 1000"},{"1":"South Dakota","2":"number_of_german_speakers_2019","3":"584","4":"Between 500 and 1000"},{"1":"Tennessee","2":"number_of_german_speakers_2017","3":"153","4":"Less than 500"},{"1":"Tennessee","2":"number_of_german_speakers_2018","3":"568","4":"Between 500 and 1000"},{"1":"Tennessee","2":"number_of_german_speakers_2019","3":"476","4":"Less than 500"},{"1":"Texas","2":"number_of_german_speakers_2017","3":"732","4":"Between 500 and 1000"},{"1":"Texas","2":"number_of_german_speakers_2018","3":"571","4":"Between 500 and 1000"},{"1":"Texas","2":"number_of_german_speakers_2019","3":"292","4":"Less than 500"},{"1":"Utah","2":"number_of_german_speakers_2017","3":"669","4":"Between 500 and 1000"},{"1":"Utah","2":"number_of_german_speakers_2018","3":"486","4":"Less than 500"},{"1":"Utah","2":"number_of_german_speakers_2019","3":"758","4":"Between 500 and 1000"},{"1":"Vermont","2":"number_of_german_speakers_2017","3":"698","4":"Between 500 and 1000"},{"1":"Vermont","2":"number_of_german_speakers_2018","3":"470","4":"Less than 500"},{"1":"Vermont","2":"number_of_german_speakers_2019","3":"158","4":"Less than 500"},{"1":"Virginia","2":"number_of_german_speakers_2017","3":"125","4":"Less than 500"},{"1":"Virginia","2":"number_of_german_speakers_2018","3":"105","4":"Less than 500"},{"1":"Virginia","2":"number_of_german_speakers_2019","3":"432","4":"Less than 500"},{"1":"Washington","2":"number_of_german_speakers_2017","3":"495","4":"Less than 500"},{"1":"Washington","2":"number_of_german_speakers_2018","3":"474","4":"Less than 500"},{"1":"Washington","2":"number_of_german_speakers_2019","3":"615","4":"Between 500 and 1000"},{"1":"West Virginia","2":"number_of_german_speakers_2017","3":"603","4":"Between 500 and 1000"},{"1":"West Virginia","2":"number_of_german_speakers_2018","3":"600","4":"Between 500 and 1000"},{"1":"West Virginia","2":"number_of_german_speakers_2019","3":"974","4":"Between 500 and 1000"},{"1":"Wisconsin","2":"number_of_german_speakers_2017","3":"582","4":"Between 500 and 1000"},{"1":"Wisconsin","2":"number_of_german_speakers_2018","3":"997","4":"Between 500 and 1000"},{"1":"Wisconsin","2":"number_of_german_speakers_2019","3":"842","4":"Between 500 and 1000"},{"1":"Wyoming","2":"number_of_german_speakers_2017","3":"451","4":"Less than 500"},{"1":"Wyoming","2":"number_of_german_speakers_2018","3":"593","4":"Between 500 and 1000"},{"1":"Wyoming","2":"number_of_german_speakers_2019","3":"431","4":"Less than 500"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+
+---
+
+class: my-turn
+
+## My Turn
+
+Convert all instances of the `proficiency_level` variable to more meaningful observations using: 
+
+1. `recode()`
+
+2. `if_else()`
+
+3. `case_when()`
+
+---
+
+class: inverse
+
+## Your Turn
+
+Convert all instances of the `race_ethnicity` variable to more meaningful observations (e.g. turn "x2018_19_asian" into "Asian") using any of the follwoing:
+
+1. `recode()`
+
+2. `if_else()`
+
+3. `case_when()`
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/highway.jpg")
+
+# Data Merging
+
+---
+
+## Data Merging
+
+All of the animations and explanations used here come from the [tidyexplain project by Garrick Aden-Buie](https://www.garrickadenbuie.com/project/tidyexplain/).
+
+
+---
+
+## Data Merging
+
+
+```r
+german_speakers_2019 &lt;- german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %&gt;% 
+  mutate(number = na_if(number, "-")) %&gt;% 
+  mutate(number = replace_na(number, 0)) %&gt;% 
+  mutate(number = as.numeric(number)) %&gt;% 
+  mutate(year = parse_number(year)) %&gt;% 
+  filter(year == 2019) %&gt;% 
+  select(-year)
+```
+
+
+---
+
+## Data Merging
+
+
+```r
+german_speakers_2019 &lt;- german_speakers %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %&gt;% 
+  mutate(number = na_if(number, "-")) %&gt;% 
+  mutate(number = replace_na(number, 0)) %&gt;% 
+  mutate(number = as.numeric(number)) %&gt;% 
+* mutate(year = parse_number(year)) %&gt;%
+  filter(year == 2019) %&gt;% 
+  select(-year)
+```
+
+---
+
+class: center
+
+![](images/parse_number.png)
+
+Image courtesy of [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+
+
+
+
+---
+
+## Data Merging
+
+
+```r
+german_speakers_2019
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"711"},{"1":"Alaska","2":"131"},{"1":"Arizona","2":"136"},{"1":"Arkansas","2":"557"},{"1":"California","2":"854"},{"1":"Colorado","2":"768"},{"1":"Connecticut","2":"586"},{"1":"Delaware","2":"453"},{"1":"District of Columbia","2":"180"},{"1":"Florida","2":"958"},{"1":"Georgia","2":"821"},{"1":"Hawaii","2":"931"},{"1":"Idaho","2":"0"},{"1":"Illinois","2":"827"},{"1":"Indiana","2":"728"},{"1":"Iowa","2":"657"},{"1":"Kansas","2":"501"},{"1":"Kentucky","2":"332"},{"1":"Louisiana","2":"490"},{"1":"Maine","2":"206"},{"1":"Montana","2":"527"},{"1":"Nebraska","2":"232"},{"1":"Nevada","2":"647"},{"1":"New Hampshire","2":"818"},{"1":"New Jersey","2":"168"},{"1":"New Mexico","2":"336"},{"1":"New York","2":"207"},{"1":"North Carolina","2":"508"},{"1":"North Dakota","2":"652"},{"1":"Ohio","2":"186"},{"1":"Oklahoma","2":"621"},{"1":"Oregon","2":"471"},{"1":"Maryland","2":"507"},{"1":"Massachusetts","2":"859"},{"1":"Michigan","2":"467"},{"1":"Minnesota","2":"251"},{"1":"Mississippi","2":"372"},{"1":"Missouri","2":"972"},{"1":"Pennsylvania","2":"956"},{"1":"Rhode Island","2":"900"},{"1":"South Carolina","2":"182"},{"1":"South Dakota","2":"584"},{"1":"Tennessee","2":"476"},{"1":"Texas","2":"292"},{"1":"Utah","2":"758"},{"1":"Vermont","2":"158"},{"1":"Virginia","2":"432"},{"1":"Washington","2":"615"},{"1":"West Virginia","2":"974"},{"1":"Wisconsin","2":"842"},{"1":"Wyoming","2":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+
+
+
+
+---
+
+## Data Merging
+
+
+```r
+french_speakers_2019 &lt;- read_excel(path = "data-raw/German and French Speakers.xlsx",
+                              sheet = "French speakers 2019")
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["french_speakers"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"1678"},{"1":"Alaska","2":"1441"},{"1":"Arizona","2":"1002"},{"1":"Arkansas","2":"1558"},{"1":"California","2":"1935"},{"1":"Colorado","2":"1714"},{"1":"Connecticut","2":"1536"},{"1":"Delaware","2":"1824"},{"1":"District of Columbia","2":"1601"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## Joins
+
+
+```r
+type_of_join &lt;- (x, y,
+                 by = "id_variable")
+```
+
+--
+
+What if we don't have a variable with the same name in both data frames?
+
+--
+
+
+```r
+type_of_join &lt;- (x, y,
+                 by = c("id_variable_x" = "id_variable_y")
+```
+
+--
+
+What if we need to join on multiple variables with different names in both data frames?
+
+--
+
+
+```r
+type_of_join &lt;- (x, y,
+                 by = c("id_variable_a" = "id_variable_b",
+                        "id_variable_c" = "id_variable_d")
+```
+
+
+---
+
+## Mutating joins
+
+&gt; A mutating join allows you to combine variables from two tables. It first matches observations by their keys, then copies across variables from one table to the other. - [R for Data Science](https://r4ds.had.co.nz/relational-data.html#mutating-joins)
+
+---
+
+### `left_join()`
+
+All rows from x, and all columns from x and y. Rows in x with no match in y will have NA values in the new columns.
+
+.center[
+![](images/left-join.gif)
+]
+
+
+
+---
+
+### `left_join()`
+
+
+```r
+left_join(german_speakers_2019,
+          french_speakers_2019,
+          by = "state")
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["french_speakers"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"711","3":"1678"},{"1":"Alaska","2":"131","3":"1441"},{"1":"Arizona","2":"136","3":"1002"},{"1":"Arkansas","2":"557","3":"1558"},{"1":"California","2":"854","3":"1935"},{"1":"Colorado","2":"768","3":"1714"},{"1":"Connecticut","2":"586","3":"1536"},{"1":"Delaware","2":"453","3":"1824"},{"1":"District of Columbia","2":"180","3":"1601"},{"1":"Florida","2":"958","3":"NA"},{"1":"Georgia","2":"821","3":"NA"},{"1":"Hawaii","2":"931","3":"NA"},{"1":"Idaho","2":"0","3":"NA"},{"1":"Illinois","2":"827","3":"NA"},{"1":"Indiana","2":"728","3":"NA"},{"1":"Iowa","2":"657","3":"NA"},{"1":"Kansas","2":"501","3":"NA"},{"1":"Kentucky","2":"332","3":"NA"},{"1":"Louisiana","2":"490","3":"NA"},{"1":"Maine","2":"206","3":"NA"},{"1":"Montana","2":"527","3":"NA"},{"1":"Nebraska","2":"232","3":"NA"},{"1":"Nevada","2":"647","3":"NA"},{"1":"New Hampshire","2":"818","3":"NA"},{"1":"New Jersey","2":"168","3":"NA"},{"1":"New Mexico","2":"336","3":"NA"},{"1":"New York","2":"207","3":"NA"},{"1":"North Carolina","2":"508","3":"NA"},{"1":"North Dakota","2":"652","3":"NA"},{"1":"Ohio","2":"186","3":"NA"},{"1":"Oklahoma","2":"621","3":"NA"},{"1":"Oregon","2":"471","3":"NA"},{"1":"Maryland","2":"507","3":"NA"},{"1":"Massachusetts","2":"859","3":"NA"},{"1":"Michigan","2":"467","3":"NA"},{"1":"Minnesota","2":"251","3":"NA"},{"1":"Mississippi","2":"372","3":"NA"},{"1":"Missouri","2":"972","3":"NA"},{"1":"Pennsylvania","2":"956","3":"NA"},{"1":"Rhode Island","2":"900","3":"NA"},{"1":"South Carolina","2":"182","3":"NA"},{"1":"South Dakota","2":"584","3":"NA"},{"1":"Tennessee","2":"476","3":"NA"},{"1":"Texas","2":"292","3":"NA"},{"1":"Utah","2":"758","3":"NA"},{"1":"Vermont","2":"158","3":"NA"},{"1":"Virginia","2":"432","3":"NA"},{"1":"Washington","2":"615","3":"NA"},{"1":"West Virginia","2":"974","3":"NA"},{"1":"Wisconsin","2":"842","3":"NA"},{"1":"Wyoming","2":"431","3":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+### `right_join()`
+
+All rows from y, and all columns from x and y. Rows in y with no match in x will have NA values in the new columns.
+.center[
+![](images/right-join.gif)
+]
+
+
+
+---
+
+### `right_join()`
+
+
+```r
+right_join(german_speakers_2019,
+           french_speakers_2019,
+           by = "state")
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["french_speakers"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"711","3":"1678"},{"1":"Alaska","2":"131","3":"1441"},{"1":"Arizona","2":"136","3":"1002"},{"1":"Arkansas","2":"557","3":"1558"},{"1":"California","2":"854","3":"1935"},{"1":"Colorado","2":"768","3":"1714"},{"1":"Connecticut","2":"586","3":"1536"},{"1":"Delaware","2":"453","3":"1824"},{"1":"District of Columbia","2":"180","3":"1601"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+### `full_join()`
+
+All rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing.
+.center[
+![](images/full-join.gif)
+]
+
+---
+
+### `full_join()`
+
+
+```r
+full_join(german_speakers_2019,
+          french_speakers_2019,
+          by = "state")
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["french_speakers"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"711","3":"1678"},{"1":"Alaska","2":"131","3":"1441"},{"1":"Arizona","2":"136","3":"1002"},{"1":"Arkansas","2":"557","3":"1558"},{"1":"California","2":"854","3":"1935"},{"1":"Colorado","2":"768","3":"1714"},{"1":"Connecticut","2":"586","3":"1536"},{"1":"Delaware","2":"453","3":"1824"},{"1":"District of Columbia","2":"180","3":"1601"},{"1":"Florida","2":"958","3":"NA"},{"1":"Georgia","2":"821","3":"NA"},{"1":"Hawaii","2":"931","3":"NA"},{"1":"Idaho","2":"0","3":"NA"},{"1":"Illinois","2":"827","3":"NA"},{"1":"Indiana","2":"728","3":"NA"},{"1":"Iowa","2":"657","3":"NA"},{"1":"Kansas","2":"501","3":"NA"},{"1":"Kentucky","2":"332","3":"NA"},{"1":"Louisiana","2":"490","3":"NA"},{"1":"Maine","2":"206","3":"NA"},{"1":"Montana","2":"527","3":"NA"},{"1":"Nebraska","2":"232","3":"NA"},{"1":"Nevada","2":"647","3":"NA"},{"1":"New Hampshire","2":"818","3":"NA"},{"1":"New Jersey","2":"168","3":"NA"},{"1":"New Mexico","2":"336","3":"NA"},{"1":"New York","2":"207","3":"NA"},{"1":"North Carolina","2":"508","3":"NA"},{"1":"North Dakota","2":"652","3":"NA"},{"1":"Ohio","2":"186","3":"NA"},{"1":"Oklahoma","2":"621","3":"NA"},{"1":"Oregon","2":"471","3":"NA"},{"1":"Maryland","2":"507","3":"NA"},{"1":"Massachusetts","2":"859","3":"NA"},{"1":"Michigan","2":"467","3":"NA"},{"1":"Minnesota","2":"251","3":"NA"},{"1":"Mississippi","2":"372","3":"NA"},{"1":"Missouri","2":"972","3":"NA"},{"1":"Pennsylvania","2":"956","3":"NA"},{"1":"Rhode Island","2":"900","3":"NA"},{"1":"South Carolina","2":"182","3":"NA"},{"1":"South Dakota","2":"584","3":"NA"},{"1":"Tennessee","2":"476","3":"NA"},{"1":"Texas","2":"292","3":"NA"},{"1":"Utah","2":"758","3":"NA"},{"1":"Vermont","2":"158","3":"NA"},{"1":"Virginia","2":"432","3":"NA"},{"1":"Washington","2":"615","3":"NA"},{"1":"West Virginia","2":"974","3":"NA"},{"1":"Wisconsin","2":"842","3":"NA"},{"1":"Wyoming","2":"431","3":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+
+---
+
+### `inner_join()`
+
+All rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing.
+.center[
+![](images/inner-join.gif)
+]
+
+---
+
+### `inner_join()`
+
+
+```r
+inner_join(german_speakers_2019,
+           french_speakers_2019,
+           by = "state")
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["french_speakers"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"711","3":"1678"},{"1":"Alaska","2":"131","3":"1441"},{"1":"Arizona","2":"136","3":"1002"},{"1":"Arkansas","2":"557","3":"1558"},{"1":"California","2":"854","3":"1935"},{"1":"Colorado","2":"768","3":"1714"},{"1":"Connecticut","2":"586","3":"1536"},{"1":"Delaware","2":"453","3":"1824"},{"1":"District of Columbia","2":"180","3":"1601"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## Filtering joins
+
+&gt; Filtering joins match observations in the same way as mutating joins, but affect the observations, not the variables - [R for Data Science](https://r4ds.had.co.nz/relational-data.html#filtering-joins)
+
+---
+
+### `semi_join()`
+
+All rows from x where there are matching values in y, keeping just columns from x.
+.center[
+![](images/semi-join.gif)
+]
+
+---
+
+### `semi_join()`
+
+
+```r
+semi_join(german_speakers_2019,
+          french_speakers_2019,
+          by = "state")
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"711"},{"1":"Alaska","2":"131"},{"1":"Arizona","2":"136"},{"1":"Arkansas","2":"557"},{"1":"California","2":"854"},{"1":"Colorado","2":"768"},{"1":"Connecticut","2":"586"},{"1":"Delaware","2":"453"},{"1":"District of Columbia","2":"180"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+### `anti_join()`
+
+All rows from x where there are not matching values in y, keeping just columns from x.
+.center[
+![](images/anti-join.gif)
+]
+
+---
+
+### `anti_join()`
+
+
+```r
+anti_join(german_speakers_2019,
+          french_speakers_2019,
+          by = "state")
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Florida","2":"958"},{"1":"Georgia","2":"821"},{"1":"Hawaii","2":"931"},{"1":"Idaho","2":"0"},{"1":"Illinois","2":"827"},{"1":"Indiana","2":"728"},{"1":"Iowa","2":"657"},{"1":"Kansas","2":"501"},{"1":"Kentucky","2":"332"},{"1":"Louisiana","2":"490"},{"1":"Maine","2":"206"},{"1":"Montana","2":"527"},{"1":"Nebraska","2":"232"},{"1":"Nevada","2":"647"},{"1":"New Hampshire","2":"818"},{"1":"New Jersey","2":"168"},{"1":"New Mexico","2":"336"},{"1":"New York","2":"207"},{"1":"North Carolina","2":"508"},{"1":"North Dakota","2":"652"},{"1":"Ohio","2":"186"},{"1":"Oklahoma","2":"621"},{"1":"Oregon","2":"471"},{"1":"Maryland","2":"507"},{"1":"Massachusetts","2":"859"},{"1":"Michigan","2":"467"},{"1":"Minnesota","2":"251"},{"1":"Mississippi","2":"372"},{"1":"Missouri","2":"972"},{"1":"Pennsylvania","2":"956"},{"1":"Rhode Island","2":"900"},{"1":"South Carolina","2":"182"},{"1":"South Dakota","2":"584"},{"1":"Tennessee","2":"476"},{"1":"Texas","2":"292"},{"1":"Utah","2":"758"},{"1":"Vermont","2":"158"},{"1":"Virginia","2":"432"},{"1":"Washington","2":"615"},{"1":"West Virginia","2":"974"},{"1":"Wisconsin","2":"842"},{"1":"Wyoming","2":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+class: my-turn
+
+## My Turn
+
+1. Create a new data frame called `chronic_absenteeism` by starting with the attendance data frame and using the data wrangling skills we just learned
+
+1. Join it with the `math_percent_not_proficient` data frame
+
+
+
+---
+
+class: inverse
+
+## Your Turn
+
+Before doing our join, we'll need to create a new data frame called `reading_scores_by_race` by importing the reading scores data that you downloaded previously. Use the `read_excel()` function to do this.
+
+
+---
+
+class: inverse
+
+## Your Turn (continued)
+
+After you've imported your data, do the following:
+
+  - Use the `clean_names()` function from the `janitor` package to give you nice variable names
+  
+  - `filter()` using the `grade_level` to only include "All Grades"
+  
+  - `filter()` using the `student_group` variable to only include the following groups ("American Indian/Alaskan Native", "Asian", "Black/African American", "Hispanic/Latino", "Multi-Racial", "Pacific Islander", or "White")
+  
+  - `select()` the following variables: `district_id`, `student_group`, `percent_proficient_level_3_or_4`
+  
+  - Divide the `percent_proficient_level_3_or_4` variable by 100 (you'll need to convert this variable to a numeric first to make this work)
+
+
+---
+
+class: inverse
+
+## Your Turn (continued)
+
+Create a new data frame called `enrollment_and_reading_scores_by_race` by mmerging the `enrollment_by_race` and `reading_scores_by_race` data frames using `left_join()`. 
+
+You are joining on two separate things (district ID and race/ethnicity group), each of which has different names in the two data frames. You'll need to use the following format to do this matching on multiple columns.
+
+
+```r
+new_data_frame &lt;- left_join(data_frame_1, data_frame_2,
+                            by = ("variable_1" = "variable_2",
+                                  "variable_3" = "variable_4"))
+```
+
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/circle-pattern.jpg")
+
+# Renaming Variables
+
+---
+
+## Renaming Variables
+
+
+```r
+french_and_german_speakers_2019 &lt;- left_join(german_speakers_2019,
+                                             french_speakers_2019,
+                                             by = "state")
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["french_speakers"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"711","3":"1678"},{"1":"Alaska","2":"131","3":"1441"},{"1":"Arizona","2":"136","3":"1002"},{"1":"Arkansas","2":"557","3":"1558"},{"1":"California","2":"854","3":"1935"},{"1":"Colorado","2":"768","3":"1714"},{"1":"Connecticut","2":"586","3":"1536"},{"1":"Delaware","2":"453","3":"1824"},{"1":"District of Columbia","2":"180","3":"1601"},{"1":"Florida","2":"958","3":"NA"},{"1":"Georgia","2":"821","3":"NA"},{"1":"Hawaii","2":"931","3":"NA"},{"1":"Idaho","2":"0","3":"NA"},{"1":"Illinois","2":"827","3":"NA"},{"1":"Indiana","2":"728","3":"NA"},{"1":"Iowa","2":"657","3":"NA"},{"1":"Kansas","2":"501","3":"NA"},{"1":"Kentucky","2":"332","3":"NA"},{"1":"Louisiana","2":"490","3":"NA"},{"1":"Maine","2":"206","3":"NA"},{"1":"Montana","2":"527","3":"NA"},{"1":"Nebraska","2":"232","3":"NA"},{"1":"Nevada","2":"647","3":"NA"},{"1":"New Hampshire","2":"818","3":"NA"},{"1":"New Jersey","2":"168","3":"NA"},{"1":"New Mexico","2":"336","3":"NA"},{"1":"New York","2":"207","3":"NA"},{"1":"North Carolina","2":"508","3":"NA"},{"1":"North Dakota","2":"652","3":"NA"},{"1":"Ohio","2":"186","3":"NA"},{"1":"Oklahoma","2":"621","3":"NA"},{"1":"Oregon","2":"471","3":"NA"},{"1":"Maryland","2":"507","3":"NA"},{"1":"Massachusetts","2":"859","3":"NA"},{"1":"Michigan","2":"467","3":"NA"},{"1":"Minnesota","2":"251","3":"NA"},{"1":"Mississippi","2":"372","3":"NA"},{"1":"Missouri","2":"972","3":"NA"},{"1":"Pennsylvania","2":"956","3":"NA"},{"1":"Rhode Island","2":"900","3":"NA"},{"1":"South Carolina","2":"182","3":"NA"},{"1":"South Dakota","2":"584","3":"NA"},{"1":"Tennessee","2":"476","3":"NA"},{"1":"Texas","2":"292","3":"NA"},{"1":"Utah","2":"758","3":"NA"},{"1":"Vermont","2":"158","3":"NA"},{"1":"Virginia","2":"432","3":"NA"},{"1":"Washington","2":"615","3":"NA"},{"1":"West Virginia","2":"974","3":"NA"},{"1":"Wisconsin","2":"842","3":"NA"},{"1":"Wyoming","2":"431","3":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## `rename()`
+
+
+```r
+data_frame %&gt;% 
+  rename("new_variable_name" = "old_variable_name")
+```
+
+
+---
+
+## `rename()`
+
+
+```r
+french_and_german_speakers_2019 %&gt;% 
+* rename("german_speakers" = "number")
+```
+
+--
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["german_speakers"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["french_speakers"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"711","3":"1678"},{"1":"Alaska","2":"131","3":"1441"},{"1":"Arizona","2":"136","3":"1002"},{"1":"Arkansas","2":"557","3":"1558"},{"1":"California","2":"854","3":"1935"},{"1":"Colorado","2":"768","3":"1714"},{"1":"Connecticut","2":"586","3":"1536"},{"1":"Delaware","2":"453","3":"1824"},{"1":"District of Columbia","2":"180","3":"1601"},{"1":"Florida","2":"958","3":"NA"},{"1":"Georgia","2":"821","3":"NA"},{"1":"Hawaii","2":"931","3":"NA"},{"1":"Idaho","2":"0","3":"NA"},{"1":"Illinois","2":"827","3":"NA"},{"1":"Indiana","2":"728","3":"NA"},{"1":"Iowa","2":"657","3":"NA"},{"1":"Kansas","2":"501","3":"NA"},{"1":"Kentucky","2":"332","3":"NA"},{"1":"Louisiana","2":"490","3":"NA"},{"1":"Maine","2":"206","3":"NA"},{"1":"Montana","2":"527","3":"NA"},{"1":"Nebraska","2":"232","3":"NA"},{"1":"Nevada","2":"647","3":"NA"},{"1":"New Hampshire","2":"818","3":"NA"},{"1":"New Jersey","2":"168","3":"NA"},{"1":"New Mexico","2":"336","3":"NA"},{"1":"New York","2":"207","3":"NA"},{"1":"North Carolina","2":"508","3":"NA"},{"1":"North Dakota","2":"652","3":"NA"},{"1":"Ohio","2":"186","3":"NA"},{"1":"Oklahoma","2":"621","3":"NA"},{"1":"Oregon","2":"471","3":"NA"},{"1":"Maryland","2":"507","3":"NA"},{"1":"Massachusetts","2":"859","3":"NA"},{"1":"Michigan","2":"467","3":"NA"},{"1":"Minnesota","2":"251","3":"NA"},{"1":"Mississippi","2":"372","3":"NA"},{"1":"Missouri","2":"972","3":"NA"},{"1":"Pennsylvania","2":"956","3":"NA"},{"1":"Rhode Island","2":"900","3":"NA"},{"1":"South Carolina","2":"182","3":"NA"},{"1":"South Dakota","2":"584","3":"NA"},{"1":"Tennessee","2":"476","3":"NA"},{"1":"Texas","2":"292","3":"NA"},{"1":"Utah","2":"758","3":"NA"},{"1":"Vermont","2":"158","3":"NA"},{"1":"Virginia","2":"432","3":"NA"},{"1":"Washington","2":"615","3":"NA"},{"1":"West Virginia","2":"974","3":"NA"},{"1":"Wisconsin","2":"842","3":"NA"},{"1":"Wyoming","2":"431","3":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## `set_names()`
+
+
+```r
+french_and_german_speakers_2019 %&gt;% 
+* set_names(c("state", "german_speakers", "french_speakers"))
+```
+
+--
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["german_speakers"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["french_speakers"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"711","3":"1678"},{"1":"Alaska","2":"131","3":"1441"},{"1":"Arizona","2":"136","3":"1002"},{"1":"Arkansas","2":"557","3":"1558"},{"1":"California","2":"854","3":"1935"},{"1":"Colorado","2":"768","3":"1714"},{"1":"Connecticut","2":"586","3":"1536"},{"1":"Delaware","2":"453","3":"1824"},{"1":"District of Columbia","2":"180","3":"1601"},{"1":"Florida","2":"958","3":"NA"},{"1":"Georgia","2":"821","3":"NA"},{"1":"Hawaii","2":"931","3":"NA"},{"1":"Idaho","2":"0","3":"NA"},{"1":"Illinois","2":"827","3":"NA"},{"1":"Indiana","2":"728","3":"NA"},{"1":"Iowa","2":"657","3":"NA"},{"1":"Kansas","2":"501","3":"NA"},{"1":"Kentucky","2":"332","3":"NA"},{"1":"Louisiana","2":"490","3":"NA"},{"1":"Maine","2":"206","3":"NA"},{"1":"Montana","2":"527","3":"NA"},{"1":"Nebraska","2":"232","3":"NA"},{"1":"Nevada","2":"647","3":"NA"},{"1":"New Hampshire","2":"818","3":"NA"},{"1":"New Jersey","2":"168","3":"NA"},{"1":"New Mexico","2":"336","3":"NA"},{"1":"New York","2":"207","3":"NA"},{"1":"North Carolina","2":"508","3":"NA"},{"1":"North Dakota","2":"652","3":"NA"},{"1":"Ohio","2":"186","3":"NA"},{"1":"Oklahoma","2":"621","3":"NA"},{"1":"Oregon","2":"471","3":"NA"},{"1":"Maryland","2":"507","3":"NA"},{"1":"Massachusetts","2":"859","3":"NA"},{"1":"Michigan","2":"467","3":"NA"},{"1":"Minnesota","2":"251","3":"NA"},{"1":"Mississippi","2":"372","3":"NA"},{"1":"Missouri","2":"972","3":"NA"},{"1":"Pennsylvania","2":"956","3":"NA"},{"1":"Rhode Island","2":"900","3":"NA"},{"1":"South Carolina","2":"182","3":"NA"},{"1":"South Dakota","2":"584","3":"NA"},{"1":"Tennessee","2":"476","3":"NA"},{"1":"Texas","2":"292","3":"NA"},{"1":"Utah","2":"758","3":"NA"},{"1":"Vermont","2":"158","3":"NA"},{"1":"Virginia","2":"432","3":"NA"},{"1":"Washington","2":"615","3":"NA"},{"1":"West Virginia","2":"974","3":"NA"},{"1":"Wisconsin","2":"842","3":"NA"},{"1":"Wyoming","2":"431","3":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+
+---
+
+class: my-turn
+
+## My Turn
+
+I'll use `rename()` and/or `set_names()` to give the `math_scores_chronic_absenteeism` data frame more meaningful names.
+
+
+---
+
+class: inverse
+
+## Your Turn
+
+Use either `rename()` or `set_names()` to give the `enrollment_and_reading_scores_by_race` data frame more meaningful names. Make the following changes:
+
+- Change `attending_district_institution_id` to `district_id`
+
+- Change `x2018_19_total_enrollment` to `total_enrollment`
+
+- Change `pct` to `percent_of_total_enrollment`
+
+- Change `percent_proficient_level_3_or_4` to `reading_proficient_percent`
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/sound-of-music.jpg")
+
+# A Few of My Favorite ~~Things~~ Functions for Data Analysis
+
+---
+
+
+- slice()
+- top_n()
+- distinct()
+- ntile()
+
+- santoku package?
+
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/ship-export.jpg")
+
+# Exporting Data
+
+---
+
+## `write_csv()`
+
+
+```r
+write_csv(french_and_german_speakers_2019,
+          "data/french_and_german_speakers_2019.csv")
+```
+
+---
+
+## `write_rds()`
+
+
+```r
+write_rds(french_and_german_speakers_2019,
+          "data/french_and_german_speakers_2019.rds")
+```
+
+
+---
+
+class: my-turn
+
+## My Turn
+
+--
+
+1. Export my `math_scores_chronic_absenteeism` data frame as a CSV
+
+--
+
+1. Export my `math_scores_chronic_absenteeism` data frame as an RDS file
+
+
+---
+
+class: inverse
+
+## Your Turn
+
+1. Export the `enrollment_and_reading_scores_by_race` data frame as an RDS file in the data directory (you'll need to make this directory)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

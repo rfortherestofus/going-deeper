@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="183px" height="49px" viewBox="0 0 183 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>docx-not-dotx.png</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Going-Deeper" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="20" font-weight="normal">
+        <g id="docx-not-dotx" transform="translate(7.000000, 8.000000)" fill="#404E6B">
+            <text id=".docx" font-family="Karla-Regular, Karla">
+                <tspan x="29" y="21">.docx</tspan>
+            </text>
+            <text id=".dotx" opacity="0.5" font-family="Karla-Regular, Karla">
+                <tspan x="94" y="21">.dotx</tspan>
+            </text>
+            <text id="👍" font-family="AppleColorEmoji, Apple Color Emoji">
+                <tspan x="0" y="22">👍</tspan>
+            </text>
+            <text id="👎" opacity="0.5" font-family="AppleColorEmoji, Apple Color Emoji">
+                <tspan x="143" y="26">👎</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

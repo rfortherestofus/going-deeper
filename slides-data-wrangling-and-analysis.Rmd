@@ -1,5 +1,6 @@
 ---
-title: "Going Deeper with R"
+title: "Advanced Data Wrangling and Analysis"
+subtitle: "Going Deeper with R"
 output:
   xaringan::moon_reader:
     css: ["style.css", "default"]
@@ -22,24 +23,20 @@ library(janitor)
 ```
 
 
-class: inverse, center, middle, dk-section-title
+class: center, middle, dk-section-title
 
-# Advanced Data Wrangling and Analysis
+background-image:url("images/data.jpg")
 
----
-
-class: inverse, center, middle, dk-section-title
-
-## Importing Data
+# Importing Data
 
 ---
 
-### Downloading Data Directly
+## Downloading Data Directly
 
 The `download.file()` function lets us download files directly from websites.
 
-```{r}
-download.file(url, destfile = "data/name-of-file.xlsx")
+```{r eval = FALSE}
+download.file(url, destfile = "data-raw/name-of-file.xlsx")
 ```
 
 ???
@@ -48,7 +45,7 @@ Benefit = reproducibility
 
 ---
 
-### Importing Excel Files
+## Importing Excel Files
 
 .center[
 ![](images/readxl-logo.png)
@@ -56,21 +53,22 @@ Benefit = reproducibility
 
 ---
 
-### Importing Excel Files
+## Importing Excel Files
 
-```{r}
+```{r eval = FALSE}
 data_frame <- read_excel(path = "directory_name/file_name.xlsx",
                          sheet = "name of sheet")
 ```
 
 ---
 
-### Importing Excel Files
+## Importing Excel Files
 
 
 ```{r eval = TRUE}
-german_speakers <- read_excel(path = "data/German and French Speakers.xlsx",
-                              sheet = "German speakers")
+german_speakers <- read_excel(path = "data-raw/German and French Speakers.xlsx",
+                              sheet = "German speakers") %>% 
+  clean_names()
 ```
 
 --
@@ -84,7 +82,7 @@ german_speakers
 ---
 
 
-### Other Packages for Importing Data
+## Other Packages for Importing Data
 
 .pull-left[
 Got SAS, Stata, or SPSS data? Use the [haven package](https://haven.tidyverse.org/).
@@ -98,7 +96,7 @@ Got SAS, Stata, or SPSS data? Use the [haven package](https://haven.tidyverse.or
 
 ---
 
-### Other Packages for Importing Data
+## Other Packages for Importing Data
 
 .pull-left[
 The [rio package](https://github.com/leeper/rio) makes it as simple as possible to import and export data. 
@@ -114,23 +112,19 @@ You give it the location of the data file in the `import()` function and it auto
 
 ---
 
-class: inverse
+class: my-turn
 
-### My Turn
+## My Turn
 
 1. I'll create a new project
 
 ---
 
-class: inverse
+class: my-turn
 
-### My Turn (continued)
+## My Turn (continued)
 
-I'll be working with the following data:
-
-1. [State of Oregon 2018-2019 school attendance data](https://www.oregon.gov/ode/reports-and-data/students/Documents/fallmembershipreport_20182019.xlsx)
-
-2. [State of Oregon 2018-2019 3rd grade math proficiency data](https://www.oregon.gov/ode/reports-and-data/students/Documents/regularattenders_report_1819.xlsx)
+I'll be working with the following data: [State of Oregon 2018-2019 school attendance data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/fallmembershipreport_20182019.xlsx) and [State of Oregon 2018-2019 3rd grade math proficiency data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/regularattenders_report_1819.xlsx)
 
 --
 
@@ -150,7 +144,9 @@ I'll do the following:
 
 1. Import the data into two data frames (`math_scores` and `attendance`)
 
---
+???
+
+TK: I took this out. Make sure it's ok.
 
 I'm ultimately going to compare third grade math scores and rates of chronic absenteeism.
 
@@ -158,7 +154,7 @@ I'm ultimately going to compare third grade math scores and rates of chronic abs
 
 class: inverse
 
-### Your Turn
+## Your Turn
 
 1. Create a new project. Make sure you put it somehwere you'll be able to find it again later!
 
@@ -166,11 +162,11 @@ class: inverse
 
 class: inverse
 
-### Your Turn (continued)
+## Your Turn (continued)
 
 You'll be working with the following data:
 
-1. [State of Oregon 3rd grade 2018-2019 enrollment data](https://www.oregon.gov/ode/reports-and-data/students/Documents/fallmembershipreport_20182019.xlsx)
+1. [State of Oregon 3rd grade 2018-2019 enrollment data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/fallmembershipreport_20182019.xlsx)
 
 2. [State of Oregon 3rd grade 2018-2019 reading proficiency data](https://www.oregon.gov/ode/educator-resources/assessment/Documents/TestResults2019/pagr_Districts_ELA_1819.xlsx)
 
@@ -194,13 +190,85 @@ Do the following:
 
 ---
 
-class: inverse, center, middle, dk-section-title
+class: center, middle, dk-section-title
 
-## Tidy Data
+background-image:url("images/berries.jpg")
+
+# Tidy Data
 
 ---
 
-### The Three Rules of Tidy Data
+## Untidy Data
+
+
+```{r eval = TRUE, echo = FALSE}
+german_speakers_numeric <- read_excel(path = "data-raw/German and French Speakers.xlsx",
+                              sheet = "German speakers",
+                              na = "-") %>% 
+  clean_names()
+```
+
+--
+
+```{r eval = TRUE}
+german_speakers_numeric
+```
+
+---
+
+## Untidy Data
+
+--
+
+```{r eval = TRUE}
+german_speakers_numeric %>% 
+  group_by(state) %>% 
+  mutate(total = number_of_german_speakers_2017 + number_of_german_speakers_2018 + number_of_german_speakers_2019) %>% 
+  select(state, total)
+```
+
+???
+
+But what if we have 10 or 20 years of data? Are we going to write out a all of those years individually?
+
+
+
+---
+
+## Tidy Data
+
+
+```{r eval = TRUE, echo = FALSE}
+german_speakers_tidy <- german_speakers %>% 
+  pivot_longer(-state) %>% 
+  mutate(year = parse_number(name)) %>% 
+  mutate(number = parse_number(value)) %>% 
+  select(state, year, number)
+```
+
+```{r eval = TRUE}
+german_speakers_tidy
+```
+
+---
+
+## Tidy Data
+
+
+```{r eval = TRUE}
+german_speakers_tidy %>% 
+  group_by(state) %>% 
+  summarize(total = sum(number))
+```
+
+
+???
+
+The tidyverse wants data in a certain format: tidy. With data in this format, it becomes much easier to work with. 
+
+---
+
+## The Three Rules of Tidy Data
 
 --
 
@@ -220,16 +288,16 @@ class: inverse, center, middle, dk-section-title
 
 ---
 
-class: inverse
+class: my-turn
 
-### My Turn
+## My Turn
 
 Let's take a look at my data and see which principles of tidy data it violates
 
 
 ---
 
-### Your Turn
+## Your Turn
 
 --
 
@@ -241,26 +309,28 @@ Let's take a look at my data and see which principles of tidy data it violates
 
 ---
 
-class: inverse, center, middle, dk-section-title
+class: center, middle, dk-section-title
 
-## Reshaping Data
+background-image:url("images/shape.jpg")
+
+# Reshaping Data
 
 ---
 
-### Reshaping Data: `pivot_longer()`
+## Reshaping Data: `pivot_longer()`
 
 The `pivot_longer()` function helps us in situations where column headers are values, not variable names.
 
 --
 
-```{r}
+```{r eval = FALSE}
 data_frame %>% 
   pivot_longer(cols = columns_to_use) #<<
 ```
 
 --
 
-```{r}
+```{r eval = FALSE}
 data_frame %>% 
   pivot_longer(cols = columns_to_use,
                names_to = "name_of_identifer_variable") #<<
@@ -268,7 +338,7 @@ data_frame %>%
 
 --
 
-```{r}
+```{r eval = FALSE}
 data_frame %>% 
   pivot_longer(cols = columns_to_use,
                names_to = "name_of_identifer_variable",
@@ -278,7 +348,7 @@ data_frame %>%
 
 ---
 
-### Reshaping Data: `pivot_longer()`
+## Reshaping Data: `pivot_longer()`
 
 ```{r eval = TRUE, echo = FALSE}
 german_speakers
@@ -286,7 +356,7 @@ german_speakers
 
 ---
 
-### Reshaping Data: `pivot_longer()`
+## Reshaping Data: `pivot_longer()`
 
 ```{r pivot_longer_example}
 german_speakers %>% 
@@ -301,7 +371,7 @@ german_speakers %>%
 
 ---
 
-### Reshaping Data: `pivot_longer()`
+## Reshaping Data: `pivot_longer()`
 
 ```{r eval = TRUE}
 german_speakers %>% 
@@ -312,7 +382,7 @@ german_speakers %>%
 
 ---
 
-### Reshaping Data: `pivot_wider()`
+## Reshaping Data: `pivot_wider()`
 
 ```{r eval = TRUE}
 german_speakers %>% 
@@ -329,9 +399,9 @@ I mostly use it to present data in tables
 
 ---
 
-class: inverse
+class: my-turn
 
-### My Turn
+## My Turn
 
 I'll do the following to create a new data frame called `math_percent_not_proficient`: 
 
@@ -355,7 +425,7 @@ I'll do the following to create a new data frame called `math_percent_not_profic
 
 class: inverse
 
-### Your Turn
+## Your Turn
 
 Do the following to create a new data frame called `enrollment_by_race`: 
 
@@ -378,13 +448,15 @@ Do the following to create a new data frame called `enrollment_by_race`:
 
 ---
 
-class: inverse, center, middle, dk-section-title
+class: center, middle, dk-section-title
 
-## Dealing with Missing Data
+background-image:url("images/missing.jpg")
+
+# Dealing with Missing Data
 
 ---
 
-### Dealing with Missing Data: `na_if()`
+## Dealing with Missing Data: `na_if()`
 
 ```{r eval = TRUE}
 german_speakers %>% 
@@ -395,7 +467,7 @@ german_speakers %>%
 
 ---
 
-### Dealing with Missing Data: `na_if()`
+## Dealing with Missing Data: `na_if()`
 
 ```{r}
 german_speakers %>% 
@@ -407,7 +479,7 @@ german_speakers %>%
 
 ---
 
-### Dealing with Missing Data: `na_if()`
+## Dealing with Missing Data: `na_if()`
 
 ```{r eval = TRUE}
 german_speakers %>% 
@@ -426,7 +498,7 @@ You can also do this with na arguments in read_excel etc
 
 ---
 
-### Dealing with Missing Data: `replace_na()`
+## Dealing with Missing Data: `replace_na()`
 
 
 ```{r eval = TRUE}
@@ -445,9 +517,9 @@ The `replace_na()` function does the opposite: turns NAs into values.
 
 ---
 
-class: inverse
+class: my-turn
 
-### My Turn
+## My Turn
 
 1. Convert all of the missing values (they should show up as "-") in the `percent_proficient` variable to NA using `na_if()`
 
@@ -457,7 +529,7 @@ class: inverse
 
 class: inverse
 
-### Your Turn
+## Your Turn
 
 --
 
@@ -469,13 +541,15 @@ class: inverse
 
 ---
 
-class: inverse, center, middle, dk-section-title
+class: center, middle, dk-section-title
 
-## Changing Variable Types
+background-image:url("images/types.jpg")
+
+# Changing Variable Types
 
 ---
 
-### Changing Variable Types
+## Changing Variable Types
 
 ```{r}
 german_speakers %>% 
@@ -493,7 +567,7 @@ german_speakers %>%
 
 ---
 
-### Changing Variable Types
+## Changing Variable Types
 
 To change variable types, you use the `mutate()` function combined with `as.numeric()`, `as.character()`, etc.
 
@@ -513,7 +587,7 @@ german_speakers %>%
 
 class: inverse
 
-### My Turn
+## My Turn
 
 Convert the `percent_proficient` variable to numeric by using `as.numeric()`
 
@@ -521,7 +595,7 @@ Convert the `percent_proficient` variable to numeric by using `as.numeric()`
 
 class: inverse
 
-### Your Turn
+## Your Turn
 
 --
 
@@ -535,13 +609,15 @@ class: inverse
 
 ---
 
-class: inverse, center, middle, dk-section-title
+class: center, middle, dk-section-title
 
-## Advanced Variable Creation
+background-image:url("images/throwing-pot.jpg")
+
+# Advanced Variable Creation
 
 ---
 
-### `recode()`
+## `recode()`
 
 ```{r}
 data_frame %>% 
@@ -550,7 +626,7 @@ data_frame %>%
 
 ---
 
-### `recode()`
+## `recode()`
 
 
 ```{r recode-example}
@@ -569,14 +645,14 @@ german_speakers %>%
 
 ---
 
-### `recode()`
+## `recode()`
 
 ```{r ref.label = "recode-example", eval = TRUE, echo = FALSE}
 ```
 
 ---
 
-### `if_else()`
+## `if_else()`
 
 ```{r}
 data_frame %>% 
@@ -585,7 +661,7 @@ data_frame %>%
 
 ---
 
-### `if_else()`
+## `if_else()`
 
 ```{r if_else-example}
 german_speakers %>% 
@@ -603,7 +679,7 @@ german_speakers %>%
 
 ---
 
-### `if_else()`
+## `if_else()`
 
 ```{r ref.label = "if_else-example", eval = TRUE, echo = FALSE}
 
@@ -612,7 +688,7 @@ german_speakers %>%
 
 ---
 
-### `case_when()`
+## `case_when()`
 
 ```{r}
 data_frame %>% 
@@ -628,7 +704,7 @@ data_frame %>%
 
 
 
-### `case_when()`
+## `case_when()`
 
 ```{r case_when-example}
 german_speakers %>% 
@@ -648,7 +724,7 @@ german_speakers %>%
 
 ---
 
-### `case_when()`
+## `case_when()`
 
 ```{r ref.label = "case_when-example", eval = TRUE, echo = FALSE}
 
@@ -656,7 +732,7 @@ german_speakers %>%
 
 ---
 
-### More complicated `case_when()`
+## More complicated `case_when()`
 
 ```{r case_when-complicated-example}
 german_speakers %>% 
@@ -676,7 +752,7 @@ german_speakers %>%
 
 ---
 
-### More complicated `case_when()`
+## More complicated `case_when()`
 
 ```{r ref.label = "case_when-complicated-example", eval = TRUE, echo = FALSE}
 
@@ -685,9 +761,9 @@ german_speakers %>%
 
 ---
 
-class: inverse
+class: my-turn
 
-### My Turn
+## My Turn
 
 Convert all instances of the `proficiency_level` variable to more meaningful observations using: 
 
@@ -701,7 +777,7 @@ Convert all instances of the `proficiency_level` variable to more meaningful obs
 
 class: inverse
 
-### My Turn
+## Your Turn
 
 Convert all instances of the `race_ethnicity` variable to more meaningful observations (e.g. turn "x2018_19_asian" into "Asian") using any of the follwoing:
 
@@ -713,20 +789,22 @@ Convert all instances of the `race_ethnicity` variable to more meaningful observ
 
 ---
 
-class: inverse, center, middle, dk-section-title
+class: center, middle, dk-section-title
 
-## Data Merging
+background-image:url("images/highway.jpg")
+
+# Data Merging
 
 ---
 
-### Data Merging
+## Data Merging
 
 All of the animations and explanations used here come from the [tidyexplain project by Garrick Aden-Buie](https://www.garrickadenbuie.com/project/tidyexplain/).
 
 
 ---
 
-### Data Merging
+## Data Merging
 
 ```{r eval = TRUE}
 german_speakers_2019 <- german_speakers %>% 
@@ -744,7 +822,7 @@ german_speakers_2019 <- german_speakers %>%
 
 ---
 
-### Data Merging
+## Data Merging
 
 ```{r}
 german_speakers_2019 <- german_speakers %>% 
@@ -772,7 +850,7 @@ Image courtesy of [Allison Horst](https://github.com/allisonhorst/stats-illustra
 
 ---
 
-### Data Merging
+## Data Merging
 
 ```{r eval = TRUE}
 german_speakers_2019
@@ -785,10 +863,10 @@ german_speakers_2019
 
 ---
 
-### Data Merging
+## Data Merging
 
 ```{r eval = TRUE, include = TRUE}
-french_speakers_2019 <- read_excel(path = "data/German and French Speakers.xlsx",
+french_speakers_2019 <- read_excel(path = "data-raw/German and French Speakers.xlsx",
                               sheet = "French speakers 2019")
 ```
 
@@ -798,7 +876,7 @@ french_speakers_2019
 
 ---
 
-### Joins
+## Joins
 
 ```{r}
 type_of_join <- (x, y,
@@ -831,13 +909,13 @@ type_of_join <- (x, y,
 
 ---
 
-### Mutating joins
+## Mutating joins
 
 > A mutating join allows you to combine variables from two tables. It first matches observations by their keys, then copies across variables from one table to the other. - [R for Data Science](https://r4ds.had.co.nz/relational-data.html#mutating-joins)
 
 ---
 
-#### `left_join()`
+### `left_join()`
 
 All rows from x, and all columns from x and y. Rows in x with no match in y will have NA values in the new columns.
 
@@ -849,7 +927,7 @@ All rows from x, and all columns from x and y. Rows in x with no match in y will
 
 ---
 
-#### `left_join()`
+### `left_join()`
 
 ```{r eval = TRUE}
 left_join(german_speakers_2019,
@@ -859,7 +937,7 @@ left_join(german_speakers_2019,
 
 ---
 
-#### `right_join()`
+### `right_join()`
 
 All rows from y, and all columns from x and y. Rows in y with no match in x will have NA values in the new columns.
 .center[
@@ -870,7 +948,7 @@ All rows from y, and all columns from x and y. Rows in y with no match in x will
 
 ---
 
-#### `right_join()`
+### `right_join()`
 
 ```{r eval = TRUE}
 right_join(german_speakers_2019,
@@ -880,7 +958,7 @@ right_join(german_speakers_2019,
 
 ---
 
-#### `full_join()`
+### `full_join()`
 
 All rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing.
 .center[
@@ -889,7 +967,7 @@ All rows and all columns from both x and y. Where there are not matching values,
 
 ---
 
-#### `full_join()`
+### `full_join()`
 
 ```{r eval = TRUE}
 full_join(german_speakers_2019,
@@ -900,7 +978,7 @@ full_join(german_speakers_2019,
 
 ---
 
-#### `inner_join()`
+### `inner_join()`
 
 All rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing.
 .center[
@@ -909,7 +987,7 @@ All rows and all columns from both x and y. Where there are not matching values,
 
 ---
 
-#### `inner_join()`
+### `inner_join()`
 
 ```{r eval = TRUE}
 inner_join(german_speakers_2019,
@@ -919,13 +997,13 @@ inner_join(german_speakers_2019,
 
 ---
 
-### Filtering joins
+## Filtering joins
 
 > Filtering joins match observations in the same way as mutating joins, but affect the observations, not the variables - [R for Data Science](https://r4ds.had.co.nz/relational-data.html#filtering-joins)
 
 ---
 
-#### `semi_join()`
+### `semi_join()`
 
 All rows from x where there are matching values in y, keeping just columns from x.
 .center[
@@ -934,7 +1012,7 @@ All rows from x where there are matching values in y, keeping just columns from 
 
 ---
 
-#### `semi_join()`
+### `semi_join()`
 
 ```{r eval = TRUE}
 semi_join(german_speakers_2019,
@@ -944,7 +1022,7 @@ semi_join(german_speakers_2019,
 
 ---
 
-#### `anti_join()`
+### `anti_join()`
 
 All rows from x where there are not matching values in y, keeping just columns from x.
 .center[
@@ -953,7 +1031,7 @@ All rows from x where there are not matching values in y, keeping just columns f
 
 ---
 
-#### `anti_join()`
+### `anti_join()`
 
 ```{r eval = TRUE}
 anti_join(german_speakers_2019,
@@ -963,9 +1041,9 @@ anti_join(german_speakers_2019,
 
 ---
 
-class: inverse
+class: my-turn
 
-### My Turn
+## My Turn
 
 1. Create a new data frame called `chronic_absenteeism` by starting with the attendance data frame and using the data wrangling skills we just learned
 
@@ -977,7 +1055,7 @@ class: inverse
 
 class: inverse
 
-### Your Turn
+## Your Turn
 
 Before doing our join, we'll need to create a new data frame called `reading_scores_by_race` by importing the reading scores data that you downloaded previously. Use the `read_excel()` function to do this.
 
@@ -986,7 +1064,7 @@ Before doing our join, we'll need to create a new data frame called `reading_sco
 
 class: inverse
 
-### Your Turn (continued)
+## Your Turn (continued)
 
 After you've imported your data, do the following:
 
@@ -1005,7 +1083,7 @@ After you've imported your data, do the following:
 
 class: inverse
 
-### Your Turn (continued)
+## Your Turn (continued)
 
 Create a new data frame called `enrollment_and_reading_scores_by_race` by mmerging the `enrollment_by_race` and `reading_scores_by_race` data frames using `left_join()`. 
 
@@ -1020,13 +1098,15 @@ new_data_frame <- left_join(data_frame_1, data_frame_2,
 
 ---
 
-class: inverse, center, middle, dk-section-title
+class: center, middle, dk-section-title
 
-## Renaming Variables
+background-image:url("images/circle-pattern.jpg")
+
+# Renaming Variables
 
 ---
 
-### Renaming Variables
+## Renaming Variables
 
 ```{r eval = TRUE}
 french_and_german_speakers_2019 <- left_join(german_speakers_2019,
@@ -1040,7 +1120,7 @@ french_and_german_speakers_2019
 
 ---
 
-### `rename()`
+## `rename()`
 
 ```{r}
 data_frame %>% 
@@ -1050,7 +1130,7 @@ data_frame %>%
 
 ---
 
-### `rename()`
+## `rename()`
 
 ```{r rename_example}
 french_and_german_speakers_2019 %>% 
@@ -1064,7 +1144,7 @@ french_and_german_speakers_2019 %>%
 
 ---
 
-### `set_names()`
+## `set_names()`
 
 ```{r set_names_example}
 french_and_german_speakers_2019 %>% 
@@ -1079,9 +1159,9 @@ french_and_german_speakers_2019 %>%
 
 ---
 
-class: inverse
+class: my-turn
 
-### My Turn
+## My Turn
 
 I'll use `rename()` and/or `set_names()` to give the `math_scores_chronic_absenteeism` data frame more meaningful names.
 
@@ -1090,7 +1170,7 @@ I'll use `rename()` and/or `set_names()` to give the `math_scores_chronic_absent
 
 class: inverse
 
-### Your Turn
+## Your Turn
 
 Use either `rename()` or `set_names()` to give the `enrollment_and_reading_scores_by_race` data frame more meaningful names. Make the following changes:
 
@@ -1102,16 +1182,101 @@ Use either `rename()` or `set_names()` to give the `enrollment_and_reading_score
 
 - Change `percent_proficient_level_3_or_4` to `reading_proficient_percent`
 
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/sound-of-music.jpg")
+
+# A Few of My Favorite ~~Things~~ Functions for Data Analysis
 
 ---
 
-class: inverse, center, middle, dk-section-title
+## slice()
 
-## Exporting Data
+```{r}
+german_speakers_2019 %>% 
+  slice(1:5)
+```
+
 
 ---
 
-### `write_csv()`
+## top_n()
+
+```{r}
+german_speakers_2019 %>% 
+  top_n(5, number)
+```
+
+
+---
+
+## ntile()
+
+
+```{r}
+german_speakers_2019 %>% 
+  mutate(quartile = ntile(number, 4))
+```
+
+???
+
+Learn more:
+
+- santoku package?
+
+--- 
+
+## distinct()
+
+```{r}
+students <- tribble(
+  ~student_id, ~name,
+  54312, "David",
+  54312, "David",
+  89654, "Rachel"
+)
+```
+
+```{r}
+students
+```
+
+--
+
+```{r}
+students %>% 
+  distinct(student_id)
+```
+
+--
+
+```{r}
+students %>% 
+  distinct(student_id, .keep_all = TRUE)
+```
+
+---
+
+class: my-turn
+
+## My Turn
+
+I'll do the following
+
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/ship-export.jpg")
+
+# Exporting Data
+
+---
+
+## `write_csv()`
 
 ```{r}
 write_csv(french_and_german_speakers_2019,
@@ -1120,7 +1285,7 @@ write_csv(french_and_german_speakers_2019,
 
 ---
 
-### `write_rds()`
+## `write_rds()`
 
 ```{r}
 write_rds(french_and_german_speakers_2019,
@@ -1130,9 +1295,9 @@ write_rds(french_and_german_speakers_2019,
 
 ---
 
-class: inverse
+class: my-turn
 
-### My Turn
+## My Turn
 
 --
 
@@ -1147,7 +1312,7 @@ class: inverse
 
 class: inverse
 
-### Your Turn
+## Your Turn
 
 1. Export the `enrollment_and_reading_scores_by_race` data frame as an RDS file in the data directory (you'll need to make this directory)
 

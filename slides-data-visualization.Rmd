@@ -1,0 +1,128 @@
+---
+title: "Advanced Data Visualization"
+subtitle: "Going Deeper with R"
+output:
+  xaringan::moon_reader:
+    css: ["style.css", "default"]
+    lib_dir: libs
+    df_print: paged
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+---
+
+```{r child = "setup.Rmd"}
+```
+
+```{r eval = TRUE, echo = FALSE}
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(knitr)
+```
+
+
+---
+
+## Applying best practice to data viz
+
+Highlight findings
+Pare down
+Focus people's attention
+Make it sparkle
+
+1. Use order and color to highlight findings
+
+1. Declutter and simplify
+
+1. Don't make people move their heads
+
+  - Don't turn them to read labels
+  - Eliminate legends
+  - Add annotations to explain
+
+1. Don't use defaults
+
+1. Combine plots to tell a story
+
+---
+
+## Ordering in plots
+
+Use reorder first, then use factors
+
+---
+
+## Using color to highlight
+
+Do it manually first
+
+Then do it with gghighlight
+
+---
+
+
+## Don't make people turn their heads
+
+---
+
+## Adding labels directly to plots
+
+Use scales package to show percentages on plots
+
+ggrepel on scatterplot showing association between scores and attendance data
+
+---
+
+## Annotations
+
+Add FT tweet from 1/23/20 from John Murdoch to show it
+http://www.thefunctionalart.com/2020/01/an-example-of-how-to-annotate.html
+
+---
+
+## Declutter using themes
+
+Actual themes
+- Use hrbrthemes + show various options
+- Link to themes RRU blog post
+
+theme() function <- use this as place to demonstrate user-made functions
+
+---
+
+## Using custom fonts
+
+Plotting + saving (i.e. use device = cairo_pdf)
+
+https://www.andrewheiss.com/blog/2017/09/27/working-with-r-cairo-graphics-custom-fonts-and-ggplot/
+
+
+
+
+---
+
+
+## Unique data viz options in R (aka a tour of ggplot extensions)
+
+- gganimate
+- ggridges
+- https://github.com/corybrunson/ggalluvial
+- [ggalt](https://github.com/hrbrmstr/ggalt) (lollipops, dumbells, etc.)
+- [ggbeeswarm](https://github.com/eclarke/ggbeeswarm)
+- https://ggraph.data-imaginist.com/
+- https://github.com/ricardo-bion/ggradar
+- https://github.com/econandrew/ggtreemap
+- https://github.com/hrbrmstr/waffle
+- Patchwork
+
+Collections
+- http://www.ggplot2-exts.org/gallery/
+- [From Data to Viz](https://www.data-to-viz.com/)
+- https://github.com/erikgahner/awesome-ggplot2
+
+
+
+
