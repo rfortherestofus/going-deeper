@@ -1,0 +1,686 @@
+school,school_id,district,district_id,percent_not_proficient_math,percent_chronically_absent
+A C Houghton Elementary School,813,Morrow SD 1,2147,0.508,0.115
+Abernethy Elementary School,822,Portland SD 1J,2180,0.293,0.07400000000000001
+Abraham Lincoln Elementary,1350,Medford SD 549C,2048,0.373,0.139
+Academy for Character Education,4555,South Lane SD 45J3,2087,0.42800000000000005,NA
+Adams Elementary School,27,Corvallis SD 509J,1901,0.38900000000000007,0.055999999999999994
+Adams Elementary School,503,Eugene SD 4J,2082,0.254,0.122
+Adrian Elementary School,707,Adrian SD 61,2113,0.55,0.1
+Aiken Elementary School,694,Ontario SD 8C,2108,0.648,0.057999999999999996
+Ainsworth Elementary School,823,Portland SD 1J,2180,0.196,0.096
+Alameda Elementary School,692,Ontario SD 8C,2108,0.5770000000000001,0.08
+Alameda Elementary School,824,Portland SD 1J,2180,0.17,NA
+Alberta Rider Elementary School,4364,Tigard-Tualatin SD 23J,2242,0.34,0.151
+Allen Dale Elementary School,435,Grants Pass SD 7,2054,0.375,0.07
+Alliance Charter Academy,4585,Oregon City SD 62,1928,0.467,NA
+Aloha-Huber Park School,1153,Beaverton SD 48J,2243,0.556,0.188
+Amity Creek Elementary School,1324,Bend-LaPine Administrative SD 1,1976,0.4809999999999999,NA
+Amity Elementary School,1208,Amity SD 4J,2252,0.47900000000000004,0.125
+Annex Charter School,705,Annex SD 29,2111,0.385,0.091
+Antonia Crater Elementary School,1335,Newberg SD 29J,2254,0.308,0.092
+Applegate Elementary School,589,Crow-Applegate-Lorane SD 66,2089,0.385,0.231
+Archer Glen Elementary School,1334,Sherwood SD 88J,2244,0.17,0.11199999999999999
+Arco Iris Spanish Immersion School,4805,Beaverton SD 48J,2243,0.4590000000000001,0.102
+Ardenwald Elementary School,4762,North Clackamas SD 12,1924,0.542,0.16699999999999998
+Arleta Elementary School,826,Portland SD 1J,2180,0.5770000000000001,0.07400000000000001
+Arlington Community Charter School,323,Arlington SD 3,2005,0.35700000000000004,0.067
+Arthur Academy,3580,David Douglas SD 40,2187,0.462,NA
+Ash Creek Elementary School,3464,Central SD 13J,2191,0.589,0.125
+Astor Elementary School,827,Portland SD 1J,2180,0.405,0.067
+Athena Elementary School,1053,Athena-Weston SD 29RJ,2208,0.561,0.195
+Atkinson Elementary School,828,Portland SD 1J,2180,0.49200000000000005,0.086
+Auburn Elementary School,728,Salem-Keizer SD 24J,2142,0.773,0.198
+Aumsville Elementary School,719,Cascade SD 5,2139,0.5,0.11900000000000001
+Awbrey Park Elementary School,504,Eugene SD 4J,2082,0.42900000000000005,0.11800000000000001
+Baker Web Academy,4728,Baker SD 5J,1894,0.7120000000000001,0.11800000000000001
+Banks Elementary School,1120,Banks SD 13,2240,0.611,0.08800000000000001
+Barnes Butte Elementary,5302,Crook County SD,1970,0.6709999999999999,0.125
+Barnes Elementary School,1154,Beaverton SD 48J,2243,0.7789999999999999,0.134
+Battle Creek Elementary School,5066,Salem-Keizer SD 24J,2142,0.617,0.196
+Beach Elementary School,830,Portland SD 1J,2180,0.43400000000000005,0.141
+Bear Creek Elementary School,241,Bend-LaPine Administrative SD 1,1976,0.5660000000000001,0.161
+Beaver Acres Elementary School,1155,Beaverton SD 48J,2243,0.563,0.145
+Beavercreek Elementary School,105,Oregon City SD 62,1928,0.585,0.10300000000000001
+Bellview Elementary School,375,Ashland SD 5,2041,0.285,0.102
+Bend International School,5309,Bend-LaPine Administrative SD 1,1976,0.125,0.083
+Bethany Charter School,784,Silver Falls SD 4J,2138,0.188,NA
+Bethany Elementary School,1156,Beaverton SD 48J,2243,0.152,0.111
+Beverly Cleary School,857,Portland SD 1J,2180,0.319,0.079
+Bilquist Elementary School,65,North Clackamas SD 12,1924,0.5790000000000001,0.08900000000000001
+Blossom Gulch Elementary School,192,Coos Bay SD 9,1965,0.58,0.133
+Boeckman Creek Primary School,1272,West Linn-Wilsonville SD 3J,1922,0.457,0.214
+Bohemia Elementary School,573,South Lane SD 45J3,2087,0.6,0.12300000000000001
+Boise-Eliot Elementary School,833,Portland SD 1J,2180,0.825,0.273
+Bolton Primary School,3455,West Linn-Wilsonville SD 3J,1922,0.32799999999999996,0.081
+Bonanza Elementary School,467,Klamath County SD,2057,0.405,0.17
+Bonny Slope Elementary School,4671,Beaverton SD 48J,2243,0.223,NA
+Boones Ferry Primary School,3913,West Linn-Wilsonville SD 3J,1922,0.435,0.153
+Bridge Charter Academy,5349,Lowell SD 71,2092,0.909,0.226
+Bridgeport Elementary School,1135,Tigard-Tualatin SD 23J,2242,0.5569999999999999,0.085
+Bridger Elementary School,834,Portland SD 1J,2180,0.396,NA
+Bridlemile Elementary School,835,Portland SD 1J,2180,0.317,0.126
+Brockway Elementary School,3624,Winston-Dillard SD 116,2002,0.7930000000000001,0.195
+Brooklyn Primary School,2,Baker SD 5J,1894,0.633,0.253
+Brookwood Elementary School,1112,Hillsboro SD 1J,2239,0.625,0.1
+Brush College Elementary School,731,Salem-Keizer SD 24J,2142,0.5469999999999999,0.159
+Buckingham Elementary School,250,Bend-LaPine Administrative SD 1,1976,0.12100000000000001,0.147
+Buckman Elementary School,837,Portland SD 1J,2180,0.43599999999999994,0.063
+Buena Vista Elementary School,1241,Eugene SD 4J,2082,0.46799999999999997,NA
+Buff Elementary School,429,Jefferson County SD 509J,2053,0.529,0.17300000000000001
+Bush Elementary School,732,Salem-Keizer SD 24J,2142,0.9359999999999999,0.273
+Butler Creek Elementary School,3649,Centennial SD 28J,2185,0.549,0.146
+Butte Creek Elementary School,119,Silver Falls SD 4J,2138,0.767,0.207
+Butte Falls Charter School,406,Butte Falls SD 91,2046,0.708,0.318
+Butternut Creek Elementary School,1147,Hillsboro SD 1J,2239,0.667,0.14300000000000002
+Cairo Elementary School,693,Ontario SD 8C,2108,0.733,NA
+Camas Ridge Community Elementary,4739,Eugene SD 4J,2082,0.571,0.22399999999999998
+Candalaria Elementary School,733,Salem-Keizer SD 24J,2142,0.36200000000000004,0.087
+Candy Lane Elementary School,106,Oregon City SD 62,1928,0.754,0.07
+Canyonville School,289,South Umpqua SD 19,1994,0.616,0.125
+Capitol Hill Elementary School,838,Portland SD 1J,2180,0.33799999999999997,0.052000000000000005
+Carus School,92,Canby SD 86,1929,0.4109999999999999,0.133
+Cascade Heights Public Charter School,4475,North Clackamas SD 12,1924,0.462,NA
+Cascade Virtual Academy,5440,Mitchell SD 55,2249,0.858,NA
+Cascades School,652,Lebanon Community SD 9,2101,0.711,0.053
+Cecile Trost Elementary School,1307,Canby SD 86,1929,0.759,0.07
+Cedar Mill Elementary School,1158,Beaverton SD 48J,2243,0.29700000000000004,0.067
+Cedaroak Park Primary School,45,West Linn-Wilsonville SD 3J,1922,0.316,0.077
+Centennial Elementary School,544,Springfield SD 19,2083,0.687,0.172
+Centennial Elementary School,676,Scio SD 95,2103,0.564,0.13
+Central Elementary School,631,Greater Albany Public SD 8J,2100,0.727,0.273
+Central Elementary School,1066,La Grande SD 1,2212,0.41200000000000003,0.275
+Central Howell Elementary School,807,Silver Falls SD 4J,2138,0.35,NA
+Central Linn Elementary School,1311,Central Linn SD 552,2105,0.405,0.132
+Central Point Elementary School,382,Central Point SD 6,2042,0.695,0.102
+Cesar Chavez Elementary School,4146,Eugene SD 4J,2082,0.6509999999999999,0.172
+Cesar Chavez K-8 School,841,Portland SD 1J,2180,0.74,0.157
+Cesar E Chavez Elem,5064,Salem-Keizer SD 24J,2142,0.688,0.191
+Chapman Elementary School,839,Portland SD 1J,2180,0.302,0.157
+Chapman Hill Elementary School,1244,Salem-Keizer SD 24J,2142,0.475,0.19399999999999998
+Charlemagne French Immersion Elementary School,1240,Eugene SD 4J,2082,0.221,0.085
+Charles F Tigard Elementary School,1136,Tigard-Tualatin SD 23J,2242,0.493,0.079
+Chehalem Elementary School,1159,Beaverton SD 48J,2243,0.542,0.10099999999999999
+Chenowith Elementary School,1093,North Wasco County SD 21,4131,0.866,0.23399999999999999
+Cherry Park Elementary School,972,David Douglas SD 40,2187,0.33399999999999996,0.092
+Chief Joseph Elementary School,840,Portland SD 1J,2180,0.491,0.22
+Chiloquin Elementary School,468,Klamath County SD,2057,0.708,0.182
+City View Charter School,4206,Hillsboro SD 1J,2239,0.45899999999999996,0.087
+Clackamas River Elementary School,131,Estacada SD 108,1930,0.65,0.153
+Clackamas Web Academy,4223,North Clackamas SD 12,1924,0.8,NA
+Clarkes Elementary School,93,Molalla River SD 35,1925,0.4,0.107
+Clatskanie Elementary School,163,Clatskanie SD 6J,1945,0.679,0.2
+Clear Lake Elementary School,582,Bethel SD 52,2088,0.8109999999999999,0.179
+Clear Lake Elementary School,734,Salem-Keizer SD 24J,2142,0.25,0.154
+Cloverdale Elementary School,806,Cascade SD 5,2139,0.384,0.08
+Coburg Community Charter School,507,Eugene SD 4J,2082,0.36,0.083
+Colonel Wright Elementary School,1097,North Wasco County SD 21,4131,0.622,0.152
+Colton Elementary School,103,Colton SD 53,1927,0.737,0.128
+Columbia City School,179,St Helens SD 502,1948,0.348,0.25
+Columbus Elementary School,1228,McMinnville SD 40,2256,0.474,0.071
+Condon Elementary School,325,Condon SD 25J,2006,0.43799999999999994,0.063
+Cooper Mountain Elementary School,1160,Beaverton SD 48J,2243,0.306,0.091
+Coquille Valley Elementary,4025,Coquille SD 8,1964,0.46099999999999997,0.179
+Corbett School,4592,Corbett SD 39,2186,0.5820000000000001,0.08199999999999999
+Cornelius Elementary School,1128,Forest Grove SD 15,2241,0.915,0.11800000000000001
+Corridor Elementary School,1242,Eugene SD 4J,2082,0.74,0.179
+Cove Charter School,3434,Cove SD 15,2216,0.27799999999999997,0.059000000000000004
+Crater Lake Charter Academy,5251,Eagle Point SD 9,2043,0.8,NA
+Creative Science School,4640,Portland SD 1J,2180,0.625,0.1
+Creslane Elementary School,570,Creswell SD 40,2086,0.495,0.168
+Creston Elementary School,843,Portland SD 1J,2180,0.447,0.156
+Crestview Heights School,623,Lincoln County SD,2097,0.8420000000000001,0.5
+Crooked River Elementary School,219,Crook County SD,1970,0.58,0.149
+Culver Elementary School,425,Culver SD 4,2050,0.5,0.16699999999999998
+Cummings Elementary School,735,Salem-Keizer SD 24J,2142,0.705,0.16699999999999998
+Dallas Community Charter,5298,Dallas SD 2,2190,0.772,NA
+Danebo Elementary School,583,Bethel SD 52,2088,0.718,0.136
+Davis Elementary School,949,Reynolds SD 7,2182,0.693,0.154
+Days Creek Charter School,3348,Douglas County SD 15,1993,0.7859999999999999,0.077
+Dayton Grade School,1211,Dayton SD 8,2253,0.531,0.16899999999999998
+Deep Creek – Damascus K-8 School,90,Gresham-Barlow SD 10J,2183,0.41600000000000004,0.14300000000000002
+Deer Creek Elementary School,1369,Tigard-Tualatin SD 23J,2242,0.638,0.12
+Desert View Elementary School,3426,Hermiston SD 8,2206,0.41100000000000003,0.106
+Dilley Elementary School,1129,Forest Grove SD 15,2241,0.34,0.22899999999999998
+Douglas Gardens Elementary School,545,Springfield SD 19,2083,0.5720000000000001,0.11800000000000001
+Driftwood Elementary School,228,Port Orford-Langlois SD 2CJ,1973,0.5,0.111
+Dry Hollow Elementary School,1098,North Wasco County SD 21,4131,0.569,0.106
+Dufur School,3402,Dufur SD 29,2229,0.455,NA
+Dundee Elementary School,1216,Newberg SD 29J,2254,0.561,NA
+Duniway Elementary School,844,Portland SD 1J,2180,0.29400000000000004,0.1
+Durham Elementary School,1138,Tigard-Tualatin SD 23J,2242,0.278,0.11800000000000001
+Eagle Charter School,4850,Oregon Department of Education,2336,0.583,0.174
+Eagle Rock Elementary School,4020,Eagle Point SD 9,2043,0.551,0.063
+Earl Boyles Elementary,3525,David Douglas SD 40,2187,0.535,0.083
+East Gresham Elementary School,933,Gresham-Barlow SD 10J,2183,0.738,0.133
+East Orient Elementary School,941,Gresham-Barlow SD 10J,2183,0.33299999999999996,0.11800000000000001
+East Sutherlin Primary School,318,Sutherlin SD 130,2003,0.713,0.14300000000000002
+Eastwood Elementary School,269,Douglas County SD 4,1991,0.6880000000000002,0.203
+Eastwood Elementary School,1115,Hillsboro SD 1J,2239,0.789,0.09300000000000001
+Echo School,3433,Echo SD 5,2203,0.32,NA
+Echo Shaw Elementary School,1130,Forest Grove SD 15,2241,0.5539999999999999,0.121
+Eddyville Charter School,3361,Lincoln County SD,2097,0.8419999999999999,0.316
+Edgewood Community Elementary School,1774,Eugene SD 4J,2082,0.414,0.05
+Edison Elementary School,510,Eugene SD 4J,2082,0.34,0.096
+Edward Byrom Elementary School,1142,Tigard-Tualatin SD 23J,2242,0.275,NA
+Edwards Elementary School,1217,Newberg SD 29J,2254,0.58,0.09699999999999999
+Edy Ridge Elementary School,4730,Sherwood SD 88J,2244,0.198,0.052000000000000005
+El Puente,4005,North Clackamas SD 12,1924,0.64,0.059000000000000004
+Elizabeth Page Elementary School,546,Springfield SD 19,2083,0.408,0.113
+Elk Meadow Elementary School,1308,Bend-LaPine Administrative SD 1,1976,0.344,0.18899999999999997
+Elkton Charter School,302,Elkton SD 34,1998,0.5,0.35700000000000004
+Elmira Elementary School,563,Fern Ridge SD 28J,2084,0.43200000000000005,0.10800000000000001
+Elmonica Elementary School,1162,Beaverton SD 48J,2243,0.445,0.10400000000000001
+Emerson School,3991,Portland SD 1J,2180,0.478,NA
+Englewood Elementary School,736,Salem-Keizer SD 24J,2142,0.515,0.127
+Ensworth Elementary School,4129,Bend-LaPine Administrative SD 1,1976,0.428,0.214
+Enterprise Elementary School,1090,Enterprise SD 21,2221,0.47600000000000003,0.1
+Errol Hassell Elementary School,1161,Beaverton SD 48J,2243,0.32299999999999995,0.157
+Evergreen Elementary School,443,Three Rivers/Josephine County SD,2055,0.8059999999999999,0.21899999999999997
+Ewing Young Elementary School,1218,Newberg SD 29J,2254,0.256,NA
+Eyre Elementary School,751,Salem-Keizer SD 24J,2142,0.639,0.136
+Fairfield Elementary School,584,Bethel SD 52,2088,0.764,NA
+Fairview Elementary School,945,Reynolds SD 7,2182,0.604,0.28800000000000003
+Family School,1339,Eugene SD 4J,2082,0.517,0.379
+Farmington View Elementary School,1189,Hillsboro SD 1J,2239,0.465,0.11900000000000001
+Faubion Elementary School,847,Portland SD 1J,2180,0.789,0.127
+Faulconer-Chapman School,1235,Sheridan SD 48J,2257,0.63,0.159
+Ferguson Elementary School,470,Klamath County SD,2057,0.32299999999999995,0.20600000000000002
+Fern Hill Elementary School,3986,Forest Grove SD 15,2241,0.696,0.109
+Findley Elementary,1370,Beaverton SD 48J,2243,0.051,NA
+Fir Grove Elementary School,270,Douglas County SD 4,1991,0.28,0.09300000000000001
+Fir Grove Elementary School,1163,Beaverton SD 48J,2243,0.47700000000000004,NA
+Firwood Elementary School,101,Oregon Trail SD 46,1926,0.40399999999999997,0.14300000000000002
+Forest Grove Community School,4595,Forest Grove SD 15,2241,0.45399999999999996,0.2
+Forest Hills Elementary School,53,Lake Oswego SD 7J,1923,0.16699999999999998,0.055999999999999994
+Forest Park Elementary School,2413,Portland SD 1J,2180,0.303,0.066
+Forest Ridge Elementary School,3529,Salem-Keizer SD 24J,2142,0.5670000000000001,0.121
+Fossil Charter School,1205,Fossil SD 21J,2248,0.715,0.217
+Foster Elementary School,662,Sweet Home SD 55,2102,0.659,0.11599999999999999
+Four Corners Elementary School,738,Salem-Keizer SD 24J,2142,0.85,0.152
+Four Rivers Community School,4040,Oregon Department of Education,2336,0.615,0.08
+Franklin School,1322,Corvallis SD 509J,1901,0.33299999999999996,0.16699999999999998
+Free Orchards Elementary School,4641,Hillsboro SD 1J,2239,0.596,NA
+Fremont/Hay Elementary School,490,Lake County SD 7,2059,0.575,0.244
+Fruitdale Elementary School,445,Three Rivers/Josephine County SD,2055,0.35600000000000004,0.086
+Ft Vannoy Elementary School,446,Three Rivers/Josephine County SD,2055,0.614,0.05
+Fullerton IV Elementary School,271,Douglas County SD 4,1991,0.6,0.133
+Gaffney Lane Elementary School,109,Oregon City SD 62,1928,0.616,0.136
+Garfield Elementary School,30,Corvallis SD 509J,1901,0.616,0.147
+Garibaldi Elementary School,1020,Neah-Kah-Nie SD 56,2198,0.654,0.20800000000000002
+Gaston Elementary School,1194,Gaston SD 511J,2245,0.773,NA
+Gearhart Elementary School,153,Seaside SD 10,1935,0.7169999999999999,0.154
+Gervais Elementary School,776,Gervais SD 1,2137,0.6669999999999999,0.254
+Gib Olinger Elementary School,5434,Milton-Freewater Unified SD 7,2205,0.664,0.243
+Gilbert Heights Elementary School,973,David Douglas SD 40,2187,0.571,0.21100000000000002
+Gilbert Park Elementary School,974,David Douglas SD 40,2187,0.7669999999999999,0.256
+Gilchrist Elementary School,472,Klamath County SD,2057,0.572,0.263
+Gilham Elementary School,513,Eugene SD 4J,2082,0.5,0.113
+Glencoe Elementary School,850,Portland SD 1J,2180,0.305,0.11
+Glendale Elementary School,306,Glendale SD 77,2000,0.938,0.14300000000000002
+Glenfair Elementary School,946,Reynolds SD 7,2182,0.7310000000000001,0.258
+Glide Elementary School,282,Glide SD 12,1992,0.644,0.138
+Grandhaven Elementary School,2784,McMinnville SD 40,2256,0.309,0.10400000000000001
+Grant Community School,740,Salem-Keizer SD 24J,2142,0.728,0.179
+Grant Watts Elementary School,158,Scappoose SD 1J,1944,0.5489999999999999,0.121
+Green Acres School,653,Lebanon Community SD 9,2101,0.6,0.19
+Green Elementary School,272,Douglas County SD 4,1991,0.605,0.079
+Greenway Elementary School,1157,Beaverton SD 48J,2243,0.6730000000000002,0.077
+Greenwood Elementary School,1068,La Grande SD 1,2212,0.479,0.163
+Gresham Arthur Academy,4601,Gresham-Barlow SD 10J,2183,0.31,NA
+Griffin Creek Elementary School,408,Medford SD 549C,2048,0.652,0.061
+Groner K-8,1152,Hillsboro SD 1J,2239,0.611,0.111
+Grout Elementary School,854,Portland SD 1J,2180,0.517,0.127
+Gubser Elementary School,745,Salem-Keizer SD 24J,2142,0.563,0.225
+Guy Lee Elementary School,548,Springfield SD 19,2083,0.7809999999999999,0.132
+Haines Elementary School,4,Baker SD 5J,1894,0.14300000000000002,0.14300000000000002
+Hall Elementary School,936,Gresham-Barlow SD 10J,2183,0.857,0.228
+Hallinan Elementary School,54,Lake Oswego SD 7J,1923,0.198,0.175
+Hallman Elementary School,3377,Salem-Keizer SD 24J,2142,0.792,0.16699999999999998
+Hamilton Creek School,658,Lebanon Community SD 9,2101,0.6859999999999999,0.237
+Hammond Elementary School,3376,Salem-Keizer SD 24J,2142,0.5409999999999999,0.22399999999999998
+Happy Valley Elementary School,4763,North Clackamas SD 12,1924,0.305,0.069
+Harrisburg Elementary School,659,Harrisburg SD 7J,2099,0.609,0.114
+Harrison Elementary School,576,South Lane SD 45J3,2087,0.645,NA
+Harrison Park School,842,Portland SD 1J,2180,0.836,0.217
+Harritt Elementary School,4068,Salem-Keizer SD 24J,2142,0.581,0.153
+Hartley Elementary School,947,Reynolds SD 7,2182,0.705,0.151
+Harvey Clarke Elementary School,1132,Forest Grove SD 15,2241,0.336,0.10800000000000001
+Hawthorne Elementary School,663,Sweet Home SD 55,2102,0.75,0.161
+Hayesville Elementary School,755,Salem-Keizer SD 24J,2142,0.809,0.149
+Hayhurst Elementary School,855,Portland SD 1J,2180,0.33,0.133
+Hazeldale Elementary School,1164,Beaverton SD 48J,2243,0.431,0.10099999999999999
+Helman Elementary School,377,Ashland SD 5,2041,0.245,0.125
+Henley Elementary School,473,Klamath County SD,2057,0.659,0.064
+Henry L Slater Elementary School,342,Harney County SD 3,2014,0.612,0.109
+Heppner Elementary School,815,Morrow SD 1,2147,0.5720000000000001,0.15
+Heritage Elementary,1359,Woodburn SD 103,2146,0.746,0.341
+High Lakes Elementary School,3218,Bend-LaPine Administrative SD 1,1976,0.168,0.087
+Highland Elementary School,309,Reedsport SD 105,2001,0.6940000000000001,0.18600000000000003
+Highland Elementary School,436,Grants Pass SD 7,2054,0.397,0.09300000000000001
+Highland Elementary School,743,Salem-Keizer SD 24J,2142,0.83,0.19699999999999998
+Highland Elementary School,935,Gresham-Barlow SD 10J,2183,0.774,0.09300000000000001
+Highland Hills Elementary School,1034,Hermiston SD 8,2206,0.43200000000000005,0.069
+Highland School at Kenwood Elementary School,3219,Bend-LaPine Administrative SD 1,1976,0.159,0.077
+Hilda Lahti Elementary School,166,Knappa SD 4,2262,0.677,0.152
+Hillcrest Elementary School,204,North Bend SD 13,1966,0.27799999999999997,0.08800000000000001
+Hillside Elementary,390,Eagle Point SD 9,2043,0.6890000000000001,0.069
+Hiteon Elementary School,1165,Beaverton SD 48J,2243,0.311,0.087
+Hogan Cedars Elementary School,3543,Gresham-Barlow SD 10J,2183,0.566,0.11
+Holcomb Elementary School,107,Oregon City SD 62,1928,0.701,0.182
+Holley Elementary School,664,Sweet Home SD 55,2102,0.8340000000000001,0.067
+Hollydale Elementary School,937,Gresham-Barlow SD 10J,2183,0.706,0.18100000000000002
+Holt Elementary School,4157,Eugene SD 4J,2082,0.605,0.16899999999999998
+Hoover Elementary School,33,Corvallis SD 509J,1901,0.261,0.053
+Hoover Elementary School,409,Medford SD 549C,2048,0.37200000000000005,0.071
+Hoover Elementary School,744,Salem-Keizer SD 24J,2142,0.715,0.14300000000000002
+Hope Chinese Charter School,4867,Beaverton SD 48J,2243,0.17300000000000001,NA
+Howard Eccles Elementary School,124,Canby SD 86,1929,0.41700000000000004,0.098
+Howard Elementary School,410,Medford SD 549C,2048,0.5459999999999999,0.177
+Howard Elementary School,515,Eugene SD 4J,2082,0.6990000000000001,0.149
+Hucrest Elementary School,273,Douglas County SD 4,1991,0.573,0.069
+Hudson Park Elementary School,171,Rainier SD 13,1946,0.611,0.17
+Humbolt Elementary School,327,John Day SD 3,2008,0.465,0.14300000000000002
+Imbler Charter School,1079,Imbler SD 11,2215,0.37,NA
+Imlay Elementary School,3536,Hillsboro SD 1J,2239,0.45299999999999996,0.087
+Inavale Community Partners dba Muddy Creek Charter School,4637,Corvallis SD 509J,1901,0.17700000000000002,0.294
+Indian Hills Elementary School,1148,Hillsboro SD 1J,2239,0.534,0.068
+Irving Elementary School,585,Bethel SD 52,2088,0.4590000000000001,0.08
+Irvington Elementary School,861,Portland SD 1J,2180,0.35700000000000004,0.131
+Island City Elementary School,1069,La Grande SD 1,2212,0.40399999999999997,0.192
+J Clyde Hopkins Elementary School,1191,Sherwood SD 88J,2244,0.45299999999999996,0.133
+Jackson Elementary School,411,Medford SD 549C,2048,0.7190000000000001,0.113
+Jackson Elementary School,1285,Hillsboro SD 1J,2239,0.414,NA
+Jacksonville Elementary School,412,Medford SD 549C,2048,0.434,0.113
+James John Elementary School,862,Portland SD 1J,2180,0.581,0.233
+James Templeton Elementary School,1139,Tigard-Tualatin SD 23J,2242,0.516,0.07400000000000001
+Jefferson Elementary School,35,Corvallis SD 509J,1901,0.35400000000000004,0.10400000000000001
+Jefferson Elementary School,413,Medford SD 549C,2048,0.603,0.16899999999999998
+Jefferson Elementary School,721,Jefferson SD 14J,2140,0.721,0.11699999999999999
+Jewett Elementary School,383,Central Point SD 6,2042,0.745,0.114
+Joan Austin Elementary School,4342,Newberg SD 29J,2254,0.53,0.078
+John McLoughlin Elementary School,114,Oregon City SD 62,1928,0.442,0.11800000000000001
+John Muir Elementary School,4476,Ashland SD 5,2041,0.818,0.091
+John Tuck Elementary School,258,Redmond SD 2J,1977,0.733,0.174
+John Wetten Elementary School,136,Gladstone SD 115,1931,0.373,0.141
+Joseph Charter School,1087,Joseph SD 6,2219,0.29400000000000004,0.055999999999999994
+Joseph Conger Elementary School,459,Klamath Falls City Schools,2056,0.6829999999999999,0.091
+Joseph Gale Elementary School,1133,Forest Grove SD 15,2241,0.6859999999999999,0.18600000000000003
+Juniper Elementary School,246,Bend-LaPine Administrative SD 1,1976,0.385,0.066
+Kairos PDX,5218,Portland SD 1J,2180,0.92,0.33299999999999996
+Kalapuya Elementary School,4858,Salem-Keizer SD 24J,2142,0.27899999999999997,0.11199999999999999
+Kalmiopsis Elementary School,236,Brookings-Harbor SD 17C,1974,0.637,0.18
+Keizer Elementary School,747,Salem-Keizer SD 24J,2142,0.767,0.126
+Kelly Creek Elementary School,1313,Gresham-Barlow SD 10J,2183,0.413,0.195
+Kelly Elementary School,864,Portland SD 1J,2180,0.767,0.2
+Kelso Elementary School,99,Oregon Trail SD 46,1926,0.40399999999999997,0.12
+Kennedy Elementary School,416,Medford SD 549C,2048,0.6579999999999999,0.205
+Kennedy Elementary School,746,Salem-Keizer SD 24J,2142,0.797,0.156
+Keno Elementary School,474,Klamath County SD,2057,0.528,0.19399999999999998
+Kids Unlimited Academy,5205,Medford SD 549C,2048,0.54,0.14300000000000002
+Kings Valley Charter School,3440,Philomath SD 17J,1900,0.8230000000000001,0.294
+Kinnaman Elementary School,1166,Beaverton SD 48J,2243,0.5329999999999999,0.086
+Lacomb School,671,Lebanon Community SD 9,2101,0.7219999999999999,0.055999999999999994
+Ladd Acres Elementary School,1150,Hillsboro SD 1J,2239,0.304,0.07400000000000001
+Lafayette Elementary School,640,Greater Albany Public SD 8J,2100,0.6859999999999999,0.2
+Lake Grove Elementary School,55,Lake Oswego SD 7J,1923,0.163,0.052000000000000005
+Lamb Elementary School,3375,Salem-Keizer SD 24J,2142,0.759,0.099
+LaPine Elementary School,245,Bend-LaPine Administrative SD 1,1976,0.631,0.24100000000000002
+Latham Elementary School,577,South Lane SD 45J3,2087,0.5,0.071
+Laurel Elementary School,595,Junction City SD 69,2091,0.636,0.106
+Laurelhurst Elementary School,868,Portland SD 1J,2180,0.32,0.054000000000000006
+Lava Ridge Elementary School,1317,Bend-LaPine Administrative SD 1,1976,0.252,0.07200000000000001
+Le Monde French Immersion Public Charter School,5060,Portland SD 1J,2180,0.158,0.19
+Lee Elementary School,869,Portland SD 1J,2180,0.778,0.068
+Lee Elementary School,3526,Salem-Keizer SD 24J,2142,0.45,0.18600000000000003
+Lenox Elementary School,1110,Hillsboro SD 1J,2239,0.43699999999999994,0.113
+Lent Elementary School,870,Portland SD 1J,2180,0.8880000000000001,0.11699999999999999
+Lewelling Elementary School,4764,North Clackamas SD 12,1924,0.7120000000000001,0.226
+Lewis & Clark Elementary School,147,Astoria SD 1,1933,0.5579999999999999,0.105
+Lewis & Clark Elementary School,3569,St Helens SD 502,1948,0.742,0.159
+Lewis Elementary School,871,Portland SD 1J,2180,0.45399999999999996,0.141
+Liberty Elementary School,641,Greater Albany Public SD 8J,2100,0.36,0.115
+Liberty Elementary School,749,Salem-Keizer SD 24J,2142,0.672,0.16899999999999998
+Lighthouse Charter School,3615,Coos Bay SD 9,1965,0.52,0.16699999999999998
+Lincoln Elementary School,36,Corvallis SD 509J,1901,0.6,0.102
+Lincoln Elementary School,437,Grants Pass SD 7,2054,0.55,0.10300000000000001
+Lincoln Elementary School,1267,Woodburn SD 103,2146,0.8170000000000001,0.212
+Lincoln Park Elementary School,975,David Douglas SD 40,2187,0.62,0.17300000000000001
+Lincoln Street Elementary School,4642,Hillsboro SD 1J,2239,0.79,0.133
+Linwood Elementary School,4765,North Clackamas SD 12,1924,0.857,0.133
+Llewellyn Elementary School,872,Portland SD 1J,2180,0.20800000000000002,0.07400000000000001
+Logos Public Charter School,4821,Medford SD 549C,2048,0.654,NA
+London School,578,South Lane SD 45J3,2087,0.643,0.071
+Lone Pine Elementary School,414,Medford SD 549C,2048,0.414,0.086
+Lookingglass Elementary School,313,Winston-Dillard SD 116,2002,0.888,0.077
+Lowrie Primary School,5056,West Linn-Wilsonville SD 3J,1922,0.41100000000000003,0.20199999999999999
+Luckiamute Valley Charter School,3461,Dallas SD 2,2190,0.7140000000000001,0.14300000000000002
+Lundy Elementary School,598,Lowell SD 71,2092,0.727,0.14300000000000002
+Lyle Elementary School,989,Dallas SD 2,2190,0.684,0.122
+M A Lynch Elementary School,259,Redmond SD 2J,1977,0.526,0.125
+Mabel Rush Elementary School,1219,Newberg SD 29J,2254,0.32,0.14300000000000002
+Madison Elementary School,196,Coos Bay SD 9,1965,0.625,0.256
+Madras Elementary School,430,Jefferson County SD 509J,2053,0.64,0.161
+Madrona Elementary School,450,Three Rivers/Josephine County SD,2055,0.428,0.077
+Madrone Trail Public Charter School,4593,Medford SD 549C,2048,0.75,0.273
+Malabon Elementary School,586,Bethel SD 52,2088,0.7040000000000001,0.075
+Malin Elementary School,475,Klamath County SD,2057,0.7,0.2
+Manzanita Elementary School,451,Three Rivers/Josephine County SD,2055,0.583,0.172
+Maple Elementary School,550,Springfield SD 19,2083,0.637,0.09699999999999999
+Mapleton Elementary School,568,Mapleton SD 32,2085,0.924,0.091
+Maplewood Elementary School,873,Portland SD 1J,2180,0.563,0.14300000000000002
+Marcola Elementary School,603,Marcola SD 79J,2094,0.5329999999999999,0.067
+Margaret Scott Elementary School,948,Reynolds SD 7,2182,0.754,0.19699999999999998
+Mari-Linn Elementary School,656,North Santiam SD 29J,2143,0.592,0.14800000000000002
+Markham Elementary School,1278,Portland SD 1J,2180,0.28600000000000003,0.063
+Martin Luther King Jr. School,866,Portland SD 1J,2180,0.909,0.19
+Mary Woodward Elementary School,1137,Tigard-Tualatin SD 23J,2242,0.248,0.107
+Marysville Elementary School,875,Portland SD 1J,2180,0.75,0.35200000000000004
+Maupin Elementary School,1108,South Wasco County SD 1,2225,0.42900000000000005,0.375
+May Roberts Elementary School,696,Ontario SD 8C,2108,0.722,NA
+May Street Elementary School,362,Hood River County SD,2024,0.46299999999999997,NA
+McBride Elementary School,182,St Helens SD 502,1948,0.679,0.08800000000000001
+McCornack Elementary School,522,Eugene SD 4J,2082,0.569,0.12
+McKay Creek Elementary School,1047,Pendleton SD 16,2207,0.5589999999999999,0.071
+McKay Elementary School,1168,Beaverton SD 48J,2243,0.629,0.13
+McKenzie River Community School,594,McKenzie SD 68,2090,0.534,0.14300000000000002
+McKinley Elementary School,750,Salem-Keizer SD 24J,2142,0.52,0.151
+McKinley Elementary School,1169,Beaverton SD 48J,2243,0.55,0.1
+McNary Heights Elementary School,1032,Umatilla SD 6R,2204,0.67,0.235
+Meadow View School,2264,Bethel SD 52,2088,0.581,0.08800000000000001
+Meadows Elementary,959,Centennial SD 28J,2185,0.81,0.262
+Melrose Elementary School,274,Douglas County SD 4,1991,0.423,0.094
+Memorial Elementary School,1230,McMinnville SD 40,2256,0.304,0.059000000000000004
+Menlo Park Elementary School,976,David Douglas SD 40,2187,0.645,0.25
+Merrill Elementary School,476,Klamath County SD,2057,0.5790000000000001,0.053
+Metolius Elementary School,431,Jefferson County SD 509J,2053,0.31799999999999995,0.27699999999999997
+Metropolitan Learning Center,916,Portland SD 1J,2180,0.571,NA
+Metzger Elementary School,1140,Tigard-Tualatin SD 23J,2242,0.713,0.105
+Mid Valley Elementary School,363,Hood River County SD,2024,0.486,0.081
+Middleton Elementary School,3222,Sherwood SD 88J,2244,0.21600000000000003,0.052000000000000005
+Mill Park Elementary School,977,David Douglas SD 40,2187,0.865,0.16399999999999998
+Miller Elementary School,3215,Salem-Keizer SD 24J,2142,0.775,0.138
+Mills Elementary School,461,Klamath Falls City Schools,2056,0.8170000000000001,0.141
+Milwaukie Elementary School,73,North Clackamas SD 12,1924,0.6,0.158
+Minter Bridge Elementary School,1116,Hillsboro SD 1J,2239,0.772,NA
+Molalla Elementary School,94,Molalla River SD 35,1925,0.582,0.11800000000000001
+Molalla River Academy,4745,Molalla River SD 35,1925,0.75,0.19
+Monmouth Elementary School,999,Central SD 13J,2191,0.5109999999999999,0.135
+Monroe Grade School,1321,Monroe SD 1J,1898,0.6890000000000001,0.33299999999999996
+Montclair Elementary School,1170,Beaverton SD 48J,2243,0.20600000000000002,0.102
+Mooberry Elementary School,1117,Hillsboro SD 1J,2239,0.6779999999999999,0.12300000000000001
+Morningside Elementary School,753,Salem-Keizer SD 24J,2142,0.556,0.113
+Mosier Community School,1095,North Wasco County SD 21,4131,0.47600000000000003,0.1
+Mount Scott Elementary School,1264,North Clackamas SD 12,1924,0.41,0.14300000000000002
+Mountain View Academy,5252,Lowell SD 71,2092,0.25,0.133
+Mt Vernon Elementary School,554,Springfield SD 19,2083,0.563,0.139
+Mt View Elementary School,37,Corvallis SD 509J,1901,0.512,0.15
+Mulino Elementary School,121,Molalla River SD 35,1925,0.5,0.095
+Multi-sensory Instruction Teaching Children Hands-On (MITCH),3579,Tigard-Tualatin SD 23J,2242,0.37799999999999995,0.081
+Multnomah Learning Academy,3490,Reynolds SD 7,2182,0.534,0.122
+Myers Elementary School,754,Salem-Keizer SD 24J,2142,0.555,0.159
+Myrtle Creek Elementary School,290,South Umpqua SD 19,1994,0.625,0.152
+Myrtle Crest School,214,Myrtle Point SD 41,1968,0.742,0.225
+Naas Elementary School,96,Oregon Trail SD 46,1926,0.38799999999999996,NA
+Nancy Ryles Elementary School,1303,Beaverton SD 48J,2243,0.29700000000000004,0.115
+Nehalem Elementary School,1021,Neah-Kah-Nie SD 56,2198,0.6780000000000002,0.25
+Nellie Muir Elementary School,796,Woodburn SD 103,2146,0.795,0.077
+Nestucca Valley Elementary,1019,Nestucca Valley SD 101J,2199,0.5790000000000001,0.105
+Newby Elementary School,1231,McMinnville SD 40,2256,0.30200000000000005,0.098
+Ninety-One School,127,Canby SD 86,1929,0.442,0.205
+North Albany Elementary School,637,Greater Albany Public SD 8J,2100,0.434,0.057
+North Bay Elementary School,205,North Bend SD 13,1966,0.6030000000000001,0.174
+North Douglas Elementary School,296,North Douglas SD 22,1996,0.542,0.2
+North Gresham Elementary School,938,Gresham-Barlow SD 10J,2183,0.74,0.113
+North Lake School,1289,North Lake SD 14,2061,0.857,0.214
+North Marion Intermediate School,724,North Marion SD 15,2141,0.715,0.124
+North Plains Elementary School,1190,Hillsboro SD 1J,2239,0.353,0.122
+North Powder Charter School,3365,North Powder SD 8J,2214,0.723,0.222
+Nyssa Elementary School,702,Nyssa SD 26,2110,0.44799999999999995,0.111
+Oak Creek Elementary School,1288,Lake Oswego SD 7J,1923,0.319,0.062
+Oak Elementary School,643,Greater Albany Public SD 8J,2100,0.542,0.053
+Oak Grove Elementary,3342,North Clackamas SD 12,1924,0.621,0.203
+Oak Grove Elementary School,415,Medford SD 549C,2048,0.6890000000000001,0.115
+Oak Grove Elementary School,639,Greater Albany Public SD 8J,2100,0.309,0.127
+Oak Heights Elementary School,666,Sweet Home SD 55,2102,0.591,0.256
+Oak Hills Elementary School,1171,Beaverton SD 48J,2243,0.261,0.051
+Oakdale Heights Elementary School,990,Dallas SD 2,2190,0.722,0.13699999999999998
+Oakland Elementary School,267,Oakland SD 1,1990,0.43200000000000005,0.105
+Oakridge Elementary School,600,Oakridge SD 76,2093,0.6469999999999999,0.196
+Ocean Crest Elementary School,217,Bandon SD 54,1969,0.596,0.21600000000000003
+Oliver Elementary School,962,Centennial SD 28J,2185,0.738,0.14300000000000002
+Opal School of the Portland Children's Museum,3451,Portland SD 1J,2180,0.715,0.067
+Optimum Learning Environment Charter School,3528,Salem-Keizer SD 24J,2142,0.52,0.115
+Orchard Hill Elementary School,370,Phoenix-Talent SD 4,2039,0.508,0.156
+Oregon Connections Academy,4399,Santiam Canyon SD 129J,2104,0.564,0.161
+Oregon Family School,5446,Harney County SD 4,2015,0.8819999999999999,NA
+Oregon Trail  Academy,4820,Oregon Trail SD 46,1926,0.107,0.14300000000000002
+Oregon Trail Elementary School,4766,North Clackamas SD 12,1924,0.5710000000000001,0.09
+Oregon Virtual Academy,4690,North Bend SD 13,1966,0.685,NA
+Orenco Elementary School,3160,Hillsboro SD 1J,2239,0.365,0.075
+Parkdale Elementary School,364,Hood River County SD,2024,0.69,NA
+Parklane Elementary School,963,Centennial SD 28J,2185,0.769,0.275
+Parkside Elementary,1351,Grants Pass SD 7,2054,0.523,0.149
+Patrick Elementary School,384,Central Point SD 6,2042,0.5,0.054000000000000006
+Patrick Lynch Elementary,964,Centennial SD 28J,2185,0.698,0.20800000000000002
+Paul L Patterson Elementary School,3159,Hillsboro SD 1J,2239,0.431,0.05
+Pelican Elementary School,462,Klamath Falls City Schools,2056,0.633,0.08
+Peninsula Elementary School,879,Portland SD 1J,2180,0.728,0.21100000000000002
+Periwinkle Elementary School,636,Greater Albany Public SD 8J,2100,0.616,0.183
+Perrydale School,3378,Perrydale SD 21,2192,0.64,NA
+Peterson Elementary School,477,Klamath County SD,2057,0.32899999999999996,0.114
+Philander Lee Elementary School,4435,Canby SD 86,1929,0.581,0.162
+Philomath Elementary School,20,Philomath SD 17J,1900,0.596,0.11
+Phoenix Elementary School,371,Phoenix-Talent SD 4,2039,0.8059999999999999,0.121
+Pilot Rock Elementary School,1027,Pilot Rock SD 2,2202,0.55,0.136
+Pine Eagle Charter School,15,Pine Eagle SD 61,1897,0.5,0.05
+Pine Ridge Elementary,3947,Bend-LaPine Administrative SD 1,1976,0.312,0.10800000000000001
+Pioneer Elementary School,697,Ontario SD 8C,2108,0.8080000000000002,NA
+Pioneer School,3504,Lebanon Community SD 9,2101,0.442,0.122
+Pleasant Hill Elementary School,500,Pleasant Hill SD 1,2081,0.5539999999999999,0.149
+Pleasant Valley Elementary School,966,Centennial SD 28J,2185,0.5930000000000001,0.10300000000000001
+Ponderosa Elementary,4646,Bend-LaPine Administrative SD 1,1976,0.505,0.13
+Portland Arthur Academy Charter School,4400,Portland SD 1J,2180,0.5710000000000001,0.179
+Portland Village School,4534,Portland SD 1J,2180,0.436,NA
+Powell Butte Community Charter School,223,Crook County SD,1970,0.304,0.16699999999999998
+Powell Butte Elementary School,965,Centennial SD 28J,2185,0.6240000000000001,0.228
+Powell Valley Elementary School,939,Gresham-Barlow SD 10J,2183,0.6659999999999999,0.133
+Prairie Mountain School,3567,Bethel SD 52,2088,0.537,0.096
+Prescott Elementary School,925,Parkrose SD 3,2181,0.804,0.273
+Pringle Elementary School,756,Salem-Keizer SD 24J,2142,0.44299999999999995,0.222
+Prospect Charter School,3356,Prospect SD 59,2045,0.8,0.1
+Quatama Elementary School,4643,Hillsboro SD 1J,2239,0.315,0.11
+R E Jewell Elementary School,247,Bend-LaPine Administrative SD 1,1976,0.5329999999999999,0.11199999999999999
+Raleigh Hills Elementary School,1172,Beaverton SD 48J,2243,0.38900000000000007,0.23199999999999998
+Raleigh Park Elementary School,1173,Beaverton SD 48J,2243,0.371,0.095
+Redland Elementary School,139,Oregon City SD 62,1928,0.612,0.07400000000000001
+Redwood Elementary School,439,Grants Pass SD 7,2054,0.32,0.111
+Reedville Elementary School,1149,Hillsboro SD 1J,2239,0.8119999999999998,0.094
+Reynolds Arthur Academy,4216,Reynolds SD 7,2182,0.44799999999999995,0.069
+Richardson Elementary School,385,Central Point SD 6,2042,0.618,0.079
+Richmond Elementary School,757,Salem-Keizer SD 24J,2142,0.818,0.355
+Richmond Elementary School,883,Portland SD 1J,2180,0.221,0.055999999999999994
+Riddle Elementary School,304,Riddle SD 70,1999,0.551,0.067
+Ridgeline Montessori,3233,Eugene SD 4J,2082,0.5,0.14800000000000002
+Ridgeview Elementary School,553,Springfield SD 19,2083,0.515,0.145
+Ridgewood Elementary School,1174,Beaverton SD 48J,2243,0.321,0.08800000000000001
+Rieke Elementary School,1299,Portland SD 1J,2180,0.24600000000000002,0.068
+Rigler Elementary School,884,Portland SD 1J,2180,0.9339999999999999,0.068
+Riley Creek Elementary School,231,Central Curry SD 1,1972,0.54,0.139
+River Grove Elementary School,56,Lake Oswego SD 7J,1923,0.233,NA
+River Mill Elementary School,132,Estacada SD 108,1930,0.606,0.182
+River Road/El Camino del Rio Elementary School,525,Eugene SD 4J,2082,0.746,0.053
+Riverbend Elementary School,1352,Springfield SD 19,2083,0.55,0.13
+Riverdale Grade School,985,Riverdale SD 51J,2188,0.22200000000000003,0.152
+Riverside Elementary School,76,North Clackamas SD 12,1924,0.6609999999999999,0.153
+Riverside Elementary School,440,Grants Pass SD 7,2054,0.585,0.08199999999999999
+Riverview School,3503,Lebanon Community SD 9,2101,0.5790000000000001,0.242
+Robert Frost Elementary School,716,Silver Falls SD 4J,2138,0.5920000000000001,0.145
+Rock Creek Elementary School,1175,Beaverton SD 48J,2243,0.283,0.051
+Rockwood Preparatory Academy,4822,Reynolds SD 7,2182,0.6829999999999999,0.214
+Rocky Heights Elementary School,1036,Hermiston SD 8,2206,0.537,0.076
+Rogue River Elementary School,399,Rogue River SD 35,2044,0.435,0.17600000000000002
+Roosevelt Elementary School,417,Medford SD 549C,2048,0.682,0.203
+Roosevelt Elementary School,465,Klamath Falls City Schools,2056,0.446,NA
+Rosa Parks Elementary School,829,Portland SD 1J,2180,0.851,0.217
+Rose City Park,5427,Portland SD 1J,2180,0.36700000000000005,0.08
+Rosedale Elementary School,4703,Hillsboro SD 1J,2239,0.5529999999999999,0.13
+Rosland Elementary,4793,Bend-LaPine Administrative SD 1,1976,0.455,0.217
+Ruch Elementary School,418,Medford SD 549C,2048,0.462,0.25
+Rural Dell Elementary School,128,Molalla River SD 35,1925,0.439,0.125
+Russell Elementary,926,Parkrose SD 3,2181,0.6,0.16899999999999998
+Sabin Elementary School,886,Portland SD 1J,2180,0.38,0.055
+Sacramento Elementary School,927,Parkrose SD 3,2181,0.875,0.145
+Sage Elementary School,256,Redmond SD 2J,1977,0.307,0.136
+Salem Heights Elementary School,759,Salem-Keizer SD 24J,2142,0.465,0.22399999999999998
+Salish Ponds Elementary School,3989,Reynolds SD 7,2182,0.8889999999999999,0.17600000000000002
+Sam Boardman Elementary School,814,Morrow SD 1,2147,0.7020000000000001,0.154
+Sam Case Elementary,625,Lincoln County SD,2097,0.586,0.149
+Sams Valley Elementary School,386,Central Point SD 6,2042,0.6459999999999999,0.11800000000000001
+Sand Ridge Charter School,3505,Lebanon Community SD 9,2101,0.23700000000000002,0.079
+Sandy Grade School,100,Oregon Trail SD 46,1926,0.415,0.12
+Santiam Elementary School,681,Santiam Canyon SD 129J,2104,0.725,0.35
+Sato Elementary School,5382,Beaverton SD 48J,2243,0.136,0.08800000000000001
+Sauvie Island School,958,Scappoose SD 1J,1944,0.33299999999999996,NA
+Schirle Elementary School,760,Salem-Keizer SD 24J,2142,0.569,0.217
+Scholls Heights Elementary School,2781,Beaverton SD 48J,2243,0.172,0.07400000000000001
+Scott Elementary School,741,Salem-Keizer SD 24J,2142,0.7530000000000001,0.152
+Scott Elementary School,887,Portland SD 1J,2180,0.7290000000000001,0.16399999999999998
+Scotts Mills Elementary School,785,Silver Falls SD 4J,2138,0.5,0.17600000000000002
+Scouters Mountain Elementary,4713,North Clackamas SD 12,1924,0.43200000000000005,0.11900000000000001
+Seaside Heights Elementary School,152,Seaside SD 10,1935,0.6580000000000001,0.141
+Sexton Mountain Elementary School,1270,Beaverton SD 48J,2243,0.322,0.086
+Shady Cove School,393,Eagle Point SD 9,2043,0.536,NA
+Shasta Elementary School,478,Klamath County SD,2057,0.4,0.11800000000000001
+Shaver Elementary School,928,Parkrose SD 3,2181,0.61,0.341
+Sherman County School,1010,Sherman County SD,2195,0.45399999999999996,0.19
+Sherwood Charter School,4220,Sherwood SD 88J,2244,0.32,0.091
+Sherwood Heights Elementary School,1048,Pendleton SD 16,2207,0.521,0.122
+Siletz Valley Schools,4038,Lincoln County SD,2097,0.818,0.273
+Silver Crest Elementary School,795,Silver Falls SD 4J,2138,0.6,0.091
+Silver Rail Elementary School,5293,Bend-LaPine Administrative SD 1,1976,0.603,0.16899999999999998
+Silvies River Charter School,4702,Frenchglen SD 16,2020,0.74,NA
+Sisters Elementary School,264,Sisters SD 6,1978,0.42700000000000005,0.11699999999999999
+Sitton Elementary School,889,Portland SD 1J,2180,0.855,0.276
+Siuslaw Elementary School,609,Siuslaw SD 97J,2096,0.602,0.205
+Skyline Elementary School,890,Portland SD 1J,2180,0.5,0.069
+Sojourner School,2733,North Clackamas SD 12,1924,0.259,0.14800000000000002
+South Columbia Family School,4221,Scappoose SD 1J,1944,0.7,NA
+South Prairie Elementary School,1014,Tillamook SD 9,2197,0.665,0.146
+South Shore Elementary School,645,Greater Albany Public SD 8J,2100,0.831,0.188
+Spring Creek Elementary School,529,Eugene SD 4J,2082,0.561,0.282
+Spring Mountain Elementary School,3198,North Clackamas SD 12,1924,0.256,0.11199999999999999
+Springville K-8 School,4712,Beaverton SD 48J,2243,0.155,NA
+Springwater Environmental Sciences School,4480,Oregon City SD 62,1928,0.375,0.136
+St Helens Arthur Academy,4602,St Helens SD 502,1948,0.44799999999999995,NA
+St Marys Public School,793,Mt Angel SD 91,2145,0.578,0.129
+St Paul Elementary School,778,St Paul SD 45,2144,0.546,NA
+Stafford Primary School,47,West Linn-Wilsonville SD 3J,1922,0.478,0.134
+Stanfield Elementary School,1060,Stanfield SD 61,2209,0.654,0.125
+Stayton Elementary School,788,North Santiam SD 29J,2143,0.48100000000000004,0.20199999999999999
+Stearns Elementary School,479,Klamath County SD,2057,0.7330000000000001,0.136
+Stella Mayfield Elementary School,1082,Elgin SD 23,2217,0.629,NA
+Stephenson Elementary School,892,Portland SD 1J,2180,0.2,NA
+Sublimity Elementary School,717,North Santiam SD 29J,2143,0.26299999999999996,0.154
+Sue Buel Elementary,4639,McMinnville SD 40,2256,0.557,0.107
+Summit Learning Charter,4670,Estacada SD 108,1930,0.625,NA
+Sumpter Elementary School,761,Salem-Keizer SD 24J,2142,0.384,0.136
+Sunny Wolf Charter School,4823,Three Rivers/Josephine County SD,2055,0.35,0.25
+Sunnyside Elementary School,78,North Clackamas SD 12,1924,0.563,0.203
+Sunnyside Environmental School,893,Portland SD 1J,2180,0.604,0.18600000000000003
+Sunnyslope Elementary School,276,Douglas County SD 4,1991,0.65,0.098
+Sunrise Elementary School,644,Greater Albany Public SD 8J,2100,0.7,0.24
+Sunset Elementary School,1037,Hermiston SD 8,2206,0.5660000000000001,0.136
+Sunset Primary School,48,West Linn-Wilsonville SD 3J,1922,0.24100000000000002,NA
+Sweet Home Charter School,4484,Sweet Home SD 55,2102,0.455,0.182
+Sweetbriar Elementary School,950,Reynolds SD 7,2182,0.5,0.175
+Swegle Elementary School,762,Salem-Keizer SD 24J,2142,0.7709999999999999,0.22
+Table Rock Elementary,394,Eagle Point SD 9,2043,0.7809999999999999,0.059000000000000004
+Taft Elementary School,620,Lincoln County SD,2097,0.728,0.209
+Talent Elementary School,372,Phoenix-Talent SD 4,2039,0.83,0.172
+Tangent Elementary School,646,Greater Albany Public SD 8J,2100,0.778,NA
+Terra Linda Elementary School,1176,Beaverton SD 48J,2243,0.355,0.094
+Terrebonne Community School,260,Redmond SD 2J,1977,0.41100000000000003,0.135
+Territorial Elementary School,1297,Junction City SD 69,2091,0.22699999999999998,0.091
+The Community Roots School,4746,Silver Falls SD 4J,2138,0.5329999999999999,0.188
+The Cottonwood School of Civics and Science,4604,Oregon Department of Education,2336,0.7090000000000001,NA
+The Ivy School,4720,Oregon Department of Education,2336,0.4,0.055999999999999994
+Three Rivers Elementary School,1266,Bend-LaPine Administrative SD 1,1976,0.303,0.136
+Thurston Elementary School,556,Springfield SD 19,2083,0.39,0.127
+Timber Ridge School,4744,Greater Albany Public SD 8J,2100,0.47,NA
+Tobias Elementary School,1302,Hillsboro SD 1J,2239,0.578,0.08900000000000001
+Toledo Elementary School,611,Lincoln County SD,2097,0.7040000000000001,0.255
+Tom McCall Elementary School,4429,Redmond SD 2J,1977,0.38099999999999995,0.207
+Tri City Elementary School,292,South Umpqua SD 19,1994,0.667,0.13
+Triangle Lake Charter School,3401,Blachly SD 90,2095,0.588,0.25
+Trillium,3616,Portland SD 1J,2180,0.7140000000000001,0.154
+Trillium Creek Primary School,5057,West Linn-Wilsonville SD 3J,1922,0.24299999999999997,NA
+Troutdale Elementary School,951,Reynolds SD 7,2182,0.617,0.226
+Tualatin Elementary School,1143,Tigard-Tualatin SD 23J,2242,0.507,0.14300000000000002
+Tumalo Community School,261,Redmond SD 2J,1977,0.28200000000000003,0.075
+Turner Elementary School,790,Cascade SD 5,2139,0.434,0.05
+Twin Oaks Elementary School,530,Eugene SD 4J,2082,0.42100000000000004,0.16699999999999998
+Two Rivers Dos Rios Elementary,5059,Springfield SD 19,2083,0.77,0.12300000000000001
+Union Elementary School,1074,Union SD 5,2213,0.53,0.14300000000000002
+Vale Elementary School,701,Vale SD 84,2116,0.612,0.10400000000000001
+Valley Inquiry Charter School,4390,Salem-Keizer SD 24J,2142,0.48100000000000004,0.179
+Veneta Elementary School,566,Fern Ridge SD 28J,2084,0.509,0.14300000000000002
+Ventura Park Elementary School,978,David Douglas SD 40,2187,0.6030000000000001,0.138
+Vern Patrick Elementary School,1325,Redmond SD 2J,1977,0.574,0.095
+Verne A Duncan Elementary School,4714,North Clackamas SD 12,1924,0.554,0.237
+Vernon Elementary School,895,Portland SD 1J,2180,0.4759999999999999,0.11800000000000001
+Vernonia Elementary School,177,Vernonia SD 47J,1947,0.7390000000000001,0.087
+Vestal Elementary School,896,Portland SD 1J,2180,0.35700000000000004,0.14800000000000002
+Victor Point Elementary School,777,Silver Falls SD 4J,2138,0.136,NA
+View Acres Elementary School,79,North Clackamas SD 12,1924,0.491,0.077
+Village School,3229,Eugene SD 4J,2082,0.7140000000000001,0.20800000000000002
+Vose Elementary School,1177,Beaverton SD 48J,2243,0.495,0.152
+W L Henry Elementary School,1119,Hillsboro SD 1J,2239,0.6890000000000001,0.063
+W Verne McKinney Elementary School,1114,Hillsboro SD 1J,2239,0.6759999999999999,0.134
+Walker Elementary School,379,Ashland SD 5,2041,0.38799999999999996,0.057999999999999996
+Wallowa Elementary School,1088,Wallowa SD 12,2220,0.455,NA
+Walterville Elementary School,558,Springfield SD 19,2083,0.608,0.077
+Warm Springs K-8 Academy,432,Jefferson County SD 509J,2053,0.629,0.33299999999999996
+Warren Elementary School,160,Scappoose SD 1J,1944,0.7090000000000001,0.10400000000000001
+Warrenton Grade School,156,Warrenton-Hammond SD 30,1936,0.602,0.147
+Wascher Elementary School,1232,McMinnville SD 40,2256,0.265,0.11900000000000001
+Washington Elementary School,419,Medford SD 549C,2048,0.8,0.133
+Washington Elementary School,763,Salem-Keizer SD 24J,2142,0.623,0.207
+Washington Elementary School,797,Woodburn SD 103,2146,0.8640000000000001,0.114
+Washington Elementary School,1049,Pendleton SD 16,2207,0.5059999999999999,0.244
+Waverly Elementary School,648,Greater Albany Public SD 8J,2100,0.6190000000000001,0.171
+Weddle Elementary School,3374,Salem-Keizer SD 24J,2142,0.8490000000000001,0.214
+Welches Elementary School,88,Oregon Trail SD 46,1926,0.5459999999999999,0.061
+West Gresham Elementary School,940,Gresham-Barlow SD 10J,2183,0.5489999999999999,0.091
+West Park Elementary School,1038,Hermiston SD 8,2206,0.44099999999999995,0.16899999999999998
+West Powellhurst Elementary School,979,David Douglas SD 40,2187,0.705,0.19699999999999998
+West Tualatin View Elementary School,1178,Beaverton SD 48J,2243,0.24599999999999997,NA
+West Union Elementary School,1111,Hillsboro SD 1J,2239,0.622,0.127
+Westridge Elementary School,58,Lake Oswego SD 7J,1923,0.163,0.06
+Westside Elementary School,366,Hood River County SD,2024,0.4,NA
+Westside Village Magnet School at Kingston Elementary School,3221,Bend-LaPine Administrative SD 1,1976,0.47100000000000003,0.22899999999999998
+Whitcomb Elementary School,72,North Clackamas SD 12,1924,0.86,0.079
+Whitman Elementary School,900,Portland SD 1J,2180,0.625,0.282
+Wilkes Elementary School,952,Reynolds SD 7,2182,0.7219999999999999,0.257
+Willagillespie Elementary School,534,Eugene SD 4J,2082,0.436,0.12
+Willamette Primary School,1286,West Linn-Wilsonville SD 3J,1922,0.193,0.054000000000000006
+Willamina Elementary School,1224,Willamina SD 30J,2255,0.83,0.18600000000000003
+William E Miller Elementary,4680,Bend-LaPine Administrative SD 1,1976,0.17300000000000001,0.126
+William Knight Elementary School,122,Canby SD 86,1929,0.41200000000000003,0.182
+William Walker Elementary School,1179,Beaverton SD 48J,2243,0.721,0.141
+Williams Elementary School,453,Three Rivers/Josephine County SD,2055,0.376,0.28600000000000003
+Wilson Elementary School,39,Corvallis SD 509J,1901,0.39299999999999996,0.155
+Wilson Elementary School,420,Medford SD 549C,2048,0.539,0.237
+Winchester Elementary,277,Douglas County SD 4,1991,0.659,0.091
+Winterhaven School,1364,Portland SD 1J,2180,0.637,0.261
+Witch Hazel Elementary School,1151,Hillsboro SD 1J,2239,0.732,0.111
+Woodburn Arthur Academy,4230,Woodburn SD 103,2146,0.8,0.179
+Woodland Elementary,1365,Reynolds SD 7,2182,0.768,0.16899999999999998
+Woodlawn Elementary School,902,Portland SD 1J,2180,0.534,0.16
+Woodmere Elementary School,903,Portland SD 1J,2180,0.787,0.32
+Woodstock Elementary School,904,Portland SD 1J,2180,0.304,NA
+Wright Elementary School,737,Salem-Keizer SD 24J,2142,0.426,0.115
+Yamhill Carlton Elementary School,1213,Yamhill Carlton SD 1,2251,0.467,0.09699999999999999
+Yolanda Elementary School,559,Springfield SD 19,2083,0.37,NA
+Yoncalla Elementary School,299,Yoncalla SD 32,1997,0.9,0.273
+Yoshikai Elementary School,764,Salem-Keizer SD 24J,2142,0.354,0.21100000000000002
+Yujin Gakuen Elementary School,1259,Eugene SD 4J,2082,0.294,0.115

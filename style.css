@@ -143,6 +143,10 @@ div.dk-footer a {
 
 /* DK section title */
 
+.dk-section-title {
+box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+}
+
 .dk-section-title div.dk-footer {
     display: none;
     opacity: 0.5;
@@ -166,7 +170,11 @@ div.dk-footer a {
 }
 
 
-/* DK section title */
+/* DK section title  light bg */
+
+.dk-section-title-light-bg {
+box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
 
 .dk-section-title-light-bg div.dk-footer {
     display: none;
@@ -181,7 +189,7 @@ div.dk-footer a {
 }
 
 .dk-section-title-light-bg h2 {
-  color: #f3f3f3;
+  color: #6cabdd;
   font-size: 75px;
   line-height: 1;
 }

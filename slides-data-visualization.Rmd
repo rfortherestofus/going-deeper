@@ -23,89 +23,554 @@ library(janitor)
 library(knitr)
 ```
 
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/highlight.jpg")
+
+# Highlight
 
 ---
 
-## Applying best practice to data viz
+class: center, middle, dk-section-title
 
-Highlight findings
-Pare down
-Focus people's attention
-Make it sparkle
+background-image:url("images/declutter.jpg")
 
-1. Use order and color to highlight findings
+# Declutter
 
-1. Declutter and simplify
-
-1. Don't make people move their heads
-
-  - Don't turn them to read labels
-  - Eliminate legends
-  - Add annotations to explain
-
-1. Don't use defaults
-
-1. Combine plots to tell a story
 
 ---
 
-## Ordering in plots
+class: center, middle, dk-section-title
 
-Use reorder first, then use factors
+background-image:url("images/explain.jpg")
+
+# Explain
+
 
 ---
 
-## Using color to highlight
+class: center, middle, dk-section-title
 
-Do it manually first
+background-image:url("images/sparkle.jpg")
 
-Then do it with gghighlight
+# Sparkle
+
+---
+
+class: inverse
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/highlight.jpg")
+
+# Highlight
+
+---
+
+## Reorder Plots to Highlight Findings
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism <- read_rds("data/math_scores_chronic_absenteeism.rds")
+```
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school)) +
+  geom_col()
+```
+
+
+---
+
+## Reorder Plots to Highlight Findings
+
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = reorder(school, percent_not_proficient_math))) +
+  geom_col()
+```
 
 ---
 
 
-## Don't make people turn their heads
+## Reorder Plots to Highlight Findings
+
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school)) +
+  geom_col()
+```
 
 ---
 
-## Adding labels directly to plots
+## Use Color to Highlight Findings
 
-Use scales package to show percentages on plots
 
-ggrepel on scatterplot showing association between scores and attendance data
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school)) +
+  geom_col() +
+  geom_col(data = filter(math_scores_chronic_absenteeism, school == "Glendale Elementary School"),
+           fill = "red")
+```
 
 ---
 
-## Annotations
+## Use Color to Highlight Findings
 
-Add FT tweet from 1/23/20 from John Murdoch to show it
-http://www.thefunctionalart.com/2020/01/an-example-of-how-to-annotate.html
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school)) +
+  geom_col() +
+  geom_col(data = filter(math_scores_chronic_absenteeism, #<<
+                         percent_not_proficient_math == max(percent_not_proficient_math)), #<<
+           fill = "red")
+```
 
 ---
 
-## Declutter using themes
+## Use Color to Highlight Findings
+
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", #<<
+    TRUE ~ "N" #<<
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  scale_fill_manual(values = c("gray", "red")) #<<
+```
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/declutter.jpg")
+
+# Declutter
+
+---
+
+## Remove Unnecessary Elements: Axis Titles
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  scale_fill_manual(values = c("gray", "red")) +
+  labs(x = NULL, #<<
+       y = NULL) #<<
+```
+
+---
+
+## Remove Unnecessary Elements: Axis Titles
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  scale_fill_manual(values = c("gray", "red")) +
+  theme_void()
+```
+
+---
+
+## Remove Unnecessary Elements: Axis Titles
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  scale_fill_manual(values = c("gray", "red")) +
+  theme(axis.title = element_blank()) #<<
+```
+
+---
+
+## Remove Unnecessary Elements: Legends
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  scale_fill_manual(values = c("gray", "red")) +
+  theme(axis.title = element_blank(),
+        legend.position = "none") #<<
+```
+
+---
+
+## Remove Unnecessary Elements: Legends
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col(show.legend = FALSE) + #<<
+  scale_fill_manual(values = c("gray", "red")) +
+  theme(axis.title = element_blank()) 
+```
+
+---
+
+## Remove Unnecessary Elements: Backgrounds
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  scale_fill_manual(values = c("gray", "red")) +
+  theme_void() + #<<
+  theme(axis.text.y = element_text(family = "Arial", #<<
+                                   hjust = 1), #<<
+        legend.position = "none") #<<
+```
+
+
+
+
+---
+## Working with Existing Themes
 
 Actual themes
 - Use hrbrthemes + show various options
 - Link to themes RRU blog post
+- https://github.com/jmcastagnetto/ggplot2_themes_in_github/
 
-theme() function <- use this as place to demonstrate user-made functions
+
+
 
 ---
 
-## Using custom fonts
+class: center, middle, dk-section-title
+
+background-image:url("images/explain.jpg")
+
+# Explain
+
+---
+
+## Use Direct Labeling
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  geom_text(aes(label = percent_not_proficient_math)) + #<<
+  scale_fill_manual(values = c("gray", "red")) +
+  theme_void() + #<<
+  theme(axis.text.y = element_text(family = "Arial",
+                                   hjust = 1), 
+        legend.position = "none") 
+```
+
+---
+
+## Use Direct Labeling
+
+```{r eval = TRUE}
+library(scales)
+
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  geom_text(aes(label = percent(percent_not_proficient_math))) + #<<
+  scale_fill_manual(values = c("gray", "red")) +
+  theme_void() + #<<
+  theme(axis.text.y = element_text(family = "Arial",
+                                   hjust = 1), 
+        legend.position = "none") 
+```
+
+---
+
+## Use Direct Labeling
+
+```{r eval = TRUE}
+library(scales)
+
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  geom_text(aes(label = percent(percent_not_proficient_math),
+                hjust = 1.2)) + #<<
+  scale_fill_manual(values = c("gray", "red")) +
+  theme_void() + #<<
+  theme(axis.text.y = element_text(family = "Arial",
+                                   hjust = 1), 
+        legend.position = "none") 
+```
+
+---
+
+## Use Direct Labeling
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  # view()
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  geom_text(aes(label = percent(percent_not_proficient_math),
+                hjust = 1.2)) + 
+  geom_text(aes(x = 0.02,
+                y = school,
+                label = school),
+            hjust = 0) +
+  scale_fill_manual(values = c("gray", "red")) +
+  theme_void() + #<<
+  theme(legend.position = "none") 
+```
+
+
+## Use Titles That Tell the Story
+
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  geom_text(aes(label = percent(percent_not_proficient_math),
+                hjust = 1.2)) + 
+  geom_text(aes(x = 0.02,
+                y = school,
+                label = school),
+            hjust = 0) +
+  labs(title = "Glendale Elementary School Has the Highest Percent of Students Not Proficient in Math in Oregon") + #<<
+  scale_fill_manual(values = c("gray", "red")) +
+  theme_void() + #<<
+  theme(legend.position = "none") 
+```
+
+---
+
+## Use Titles That Tell the Story
+
+```{r eval = TRUE}
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  geom_text(aes(label = percent(percent_not_proficient_math),
+                hjust = 1.2)) + 
+  geom_text(aes(x = 0.02,
+                y = school,
+                label = school),
+            hjust = 0) +
+  labs(title = "Glendale Elementary School Has the Highest Percent of Students Not Proficient in Math in Oregon") + #<<
+  scale_fill_manual(values = c("gray", "red")) +
+  theme_void() + #<<
+  theme(legend.position = "none",
+        plot.title = element_text(face = "bold")) 
+```
+
+---
+
+## Use Titles That Tell the Story
+
+```{r eval = TRUE}
+library(ggtext)
+
+math_scores_chronic_absenteeism %>% 
+  top_n(10, percent_not_proficient_math) %>% 
+  mutate(school = fct_reorder(school, percent_not_proficient_math)) %>% 
+  mutate(school_to_highlight = case_when( #<<
+    percent_not_proficient_math == max(percent_not_proficient_math) ~ "Y", 
+    TRUE ~ "N" 
+  )) %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = school,
+             fill = school_to_highlight)) +
+  geom_col() +
+  geom_text(aes(label = percent(percent_not_proficient_math),
+                hjust = 1.2)) + 
+  geom_text(aes(x = 0.02,
+                y = school,
+                label = school),
+            hjust = 0) +
+      labs(title = "**<span style='color:#FF0000'>Glendale Elementary School</span>** Has the Highest Percent of<br>Students Not Proficient in Math in Oregon") +
+  scale_fill_manual(values = c("gray", "red")) +
+  theme_void() + #<<
+  theme(legend.position = "none",
+        plot.title = element_textbox(margin = margin(0, 0, 10, 30))) 
+```
+
+
+
+
+## Annotations
+
+```{r}
+math_scores_chronic_absenteeism %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = percent_chronically_absent)) +
+  geom_point()
+```
+
+```{r}
+library(gghighlight)
+math_scores_chronic_absenteeism %>% 
+  ggplot(aes(x = percent_not_proficient_math,
+             y = percent_chronically_absent)) +
+  geom_bin2d()
+  geom_histogram()
+  geom_point(alpha = 0.5) +
+  gghighlight(percent_chronically_absent == max(percent_chronically_absent)) +
+  scale_y_continuous(limits = c(0, 0.55),
+                     labels = percent_format()) +
+  scale_x_continuous(limits = c(0, 1),
+                     labels = percent_format()) +
+  theme_minimal() +
+  labs(x = "Percent of Third Graders NOT Proficient in Math",
+       y = "Percent Chronically Absent")
+```
+
+???
+Add FT tweet from 1/23/20 from John Murdoch to show it
+http://www.thefunctionalart.com/2020/01/an-example-of-how-to-annotate.html
+
+
+## ggrepel
+
+# Make it Sparkle
+
+## Don't Use Defaults
+
+## Custom themes
+
+theme() function <- use this as place to demonstrate user-made functions
+
+- Use hrbrthemes + show various options
+- Link to themes RRU blog post
+- https://github.com/jmcastagnetto/ggplot2_themes_in_github/
+
+## Custom fonts
 
 Plotting + saving (i.e. use device = cairo_pdf)
 
 https://www.andrewheiss.com/blog/2017/09/27/working-with-r-cairo-graphics-custom-fonts-and-ggplot/
 
-
-
-
----
-
-
-## Unique data viz options in R (aka a tour of ggplot extensions)
+## ggplot extensions
 
 - gganimate
 - ggridges
@@ -122,6 +587,7 @@ Collections
 - http://www.ggplot2-exts.org/gallery/
 - [From Data to Viz](https://www.data-to-viz.com/)
 - https://github.com/erikgahner/awesome-ggplot2
+
 
 
 

@@ -1,0 +1,20 @@
+---
+title: "School Attendance and Math Proficiency"
+author: "David Keyes"
+output_format: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+![](https://github.com/rfortherestofus/going-deeper/raw/master/images/ode-logo.jpg)
+
+This is a report for the [Oregon Department of Education](https://www.oregon.gov/ode/pages/default.aspx) on math proficiency and school attendance. The mission statement of ODE is as follows:
+
+> The Oregon Department of Education fosters equity and excellence for every learner through collaboration with educators, partners, and communities.^[For more, see https://www.oregon.gov/ode/about-us/Pages/default.aspx]
+
+```{r}
+math_scores_chronic_absenteeism <- read_rds("data/math_scores_chronic_absenteeism.rds")
+```

@@ -99,7 +99,6 @@ I'll do the following:
 
 1. Add a footnote
 
----
 
 ---
 
@@ -107,15 +106,23 @@ class: inverse
 
 ## Your Turn
 
-Do the following on your report:
+1. Add the Oregon Department of Education logo to the top of your report. You can find it at https://github.com/rfortherestofus/going-deeper/raw/master/images/ode-logo.jpg
 
-1. Add a link
+1. Add the following text (make sure you include the link, which points to https://www.oregon.gov/ode/pages/default.aspx):
 
-1. Add an image
+  This is a report for the [Oregon Department of Education](https://www.oregon.gov/ode/pages/default.aspx) on math proficiency and school attendance. 
+  
+---
 
-1. Add a block quote
+class: inverse
 
-1. Add a footnote
+## Your Turn (continued)
+
+1. Add the following text as a block quote:
+
+  The Oregon Department of Education fosters equity and excellence for every learner through collaboration with educators, partners, and communities.
+
+1. Add a link to the source for mission statement above (https://www.oregon.gov/ode/about-us/Pages/default.aspx) as a footnote.
 
 
 ---
@@ -289,7 +296,19 @@ Do the following:
 
 1. Change the default data frame printing method to use kable
 
-TK: Update: 1. Choose one of the table packages and make an attractive table with it
+1. Choose one of the table packages and make an attractive table with it. I've given you some code that shows the top 10 districts by enrollment. Add to it to make a table.
+
+```{r}
+enrollment_and_reading_scores_by_race <- read_rds("data/enrollment_and_reading_scores_by_race.rds")
+
+enrollment_and_reading_scores_by_race %>% 
+  distinct(district_id, .keep_all = TRUE) %>% 
+  arrange(desc(total_enrollment)) %>% 
+  slice(1:10) %>% 
+  select(district, total_enrollment) %>%
+  set_names(c("District", "Enrollment"))
+```
+
 
 ---
 
@@ -442,6 +461,10 @@ class: center, middle
 [![](images/ymlthis.png)](https://ymlthis.r-lib.org/)
 ]
 
+???
+
+TK: Here is where to talk about how you can do this as code chunk options as well I think
+
 
 ---
 
@@ -455,6 +478,8 @@ I'll do the following:
 
 1. Adjust default figure height, width, and captions
 
+1. Add a parameter to the YAML and use it in the body of my report
+
 1. Knit to make sure everything works
 
 ---
@@ -463,14 +488,17 @@ class: inverse
 
 ## Your Turn
 
-do the following:
+--
 
 1. Add a table of contents and make it floating
 
+--
+
 1. Adjust default figure height, width, and captions
 
-TK: Update: 1. Add a parameter and make sure it works
+--
 
+1. Add a parameter to the YAML and use it in the body of your report to dynamically create a table of the top 10 districts by various race/ethnicity categories.
 
 
 ---
@@ -552,11 +580,11 @@ class: center, middle, dk-section-title
 
 background-image:url("images/microsoft-word.jpg")
 
-# Making your reports look nice: Word edition
+# Making your reports shine: Word edition
 
 ---
 
-## Making your reports look nice: Word edition
+## Making your reports shine: Word edition
 
 ```{r}
 ---
@@ -642,7 +670,7 @@ Do the following:
 
 ---
 
-## Making your reports look nice: PDF edition
+## Making your reports shine: PDF edition
 
 .center[
 [![](images/sam-tyner-latex.png)](https://sctyner.github.io/static/presentations/Conferences/dcr19/slides.html#12)
@@ -650,7 +678,7 @@ Do the following:
 
 ---
 
-## Making your reports look nice: PDF edition
+## Making your reports shine: PDF edition
 
 .center[
 [![](images/littlejohn-latex-tweet.png)](https://twitter.com/jefflittlejohn/status/1216869830726316033)
@@ -658,7 +686,7 @@ Do the following:
 
 ---
 
-## Making your reports look nice: PDF edition
+## Making your reports shine: PDF edition
 
 .center[
 [![](images/heiss-latex-tweet.png)](https://twitter.com/andrewheiss/status/1204870408148832257)
@@ -667,7 +695,7 @@ Do the following:
 
 ---
 
-## Making your reports look nice: PDF edition
+## Making your reports shine: PDF edition
 
 Use the `chrome_print()` function from `pagedown` to turn any HTML document into a PDF.
 
@@ -679,11 +707,28 @@ chrome_print("slides.html")
 
 ---
 
-class: center, middle, dk-section-title-light-bg
+class: my-turn
 
-background-image:url("images/flexdashboard.png")
+## My Turn
 
-# Other Formats
+I'll convert my report to `pagedown`
+
+---
+
+class: inverse
+
+## Your Turn
+
+Convert your report to `pagedown`
+
+---
+
+class: center, middle, dk-section-title
+
+background-image:url("images/projector.jpg")
+
+# Presenations
+
 
 ---
 
@@ -706,6 +751,31 @@ https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html
 
 ---
 
+class: my-turn
+
+## My Turn
+
+I'll convert my report to `xaringan`
+
+---
+
+class: inverse
+
+## Your Turn
+
+Convert your report to PowerPoint and knit it.
+
+
+---
+
+class: center, middle, dk-section-title-light-bg
+
+background-image:url("images/flexdashboard.png")
+
+# Dashboards
+
+---
+
 
 ## Dashboards
 
@@ -714,38 +784,11 @@ https://bookdown.org/yihui/rmarkdown/powerpoint-presentation.html
 ---
 
 
-
-
-## Other Formats: bookdown
-
-[![](images/howiuser.png)](https://howiuser.com/)
-
-
----
-
-## Other Formats: Websites
-
-[![](images/elwc-maps.png)](https://dgkeyes.github.io/elwc-map/)
-
----
-
-## Other Formats: Websites
-
-[![](images/alison-hill-website.png)](https://alison.rbind.io/)
-
-???
-
-Also show https://tinystats.github.io/teacups-giraffes-and-statistics/index.html
-
----
-
 class: my-turn
 
 ## My Turn
 
-I'll do the following:
-
-1. Convert my report to distill format
+I'll convert my report to a dashboard
 
 ---
 
@@ -753,7 +796,53 @@ class: inverse
 
 ## Your Turn
 
-Render your report into at least one more format. You can try a website if you want, but the other formats are much easier. 
+Convert your report to a dashboard
+
+---
 
 
+# Other Formats
+
+
+---
+
+## bookdown
+
+[![](images/howiuser.png)](https://howiuser.com/)
+
+
+---
+
+## Websites
+
+[![](images/elwc-maps.png)](https://dgkeyes.github.io/elwc-map/)
+
+---
+
+## Websites
+
+[![](images/alison-hill-website.png)](https://alison.rbind.io/)
+
+???
+
+Also show https://tinystats.github.io/teacups-giraffes-and-statistics/index.html
+
+
+
+---
+
+
+class: my-turn
+
+## My Turn
+
+I'll convert my report to `bookdown`
+
+---
+
+class: inverse
+
+## Your Turn
+
+Convert your report to `bookdown`
 

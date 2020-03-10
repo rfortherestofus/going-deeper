@@ -116,7 +116,14 @@ class: my-turn
 
 ## My Turn
 
-1. I'll create a new project
+I'll create a new project. 
+
+Throughout, I'll be working with the following data: 
+
+- [State of Oregon 2018-2019 school attendance data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/fallmembershipreport_20182019.xlsx)
+
+- [State of Oregon 2018-2019 3rd grade math proficiency data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/regularattenders_report_1819.xlsx)
+
 
 ---
 
@@ -124,11 +131,11 @@ class: my-turn
 
 ## My Turn (continued)
 
-I'll be working with the following data: [State of Oregon 2018-2019 school attendance data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/fallmembershipreport_20182019.xlsx) and [State of Oregon 2018-2019 3rd grade math proficiency data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/regularattenders_report_1819.xlsx)
+I'll do the following:
+
+1. Create a new R script file where I'll do all of my data prep work
 
 --
-
-I'll do the following:
 
 1. Download the two files above manually and put them in the data folder
 
@@ -138,15 +145,9 @@ I'll do the following:
 
 --
 
-1. Create a new R script file where I'll do my data importing, wrangling, and cleaning, and import the files into two data frames
-
---
-
 1. Import the data into two data frames (`math_scores` and `attendance`)
 
-???
-
-TK: I took this out. Make sure it's ok.
+--
 
 I'm ultimately going to compare third grade math scores and rates of chronic absenteeism.
 
@@ -156,7 +157,15 @@ class: inverse
 
 ## Your Turn
 
-1. Create a new project. Make sure you put it somehwere you'll be able to find it again later!
+Create a new project. Make sure you put it somehwere you'll be able to find it again later!
+
+--
+
+You'll be working with the following data:
+
+- [State of Oregon 3rd grade 2018-2019 enrollment data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/fallmembershipreport_20182019.xlsx)
+
+- [State of Oregon 3rd grade 2018-2019 reading proficiency data](https://www.oregon.gov/ode/educator-resources/assessment/Documents/TestResults2019/pagr_Districts_ELA_1819.xlsx)
 
 ---
 
@@ -164,28 +173,18 @@ class: inverse
 
 ## Your Turn (continued)
 
-You'll be working with the following data:
-
-1. [State of Oregon 3rd grade 2018-2019 enrollment data](https://www.oregon.gov/ode/reports-and-data-raw/students/Documents/fallmembershipreport_20182019.xlsx)
-
-2. [State of Oregon 3rd grade 2018-2019 reading proficiency data](https://www.oregon.gov/ode/educator-resources/assessment/Documents/TestResults2019/pagr_Districts_ELA_1819.xlsx)
-
---
 
 Do the following:
 
---
-
-1. Download the two files above using the download.file() function (in the process, I'll overwrite the files I downloaded before)
+1. Create a new R script file where you'll do all of your data prep work
 
 --
 
-1. Create a new R script file where to do my data importing, wrangling, and cleaning, and import the files into two data frames
+1. Download the two files above using the download.file() function
 
 --
 
 1. Import the data into two data frames (`enrollment` and `reading_scores`)
-
 
 
 ---
@@ -296,6 +295,8 @@ Let's take a look at my data and see which principles of tidy data it violates
 
 
 ---
+
+class: inverse
 
 ## Your Turn
 
@@ -585,7 +586,7 @@ german_speakers %>%
 
 ---
 
-class: inverse
+class: my-turn
 
 ## My Turn
 
@@ -765,7 +766,7 @@ class: my-turn
 
 ## My Turn
 
-Convert all instances of the `proficiency_level` variable to more meaningful observations using: 
+I'll convert all instances of the `proficiency_level` variable to more meaningful observations using: 
 
 1. `recode()`
 
@@ -906,6 +907,11 @@ type_of_join <- (x, y,
                         "id_variable_c" = "id_variable_d")
 ```
 
+???
+
+I do left_join 95% of the time
+
+https://twitter.com/ClausWilke/status/1235379667428835331?s=09
 
 ---
 
@@ -1047,7 +1053,14 @@ class: my-turn
 
 1. Create a new data frame called `chronic_absenteeism` by starting with the attendance data frame and using the data wrangling skills we just learned
 
-1. Join it with the `math_percent_not_proficient` data frame
+--
+
+1. Calculate a new variable `percent_not_proficient` as the percentage of students at each school who are NOT at math proficiency levels 3 or 4 (i.e. are at levels 1 or 2)
+
+--
+
+1. Join the `math_percent_not_proficient` and `chronic_absenteeism` data frames to create a new data frame called `math_scores_chronic_absenteeism`
+
 
 
 
@@ -1057,7 +1070,7 @@ class: inverse
 
 ## Your Turn
 
-Before doing our join, we'll need to create a new data frame called `reading_scores_by_race` by importing the reading scores data that you downloaded previously. Use the `read_excel()` function to do this.
+Before doing your join, you'll need to create a new data frame called `reading_scores_by_race` by importing the reading scores data that you downloaded previously. Use the `read_excel()` function to do this.
 
 
 ---
@@ -1070,12 +1083,20 @@ After you've imported your data, do the following:
 
   - Use the `clean_names()` function from the `janitor` package to give you nice variable names
   
+--
+  
   - `filter()` using the `grade_level` to only include "All Grades"
-  
+
+--
+
   - `filter()` using the `student_group` variable to only include the following groups ("American Indian/Alaskan Native", "Asian", "Black/African American", "Hispanic/Latino", "Multi-Racial", "Pacific Islander", or "White")
-  
+
+--
+
   - `select()` the following variables: `district_id`, `student_group`, `percent_proficient_level_3_or_4`
-  
+
+--
+
   - Divide the `percent_proficient_level_3_or_4` variable by 100 (you'll need to convert this variable to a numeric first to make this work)
 
 
