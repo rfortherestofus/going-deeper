@@ -1,0 +1,2088 @@
+school,school_id,district,district_id,percent_proficient,year
+Brooklyn Primary School,2,Baker SD 5J,1894,0.32608695652173914,2016-2017
+Haines Elementary School,4,Baker SD 5J,1894,0.39473684210526316,2016-2017
+Pine Eagle Charter School,15,Pine Eagle SD 61,1897,0.125,2016-2017
+Philomath Elementary School,20,Philomath SD 17J,1900,0.3357664233576642,2016-2017
+Adams Elementary School,27,Corvallis SD 509J,1901,0.3888888888888889,2016-2017
+Garfield Elementary School,30,Corvallis SD 509J,1901,0.37373737373737376,2016-2017
+Hoover Elementary School,33,Corvallis SD 509J,1901,0.43846153846153846,2016-2017
+Jefferson Elementary School,35,Corvallis SD 509J,1901,0.43564356435643564,2016-2017
+Lincoln Elementary School,36,Corvallis SD 509J,1901,0.3176470588235294,2016-2017
+Mt View Elementary School,37,Corvallis SD 509J,1901,0.32608695652173914,2016-2017
+Wilson Elementary School,39,Corvallis SD 509J,1901,0.36036036036036034,2016-2017
+Cedaroak Park Primary School,45,West Linn-Wilsonville SD 3J,1922,0.4,2016-2017
+Stafford Primary School,47,West Linn-Wilsonville SD 3J,1922,0.3490566037735849,2016-2017
+Sunset Primary School,48,West Linn-Wilsonville SD 3J,1922,0.4430379746835443,2016-2017
+Forest Hills Elementary School,53,Lake Oswego SD 7J,1923,0.43859649122807015,2016-2017
+Hallinan Elementary School,54,Lake Oswego SD 7J,1923,0.46,2016-2017
+Lake Grove Elementary School,55,Lake Oswego SD 7J,1923,0.46825396825396826,2016-2017
+River Grove Elementary School,56,Lake Oswego SD 7J,1923,0.44525547445255476,2016-2017
+Westridge Elementary School,58,Lake Oswego SD 7J,1923,0.461038961038961,2016-2017
+Bilquist Elementary School,65,North Clackamas SD 12,1924,0.33962264150943394,2016-2017
+Whitcomb Elementary School,72,North Clackamas SD 12,1924,0.2169811320754717,2016-2017
+Milwaukie Elementary School,73,North Clackamas SD 12,1924,0.1875,2016-2017
+Riverside Elementary School,76,North Clackamas SD 12,1924,0.3157894736842105,2016-2017
+Sunnyside Elementary School,78,North Clackamas SD 12,1924,0.3333333333333333,2016-2017
+View Acres Elementary School,79,North Clackamas SD 12,1924,0.33076923076923076,2016-2017
+Welches Elementary School,88,Oregon Trail SD 46,1926,0.3684210526315789,2016-2017
+Deep Creek – Damascus K-8 School,90,Gresham-Barlow SD 10J,2183,0.34285714285714286,2016-2017
+Carus School,92,Canby SD 86,1929,0.3968253968253968,2016-2017
+Clarkes Elementary School,93,Molalla River SD 35,1925,0.47619047619047616,2016-2017
+Molalla Elementary School,94,Molalla River SD 35,1925,0.16666666666666666,2016-2017
+Naas Elementary School,96,Oregon Trail SD 46,1926,0.35714285714285715,2016-2017
+Kelso Elementary School,99,Oregon Trail SD 46,1926,0.35714285714285715,2016-2017
+Sandy Grade School,100,Oregon Trail SD 46,1926,0.35789473684210527,2016-2017
+Firwood Elementary School,101,Oregon Trail SD 46,1926,0.41732283464566927,2016-2017
+Colton Elementary School,103,Colton SD 53,1927,0.2903225806451613,2016-2017
+Beavercreek Elementary School,105,Oregon City SD 62,1928,0.28776978417266186,2016-2017
+Candy Lane Elementary School,106,Oregon City SD 62,1928,0.22935779816513763,2016-2017
+Holcomb Elementary School,107,Oregon City SD 62,1928,0.24761904761904763,2016-2017
+Gaffney Lane Elementary School,109,Oregon City SD 62,1928,0.31666666666666665,2016-2017
+John McLoughlin Elementary School,114,Oregon City SD 62,1928,0.36666666666666664,2016-2017
+Butte Creek Elementary School,119,Silver Falls SD 4J,2138,0.3170731707317073,2016-2017
+Mulino Elementary School,121,Molalla River SD 35,1925,0.3424657534246575,2016-2017
+William Knight Elementary School,122,Canby SD 86,1929,0.34615384615384615,2016-2017
+Howard Eccles Elementary School,124,Canby SD 86,1929,0.38392857142857145,2016-2017
+Ninety-One School,127,Canby SD 86,1929,0.36363636363636365,2016-2017
+Rural Dell Elementary School,128,Molalla River SD 35,1925,0.3548387096774194,2016-2017
+Clackamas River Elementary School,131,Estacada SD 108,1930,0.32558139534883723,2016-2017
+River Mill Elementary School,132,Estacada SD 108,1930,0.061224489795918366,2016-2017
+John Wetten Elementary School,136,Gladstone SD 115,1931,0.3665338645418327,2016-2017
+Redland Elementary School,139,Oregon City SD 62,1928,0.256,2016-2017
+Lewis & Clark Elementary School,147,Astoria SD 1,1933,0.30357142857142855,2016-2017
+Seaside Heights Elementary School,152,Seaside SD 10,1935,0.1267605633802817,2016-2017
+Gearhart Elementary School,153,Seaside SD 10,1935,0.2698412698412698,2016-2017
+Warrenton Grade School,156,Warrenton-Hammond SD 30,1936,0.25203252032520324,2016-2017
+Grant Watts Elementary School,158,Scappoose SD 1J,1944,0.3115942028985507,2016-2017
+Warren Elementary School,160,Scappoose SD 1J,1944,0.3780487804878049,2016-2017
+Clatskanie Elementary School,163,Clatskanie SD 6J,1945,0.23529411764705882,2016-2017
+Hilda Lahti Elementary School,166,Knappa SD 4,2262,0.1935483870967742,2016-2017
+Hudson Park Elementary School,171,Rainier SD 13,1946,0.32432432432432434,2016-2017
+Vernonia Elementary School,177,Vernonia SD 47J,1947,0.2962962962962963,2016-2017
+McBride Elementary School,182,St Helens SD 502,1948,0.3188405797101449,2016-2017
+Blossom Gulch Elementary School,192,Coos Bay SD 9,1965,0.2964824120603015,2016-2017
+Madison Elementary School,196,Coos Bay SD 9,1965,0.30337078651685395,2016-2017
+Hillcrest Elementary School,204,North Bend SD 13,1966,0.3709677419354839,2016-2017
+North Bay Elementary School,205,North Bend SD 13,1966,0.3157894736842105,2016-2017
+Powers Elementary School,210,Powers SD 31,1967,0.14285714285714285,2016-2017
+Myrtle Crest School,214,Myrtle Point SD 41,1968,0.19117647058823528,2016-2017
+Ocean Crest Elementary School,217,Bandon SD 54,1969,0.171875,2016-2017
+Crooked River Elementary School,219,Crook County SD,1970,0.31901840490797545,2016-2017
+Powell Butte Community Charter School,223,Crook County SD,1970,0.39285714285714285,2016-2017
+Driftwood Elementary School,228,Port Orford-Langlois SD 2CJ,1973,0.25,2016-2017
+Riley Creek Elementary School,231,Central Curry SD 1,1972,0.2413793103448276,2016-2017
+Kalmiopsis Elementary School,236,Brookings-Harbor SD 17C,1974,0.3016759776536313,2016-2017
+Bear Creek Elementary School,241,Bend-LaPine Administrative SD 1,1976,0.35251798561151076,2016-2017
+LaPine Elementary School,245,Bend-LaPine Administrative SD 1,1976,0.2857142857142857,2016-2017
+Juniper Elementary School,246,Bend-LaPine Administrative SD 1,1976,0.3191489361702128,2016-2017
+R E Jewell Elementary School,247,Bend-LaPine Administrative SD 1,1976,0.3076923076923077,2016-2017
+Buckingham Elementary School,250,Bend-LaPine Administrative SD 1,1976,0.4222222222222222,2016-2017
+Sage Elementary School,256,Redmond SD 2J,1977,0.4025157232704403,2016-2017
+John Tuck Elementary School,258,Redmond SD 2J,1977,0.2767857142857143,2016-2017
+M A Lynch Elementary School,259,Redmond SD 2J,1977,0.31958762886597936,2016-2017
+Terrebonne Community School,260,Redmond SD 2J,1977,0.36666666666666664,2016-2017
+Tumalo Community School,261,Redmond SD 2J,1977,0.38571428571428573,2016-2017
+Sisters Elementary School,264,Sisters SD 6,1978,0.32432432432432434,2016-2017
+Oakland Elementary School,267,Oakland SD 1,1990,0.3090909090909091,2016-2017
+Eastwood Elementary School,269,Douglas County SD 4,1991,0.1958762886597938,2016-2017
+Fir Grove Elementary School,270,Douglas County SD 4,1991,0.38271604938271603,2016-2017
+Fullerton IV Elementary School,271,Douglas County SD 4,1991,0.22727272727272727,2016-2017
+Green Elementary School,272,Douglas County SD 4,1991,0.1694915254237288,2016-2017
+Hucrest Elementary School,273,Douglas County SD 4,1991,0.330188679245283,2016-2017
+Melrose Elementary School,274,Douglas County SD 4,1991,0.28169014084507044,2016-2017
+Sunnyslope Elementary School,276,Douglas County SD 4,1991,0.3194444444444444,2016-2017
+Winchester Elementary,277,Douglas County SD 4,1991,0.18309859154929578,2016-2017
+Glide Elementary School,282,Glide SD 12,1992,0.33766233766233766,2016-2017
+Canyonville School,289,South Umpqua SD 19,1994,0.3,2016-2017
+Myrtle Creek Elementary School,290,South Umpqua SD 19,1994,0.14516129032258066,2016-2017
+Tri City Elementary School,292,South Umpqua SD 19,1994,0.30158730158730157,2016-2017
+North Douglas Elementary School,296,North Douglas SD 22,1996,0.23076923076923078,2016-2017
+Yoncalla Elementary School,299,Yoncalla SD 32,1997,0.45454545454545453,2016-2017
+Elkton Charter School,302,Elkton SD 34,1998,0.21428571428571427,2016-2017
+Riddle Elementary School,304,Riddle SD 70,1999,0.21621621621621623,2016-2017
+Glendale Elementary School,306,Glendale SD 77,2000,0.28,2016-2017
+Highland Elementary School,309,Reedsport SD 105,2001,0.14035087719298245,2016-2017
+Lookingglass Elementary School,313,Winston-Dillard SD 116,2002,0.24390243902439024,2016-2017
+East Sutherlin Primary School,318,Sutherlin SD 130,2003,0.2158273381294964,2016-2017
+Arlington Community Charter School,323,Arlington SD 3,2005,0.26666666666666666,2016-2017
+Condon Elementary School,325,Condon SD 25J,2006,0.3076923076923077,2016-2017
+Humbolt Elementary School,327,John Day SD 3,2008,0.26229508196721313,2016-2017
+Henry L Slater Elementary School,342,Harney County SD 3,2014,0.330188679245283,2016-2017
+Crane Elementary School,346,Harney County SD 4,2015,0.36363636363636365,2016-2017
+May Street Elementary School,362,Hood River County SD,2024,0.3125,2016-2017
+Mid Valley Elementary School,363,Hood River County SD,2024,0.22115384615384615,2016-2017
+Parkdale Elementary School,364,Hood River County SD,2024,0.375,2016-2017
+Westside Elementary School,366,Hood River County SD,2024,0.36054421768707484,2016-2017
+Orchard Hill Elementary School,370,Phoenix-Talent SD 4,2039,0.2891566265060241,2016-2017
+Phoenix Elementary School,371,Phoenix-Talent SD 4,2039,0.1527777777777778,2016-2017
+Talent Elementary School,372,Phoenix-Talent SD 4,2039,0.16279069767441862,2016-2017
+Bellview Elementary School,375,Ashland SD 5,2041,0.37349397590361444,2016-2017
+Helman Elementary School,377,Ashland SD 5,2041,0.39759036144578314,2016-2017
+Walker Elementary School,379,Ashland SD 5,2041,0.2727272727272727,2016-2017
+Central Point Elementary School,382,Central Point SD 6,2042,0.22522522522522523,2016-2017
+Jewett Elementary School,383,Central Point SD 6,2042,0.3150684931506849,2016-2017
+Patrick Elementary School,384,Central Point SD 6,2042,0.34328358208955223,2016-2017
+Richardson Elementary School,385,Central Point SD 6,2042,0.3680555555555556,2016-2017
+Sams Valley Elementary School,386,Central Point SD 6,2042,0.2,2016-2017
+Hillside Elementary,390,Eagle Point SD 9,2043,0.29365079365079366,2016-2017
+Shady Cove School,393,Eagle Point SD 9,2043,0.27906976744186046,2016-2017
+Table Rock Elementary,394,Eagle Point SD 9,2043,0.19463087248322147,2016-2017
+Rogue River Elementary School,399,Rogue River SD 35,2044,0.29347826086956524,2016-2017
+Butte Falls Charter School,406,Butte Falls SD 91,2046,0.16666666666666666,2016-2017
+Griffin Creek Elementary School,408,Medford SD 549C,2048,0.34375,2016-2017
+Hoover Elementary School,409,Medford SD 549C,2048,0.384180790960452,2016-2017
+Howard Elementary School,410,Medford SD 549C,2048,0.31958762886597936,2016-2017
+Jackson Elementary School,411,Medford SD 549C,2048,0.24675324675324675,2016-2017
+Jacksonville Elementary School,412,Medford SD 549C,2048,0.375,2016-2017
+Jefferson Elementary School,413,Medford SD 549C,2048,0.28,2016-2017
+Lone Pine Elementary School,414,Medford SD 549C,2048,0.35507246376811596,2016-2017
+Oak Grove Elementary School,415,Medford SD 549C,2048,0.3020833333333333,2016-2017
+Kennedy Elementary School,416,Medford SD 549C,2048,0.29245283018867924,2016-2017
+Roosevelt Elementary School,417,Medford SD 549C,2048,0.23880597014925373,2016-2017
+Ruch Elementary School,418,Medford SD 549C,2048,0.1,2016-2017
+Washington Elementary School,419,Medford SD 549C,2048,0.21951219512195122,2016-2017
+Wilson Elementary School,420,Medford SD 549C,2048,0.36428571428571427,2016-2017
+Culver Elementary School,425,Culver SD 4,2050,0.36619718309859156,2016-2017
+Buff Elementary School,429,Jefferson County SD 509J,2053,0.19117647058823528,2016-2017
+Madras Elementary School,430,Jefferson County SD 509J,2053,0.27956989247311825,2016-2017
+Metolius Elementary School,431,Jefferson County SD 509J,2053,0.30303030303030304,2016-2017
+Warm Springs K-8 Academy,432,Jefferson County SD 509J,2053,0.18292682926829268,2016-2017
+Allen Dale Elementary School,435,Grants Pass SD 7,2054,0.24528301886792453,2016-2017
+Highland Elementary School,436,Grants Pass SD 7,2054,0.33613445378151263,2016-2017
+Lincoln Elementary School,437,Grants Pass SD 7,2054,0.3125,2016-2017
+Redwood Elementary School,439,Grants Pass SD 7,2054,0.3275862068965517,2016-2017
+Riverside Elementary School,440,Grants Pass SD 7,2054,0.22916666666666666,2016-2017
+Evergreen Elementary School,443,Three Rivers/Josephine County SD,2055,0.24210526315789474,2016-2017
+Fruitdale Elementary School,445,Three Rivers/Josephine County SD,2055,0.36363636363636365,2016-2017
+Ft Vannoy Elementary School,446,Three Rivers/Josephine County SD,2055,0.2676056338028169,2016-2017
+Madrona Elementary School,450,Three Rivers/Josephine County SD,2055,0.33035714285714285,2016-2017
+Manzanita Elementary School,451,Three Rivers/Josephine County SD,2055,0.2,2016-2017
+Williams Elementary School,453,Three Rivers/Josephine County SD,2055,0.391304347826087,2016-2017
+Joseph Conger Elementary School,459,Klamath Falls City Schools,2056,0.2625,2016-2017
+Mills Elementary School,461,Klamath Falls City Schools,2056,0.2857142857142857,2016-2017
+Pelican Elementary School,462,Klamath Falls City Schools,2056,0.32432432432432434,2016-2017
+Roosevelt Elementary School,465,Klamath Falls City Schools,2056,0.35714285714285715,2016-2017
+Bonanza Elementary School,467,Klamath County SD,2057,0.2765957446808511,2016-2017
+Chiloquin Elementary School,468,Klamath County SD,2057,0.26666666666666666,2016-2017
+Ferguson Elementary School,470,Klamath County SD,2057,0.3793103448275862,2016-2017
+Gilchrist Elementary School,472,Klamath County SD,2057,0.2857142857142857,2016-2017
+Henley Elementary School,473,Klamath County SD,2057,0.3130434782608696,2016-2017
+Keno Elementary School,474,Klamath County SD,2057,0.4406779661016949,2016-2017
+Malin Elementary School,475,Klamath County SD,2057,0.17391304347826086,2016-2017
+Merrill Elementary School,476,Klamath County SD,2057,0.23809523809523808,2016-2017
+Peterson Elementary School,477,Klamath County SD,2057,0.32867132867132864,2016-2017
+Shasta Elementary School,478,Klamath County SD,2057,0.38317757009345793,2016-2017
+Stearns Elementary School,479,Klamath County SD,2057,0.32857142857142857,2016-2017
+Union Elementary School,489,Lake County SD 7,2059,0.45454545454545453,2016-2017
+Fremont/Hay Elementary School,490,Lake County SD 7,2059,0.35714285714285715,2016-2017
+Pleasant Hill Elementary School,500,Pleasant Hill SD 1,2081,0.24705882352941178,2016-2017
+Adams Elementary School,503,Eugene SD 4J,2082,0.39669421487603307,2016-2017
+Awbrey Park Elementary School,504,Eugene SD 4J,2082,0.3,2016-2017
+Coburg Community Charter School,507,Eugene SD 4J,2082,0.45652173913043476,2016-2017
+Edison Elementary School,510,Eugene SD 4J,2082,0.37142857142857144,2016-2017
+Gilham Elementary School,513,Eugene SD 4J,2082,0.3424657534246575,2016-2017
+Howard Elementary School,515,Eugene SD 4J,2082,0.24752475247524752,2016-2017
+McCornack Elementary School,522,Eugene SD 4J,2082,0.21621621621621623,2016-2017
+River Road/El Camino del Rio Elementary School,525,Eugene SD 4J,2082,0.20930232558139536,2016-2017
+Spring Creek Elementary School,529,Eugene SD 4J,2082,0.2972972972972973,2016-2017
+Twin Oaks Elementary School,530,Eugene SD 4J,2082,0.3090909090909091,2016-2017
+Willagillespie Elementary School,534,Eugene SD 4J,2082,0.35294117647058826,2016-2017
+Centennial Elementary School,544,Springfield SD 19,2083,0.24691358024691357,2016-2017
+Douglas Gardens Elementary School,545,Springfield SD 19,2083,0.41414141414141414,2016-2017
+Elizabeth Page Elementary School,546,Springfield SD 19,2083,0.2441860465116279,2016-2017
+Guy Lee Elementary School,548,Springfield SD 19,2083,0.1724137931034483,2016-2017
+Maple Elementary School,550,Springfield SD 19,2083,0.36231884057971014,2016-2017
+Ridgeview Elementary School,553,Springfield SD 19,2083,0.352,2016-2017
+Mt Vernon Elementary School,554,Springfield SD 19,2083,0.2413793103448276,2016-2017
+Thurston Elementary School,556,Springfield SD 19,2083,0.33980582524271846,2016-2017
+Walterville Elementary School,558,Springfield SD 19,2083,0.43103448275862066,2016-2017
+Yolanda Elementary School,559,Springfield SD 19,2083,0.4444444444444444,2016-2017
+Elmira Elementary School,563,Fern Ridge SD 28J,2084,0.35,2016-2017
+Veneta Elementary School,566,Fern Ridge SD 28J,2084,0.3786407766990291,2016-2017
+Mapleton Elementary School,568,Mapleton SD 32,2085,0.125,2016-2017
+Creslane Elementary School,570,Creswell SD 40,2086,0.3888888888888889,2016-2017
+Bohemia Elementary School,573,South Lane SD 45J3,2087,0.35344827586206895,2016-2017
+Dorena School,574,South Lane SD 45J3,2087,0.1111111111111111,2016-2017
+Harrison Elementary School,576,South Lane SD 45J3,2087,0.3,2016-2017
+Latham Elementary School,577,South Lane SD 45J3,2087,0.38461538461538464,2016-2017
+London School,578,South Lane SD 45J3,2087,0.3333333333333333,2016-2017
+Clear Lake Elementary School,582,Bethel SD 52,2088,0.3114754098360656,2016-2017
+Danebo Elementary School,583,Bethel SD 52,2088,0.1568627450980392,2016-2017
+Fairfield Elementary School,584,Bethel SD 52,2088,0.2236842105263158,2016-2017
+Irving Elementary School,585,Bethel SD 52,2088,0.42727272727272725,2016-2017
+Malabon Elementary School,586,Bethel SD 52,2088,0.30578512396694213,2016-2017
+Applegate Elementary School,589,Crow-Applegate-Lorane SD 66,2089,0.29411764705882354,2016-2017
+McKenzie Elementary School,593,McKenzie SD 68,2090,0.3076923076923077,2016-2017
+Laurel Elementary School,595,Junction City SD 69,2091,0.3181818181818182,2016-2017
+Lundy Elementary School,598,Lowell SD 71,2092,0.23076923076923078,2016-2017
+Oakridge Elementary School,600,Oakridge SD 76,2093,0.23809523809523808,2016-2017
+Marcola Elementary School,603,Marcola SD 79J,2094,0.23529411764705882,2016-2017
+Siuslaw Elementary School,609,Siuslaw SD 97J,2096,0.3411764705882353,2016-2017
+Toledo Elementary School,611,Lincoln County SD,2097,0.28888888888888886,2016-2017
+Taft Elementary School,620,Lincoln County SD,2097,0.2375,2016-2017
+Crestview Heights School,623,Lincoln County SD,2097,0.20588235294117646,2016-2017
+Sam Case Elementary,625,Lincoln County SD,2097,0.2736318407960199,2016-2017
+Central Elementary School,631,Greater Albany Public SD 8J,2100,0.27941176470588236,2016-2017
+Periwinkle Elementary School,636,Greater Albany Public SD 8J,2100,0.25961538461538464,2016-2017
+North Albany Elementary School,637,Greater Albany Public SD 8J,2100,0.3625,2016-2017
+Oak Grove Elementary School,639,Greater Albany Public SD 8J,2100,0.4024390243902439,2016-2017
+Lafayette Elementary School,640,Greater Albany Public SD 8J,2100,0.34615384615384615,2016-2017
+Liberty Elementary School,641,Greater Albany Public SD 8J,2100,0.313953488372093,2016-2017
+Oak Elementary School,643,Greater Albany Public SD 8J,2100,0.3373493975903614,2016-2017
+Sunrise Elementary School,644,Greater Albany Public SD 8J,2100,0.125,2016-2017
+South Shore Elementary School,645,Greater Albany Public SD 8J,2100,0.24444444444444444,2016-2017
+Tangent Elementary School,646,Greater Albany Public SD 8J,2100,0.13333333333333333,2016-2017
+Waverly Elementary School,648,Greater Albany Public SD 8J,2100,0.3088235294117647,2016-2017
+Cascades School,652,Lebanon Community SD 9,2101,0.30864197530864196,2016-2017
+Green Acres School,653,Lebanon Community SD 9,2101,0.234375,2016-2017
+Mari-Linn Elementary School,656,North Santiam SD 29J,2143,0.29411764705882354,2016-2017
+Hamilton Creek School,658,Lebanon Community SD 9,2101,0.3023255813953488,2016-2017
+Harrisburg Elementary School,659,Harrisburg SD 7J,2099,0.23076923076923078,2016-2017
+Foster Elementary School,662,Sweet Home SD 55,2102,0.2909090909090909,2016-2017
+Hawthorne Elementary School,663,Sweet Home SD 55,2102,0.2641509433962264,2016-2017
+Holley Elementary School,664,Sweet Home SD 55,2102,0.2,2016-2017
+Oak Heights Elementary School,666,Sweet Home SD 55,2102,0.26229508196721313,2016-2017
+Lacomb School,671,Lebanon Community SD 9,2101,0.42857142857142855,2016-2017
+Centennial Elementary School,676,Scio SD 95,2103,0.3380281690140845,2016-2017
+Santiam Elementary School,681,Santiam Canyon SD 129J,2104,0.21568627450980393,2016-2017
+Alameda Elementary School,692,Ontario SD 8C,2108,0.273972602739726,2016-2017
+Cairo Elementary School,693,Ontario SD 8C,2108,0.19444444444444445,2016-2017
+Aiken Elementary School,694,Ontario SD 8C,2108,0.14925373134328357,2016-2017
+May Roberts Elementary School,696,Ontario SD 8C,2108,0.18309859154929578,2016-2017
+Pioneer Elementary School,697,Ontario SD 8C,2108,0.15384615384615385,2016-2017
+Vale Elementary School,701,Vale SD 84,2116,0.23333333333333334,2016-2017
+Nyssa Elementary School,702,Nyssa SD 26,2110,0.26495726495726496,2016-2017
+Annex Charter School,705,Annex SD 29,2111,0.07692307692307693,2016-2017
+Willowcreek Elementary School,706,Vale SD 84,2116,0.36363636363636365,2016-2017
+Robert Frost Elementary School,716,Silver Falls SD 4J,2138,0.26011560693641617,2016-2017
+Sublimity Elementary School,717,North Santiam SD 29J,2143,0.34328358208955223,2016-2017
+Evergreen Elementary School,718,Silver Falls SD 4J,2138,0.42857142857142855,2016-2017
+Aumsville Elementary School,719,Cascade SD 5,2139,0.23943661971830985,2016-2017
+Jefferson Elementary School,721,Jefferson SD 14J,2140,0.26436781609195403,2016-2017
+North Marion Intermediate School,724,North Marion SD 15,2141,0.23204419889502761,2016-2017
+Auburn Elementary School,728,Salem-Keizer SD 24J,2142,0.2229299363057325,2016-2017
+Brush College Elementary School,731,Salem-Keizer SD 24J,2142,0.3709677419354839,2016-2017
+Bush Elementary School,732,Salem-Keizer SD 24J,2142,0.22448979591836735,2016-2017
+Candalaria Elementary School,733,Salem-Keizer SD 24J,2142,0.3979591836734694,2016-2017
+Clear Lake Elementary School,734,Salem-Keizer SD 24J,2142,0.37719298245614036,2016-2017
+Cummings Elementary School,735,Salem-Keizer SD 24J,2142,0.34579439252336447,2016-2017
+Englewood Elementary School,736,Salem-Keizer SD 24J,2142,0.3375,2016-2017
+Wright Elementary School,737,Salem-Keizer SD 24J,2142,0.34579439252336447,2016-2017
+Four Corners Elementary School,738,Salem-Keizer SD 24J,2142,0.18018018018018017,2016-2017
+Grant Community School,740,Salem-Keizer SD 24J,2142,0.1951219512195122,2016-2017
+Scott Elementary School,741,Salem-Keizer SD 24J,2142,0.14782608695652175,2016-2017
+Highland Elementary School,743,Salem-Keizer SD 24J,2142,0.1388888888888889,2016-2017
+Hoover Elementary School,744,Salem-Keizer SD 24J,2142,0.10465116279069768,2016-2017
+Gubser Elementary School,745,Salem-Keizer SD 24J,2142,0.36507936507936506,2016-2017
+Kennedy Elementary School,746,Salem-Keizer SD 24J,2142,0.16483516483516483,2016-2017
+Keizer Elementary School,747,Salem-Keizer SD 24J,2142,0.23776223776223776,2016-2017
+Liberty Elementary School,749,Salem-Keizer SD 24J,2142,0.25,2016-2017
+McKinley Elementary School,750,Salem-Keizer SD 24J,2142,0.35106382978723405,2016-2017
+Eyre Elementary School,751,Salem-Keizer SD 24J,2142,0.17518248175182483,2016-2017
+Morningside Elementary School,753,Salem-Keizer SD 24J,2142,0.3409090909090909,2016-2017
+Myers Elementary School,754,Salem-Keizer SD 24J,2142,0.22522522522522523,2016-2017
+Hayesville Elementary School,755,Salem-Keizer SD 24J,2142,0.24742268041237114,2016-2017
+Pringle Elementary School,756,Salem-Keizer SD 24J,2142,0.3776223776223776,2016-2017
+Richmond Elementary School,757,Salem-Keizer SD 24J,2142,0.10606060606060606,2016-2017
+Salem Heights Elementary School,759,Salem-Keizer SD 24J,2142,0.30120481927710846,2016-2017
+Schirle Elementary School,760,Salem-Keizer SD 24J,2142,0.34579439252336447,2016-2017
+Sumpter Elementary School,761,Salem-Keizer SD 24J,2142,0.3609022556390977,2016-2017
+Swegle Elementary School,762,Salem-Keizer SD 24J,2142,0.25,2016-2017
+Washington Elementary School,763,Salem-Keizer SD 24J,2142,0.14457831325301204,2016-2017
+Yoshikai Elementary School,764,Salem-Keizer SD 24J,2142,0.391025641025641,2016-2017
+Gervais Elementary School,776,Gervais SD 1,2137,0.23333333333333334,2016-2017
+Victor Point Elementary School,777,Silver Falls SD 4J,2138,0.41379310344827586,2016-2017
+St Paul Elementary School,778,St Paul SD 45,2144,0.3333333333333333,2016-2017
+Pratum Elementary School,780,Silver Falls SD 4J,2138,0.4666666666666667,2016-2017
+Bethany Charter School,784,Silver Falls SD 4J,2138,0.3,2016-2017
+Scotts Mills Elementary School,785,Silver Falls SD 4J,2138,0.2857142857142857,2016-2017
+Stayton Elementary School,788,North Santiam SD 29J,2143,0.2914285714285714,2016-2017
+Turner Elementary School,790,Cascade SD 5,2139,0.28,2016-2017
+St Marys Public School,793,Mt Angel SD 91,2145,0.28865979381443296,2016-2017
+Silver Crest Elementary School,795,Silver Falls SD 4J,2138,0.23529411764705882,2016-2017
+Nellie Muir Elementary School,796,Woodburn SD 103,2146,0.13186813186813187,2016-2017
+Washington Elementary School,797,Woodburn SD 103,2146,0.12871287128712872,2016-2017
+Cloverdale Elementary School,806,Cascade SD 5,2139,0.37777777777777777,2016-2017
+Central Howell Elementary School,807,Silver Falls SD 4J,2138,0.3,2016-2017
+A C Houghton Elementary School,813,Morrow SD 1,2147,0.23076923076923078,2016-2017
+Sam Boardman Elementary School,814,Morrow SD 1,2147,0.22857142857142856,2016-2017
+Heppner Elementary School,815,Morrow SD 1,2147,0.16129032258064516,2016-2017
+Abernethy Elementary School,822,Portland SD 1J,2180,0.41134751773049644,2016-2017
+Ainsworth Elementary School,823,Portland SD 1J,2180,0.4438202247191011,2016-2017
+Alameda Elementary School,824,Portland SD 1J,2180,0.4439461883408072,2016-2017
+Arleta Elementary School,826,Portland SD 1J,2180,0.3333333333333333,2016-2017
+Astor Elementary School,827,Portland SD 1J,2180,0.32222222222222224,2016-2017
+Atkinson Elementary School,828,Portland SD 1J,2180,0.32,2016-2017
+Rosa Parks Elementary School,829,Portland SD 1J,2180,0.19718309859154928,2016-2017
+Beach Elementary School,830,Portland SD 1J,2180,0.32,2016-2017
+Boise-Eliot Elementary School,833,Portland SD 1J,2180,0.19718309859154928,2016-2017
+Bridger Elementary School,834,Portland SD 1J,2180,0.1875,2016-2017
+Bridlemile Elementary School,835,Portland SD 1J,2180,0.40186915887850466,2016-2017
+Buckman Elementary School,837,Portland SD 1J,2180,0.3333333333333333,2016-2017
+Capitol Hill Elementary School,838,Portland SD 1J,2180,0.39,2016-2017
+Chapman Elementary School,839,Portland SD 1J,2180,0.4013605442176871,2016-2017
+Chief Joseph Elementary School,840,Portland SD 1J,2180,0.31313131313131315,2016-2017
+Cesar Chavez K-8 School,841,Portland SD 1J,2180,0.21518987341772153,2016-2017
+Harrison Park School,842,Portland SD 1J,2180,0.14634146341463414,2016-2017
+Creston Elementary School,843,Portland SD 1J,2180,0.3584905660377358,2016-2017
+Duniway Elementary School,844,Portland SD 1J,2180,0.43703703703703706,2016-2017
+Faubion Elementary School,847,Portland SD 1J,2180,0.09090909090909091,2016-2017
+Glencoe Elementary School,850,Portland SD 1J,2180,0.3431372549019608,2016-2017
+Grout Elementary School,854,Portland SD 1J,2180,0.2361111111111111,2016-2017
+Hayhurst Elementary School,855,Portland SD 1J,2180,0.39473684210526316,2016-2017
+Beverly Cleary School,857,Portland SD 1J,2180,0.44623655913978494,2016-2017
+Irvington Elementary School,861,Portland SD 1J,2180,0.3333333333333333,2016-2017
+James John Elementary School,862,Portland SD 1J,2180,0.2077922077922078,2016-2017
+Kelly Elementary School,864,Portland SD 1J,2180,0.18333333333333332,2016-2017
+Martin Luther King Jr. School,866,Portland SD 1J,2180,0.07692307692307693,2016-2017
+Laurelhurst Elementary School,868,Portland SD 1J,2180,0.43795620437956206,2016-2017
+Lee Elementary School,869,Portland SD 1J,2180,0.1724137931034483,2016-2017
+Lent Elementary School,870,Portland SD 1J,2180,0.20408163265306123,2016-2017
+Lewis Elementary School,871,Portland SD 1J,2180,0.23076923076923078,2016-2017
+Llewellyn Elementary School,872,Portland SD 1J,2180,0.4444444444444444,2016-2017
+Maplewood Elementary School,873,Portland SD 1J,2180,0.2857142857142857,2016-2017
+Marysville Elementary School,875,Portland SD 1J,2180,0.25806451612903225,2016-2017
+Peninsula Elementary School,879,Portland SD 1J,2180,0.18181818181818182,2016-2017
+Richmond Elementary School,883,Portland SD 1J,2180,0.4508670520231214,2016-2017
+Rigler Elementary School,884,Portland SD 1J,2180,0.1282051282051282,2016-2017
+Roseway Heights School,885,Portland SD 1J,2180,0.4095238095238095,2016-2017
+Sabin Elementary School,886,Portland SD 1J,2180,0.3829787234042553,2016-2017
+Scott Elementary School,887,Portland SD 1J,2180,0.22972972972972974,2016-2017
+Sitton Elementary School,889,Portland SD 1J,2180,0.05555555555555555,2016-2017
+Skyline Elementary School,890,Portland SD 1J,2180,0.2916666666666667,2016-2017
+Stephenson Elementary School,892,Portland SD 1J,2180,0.48717948717948717,2016-2017
+Sunnyside Environmental School,893,Portland SD 1J,2180,0.37681159420289856,2016-2017
+Vernon Elementary School,895,Portland SD 1J,2180,0.25757575757575757,2016-2017
+Vestal Elementary School,896,Portland SD 1J,2180,0.22033898305084745,2016-2017
+Whitman Elementary School,900,Portland SD 1J,2180,0.23636363636363636,2016-2017
+Woodlawn Elementary School,902,Portland SD 1J,2180,0.22388059701492538,2016-2017
+Woodmere Elementary School,903,Portland SD 1J,2180,0.1956521739130435,2016-2017
+Woodstock Elementary School,904,Portland SD 1J,2180,0.42657342657342656,2016-2017
+Metropolitan Learning Center,916,Portland SD 1J,2180,0.3548387096774194,2016-2017
+Prescott Elementary School,925,Parkrose SD 3,2181,0.1,2016-2017
+Russell Elementary,926,Parkrose SD 3,2181,0.3333333333333333,2016-2017
+Sacramento Elementary School,927,Parkrose SD 3,2181,0.1864406779661017,2016-2017
+Shaver Elementary School,928,Parkrose SD 3,2181,0.22033898305084745,2016-2017
+East Gresham Elementary School,933,Gresham-Barlow SD 10J,2183,0.1780821917808219,2016-2017
+Highland Elementary School,935,Gresham-Barlow SD 10J,2183,0.19,2016-2017
+Hall Elementary School,936,Gresham-Barlow SD 10J,2183,0.16666666666666666,2016-2017
+Hollydale Elementary School,937,Gresham-Barlow SD 10J,2183,0.36082474226804123,2016-2017
+North Gresham Elementary School,938,Gresham-Barlow SD 10J,2183,0.2777777777777778,2016-2017
+Powell Valley Elementary School,939,Gresham-Barlow SD 10J,2183,0.14634146341463414,2016-2017
+West Gresham Elementary School,940,Gresham-Barlow SD 10J,2183,0.2727272727272727,2016-2017
+East Orient Elementary School,941,Gresham-Barlow SD 10J,2183,0.42063492063492064,2016-2017
+Alder Elementary School,943,Reynolds SD 7,2182,0.06329113924050633,2016-2017
+Fairview Elementary School,945,Reynolds SD 7,2182,0.21,2016-2017
+Glenfair Elementary School,946,Reynolds SD 7,2182,0.13675213675213677,2016-2017
+Hartley Elementary School,947,Reynolds SD 7,2182,0.20192307692307693,2016-2017
+Margaret Scott Elementary School,948,Reynolds SD 7,2182,0.1588785046728972,2016-2017
+Davis Elementary School,949,Reynolds SD 7,2182,0.07291666666666667,2016-2017
+Sweetbriar Elementary School,950,Reynolds SD 7,2182,0.23809523809523808,2016-2017
+Troutdale Elementary School,951,Reynolds SD 7,2182,0.29292929292929293,2016-2017
+Wilkes Elementary School,952,Reynolds SD 7,2182,0.21,2016-2017
+Sauvie Island School,958,Scappoose SD 1J,1944,0.42857142857142855,2016-2017
+Meadows Elementary,959,Centennial SD 28J,2185,0.1797752808988764,2016-2017
+Oliver Elementary School,962,Centennial SD 28J,2185,0.13414634146341464,2016-2017
+Parklane Elementary School,963,Centennial SD 28J,2185,0.2647058823529412,2016-2017
+Patrick Lynch Elementary,964,Centennial SD 28J,2185,0.27586206896551724,2016-2017
+Powell Butte Elementary School,965,Centennial SD 28J,2185,0.2826086956521739,2016-2017
+Pleasant Valley Elementary School,966,Centennial SD 28J,2185,0.32967032967032966,2016-2017
+Cherry Park Elementary School,972,David Douglas SD 40,2187,0.37373737373737376,2016-2017
+Gilbert Heights Elementary School,973,David Douglas SD 40,2187,0.25806451612903225,2016-2017
+Gilbert Park Elementary School,974,David Douglas SD 40,2187,0.2535211267605634,2016-2017
+Lincoln Park Elementary School,975,David Douglas SD 40,2187,0.19594594594594594,2016-2017
+Menlo Park Elementary School,976,David Douglas SD 40,2187,0.2,2016-2017
+Mill Park Elementary School,977,David Douglas SD 40,2187,0.125,2016-2017
+Ventura Park Elementary School,978,David Douglas SD 40,2187,0.20430107526881722,2016-2017
+West Powellhurst Elementary School,979,David Douglas SD 40,2187,0.22916666666666666,2016-2017
+Riverdale Grade School,985,Riverdale SD 51J,2188,0.4605263157894737,2016-2017
+Lyle Elementary School,989,Dallas SD 2,2190,0.35365853658536583,2016-2017
+Oakdale Heights Elementary School,990,Dallas SD 2,2190,0.39325842696629215,2016-2017
+Independence Elementary School,998,Central SD 13J,2191,0.15384615384615385,2016-2017
+Monmouth Elementary School,999,Central SD 13J,2191,0.32061068702290074,2016-2017
+Sherman County School,1010,Sherman County SD,2195,0.28125,2016-2017
+South Prairie Elementary School,1014,Tillamook SD 9,2197,0.29959514170040485,2016-2017
+Nestucca Valley Elementary,1019,Nestucca Valley SD 101J,2199,0.3111111111111111,2016-2017
+Garibaldi Elementary School,1020,Neah-Kah-Nie SD 56,2198,0.2127659574468085,2016-2017
+Nehalem Elementary School,1021,Neah-Kah-Nie SD 56,2198,0.41935483870967744,2016-2017
+Pilot Rock Elementary School,1027,Pilot Rock SD 2,2202,0.16666666666666666,2016-2017
+McNary Heights Elementary School,1032,Umatilla SD 6R,2204,0.21481481481481482,2016-2017
+Highland Hills Elementary School,1034,Hermiston SD 8,2206,0.36363636363636365,2016-2017
+Rocky Heights Elementary School,1036,Hermiston SD 8,2206,0.3076923076923077,2016-2017
+Sunset Elementary School,1037,Hermiston SD 8,2206,0.2805755395683453,2016-2017
+West Park Elementary School,1038,Hermiston SD 8,2206,0.3357664233576642,2016-2017
+McKay Creek Elementary School,1047,Pendleton SD 16,2207,0.35064935064935066,2016-2017
+Sherwood Heights Elementary School,1048,Pendleton SD 16,2207,0.31724137931034485,2016-2017
+Washington Elementary School,1049,Pendleton SD 16,2207,0.2647058823529412,2016-2017
+Athena Elementary School,1053,Athena-Weston SD 29RJ,2208,0.3,2016-2017
+Stanfield Elementary School,1060,Stanfield SD 61,2209,0.3333333333333333,2016-2017
+Central Elementary School,1066,La Grande SD 1,2212,0.3055555555555556,2016-2017
+Greenwood Elementary School,1068,La Grande SD 1,2212,0.20930232558139536,2016-2017
+Island City Elementary School,1069,La Grande SD 1,2212,0.37349397590361444,2016-2017
+Union Elementary School,1074,Union SD 5,2213,0.3448275862068966,2016-2017
+Imbler Charter School,1079,Imbler SD 11,2215,0.3103448275862069,2016-2017
+Stella Mayfield Elementary School,1082,Elgin SD 23,2217,0.2,2016-2017
+Joseph Charter School,1087,Joseph SD 6,2219,0.4423076923076923,2016-2017
+Wallowa Elementary School,1088,Wallowa SD 12,2220,0.13333333333333333,2016-2017
+Enterprise Elementary School,1090,Enterprise SD 21,2221,0.28205128205128205,2016-2017
+Chenowith Elementary School,1093,North Wasco County SD 21,4131,0.23711340206185566,2016-2017
+Mosier Community School,1095,North Wasco County SD 21,4131,0.375,2016-2017
+Colonel Wright Elementary School,1097,North Wasco County SD 21,4131,0.2391304347826087,2016-2017
+Dry Hollow Elementary School,1098,North Wasco County SD 21,4131,0.3262411347517731,2016-2017
+Maupin Elementary School,1108,South Wasco County SD 1,2225,0.25925925925925924,2016-2017
+Lenox Elementary School,1110,Hillsboro SD 1J,2239,0.35294117647058826,2016-2017
+West Union Elementary School,1111,Hillsboro SD 1J,2239,0.3561643835616438,2016-2017
+Brookwood Elementary School,1112,Hillsboro SD 1J,2239,0.24615384615384617,2016-2017
+W Verne McKinney Elementary School,1114,Hillsboro SD 1J,2239,0.2638888888888889,2016-2017
+Eastwood Elementary School,1115,Hillsboro SD 1J,2239,0.15476190476190477,2016-2017
+Minter Bridge Elementary School,1116,Hillsboro SD 1J,2239,0.2828282828282828,2016-2017
+Mooberry Elementary School,1117,Hillsboro SD 1J,2239,0.225,2016-2017
+W L Henry Elementary School,1119,Hillsboro SD 1J,2239,0.2571428571428571,2016-2017
+Banks Elementary School,1120,Banks SD 13,2240,0.26785714285714285,2016-2017
+Cornelius Elementary School,1128,Forest Grove SD 15,2241,0.24691358024691357,2016-2017
+Dilley Elementary School,1129,Forest Grove SD 15,2241,0.3902439024390244,2016-2017
+Echo Shaw Elementary School,1130,Forest Grove SD 15,2241,0.2872340425531915,2016-2017
+Harvey Clarke Elementary School,1132,Forest Grove SD 15,2241,0.4233128834355828,2016-2017
+Joseph Gale Elementary School,1133,Forest Grove SD 15,2241,0.27450980392156865,2016-2017
+Bridgeport Elementary School,1135,Tigard-Tualatin SD 23J,2242,0.2641509433962264,2016-2017
+Charles F Tigard Elementary School,1136,Tigard-Tualatin SD 23J,2242,0.40476190476190477,2016-2017
+Mary Woodward Elementary School,1137,Tigard-Tualatin SD 23J,2242,0.46153846153846156,2016-2017
+Durham Elementary School,1138,Tigard-Tualatin SD 23J,2242,0.37037037037037035,2016-2017
+James Templeton Elementary School,1139,Tigard-Tualatin SD 23J,2242,0.32051282051282054,2016-2017
+Metzger Elementary School,1140,Tigard-Tualatin SD 23J,2242,0.32926829268292684,2016-2017
+Edward Byrom Elementary School,1142,Tigard-Tualatin SD 23J,2242,0.3684210526315789,2016-2017
+Tualatin Elementary School,1143,Tigard-Tualatin SD 23J,2242,0.3305785123966942,2016-2017
+Butternut Creek Elementary School,1147,Hillsboro SD 1J,2239,0.21739130434782608,2016-2017
+Indian Hills Elementary School,1148,Hillsboro SD 1J,2239,0.36752136752136755,2016-2017
+Reedville Elementary School,1149,Hillsboro SD 1J,2239,0.13157894736842105,2016-2017
+Ladd Acres Elementary School,1150,Hillsboro SD 1J,2239,0.33613445378151263,2016-2017
+Witch Hazel Elementary School,1151,Hillsboro SD 1J,2239,0.13978494623655913,2016-2017
+Groner K-8,1152,Hillsboro SD 1J,2239,0.1724137931034483,2016-2017
+Aloha-Huber Park School,1153,Beaverton SD 48J,2243,0.26011560693641617,2016-2017
+Barnes Elementary School,1154,Beaverton SD 48J,2243,0.12295081967213115,2016-2017
+Beaver Acres Elementary School,1155,Beaverton SD 48J,2243,0.3368421052631579,2016-2017
+Bethany Elementary School,1156,Beaverton SD 48J,2243,0.4691358024691358,2016-2017
+Greenway Elementary School,1157,Beaverton SD 48J,2243,0.234375,2016-2017
+Cedar Mill Elementary School,1158,Beaverton SD 48J,2243,0.42857142857142855,2016-2017
+Chehalem Elementary School,1159,Beaverton SD 48J,2243,0.19318181818181818,2016-2017
+Cooper Mountain Elementary School,1160,Beaverton SD 48J,2243,0.3900709219858156,2016-2017
+Errol Hassell Elementary School,1161,Beaverton SD 48J,2243,0.3565217391304348,2016-2017
+Elmonica Elementary School,1162,Beaverton SD 48J,2243,0.36075949367088606,2016-2017
+Fir Grove Elementary School,1163,Beaverton SD 48J,2243,0.2727272727272727,2016-2017
+Hazeldale Elementary School,1164,Beaverton SD 48J,2243,0.40458015267175573,2016-2017
+Hiteon Elementary School,1165,Beaverton SD 48J,2243,0.4427083333333333,2016-2017
+Kinnaman Elementary School,1166,Beaverton SD 48J,2243,0.3383084577114428,2016-2017
+McKay Elementary School,1168,Beaverton SD 48J,2243,0.29069767441860467,2016-2017
+McKinley Elementary School,1169,Beaverton SD 48J,2243,0.34838709677419355,2016-2017
+Montclair Elementary School,1170,Beaverton SD 48J,2243,0.4020618556701031,2016-2017
+Oak Hills Elementary School,1171,Beaverton SD 48J,2243,0.45222929936305734,2016-2017
+Raleigh Hills Elementary School,1172,Beaverton SD 48J,2243,0.4032258064516129,2016-2017
+Raleigh Park Elementary School,1173,Beaverton SD 48J,2243,0.4375,2016-2017
+Ridgewood Elementary School,1174,Beaverton SD 48J,2243,0.43356643356643354,2016-2017
+Rock Creek Elementary School,1175,Beaverton SD 48J,2243,0.42487046632124353,2016-2017
+Terra Linda Elementary School,1176,Beaverton SD 48J,2243,0.3978494623655914,2016-2017
+Vose Elementary School,1177,Beaverton SD 48J,2243,0.31724137931034485,2016-2017
+West Tualatin View Elementary School,1178,Beaverton SD 48J,2243,0.43037974683544306,2016-2017
+William Walker Elementary School,1179,Beaverton SD 48J,2243,0.2692307692307692,2016-2017
+Farmington View Elementary School,1189,Hillsboro SD 1J,2239,0.3972602739726027,2016-2017
+North Plains Elementary School,1190,Hillsboro SD 1J,2239,0.3384615384615385,2016-2017
+J Clyde Hopkins Elementary School,1191,Sherwood SD 88J,2244,0.4,2016-2017
+Gaston Elementary School,1194,Gaston SD 511J,2245,0.3076923076923077,2016-2017
+Fossil Charter School,1205,Fossil SD 21J,2248,0.2894736842105263,2016-2017
+Amity Elementary School,1208,Amity SD 4J,2252,0.3404255319148936,2016-2017
+Dayton Grade School,1211,Dayton SD 8,2253,0.25274725274725274,2016-2017
+Yamhill Carlton Elementary School,1213,Yamhill Carlton SD 1,2251,0.3252032520325203,2016-2017
+Dundee Elementary School,1216,Newberg SD 29J,2254,0.3235294117647059,2016-2017
+Edwards Elementary School,1217,Newberg SD 29J,2254,0.27906976744186046,2016-2017
+Ewing Young Elementary School,1218,Newberg SD 29J,2254,0.36065573770491804,2016-2017
+Mabel Rush Elementary School,1219,Newberg SD 29J,2254,0.26666666666666666,2016-2017
+Willamina Elementary School,1224,Willamina SD 30J,2255,0.13432835820895522,2016-2017
+Columbus Elementary School,1228,McMinnville SD 40,2256,0.35714285714285715,2016-2017
+Memorial Elementary School,1230,McMinnville SD 40,2256,0.4393063583815029,2016-2017
+Newby Elementary School,1231,McMinnville SD 40,2256,0.38513513513513514,2016-2017
+Wascher Elementary School,1232,McMinnville SD 40,2256,0.3333333333333333,2016-2017
+Faulconer-Chapman School,1235,Sheridan SD 48J,2257,0.25,2016-2017
+Charlemagne French Immersion Elementary School,1240,Eugene SD 4J,2082,0.43564356435643564,2016-2017
+Buena Vista Elementary School,1241,Eugene SD 4J,2082,0.39215686274509803,2016-2017
+Corridor Elementary School,1242,Eugene SD 4J,2082,0.3090909090909091,2016-2017
+Chapman Hill Elementary School,1244,Salem-Keizer SD 24J,2142,0.40540540540540543,2016-2017
+Yujin Gakuen Elementary School,1259,Eugene SD 4J,2082,0.3563218390804598,2016-2017
+Mount Scott Elementary School,1264,North Clackamas SD 12,1924,0.391304347826087,2016-2017
+Three Rivers Elementary School,1266,Bend-LaPine Administrative SD 1,1976,0.3230769230769231,2016-2017
+Lincoln Elementary School,1267,Woodburn SD 103,2146,0.12987012987012986,2016-2017
+Sexton Mountain Elementary School,1270,Beaverton SD 48J,2243,0.4594594594594595,2016-2017
+Boeckman Creek Primary School,1272,West Linn-Wilsonville SD 3J,1922,0.38181818181818183,2016-2017
+Markham Elementary School,1278,Portland SD 1J,2180,0.35454545454545455,2016-2017
+Jackson Elementary School,1285,Hillsboro SD 1J,2239,0.40310077519379844,2016-2017
+Willamette Primary School,1286,West Linn-Wilsonville SD 3J,1922,0.43478260869565216,2016-2017
+Oak Creek Elementary School,1288,Lake Oswego SD 7J,1923,0.4319526627218935,2016-2017
+North Lake School,1289,North Lake SD 14,2061,0.21739130434782608,2016-2017
+Territorial Elementary School,1297,Junction City SD 69,2091,0.40625,2016-2017
+Rieke Elementary School,1299,Portland SD 1J,2180,0.43636363636363634,2016-2017
+Tobias Elementary School,1302,Hillsboro SD 1J,2239,0.4090909090909091,2016-2017
+Nancy Ryles Elementary School,1303,Beaverton SD 48J,2243,0.43646408839779005,2016-2017
+Cecile Trost Elementary School,1307,Canby SD 86,1929,0.10294117647058823,2016-2017
+Elk Meadow Elementary School,1308,Bend-LaPine Administrative SD 1,1976,0.38333333333333336,2016-2017
+Central Linn Elementary School,1311,Central Linn SD 552,2105,0.37142857142857144,2016-2017
+Kelly Creek Elementary School,1313,Gresham-Barlow SD 10J,2183,0.3435114503816794,2016-2017
+Lava Ridge Elementary School,1317,Bend-LaPine Administrative SD 1,1976,0.3918918918918919,2016-2017
+Monroe Grade School,1321,Monroe SD 1J,1898,0.25,2016-2017
+Franklin School,1322,Corvallis SD 509J,1901,0.4642857142857143,2016-2017
+Amity Creek Elementary School,1324,Bend-LaPine Administrative SD 1,1976,0.425531914893617,2016-2017
+Vern Patrick Elementary School,1325,Redmond SD 2J,1977,0.3473684210526316,2016-2017
+Archer Glen Elementary School,1334,Sherwood SD 88J,2244,0.44886363636363635,2016-2017
+Antonia Crater Elementary School,1335,Newberg SD 29J,2254,0.39416058394160586,2016-2017
+Family School,1339,Eugene SD 4J,2082,0.3793103448275862,2016-2017
+Abraham Lincoln Elementary,1350,Medford SD 549C,2048,0.30612244897959184,2016-2017
+Parkside Elementary,1351,Grants Pass SD 7,2054,0.25806451612903225,2016-2017
+Riverbend Elementary School,1352,Springfield SD 19,2083,0.2743362831858407,2016-2017
+Heritage Elementary,1359,Woodburn SD 103,2146,0.27014218009478674,2016-2017
+Winterhaven School,1364,Portland SD 1J,2180,0.48,2016-2017
+Woodland Elementary,1365,Reynolds SD 7,2182,0.18072289156626506,2016-2017
+Deer Creek Elementary School,1369,Tigard-Tualatin SD 23J,2242,0.30177514792899407,2016-2017
+Edgewood Community Elementary School,1774,Eugene SD 4J,2082,0.3157894736842105,2016-2017
+Meadow View School,2264,Bethel SD 52,2088,0.32432432432432434,2016-2017
+Forest Park Elementary School,2413,Portland SD 1J,2180,0.4396551724137931,2016-2017
+Sojourner School,2733,North Clackamas SD 12,1924,0.34210526315789475,2016-2017
+Scholls Heights Elementary School,2781,Beaverton SD 48J,2243,0.46405228758169936,2016-2017
+Grandhaven Elementary School,2784,McMinnville SD 40,2256,0.32894736842105265,2016-2017
+Lourdes School,2994,Scio SD 95,2103,0.3333333333333333,2016-2017
+Lake Creek Learning Center,3147,Eagle Point SD 9,2043,0.36363636363636365,2016-2017
+Paul L Patterson Elementary School,3159,Hillsboro SD 1J,2239,0.38738738738738737,2016-2017
+Orenco Elementary School,3160,Hillsboro SD 1J,2239,0.328,2016-2017
+Spring Mountain Elementary School,3198,North Clackamas SD 12,1924,0.3972602739726027,2016-2017
+Miller Elementary School,3215,Salem-Keizer SD 24J,2142,0.21505376344086022,2016-2017
+High Lakes Elementary School,3218,Bend-LaPine Administrative SD 1,1976,0.42272727272727273,2016-2017
+Highland School at Kenwood Elementary School,3219,Bend-LaPine Administrative SD 1,1976,0.47706422018348627,2016-2017
+Westside Village Magnet School at Kingston Elementary School,3221,Bend-LaPine Administrative SD 1,1976,0.34146341463414637,2016-2017
+Middleton Elementary School,3222,Sherwood SD 88J,2244,0.45408163265306123,2016-2017
+Village School,3229,Eugene SD 4J,2082,0.3333333333333333,2016-2017
+Ridgeline Montessori,3233,Eugene SD 4J,2082,0.39473684210526316,2016-2017
+Oak Grove Elementary,3342,North Clackamas SD 12,1924,0.275,2016-2017
+Days Creek Charter School,3348,Douglas County SD 15,1993,0.2222222222222222,2016-2017
+Prairie City School,3349,Prairie City SD 4,2009,0.3,2016-2017
+Jewell School,3352,Jewell SD 8,1934,0.14285714285714285,2016-2017
+Prospect Charter School,3356,Prospect SD 59,2045,0.09523809523809523,2016-2017
+Paisley School,3360,Paisley SD 11,2060,0.40540540540540543,2016-2017
+Eddyville Charter School,3361,Lincoln County SD,2097,0.10714285714285714,2016-2017
+Harper Charter School,3362,Harper SD 66,2114,0.1111111111111111,2016-2017
+Ione Community Charter School,3363,Ione SD R2,3997,0.3684210526315789,2016-2017
+Helix School,3364,Helix SD 1,2201,0.375,2016-2017
+North Powder Charter School,3365,North Powder SD 8J,2214,0.26666666666666666,2016-2017
+Cascade Locks School,3372,Hood River County SD,2024,0.38095238095238093,2016-2017
+Weddle Elementary School,3374,Salem-Keizer SD 24J,2142,0.23148148148148148,2016-2017
+Lamb Elementary School,3375,Salem-Keizer SD 24J,2142,0.23931623931623933,2016-2017
+Hammond Elementary School,3376,Salem-Keizer SD 24J,2142,0.312,2016-2017
+Hallman Elementary School,3377,Salem-Keizer SD 24J,2142,0.13131313131313133,2016-2017
+Perrydale School,3378,Perrydale SD 21,2192,0.2727272727272727,2016-2017
+Camas Valley School,3400,Camas Valley SD 21J,1995,0.1111111111111111,2016-2017
+Triangle Lake Charter School,3401,Blachly SD 90,2095,0.3076923076923077,2016-2017
+Dufur School,3402,Dufur SD 29,2229,0.2962962962962963,2016-2017
+Desert View Elementary School,3426,Hermiston SD 8,2206,0.3941176470588235,2016-2017
+Echo School,3433,Echo SD 5,2203,0.3076923076923077,2016-2017
+Cove Charter School,3434,Cove SD 15,2216,0.3333333333333333,2016-2017
+Jacob Wismer Elementary School,3437,Beaverton SD 48J,2243,0.48695652173913045,2016-2017
+Kings Valley Charter School,3440,Philomath SD 17J,1900,0.32,2016-2017
+Opal School of the Portland Children's Museum,3451,Portland SD 1J,2180,0.29411764705882354,2016-2017
+Bolton Primary School,3455,West Linn-Wilsonville SD 3J,1922,0.42063492063492064,2016-2017
+Luckiamute Valley Charter School,3461,Dallas SD 2,2190,0.20833333333333334,2016-2017
+Ash Creek Elementary School,3464,Central SD 13J,2191,0.23484848484848486,2016-2017
+Multnomah Learning Academy,3490,Reynolds SD 7,2182,0.3561643835616438,2016-2017
+Riverview School,3503,Lebanon Community SD 9,2101,0.22340425531914893,2016-2017
+Pioneer School,3504,Lebanon Community SD 9,2101,0.3333333333333333,2016-2017
+Sand Ridge Charter School,3505,Lebanon Community SD 9,2101,0.46153846153846156,2016-2017
+Earl Boyles Elementary,3525,David Douglas SD 40,2187,0.27358490566037735,2016-2017
+Lee Elementary School,3526,Salem-Keizer SD 24J,2142,0.3793103448275862,2016-2017
+Optimum Learning Environment Charter School,3528,Salem-Keizer SD 24J,2142,0.38095238095238093,2016-2017
+Forest Ridge Elementary School,3529,Salem-Keizer SD 24J,2142,0.32727272727272727,2016-2017
+Imlay Elementary School,3536,Hillsboro SD 1J,2239,0.3697478991596639,2016-2017
+Hogan Cedars Elementary School,3543,Gresham-Barlow SD 10J,2183,0.32575757575757575,2016-2017
+Prairie Mountain School,3567,Bethel SD 52,2088,0.35964912280701755,2016-2017
+Lewis & Clark Elementary School,3569,St Helens SD 502,1948,0.34911242603550297,2016-2017
+Multi-sensory Instruction Teaching Children Hands-On (MITCH),3579,Tigard-Tualatin SD 23J,2242,0.35135135135135137,2016-2017
+Arthur Academy,3580,David Douglas SD 40,2187,0.3829787234042553,2016-2017
+Lighthouse Charter School,3615,Coos Bay SD 9,1965,0.3125,2016-2017
+Trillium,3616,Portland SD 1J,2180,0.14285714285714285,2016-2017
+Brockway Elementary School,3624,Winston-Dillard SD 116,2002,0.28205128205128205,2016-2017
+Butler Creek Elementary School,3649,Centennial SD 28J,2185,0.371900826446281,2016-2017
+Boones Ferry Primary School,3913,West Linn-Wilsonville SD 3J,1922,0.3333333333333333,2016-2017
+Pine Ridge Elementary,3947,Bend-LaPine Administrative SD 1,1976,0.39869281045751637,2016-2017
+Fern Hill Elementary School,3986,Forest Grove SD 15,2241,0.13186813186813187,2016-2017
+Salish Ponds Elementary School,3989,Reynolds SD 7,2182,0.16161616161616163,2016-2017
+Emerson School,3991,Portland SD 1J,2180,0.4523809523809524,2016-2017
+El Puente,4005,North Clackamas SD 12,1924,0.3488372093023256,2016-2017
+Eagle Rock Elementary School,4020,Eagle Point SD 9,2043,0.24675324675324675,2016-2017
+Coquille Valley Elementary,4025,Coquille SD 8,1964,0.36538461538461536,2016-2017
+Siletz Valley Schools,4038,Lincoln County SD,2097,0.125,2016-2017
+Four Rivers Community School,4040,Oregon Department of Education,2336,0.358974358974359,2016-2017
+Harritt Elementary School,4068,Salem-Keizer SD 24J,2142,0.2677165354330709,2016-2017
+Ensworth Elementary School,4129,Bend-LaPine Administrative SD 1,1976,0.28,2016-2017
+Cesar Chavez Elementary School,4146,Eugene SD 4J,2082,0.26744186046511625,2016-2017
+Holt Elementary School,4157,Eugene SD 4J,2082,0.3142857142857143,2016-2017
+City View Charter School,4206,Hillsboro SD 1J,2239,0.28125,2016-2017
+Reynolds Arthur Academy,4216,Reynolds SD 7,2182,0.2564102564102564,2016-2017
+Sherwood Charter School,4220,Sherwood SD 88J,2244,0.3902439024390244,2016-2017
+South Columbia Family School,4221,Scappoose SD 1J,1944,0.4166666666666667,2016-2017
+Clackamas Web Academy,4223,North Clackamas SD 12,1924,0.1875,2016-2017
+Woodburn Arthur Academy,4230,Woodburn SD 103,2146,0.17857142857142858,2016-2017
+Joan Austin Elementary School,4342,Newberg SD 29J,2254,0.33783783783783783,2016-2017
+Alberta Rider Elementary School,4364,Tigard-Tualatin SD 23J,2242,0.43243243243243246,2016-2017
+Valley Inquiry Charter School,4390,Salem-Keizer SD 24J,2142,0.3076923076923077,2016-2017
+Oregon Connections Academy,4399,Santiam Canyon SD 129J,2104,0.2462686567164179,2016-2017
+Portland Arthur Academy Charter School,4400,Portland SD 1J,2180,0.3958333333333333,2016-2017
+Tom McCall Elementary School,4429,Redmond SD 2J,1977,0.30344827586206896,2016-2017
+Philander Lee Elementary School,4435,Canby SD 86,1929,0.3302752293577982,2016-2017
+Cascade Heights Public Charter School,4475,North Clackamas SD 12,1924,0.358974358974359,2016-2017
+John Muir Elementary School,4476,Ashland SD 5,2041,0.45454545454545453,2016-2017
+Springwater Environmental Sciences School,4480,Oregon City SD 62,1928,0.3125,2016-2017
+Sweet Home Charter School,4484,Sweet Home SD 55,2102,0.3103448275862069,2016-2017
+Portland Village School,4534,Portland SD 1J,2180,0.3384615384615385,2016-2017
+Academy for Character Education,4555,South Lane SD 45J3,2087,0.36363636363636365,2016-2017
+Alliance Charter Academy,4585,Oregon City SD 62,1928,0.37037037037037035,2016-2017
+Corbett School,4592,Corbett SD 39,2186,0.2857142857142857,2016-2017
+Madrone Trail Public Charter School,4593,Medford SD 549C,2048,0.125,2016-2017
+Forest Grove Community School,4595,Forest Grove SD 15,2241,0.3684210526315789,2016-2017
+Gresham Arthur Academy,4601,Gresham-Barlow SD 10J,2183,0.34146341463414637,2016-2017
+St Helens Arthur Academy,4602,St Helens SD 502,1948,0.35135135135135137,2016-2017
+The Cottonwood School of Civics and Science,4604,Oregon Department of Education,2336,0.39473684210526316,2016-2017
+Inavale Community Partners dba Muddy Creek Charter School,4637,Corvallis SD 509J,1901,0.38235294117647056,2016-2017
+Sue Buel Elementary,4639,McMinnville SD 40,2256,0.28440366972477066,2016-2017
+Creative Science School,4640,Portland SD 1J,2180,0.24193548387096775,2016-2017
+Free Orchards Elementary School,4641,Hillsboro SD 1J,2239,0.22535211267605634,2016-2017
+Lincoln Street Elementary School,4642,Hillsboro SD 1J,2239,0.10989010989010989,2016-2017
+Quatama Elementary School,4643,Hillsboro SD 1J,2239,0.3979591836734694,2016-2017
+Ponderosa Elementary,4646,Bend-LaPine Administrative SD 1,1976,0.3333333333333333,2016-2017
+Lewis and Clark Montessori Charter School,4667,Gresham-Barlow SD 10J,2183,0.2037037037037037,2016-2017
+Summit Learning Charter,4670,Estacada SD 108,1930,0.1875,2016-2017
+Bonny Slope Elementary School,4671,Beaverton SD 48J,2243,0.4419889502762431,2016-2017
+William E Miller Elementary,4680,Bend-LaPine Administrative SD 1,1976,0.4114285714285714,2016-2017
+Oregon Virtual Academy,4690,North Bend SD 13,1966,0.16883116883116883,2016-2017
+Silvies River Charter School,4702,Frenchglen SD 16,2020,0.29411764705882354,2016-2017
+Rosedale Elementary School,4703,Hillsboro SD 1J,2239,0.3048780487804878,2016-2017
+Springville K-8 School,4712,Beaverton SD 48J,2243,0.4300341296928328,2016-2017
+Scouters Mountain Elementary,4713,North Clackamas SD 12,1924,0.37142857142857144,2016-2017
+Verne A Duncan Elementary School,4714,North Clackamas SD 12,1924,0.33548387096774196,2016-2017
+The Ivy School,4720,Oregon Department of Education,2336,0.31666666666666665,2016-2017
+Baker Web Academy,4728,Baker SD 5J,1894,0.27586206896551724,2016-2017
+Edy Ridge Elementary School,4730,Sherwood SD 88J,2244,0.42483660130718953,2016-2017
+Camas Ridge Community Elementary,4739,Eugene SD 4J,2082,0.3466666666666667,2016-2017
+Timber Ridge School,4744,Greater Albany Public SD 8J,2100,0.30057803468208094,2016-2017
+Molalla River Academy,4745,Molalla River SD 35,1925,0.3076923076923077,2016-2017
+The Community Roots School,4746,Silver Falls SD 4J,2138,0.21428571428571427,2016-2017
+Ardenwald Elementary School,4762,North Clackamas SD 12,1924,0.26373626373626374,2016-2017
+Happy Valley Elementary School,4763,North Clackamas SD 12,1924,0.43846153846153846,2016-2017
+Lewelling Elementary School,4764,North Clackamas SD 12,1924,0.34,2016-2017
+Linwood Elementary School,4765,North Clackamas SD 12,1924,0.30851063829787234,2016-2017
+Oregon Trail Elementary School,4766,North Clackamas SD 12,1924,0.2608695652173913,2016-2017
+Rosland Elementary,4793,Bend-LaPine Administrative SD 1,1976,0.3,2016-2017
+Arco Iris Spanish Immersion School,4805,Beaverton SD 48J,2243,0.44047619047619047,2016-2017
+Oregon Trail  Academy,4820,Oregon Trail SD 46,1926,0.4,2016-2017
+Logos Public Charter School,4821,Medford SD 549C,2048,0.2727272727272727,2016-2017
+Rockwood Preparatory Academy,4822,Reynolds SD 7,2182,0.18181818181818182,2016-2017
+Sunny Wolf Charter School,4823,Three Rivers/Josephine County SD,2055,0.2692307692307692,2016-2017
+Eagle Charter School,4850,Oregon Department of Education,2336,0.32,2016-2017
+Rivers Edge Academy Charter School,4856,Rogue River SD 35,2044,0.3333333333333333,2016-2017
+Kalapuya Elementary School,4858,Salem-Keizer SD 24J,2142,0.3804347826086957,2016-2017
+Hope Chinese Charter School,4867,Beaverton SD 48J,2243,0.44680851063829785,2016-2017
+Lowrie Primary School,5056,West Linn-Wilsonville SD 3J,1922,0.35668789808917195,2016-2017
+Trillium Creek Primary School,5057,West Linn-Wilsonville SD 3J,1922,0.39285714285714285,2016-2017
+Two Rivers Dos Rios Elementary,5059,Springfield SD 19,2083,0.2796610169491525,2016-2017
+Le Monde French Immersion Public Charter School,5060,Portland SD 1J,2180,0.4810126582278481,2016-2017
+Cesar E Chavez Elem,5064,Salem-Keizer SD 24J,2142,0.3064516129032258,2016-2017
+Battle Creek Elementary School,5066,Salem-Keizer SD 24J,2142,0.3157894736842105,2016-2017
+Kids Unlimited Academy,5205,Medford SD 549C,2048,0.24615384615384617,2016-2017
+Mountain View Academy,5252,Lowell SD 71,2092,0.2727272727272727,2016-2017
+Silver Rail Elementary School,5293,Bend-LaPine Administrative SD 1,1976,0.4017094017094017,2016-2017
+Ferndale Elementary School,5297,Milton-Freewater Unified SD 7,2205,0.22093023255813954,2016-2017
+Barnes Butte Elementary,5302,Crook County SD,1970,0.27380952380952384,2016-2017
+Bend International School,5309,Bend-LaPine Administrative SD 1,1976,0.32142857142857145,2016-2017
+Bridge Charter Academy,5349,Lowell SD 71,2092,0.2608695652173913,2016-2017
+Brooklyn Primary School,2,Baker SD 5J,1894,0.310126582278481,2017-2018
+Haines Elementary School,4,Baker SD 5J,1894,0.4634146341463415,2017-2018
+Pine Eagle Charter School,15,Pine Eagle SD 61,1897,0.3684210526315789,2017-2018
+Alsea Charter School,17,Alsea SD 7J,1899,0.25,2017-2018
+Blodgett Elementary School,18,Philomath SD 17J,1900,0.4,2017-2018
+Philomath Elementary School,20,Philomath SD 17J,1900,0.3008130081300813,2017-2018
+Adams Elementary School,27,Corvallis SD 509J,1901,0.34579439252336447,2017-2018
+Garfield Elementary School,30,Corvallis SD 509J,1901,0.3090909090909091,2017-2018
+Hoover Elementary School,33,Corvallis SD 509J,1901,0.4700854700854701,2017-2018
+Jefferson Elementary School,35,Corvallis SD 509J,1901,0.39436619718309857,2017-2018
+Lincoln Elementary School,36,Corvallis SD 509J,1901,0.30952380952380953,2017-2018
+Mt View Elementary School,37,Corvallis SD 509J,1901,0.30337078651685395,2017-2018
+Wilson Elementary School,39,Corvallis SD 509J,1901,0.4051724137931034,2017-2018
+Cedaroak Park Primary School,45,West Linn-Wilsonville SD 3J,1922,0.3835616438356164,2017-2018
+Stafford Primary School,47,West Linn-Wilsonville SD 3J,1922,0.3875968992248062,2017-2018
+Sunset Primary School,48,West Linn-Wilsonville SD 3J,1922,0.46296296296296297,2017-2018
+Forest Hills Elementary School,53,Lake Oswego SD 7J,1923,0.4726027397260274,2017-2018
+Hallinan Elementary School,54,Lake Oswego SD 7J,1923,0.4715447154471545,2017-2018
+Lake Grove Elementary School,55,Lake Oswego SD 7J,1923,0.4491525423728814,2017-2018
+River Grove Elementary School,56,Lake Oswego SD 7J,1923,0.41975308641975306,2017-2018
+Westridge Elementary School,58,Lake Oswego SD 7J,1923,0.48226950354609927,2017-2018
+Bilquist Elementary School,65,North Clackamas SD 12,1924,0.325,2017-2018
+Whitcomb Elementary School,72,North Clackamas SD 12,1924,0.12195121951219512,2017-2018
+Milwaukie Elementary School,73,North Clackamas SD 12,1924,0.358974358974359,2017-2018
+Riverside Elementary School,76,North Clackamas SD 12,1924,0.3333333333333333,2017-2018
+Sunnyside Elementary School,78,North Clackamas SD 12,1924,0.3431952662721893,2017-2018
+View Acres Elementary School,79,North Clackamas SD 12,1924,0.24285714285714285,2017-2018
+Welches Elementary School,88,Oregon Trail SD 46,1926,0.34,2017-2018
+Deep Creek – Damascus K-8 School,90,Gresham-Barlow SD 10J,2183,0.1951219512195122,2017-2018
+Carus School,92,Canby SD 86,1929,0.3411764705882353,2017-2018
+Clarkes Elementary School,93,Molalla River SD 35,1925,0.2903225806451613,2017-2018
+Molalla Elementary School,94,Molalla River SD 35,1925,0.2696629213483146,2017-2018
+Naas Elementary School,96,Oregon Trail SD 46,1926,0.2112676056338028,2017-2018
+Kelso Elementary School,99,Oregon Trail SD 46,1926,0.34408602150537637,2017-2018
+Sandy Grade School,100,Oregon Trail SD 46,1926,0.3522727272727273,2017-2018
+Firwood Elementary School,101,Oregon Trail SD 46,1926,0.3644859813084112,2017-2018
+Colton Elementary School,103,Colton SD 53,1927,0.2714285714285714,2017-2018
+Beavercreek Elementary School,105,Oregon City SD 62,1928,0.34782608695652173,2017-2018
+Candy Lane Elementary School,106,Oregon City SD 62,1928,0.21212121212121213,2017-2018
+Holcomb Elementary School,107,Oregon City SD 62,1928,0.26262626262626265,2017-2018
+Gaffney Lane Elementary School,109,Oregon City SD 62,1928,0.2868217054263566,2017-2018
+John McLoughlin Elementary School,114,Oregon City SD 62,1928,0.3313253012048193,2017-2018
+Butte Creek Elementary School,119,Silver Falls SD 4J,2138,0.15384615384615385,2017-2018
+Mulino Elementary School,121,Molalla River SD 35,1925,0.39361702127659576,2017-2018
+William Knight Elementary School,122,Canby SD 86,1929,0.4142857142857143,2017-2018
+Howard Eccles Elementary School,124,Canby SD 86,1929,0.3879310344827586,2017-2018
+Ninety-One School,127,Canby SD 86,1929,0.37349397590361444,2017-2018
+Rural Dell Elementary School,128,Molalla River SD 35,1925,0.24528301886792453,2017-2018
+Clackamas River Elementary School,131,Estacada SD 108,1930,0.2807017543859649,2017-2018
+River Mill Elementary School,132,Estacada SD 108,1930,0.21428571428571427,2017-2018
+John Wetten Elementary School,136,Gladstone SD 115,1931,0.39316239316239315,2017-2018
+Redland Elementary School,139,Oregon City SD 62,1928,0.2661290322580645,2017-2018
+Lewis & Clark Elementary School,147,Astoria SD 1,1933,0.3333333333333333,2017-2018
+Seaside Heights Elementary School,152,Seaside SD 10,1935,0.2882882882882883,2017-2018
+Gearhart Elementary School,153,Seaside SD 10,1935,0.3291139240506329,2017-2018
+Warrenton Grade School,156,Warrenton-Hammond SD 30,1936,0.3884297520661157,2017-2018
+Grant Watts Elementary School,158,Scappoose SD 1J,1944,0.2536231884057971,2017-2018
+Warren Elementary School,160,Scappoose SD 1J,1944,0.35064935064935066,2017-2018
+Clatskanie Elementary School,163,Clatskanie SD 6J,1945,0.20588235294117646,2017-2018
+Hilda Lahti Elementary School,166,Knappa SD 4,2262,0.12195121951219512,2017-2018
+Hudson Park Elementary School,171,Rainier SD 13,1946,0.23655913978494625,2017-2018
+Vernonia Elementary School,177,Vernonia SD 47J,1947,0.3076923076923077,2017-2018
+Columbia City School,179,St Helens SD 502,1948,0.3181818181818182,2017-2018
+McBride Elementary School,182,St Helens SD 502,1948,0.1981981981981982,2017-2018
+Blossom Gulch Elementary School,192,Coos Bay SD 9,1965,0.2512820512820513,2017-2018
+Madison Elementary School,196,Coos Bay SD 9,1965,0.2204724409448819,2017-2018
+Hillcrest Elementary School,204,North Bend SD 13,1966,0.3486238532110092,2017-2018
+North Bay Elementary School,205,North Bend SD 13,1966,0.375,2017-2018
+Powers Elementary School,210,Powers SD 31,1967,0.15,2017-2018
+Myrtle Crest School,214,Myrtle Point SD 41,1968,0.24528301886792453,2017-2018
+Ocean Crest Elementary School,217,Bandon SD 54,1969,0.19402985074626866,2017-2018
+Crooked River Elementary School,219,Crook County SD,1970,0.3333333333333333,2017-2018
+Powell Butte Community Charter School,223,Crook County SD,1970,0.4375,2017-2018
+Driftwood Elementary School,228,Port Orford-Langlois SD 2CJ,1973,0.3793103448275862,2017-2018
+Riley Creek Elementary School,231,Central Curry SD 1,1972,0.37735849056603776,2017-2018
+Kalmiopsis Elementary School,236,Brookings-Harbor SD 17C,1974,0.2695035460992908,2017-2018
+Bear Creek Elementary School,241,Bend-LaPine Administrative SD 1,1976,0.30344827586206896,2017-2018
+LaPine Elementary School,245,Bend-LaPine Administrative SD 1,1976,0.29473684210526313,2017-2018
+Juniper Elementary School,246,Bend-LaPine Administrative SD 1,1976,0.3894736842105263,2017-2018
+R E Jewell Elementary School,247,Bend-LaPine Administrative SD 1,1976,0.35877862595419846,2017-2018
+Buckingham Elementary School,250,Bend-LaPine Administrative SD 1,1976,0.43452380952380953,2017-2018
+Sage Elementary School,256,Redmond SD 2J,1977,0.4293193717277487,2017-2018
+John Tuck Elementary School,258,Redmond SD 2J,1977,0.26666666666666666,2017-2018
+M A Lynch Elementary School,259,Redmond SD 2J,1977,0.30303030303030304,2017-2018
+Terrebonne Community School,260,Redmond SD 2J,1977,0.3763440860215054,2017-2018
+Tumalo Community School,261,Redmond SD 2J,1977,0.4157303370786517,2017-2018
+Sisters Elementary School,264,Sisters SD 6,1978,0.3424657534246575,2017-2018
+Oakland Elementary School,267,Oakland SD 1,1990,0.26229508196721313,2017-2018
+Eastwood Elementary School,269,Douglas County SD 4,1991,0.30927835051546393,2017-2018
+Fir Grove Elementary School,270,Douglas County SD 4,1991,0.40789473684210525,2017-2018
+Fullerton IV Elementary School,271,Douglas County SD 4,1991,0.20634920634920634,2017-2018
+Green Elementary School,272,Douglas County SD 4,1991,0.16326530612244897,2017-2018
+Hucrest Elementary School,273,Douglas County SD 4,1991,0.35294117647058826,2017-2018
+Melrose Elementary School,274,Douglas County SD 4,1991,0.36885245901639346,2017-2018
+Sunnyslope Elementary School,276,Douglas County SD 4,1991,0.3,2017-2018
+Winchester Elementary,277,Douglas County SD 4,1991,0.22,2017-2018
+Glide Elementary School,282,Glide SD 12,1992,0.35514018691588783,2017-2018
+Canyonville School,289,South Umpqua SD 19,1994,0.4,2017-2018
+Myrtle Creek Elementary School,290,South Umpqua SD 19,1994,0.11290322580645161,2017-2018
+Tri City Elementary School,292,South Umpqua SD 19,1994,0.2549019607843137,2017-2018
+North Douglas Elementary School,296,North Douglas SD 22,1996,0.2631578947368421,2017-2018
+Yoncalla Elementary School,299,Yoncalla SD 32,1997,0.125,2017-2018
+Elkton Charter School,302,Elkton SD 34,1998,0.3076923076923077,2017-2018
+Riddle Elementary School,304,Riddle SD 70,1999,0.21739130434782608,2017-2018
+Glendale Elementary School,306,Glendale SD 77,2000,0.07692307692307693,2017-2018
+Highland Elementary School,309,Reedsport SD 105,2001,0.25,2017-2018
+Lookingglass Elementary School,313,Winston-Dillard SD 116,2002,0.3,2017-2018
+East Sutherlin Primary School,318,Sutherlin SD 130,2003,0.25,2017-2018
+Arlington Community Charter School,323,Arlington SD 3,2005,0.3333333333333333,2017-2018
+Condon Elementary School,325,Condon SD 25J,2006,0.375,2017-2018
+Humbolt Elementary School,327,John Day SD 3,2008,0.2549019607843137,2017-2018
+Seneca Elementary School,330,John Day SD 3,2008,0.3333333333333333,2017-2018
+Henry L Slater Elementary School,342,Harney County SD 3,2014,0.3137254901960784,2017-2018
+Crane Elementary School,346,Harney County SD 4,2015,0.29411764705882354,2017-2018
+May Street Elementary School,362,Hood River County SD,2024,0.35,2017-2018
+Mid Valley Elementary School,363,Hood River County SD,2024,0.37209302325581395,2017-2018
+Parkdale Elementary School,364,Hood River County SD,2024,0.2826086956521739,2017-2018
+Westside Elementary School,366,Hood River County SD,2024,0.36633663366336633,2017-2018
+Orchard Hill Elementary School,370,Phoenix-Talent SD 4,2039,0.23,2017-2018
+Phoenix Elementary School,371,Phoenix-Talent SD 4,2039,0.10666666666666667,2017-2018
+Talent Elementary School,372,Phoenix-Talent SD 4,2039,0.24175824175824176,2017-2018
+Bellview Elementary School,375,Ashland SD 5,2041,0.3076923076923077,2017-2018
+Helman Elementary School,377,Ashland SD 5,2041,0.40229885057471265,2017-2018
+Walker Elementary School,379,Ashland SD 5,2041,0.28378378378378377,2017-2018
+Central Point Elementary School,382,Central Point SD 6,2042,0.2621359223300971,2017-2018
+Jewett Elementary School,383,Central Point SD 6,2042,0.28187919463087246,2017-2018
+Patrick Elementary School,384,Central Point SD 6,2042,0.2641509433962264,2017-2018
+Richardson Elementary School,385,Central Point SD 6,2042,0.22988505747126436,2017-2018
+Sams Valley Elementary School,386,Central Point SD 6,2042,0.1780821917808219,2017-2018
+Hillside Elementary,390,Eagle Point SD 9,2043,0.25210084033613445,2017-2018
+Shady Cove School,393,Eagle Point SD 9,2043,0.22727272727272727,2017-2018
+Table Rock Elementary,394,Eagle Point SD 9,2043,0.1895424836601307,2017-2018
+Rogue River Elementary School,399,Rogue River SD 35,2044,0.37142857142857144,2017-2018
+Applegate Elementary School,402,Three Rivers/Josephine County SD,2055,0.4074074074074074,2017-2018
+Butte Falls Charter School,406,Butte Falls SD 91,2046,0.15789473684210525,2017-2018
+Griffin Creek Elementary School,408,Medford SD 549C,2048,0.38028169014084506,2017-2018
+Hoover Elementary School,409,Medford SD 549C,2048,0.375,2017-2018
+Howard Elementary School,410,Medford SD 549C,2048,0.3368421052631579,2017-2018
+Jackson Elementary School,411,Medford SD 549C,2048,0.3146067415730337,2017-2018
+Jacksonville Elementary School,412,Medford SD 549C,2048,0.42391304347826086,2017-2018
+Jefferson Elementary School,413,Medford SD 549C,2048,0.3493975903614458,2017-2018
+Lone Pine Elementary School,414,Medford SD 549C,2048,0.40625,2017-2018
+Oak Grove Elementary School,415,Medford SD 549C,2048,0.2616822429906542,2017-2018
+Kennedy Elementary School,416,Medford SD 549C,2048,0.2727272727272727,2017-2018
+Roosevelt Elementary School,417,Medford SD 549C,2048,0.1774193548387097,2017-2018
+Ruch Elementary School,418,Medford SD 549C,2048,0.39285714285714285,2017-2018
+Washington Elementary School,419,Medford SD 549C,2048,0.15492957746478872,2017-2018
+Wilson Elementary School,420,Medford SD 549C,2048,0.36885245901639346,2017-2018
+Culver Elementary School,425,Culver SD 4,2050,0.35443037974683544,2017-2018
+Buff Elementary School,429,Jefferson County SD 509J,2053,0.3037974683544304,2017-2018
+Madras Elementary School,430,Jefferson County SD 509J,2053,0.3008849557522124,2017-2018
+Metolius Elementary School,431,Jefferson County SD 509J,2053,0.296875,2017-2018
+Warm Springs K-8 Academy,432,Jefferson County SD 509J,2053,0.26595744680851063,2017-2018
+Allen Dale Elementary School,435,Grants Pass SD 7,2054,0.32456140350877194,2017-2018
+Highland Elementary School,436,Grants Pass SD 7,2054,0.3416666666666667,2017-2018
+Lincoln Elementary School,437,Grants Pass SD 7,2054,0.32407407407407407,2017-2018
+Redwood Elementary School,439,Grants Pass SD 7,2054,0.3089430894308943,2017-2018
+Riverside Elementary School,440,Grants Pass SD 7,2054,0.25,2017-2018
+Evergreen Elementary School,443,Three Rivers/Josephine County SD,2055,0.2523364485981308,2017-2018
+Fruitdale Elementary School,445,Three Rivers/Josephine County SD,2055,0.2988505747126437,2017-2018
+Ft Vannoy Elementary School,446,Three Rivers/Josephine County SD,2055,0.17307692307692307,2017-2018
+Madrona Elementary School,450,Three Rivers/Josephine County SD,2055,0.3409090909090909,2017-2018
+Manzanita Elementary School,451,Three Rivers/Josephine County SD,2055,0.23943661971830985,2017-2018
+Williams Elementary School,453,Three Rivers/Josephine County SD,2055,0.1,2017-2018
+Joseph Conger Elementary School,459,Klamath Falls City Schools,2056,0.25301204819277107,2017-2018
+Mills Elementary School,461,Klamath Falls City Schools,2056,0.18571428571428572,2017-2018
+Pelican Elementary School,462,Klamath Falls City Schools,2056,0.2714285714285714,2017-2018
+Roosevelt Elementary School,465,Klamath Falls City Schools,2056,0.3855421686746988,2017-2018
+Bonanza Elementary School,467,Klamath County SD,2057,0.14814814814814814,2017-2018
+Chiloquin Elementary School,468,Klamath County SD,2057,0.3157894736842105,2017-2018
+Ferguson Elementary School,470,Klamath County SD,2057,0.39215686274509803,2017-2018
+Gilchrist Elementary School,472,Klamath County SD,2057,0.15,2017-2018
+Henley Elementary School,473,Klamath County SD,2057,0.3230769230769231,2017-2018
+Keno Elementary School,474,Klamath County SD,2057,0.40425531914893614,2017-2018
+Malin Elementary School,475,Klamath County SD,2057,0.25,2017-2018
+Merrill Elementary School,476,Klamath County SD,2057,0.3076923076923077,2017-2018
+Peterson Elementary School,477,Klamath County SD,2057,0.3049645390070922,2017-2018
+Shasta Elementary School,478,Klamath County SD,2057,0.3333333333333333,2017-2018
+Stearns Elementary School,479,Klamath County SD,2057,0.2857142857142857,2017-2018
+Fremont/Hay Elementary School,490,Lake County SD 7,2059,0.34177215189873417,2017-2018
+Pleasant Hill Elementary School,500,Pleasant Hill SD 1,2081,0.29347826086956524,2017-2018
+Adams Elementary School,503,Eugene SD 4J,2082,0.36363636363636365,2017-2018
+Awbrey Park Elementary School,504,Eugene SD 4J,2082,0.36893203883495146,2017-2018
+Coburg Community Charter School,507,Eugene SD 4J,2082,0.45652173913043476,2017-2018
+Edison Elementary School,510,Eugene SD 4J,2082,0.4342105263157895,2017-2018
+Gilham Elementary School,513,Eugene SD 4J,2082,0.2857142857142857,2017-2018
+Howard Elementary School,515,Eugene SD 4J,2082,0.2403846153846154,2017-2018
+McCornack Elementary School,522,Eugene SD 4J,2082,0.2191780821917808,2017-2018
+River Road/El Camino del Rio Elementary School,525,Eugene SD 4J,2082,0.17333333333333334,2017-2018
+Spring Creek Elementary School,529,Eugene SD 4J,2082,0.2698412698412698,2017-2018
+Twin Oaks Elementary School,530,Eugene SD 4J,2082,0.288135593220339,2017-2018
+Willagillespie Elementary School,534,Eugene SD 4J,2082,0.3923076923076923,2017-2018
+Centennial Elementary School,544,Springfield SD 19,2083,0.34285714285714286,2017-2018
+Douglas Gardens Elementary School,545,Springfield SD 19,2083,0.37383177570093457,2017-2018
+Elizabeth Page Elementary School,546,Springfield SD 19,2083,0.2948717948717949,2017-2018
+Guy Lee Elementary School,548,Springfield SD 19,2083,0.14285714285714285,2017-2018
+Maple Elementary School,550,Springfield SD 19,2083,0.2542372881355932,2017-2018
+Ridgeview Elementary School,553,Springfield SD 19,2083,0.3113207547169811,2017-2018
+Mt Vernon Elementary School,554,Springfield SD 19,2083,0.3469387755102041,2017-2018
+Thurston Elementary School,556,Springfield SD 19,2083,0.33613445378151263,2017-2018
+Walterville Elementary School,558,Springfield SD 19,2083,0.39215686274509803,2017-2018
+Yolanda Elementary School,559,Springfield SD 19,2083,0.4375,2017-2018
+Elmira Elementary School,563,Fern Ridge SD 28J,2084,0.3888888888888889,2017-2018
+Veneta Elementary School,566,Fern Ridge SD 28J,2084,0.26153846153846155,2017-2018
+Mapleton Elementary School,568,Mapleton SD 32,2085,0.2,2017-2018
+Creslane Elementary School,570,Creswell SD 40,2086,0.3727810650887574,2017-2018
+Bohemia Elementary School,573,South Lane SD 45J3,2087,0.23809523809523808,2017-2018
+Dorena School,574,South Lane SD 45J3,2087,0.2,2017-2018
+Harrison Elementary School,576,South Lane SD 45J3,2087,0.2962962962962963,2017-2018
+Latham Elementary School,577,South Lane SD 45J3,2087,0.23076923076923078,2017-2018
+London School,578,South Lane SD 45J3,2087,0.35714285714285715,2017-2018
+Clear Lake Elementary School,582,Bethel SD 52,2088,0.24074074074074073,2017-2018
+Danebo Elementary School,583,Bethel SD 52,2088,0.3188405797101449,2017-2018
+Fairfield Elementary School,584,Bethel SD 52,2088,0.2112676056338028,2017-2018
+Irving Elementary School,585,Bethel SD 52,2088,0.38524590163934425,2017-2018
+Malabon Elementary School,586,Bethel SD 52,2088,0.1935483870967742,2017-2018
+Applegate Elementary School,589,Crow-Applegate-Lorane SD 66,2089,0.3157894736842105,2017-2018
+McKenzie Elementary School,593,McKenzie SD 68,2090,0.3,2017-2018
+Laurel Elementary School,595,Junction City SD 69,2091,0.34285714285714286,2017-2018
+Lundy Elementary School,598,Lowell SD 71,2092,0.34210526315789475,2017-2018
+Oakridge Elementary School,600,Oakridge SD 76,2093,0.2641509433962264,2017-2018
+Marcola Elementary School,603,Marcola SD 79J,2094,0.34615384615384615,2017-2018
+Siuslaw Elementary School,609,Siuslaw SD 97J,2096,0.33858267716535434,2017-2018
+Toledo Elementary School,611,Lincoln County SD,2097,0.23376623376623376,2017-2018
+Taft Elementary School,620,Lincoln County SD,2097,0.23841059602649006,2017-2018
+Crestview Heights School,623,Lincoln County SD,2097,0.1590909090909091,2017-2018
+Sam Case Elementary,625,Lincoln County SD,2097,0.33031674208144796,2017-2018
+Central Elementary School,631,Greater Albany Public SD 8J,2100,0.2537313432835821,2017-2018
+Periwinkle Elementary School,636,Greater Albany Public SD 8J,2100,0.2,2017-2018
+North Albany Elementary School,637,Greater Albany Public SD 8J,2100,0.3684210526315789,2017-2018
+Oak Grove Elementary School,639,Greater Albany Public SD 8J,2100,0.4,2017-2018
+Lafayette Elementary School,640,Greater Albany Public SD 8J,2100,0.30666666666666664,2017-2018
+Liberty Elementary School,641,Greater Albany Public SD 8J,2100,0.3522727272727273,2017-2018
+Oak Elementary School,643,Greater Albany Public SD 8J,2100,0.43529411764705883,2017-2018
+Sunrise Elementary School,644,Greater Albany Public SD 8J,2100,0.10714285714285714,2017-2018
+South Shore Elementary School,645,Greater Albany Public SD 8J,2100,0.22988505747126436,2017-2018
+Tangent Elementary School,646,Greater Albany Public SD 8J,2100,0.20588235294117646,2017-2018
+Waverly Elementary School,648,Greater Albany Public SD 8J,2100,0.3880597014925373,2017-2018
+Cascades School,652,Lebanon Community SD 9,2101,0.2876712328767123,2017-2018
+Green Acres School,653,Lebanon Community SD 9,2101,0.2807017543859649,2017-2018
+Mari-Linn Elementary School,656,North Santiam SD 29J,2143,0.23076923076923078,2017-2018
+Hamilton Creek School,658,Lebanon Community SD 9,2101,0.3,2017-2018
+Harrisburg Elementary School,659,Harrisburg SD 7J,2099,0.2542372881355932,2017-2018
+Foster Elementary School,662,Sweet Home SD 55,2102,0.4,2017-2018
+Hawthorne Elementary School,663,Sweet Home SD 55,2102,0.15789473684210525,2017-2018
+Holley Elementary School,664,Sweet Home SD 55,2102,0.2222222222222222,2017-2018
+Oak Heights Elementary School,666,Sweet Home SD 55,2102,0.25,2017-2018
+Lacomb School,671,Lebanon Community SD 9,2101,0.42424242424242425,2017-2018
+Centennial Elementary School,676,Scio SD 95,2103,0.2857142857142857,2017-2018
+Santiam Elementary School,681,Santiam Canyon SD 129J,2104,0.16,2017-2018
+Alameda Elementary School,692,Ontario SD 8C,2108,0.18840579710144928,2017-2018
+Cairo Elementary School,693,Ontario SD 8C,2108,0.2571428571428571,2017-2018
+Aiken Elementary School,694,Ontario SD 8C,2108,0.22972972972972974,2017-2018
+May Roberts Elementary School,696,Ontario SD 8C,2108,0.24615384615384617,2017-2018
+Pioneer Elementary School,697,Ontario SD 8C,2108,0.14285714285714285,2017-2018
+Vale Elementary School,701,Vale SD 84,2116,0.29545454545454547,2017-2018
+Nyssa Elementary School,702,Nyssa SD 26,2110,0.2222222222222222,2017-2018
+Annex Charter School,705,Annex SD 29,2111,0.38461538461538464,2017-2018
+Adrian Elementary School,707,Adrian SD 61,2113,0.36363636363636365,2017-2018
+Robert Frost Elementary School,716,Silver Falls SD 4J,2138,0.3028571428571429,2017-2018
+Sublimity Elementary School,717,North Santiam SD 29J,2143,0.3888888888888889,2017-2018
+Aumsville Elementary School,719,Cascade SD 5,2139,0.3287671232876712,2017-2018
+Jefferson Elementary School,721,Jefferson SD 14J,2140,0.21951219512195122,2017-2018
+North Marion Intermediate School,724,North Marion SD 15,2141,0.24516129032258063,2017-2018
+Auburn Elementary School,728,Salem-Keizer SD 24J,2142,0.1889763779527559,2017-2018
+Brush College Elementary School,731,Salem-Keizer SD 24J,2142,0.3287671232876712,2017-2018
+Bush Elementary School,732,Salem-Keizer SD 24J,2142,0.06521739130434782,2017-2018
+Candalaria Elementary School,733,Salem-Keizer SD 24J,2142,0.41379310344827586,2017-2018
+Clear Lake Elementary School,734,Salem-Keizer SD 24J,2142,0.3953488372093023,2017-2018
+Cummings Elementary School,735,Salem-Keizer SD 24J,2142,0.19607843137254902,2017-2018
+Englewood Elementary School,736,Salem-Keizer SD 24J,2142,0.3404255319148936,2017-2018
+Wright Elementary School,737,Salem-Keizer SD 24J,2142,0.34375,2017-2018
+Four Corners Elementary School,738,Salem-Keizer SD 24J,2142,0.125,2017-2018
+Grant Community School,740,Salem-Keizer SD 24J,2142,0.2891566265060241,2017-2018
+Scott Elementary School,741,Salem-Keizer SD 24J,2142,0.16666666666666666,2017-2018
+Highland Elementary School,743,Salem-Keizer SD 24J,2142,0.18666666666666668,2017-2018
+Hoover Elementary School,744,Salem-Keizer SD 24J,2142,0.20833333333333334,2017-2018
+Gubser Elementary School,745,Salem-Keizer SD 24J,2142,0.3208955223880597,2017-2018
+Kennedy Elementary School,746,Salem-Keizer SD 24J,2142,0.23404255319148937,2017-2018
+Keizer Elementary School,747,Salem-Keizer SD 24J,2142,0.24025974025974026,2017-2018
+Liberty Elementary School,749,Salem-Keizer SD 24J,2142,0.2676056338028169,2017-2018
+McKinley Elementary School,750,Salem-Keizer SD 24J,2142,0.32941176470588235,2017-2018
+Eyre Elementary School,751,Salem-Keizer SD 24J,2142,0.18269230769230768,2017-2018
+Morningside Elementary School,753,Salem-Keizer SD 24J,2142,0.391304347826087,2017-2018
+Myers Elementary School,754,Salem-Keizer SD 24J,2142,0.23770491803278687,2017-2018
+Hayesville Elementary School,755,Salem-Keizer SD 24J,2142,0.20689655172413793,2017-2018
+Pringle Elementary School,756,Salem-Keizer SD 24J,2142,0.34814814814814815,2017-2018
+Richmond Elementary School,757,Salem-Keizer SD 24J,2142,0.08571428571428572,2017-2018
+Salem Heights Elementary School,759,Salem-Keizer SD 24J,2142,0.29508196721311475,2017-2018
+Schirle Elementary School,760,Salem-Keizer SD 24J,2142,0.3893805309734513,2017-2018
+Sumpter Elementary School,761,Salem-Keizer SD 24J,2142,0.3482142857142857,2017-2018
+Swegle Elementary School,762,Salem-Keizer SD 24J,2142,0.19444444444444445,2017-2018
+Washington Elementary School,763,Salem-Keizer SD 24J,2142,0.1566265060240964,2017-2018
+Yoshikai Elementary School,764,Salem-Keizer SD 24J,2142,0.3619631901840491,2017-2018
+Gervais Elementary School,776,Gervais SD 1,2137,0.30612244897959184,2017-2018
+Victor Point Elementary School,777,Silver Falls SD 4J,2138,0.40540540540540543,2017-2018
+St Paul Elementary School,778,St Paul SD 45,2144,0.17647058823529413,2017-2018
+Pratum Elementary School,780,Silver Falls SD 4J,2138,0.25,2017-2018
+Bethany Charter School,784,Silver Falls SD 4J,2138,0.34782608695652173,2017-2018
+Scotts Mills Elementary School,785,Silver Falls SD 4J,2138,0.3,2017-2018
+Stayton Elementary School,788,North Santiam SD 29J,2143,0.31125827814569534,2017-2018
+Turner Elementary School,790,Cascade SD 5,2139,0.325,2017-2018
+St Marys Public School,793,Mt Angel SD 91,2145,0.3048780487804878,2017-2018
+Silver Crest Elementary School,795,Silver Falls SD 4J,2138,0.3333333333333333,2017-2018
+Nellie Muir Elementary School,796,Woodburn SD 103,2146,0.14772727272727273,2017-2018
+Washington Elementary School,797,Woodburn SD 103,2146,0.16666666666666666,2017-2018
+Cloverdale Elementary School,806,Cascade SD 5,2139,0.3684210526315789,2017-2018
+Central Howell Elementary School,807,Silver Falls SD 4J,2138,0.39473684210526316,2017-2018
+A C Houghton Elementary School,813,Morrow SD 1,2147,0.2169811320754717,2017-2018
+Sam Boardman Elementary School,814,Morrow SD 1,2147,0.19811320754716982,2017-2018
+Heppner Elementary School,815,Morrow SD 1,2147,0.34146341463414637,2017-2018
+Abernethy Elementary School,822,Portland SD 1J,2180,0.40601503759398494,2017-2018
+Ainsworth Elementary School,823,Portland SD 1J,2180,0.4444444444444444,2017-2018
+Alameda Elementary School,824,Portland SD 1J,2180,0.40437158469945356,2017-2018
+Arleta Elementary School,826,Portland SD 1J,2180,0.3382352941176471,2017-2018
+Astor Elementary School,827,Portland SD 1J,2180,0.40816326530612246,2017-2018
+Atkinson Elementary School,828,Portland SD 1J,2180,0.30526315789473685,2017-2018
+Rosa Parks Elementary School,829,Portland SD 1J,2180,0.20754716981132076,2017-2018
+Beach Elementary School,830,Portland SD 1J,2180,0.3482142857142857,2017-2018
+Boise-Eliot Elementary School,833,Portland SD 1J,2180,0.1,2017-2018
+Bridger Elementary School,834,Portland SD 1J,2180,0.29292929292929293,2017-2018
+Bridlemile Elementary School,835,Portland SD 1J,2180,0.43125,2017-2018
+Buckman Elementary School,837,Portland SD 1J,2180,0.37333333333333335,2017-2018
+Capitol Hill Elementary School,838,Portland SD 1J,2180,0.40145985401459855,2017-2018
+Chapman Elementary School,839,Portland SD 1J,2180,0.41721854304635764,2017-2018
+Chief Joseph Elementary School,840,Portland SD 1J,2180,0.3333333333333333,2017-2018
+Cesar Chavez K-8 School,841,Portland SD 1J,2180,0.14925373134328357,2017-2018
+Harrison Park School,842,Portland SD 1J,2180,0.175,2017-2018
+Creston Elementary School,843,Portland SD 1J,2180,0.36538461538461536,2017-2018
+Duniway Elementary School,844,Portland SD 1J,2180,0.4074074074074074,2017-2018
+Faubion Elementary School,847,Portland SD 1J,2180,0.07042253521126761,2017-2018
+Glencoe Elementary School,850,Portland SD 1J,2180,0.4077669902912621,2017-2018
+Grout Elementary School,854,Portland SD 1J,2180,0.2926829268292683,2017-2018
+Hayhurst Elementary School,855,Portland SD 1J,2180,0.39316239316239315,2017-2018
+Beverly Cleary School,857,Portland SD 1J,2180,0.4303030303030303,2017-2018
+Irvington Elementary School,861,Portland SD 1J,2180,0.375,2017-2018
+James John Elementary School,862,Portland SD 1J,2180,0.2564102564102564,2017-2018
+Kelly Elementary School,864,Portland SD 1J,2180,0.296,2017-2018
+Martin Luther King Jr. School,866,Portland SD 1J,2180,0.09615384615384616,2017-2018
+Laurelhurst Elementary School,868,Portland SD 1J,2180,0.43609022556390975,2017-2018
+Lee Elementary School,869,Portland SD 1J,2180,0.296875,2017-2018
+Lent Elementary School,870,Portland SD 1J,2180,0.1388888888888889,2017-2018
+Lewis Elementary School,871,Portland SD 1J,2180,0.3707865168539326,2017-2018
+Llewellyn Elementary School,872,Portland SD 1J,2180,0.43137254901960786,2017-2018
+Maplewood Elementary School,873,Portland SD 1J,2180,0.2564102564102564,2017-2018
+Marysville Elementary School,875,Portland SD 1J,2180,0.2,2017-2018
+Peninsula Elementary School,879,Portland SD 1J,2180,0.18604651162790697,2017-2018
+Richmond Elementary School,883,Portland SD 1J,2180,0.4585635359116022,2017-2018
+Rigler Elementary School,884,Portland SD 1J,2180,0.15053763440860216,2017-2018
+Roseway Heights School,885,Portland SD 1J,2180,0.3541666666666667,2017-2018
+Sabin Elementary School,886,Portland SD 1J,2180,0.4041095890410959,2017-2018
+Scott Elementary School,887,Portland SD 1J,2180,0.17543859649122806,2017-2018
+Sitton Elementary School,889,Portland SD 1J,2180,0.1232876712328767,2017-2018
+Skyline Elementary School,890,Portland SD 1J,2180,0.3333333333333333,2017-2018
+Stephenson Elementary School,892,Portland SD 1J,2180,0.45871559633027525,2017-2018
+Sunnyside Environmental School,893,Portland SD 1J,2180,0.3695652173913043,2017-2018
+Vernon Elementary School,895,Portland SD 1J,2180,0.3116883116883117,2017-2018
+Vestal Elementary School,896,Portland SD 1J,2180,0.22,2017-2018
+Whitman Elementary School,900,Portland SD 1J,2180,0.2653061224489796,2017-2018
+Woodlawn Elementary School,902,Portland SD 1J,2180,0.20967741935483872,2017-2018
+Woodmere Elementary School,903,Portland SD 1J,2180,0.1702127659574468,2017-2018
+Woodstock Elementary School,904,Portland SD 1J,2180,0.42483660130718953,2017-2018
+Metropolitan Learning Center,916,Portland SD 1J,2180,0.3157894736842105,2017-2018
+Prescott Elementary School,925,Parkrose SD 3,2181,0.16417910447761194,2017-2018
+Russell Elementary,926,Parkrose SD 3,2181,0.22826086956521738,2017-2018
+Sacramento Elementary School,927,Parkrose SD 3,2181,0.09859154929577464,2017-2018
+Shaver Elementary School,928,Parkrose SD 3,2181,0.30120481927710846,2017-2018
+East Gresham Elementary School,933,Gresham-Barlow SD 10J,2183,0.136986301369863,2017-2018
+Highland Elementary School,935,Gresham-Barlow SD 10J,2183,0.23958333333333334,2017-2018
+Hall Elementary School,936,Gresham-Barlow SD 10J,2183,0.17708333333333334,2017-2018
+Hollydale Elementary School,937,Gresham-Barlow SD 10J,2183,0.31958762886597936,2017-2018
+North Gresham Elementary School,938,Gresham-Barlow SD 10J,2183,0.24761904761904763,2017-2018
+Powell Valley Elementary School,939,Gresham-Barlow SD 10J,2183,0.21052631578947367,2017-2018
+West Gresham Elementary School,940,Gresham-Barlow SD 10J,2183,0.3698630136986301,2017-2018
+East Orient Elementary School,941,Gresham-Barlow SD 10J,2183,0.4049586776859504,2017-2018
+Alder Elementary School,943,Reynolds SD 7,2182,0.10256410256410256,2017-2018
+Fairview Elementary School,945,Reynolds SD 7,2182,0.19117647058823528,2017-2018
+Glenfair Elementary School,946,Reynolds SD 7,2182,0.12903225806451613,2017-2018
+Hartley Elementary School,947,Reynolds SD 7,2182,0.2222222222222222,2017-2018
+Margaret Scott Elementary School,948,Reynolds SD 7,2182,0.18604651162790697,2017-2018
+Davis Elementary School,949,Reynolds SD 7,2182,0.08064516129032258,2017-2018
+Sweetbriar Elementary School,950,Reynolds SD 7,2182,0.27906976744186046,2017-2018
+Troutdale Elementary School,951,Reynolds SD 7,2182,0.2808988764044944,2017-2018
+Wilkes Elementary School,952,Reynolds SD 7,2182,0.2,2017-2018
+Sauvie Island School,958,Scappoose SD 1J,1944,0.4,2017-2018
+Meadows Elementary,959,Centennial SD 28J,2185,0.1864406779661017,2017-2018
+Oliver Elementary School,962,Centennial SD 28J,2185,0.13580246913580246,2017-2018
+Parklane Elementary School,963,Centennial SD 28J,2185,0.15517241379310345,2017-2018
+Patrick Lynch Elementary,964,Centennial SD 28J,2185,0.272,2017-2018
+Powell Butte Elementary School,965,Centennial SD 28J,2185,0.32608695652173914,2017-2018
+Pleasant Valley Elementary School,966,Centennial SD 28J,2185,0.2463768115942029,2017-2018
+Cherry Park Elementary School,972,David Douglas SD 40,2187,0.4016393442622951,2017-2018
+Gilbert Heights Elementary School,973,David Douglas SD 40,2187,0.25384615384615383,2017-2018
+Gilbert Park Elementary School,974,David Douglas SD 40,2187,0.16666666666666666,2017-2018
+Lincoln Park Elementary School,975,David Douglas SD 40,2187,0.15625,2017-2018
+Menlo Park Elementary School,976,David Douglas SD 40,2187,0.22340425531914893,2017-2018
+Mill Park Elementary School,977,David Douglas SD 40,2187,0.10465116279069768,2017-2018
+Ventura Park Elementary School,978,David Douglas SD 40,2187,0.25263157894736843,2017-2018
+West Powellhurst Elementary School,979,David Douglas SD 40,2187,0.15476190476190477,2017-2018
+Riverdale Grade School,985,Riverdale SD 51J,2188,0.4457831325301205,2017-2018
+Lyle Elementary School,989,Dallas SD 2,2190,0.33540372670807456,2017-2018
+Oakdale Heights Elementary School,990,Dallas SD 2,2190,0.32710280373831774,2017-2018
+Independence Elementary School,998,Central SD 13J,2191,0.16666666666666666,2017-2018
+Monmouth Elementary School,999,Central SD 13J,2191,0.34210526315789475,2017-2018
+Falls City Elementary School,1005,Falls City SD 57,2193,0.16666666666666666,2017-2018
+Sherman County School,1010,Sherman County SD,2195,0.4117647058823529,2017-2018
+South Prairie Elementary School,1014,Tillamook SD 9,2197,0.2730627306273063,2017-2018
+Nestucca Valley Elementary,1019,Nestucca Valley SD 101J,2199,0.26666666666666666,2017-2018
+Garibaldi Elementary School,1020,Neah-Kah-Nie SD 56,2198,0.34,2017-2018
+Nehalem Elementary School,1021,Neah-Kah-Nie SD 56,2198,0.4107142857142857,2017-2018
+Pilot Rock Elementary School,1027,Pilot Rock SD 2,2202,0.32432432432432434,2017-2018
+McNary Heights Elementary School,1032,Umatilla SD 6R,2204,0.24475524475524477,2017-2018
+Highland Hills Elementary School,1034,Hermiston SD 8,2206,0.3883495145631068,2017-2018
+Rocky Heights Elementary School,1036,Hermiston SD 8,2206,0.3474576271186441,2017-2018
+Sunset Elementary School,1037,Hermiston SD 8,2206,0.29931972789115646,2017-2018
+West Park Elementary School,1038,Hermiston SD 8,2206,0.37410071942446044,2017-2018
+McKay Creek Elementary School,1047,Pendleton SD 16,2207,0.3684210526315789,2017-2018
+Sherwood Heights Elementary School,1048,Pendleton SD 16,2207,0.36363636363636365,2017-2018
+Washington Elementary School,1049,Pendleton SD 16,2207,0.288,2017-2018
+Athena Elementary School,1053,Athena-Weston SD 29RJ,2208,0.30158730158730157,2017-2018
+Stanfield Elementary School,1060,Stanfield SD 61,2209,0.28,2017-2018
+Central Elementary School,1066,La Grande SD 1,2212,0.2909090909090909,2017-2018
+Greenwood Elementary School,1068,La Grande SD 1,2212,0.3132530120481928,2017-2018
+Island City Elementary School,1069,La Grande SD 1,2212,0.3855421686746988,2017-2018
+Union Elementary School,1074,Union SD 5,2213,0.2727272727272727,2017-2018
+Imbler Charter School,1079,Imbler SD 11,2215,0.4375,2017-2018
+Stella Mayfield Elementary School,1082,Elgin SD 23,2217,0.2894736842105263,2017-2018
+Joseph Charter School,1087,Joseph SD 6,2219,0.46153846153846156,2017-2018
+Wallowa Elementary School,1088,Wallowa SD 12,2220,0.35,2017-2018
+Enterprise Elementary School,1090,Enterprise SD 21,2221,0.32653061224489793,2017-2018
+Chenowith Elementary School,1093,North Wasco County SD 21,4131,0.14444444444444443,2017-2018
+Mosier Community School,1095,North Wasco County SD 21,4131,0.325,2017-2018
+Colonel Wright Elementary School,1097,North Wasco County SD 21,4131,0.16455696202531644,2017-2018
+Dry Hollow Elementary School,1098,North Wasco County SD 21,4131,0.37894736842105264,2017-2018
+Maupin Elementary School,1108,South Wasco County SD 1,2225,0.07692307692307693,2017-2018
+Lenox Elementary School,1110,Hillsboro SD 1J,2239,0.3821138211382114,2017-2018
+West Union Elementary School,1111,Hillsboro SD 1J,2239,0.34375,2017-2018
+Brookwood Elementary School,1112,Hillsboro SD 1J,2239,0.21739130434782608,2017-2018
+W Verne McKinney Elementary School,1114,Hillsboro SD 1J,2239,0.2897196261682243,2017-2018
+Eastwood Elementary School,1115,Hillsboro SD 1J,2239,0.058823529411764705,2017-2018
+Minter Bridge Elementary School,1116,Hillsboro SD 1J,2239,0.2375,2017-2018
+Mooberry Elementary School,1117,Hillsboro SD 1J,2239,0.25675675675675674,2017-2018
+W L Henry Elementary School,1119,Hillsboro SD 1J,2239,0.19642857142857142,2017-2018
+Banks Elementary School,1120,Banks SD 13,2240,0.2803738317757009,2017-2018
+Cornelius Elementary School,1128,Forest Grove SD 15,2241,0.2191780821917808,2017-2018
+Dilley Elementary School,1129,Forest Grove SD 15,2241,0.38666666666666666,2017-2018
+Echo Shaw Elementary School,1130,Forest Grove SD 15,2241,0.2708333333333333,2017-2018
+Harvey Clarke Elementary School,1132,Forest Grove SD 15,2241,0.3860759493670886,2017-2018
+Joseph Gale Elementary School,1133,Forest Grove SD 15,2241,0.19607843137254902,2017-2018
+Bridgeport Elementary School,1135,Tigard-Tualatin SD 23J,2242,0.2713178294573643,2017-2018
+Charles F Tigard Elementary School,1136,Tigard-Tualatin SD 23J,2242,0.391304347826087,2017-2018
+Mary Woodward Elementary School,1137,Tigard-Tualatin SD 23J,2242,0.42105263157894735,2017-2018
+Durham Elementary School,1138,Tigard-Tualatin SD 23J,2242,0.36065573770491804,2017-2018
+James Templeton Elementary School,1139,Tigard-Tualatin SD 23J,2242,0.36153846153846153,2017-2018
+Metzger Elementary School,1140,Tigard-Tualatin SD 23J,2242,0.2191780821917808,2017-2018
+Edward Byrom Elementary School,1142,Tigard-Tualatin SD 23J,2242,0.3961038961038961,2017-2018
+Tualatin Elementary School,1143,Tigard-Tualatin SD 23J,2242,0.3602941176470588,2017-2018
+Butternut Creek Elementary School,1147,Hillsboro SD 1J,2239,0.29411764705882354,2017-2018
+Indian Hills Elementary School,1148,Hillsboro SD 1J,2239,0.33663366336633666,2017-2018
+Reedville Elementary School,1149,Hillsboro SD 1J,2239,0.18518518518518517,2017-2018
+Ladd Acres Elementary School,1150,Hillsboro SD 1J,2239,0.37168141592920356,2017-2018
+Witch Hazel Elementary School,1151,Hillsboro SD 1J,2239,0.17647058823529413,2017-2018
+Groner K-8,1152,Hillsboro SD 1J,2239,0.20689655172413793,2017-2018
+Aloha-Huber Park School,1153,Beaverton SD 48J,2243,0.3383084577114428,2017-2018
+Barnes Elementary School,1154,Beaverton SD 48J,2243,0.1875,2017-2018
+Beaver Acres Elementary School,1155,Beaverton SD 48J,2243,0.33532934131736525,2017-2018
+Bethany Elementary School,1156,Beaverton SD 48J,2243,0.46875,2017-2018
+Greenway Elementary School,1157,Beaverton SD 48J,2243,0.25675675675675674,2017-2018
+Cedar Mill Elementary School,1158,Beaverton SD 48J,2243,0.40869565217391307,2017-2018
+Chehalem Elementary School,1159,Beaverton SD 48J,2243,0.2761904761904762,2017-2018
+Cooper Mountain Elementary School,1160,Beaverton SD 48J,2243,0.373134328358209,2017-2018
+Errol Hassell Elementary School,1161,Beaverton SD 48J,2243,0.3937007874015748,2017-2018
+Elmonica Elementary School,1162,Beaverton SD 48J,2243,0.272108843537415,2017-2018
+Fir Grove Elementary School,1163,Beaverton SD 48J,2243,0.21951219512195122,2017-2018
+Hazeldale Elementary School,1164,Beaverton SD 48J,2243,0.29347826086956524,2017-2018
+Hiteon Elementary School,1165,Beaverton SD 48J,2243,0.44086021505376344,2017-2018
+Kinnaman Elementary School,1166,Beaverton SD 48J,2243,0.3063583815028902,2017-2018
+McKay Elementary School,1168,Beaverton SD 48J,2243,0.3090909090909091,2017-2018
+McKinley Elementary School,1169,Beaverton SD 48J,2243,0.3178294573643411,2017-2018
+Montclair Elementary School,1170,Beaverton SD 48J,2243,0.45918367346938777,2017-2018
+Oak Hills Elementary School,1171,Beaverton SD 48J,2243,0.4230769230769231,2017-2018
+Raleigh Hills Elementary School,1172,Beaverton SD 48J,2243,0.4326923076923077,2017-2018
+Raleigh Park Elementary School,1173,Beaverton SD 48J,2243,0.391304347826087,2017-2018
+Ridgewood Elementary School,1174,Beaverton SD 48J,2243,0.42857142857142855,2017-2018
+Rock Creek Elementary School,1175,Beaverton SD 48J,2243,0.3897058823529412,2017-2018
+Terra Linda Elementary School,1176,Beaverton SD 48J,2243,0.4326923076923077,2017-2018
+Vose Elementary School,1177,Beaverton SD 48J,2243,0.3670886075949367,2017-2018
+West Tualatin View Elementary School,1178,Beaverton SD 48J,2243,0.45161290322580644,2017-2018
+William Walker Elementary School,1179,Beaverton SD 48J,2243,0.22093023255813954,2017-2018
+Farmington View Elementary School,1189,Hillsboro SD 1J,2239,0.3125,2017-2018
+North Plains Elementary School,1190,Hillsboro SD 1J,2239,0.3711340206185567,2017-2018
+J Clyde Hopkins Elementary School,1191,Sherwood SD 88J,2244,0.3987341772151899,2017-2018
+Gaston Elementary School,1194,Gaston SD 511J,2245,0.2857142857142857,2017-2018
+Fossil Charter School,1205,Fossil SD 21J,2248,0.28735632183908044,2017-2018
+Amity Elementary School,1208,Amity SD 4J,2252,0.29411764705882354,2017-2018
+Dayton Grade School,1211,Dayton SD 8,2253,0.2524271844660194,2017-2018
+Yamhill Carlton Elementary School,1213,Yamhill Carlton SD 1,2251,0.3695652173913043,2017-2018
+Dundee Elementary School,1216,Newberg SD 29J,2254,0.36764705882352944,2017-2018
+Edwards Elementary School,1217,Newberg SD 29J,2254,0.3333333333333333,2017-2018
+Ewing Young Elementary School,1218,Newberg SD 29J,2254,0.40425531914893614,2017-2018
+Mabel Rush Elementary School,1219,Newberg SD 29J,2254,0.35454545454545455,2017-2018
+Willamina Elementary School,1224,Willamina SD 30J,2255,0.15294117647058825,2017-2018
+Columbus Elementary School,1228,McMinnville SD 40,2256,0.42424242424242425,2017-2018
+Memorial Elementary School,1230,McMinnville SD 40,2256,0.4251497005988024,2017-2018
+Newby Elementary School,1231,McMinnville SD 40,2256,0.35507246376811596,2017-2018
+Wascher Elementary School,1232,McMinnville SD 40,2256,0.44339622641509435,2017-2018
+Faulconer-Chapman School,1235,Sheridan SD 48J,2257,0.234375,2017-2018
+Charlemagne French Immersion Elementary School,1240,Eugene SD 4J,2082,0.42391304347826086,2017-2018
+Buena Vista Elementary School,1241,Eugene SD 4J,2082,0.3783783783783784,2017-2018
+Corridor Elementary School,1242,Eugene SD 4J,2082,0.2558139534883721,2017-2018
+Chapman Hill Elementary School,1244,Salem-Keizer SD 24J,2142,0.3563218390804598,2017-2018
+Yujin Gakuen Elementary School,1259,Eugene SD 4J,2082,0.3835616438356164,2017-2018
+Mount Scott Elementary School,1264,North Clackamas SD 12,1924,0.3764705882352941,2017-2018
+Three Rivers Elementary School,1266,Bend-LaPine Administrative SD 1,1976,0.43434343434343436,2017-2018
+Lincoln Elementary School,1267,Woodburn SD 103,2146,0.1510791366906475,2017-2018
+Sexton Mountain Elementary School,1270,Beaverton SD 48J,2243,0.3971631205673759,2017-2018
+Boeckman Creek Primary School,1272,West Linn-Wilsonville SD 3J,1922,0.31451612903225806,2017-2018
+Markham Elementary School,1278,Portland SD 1J,2180,0.40707964601769914,2017-2018
+Jackson Elementary School,1285,Hillsboro SD 1J,2239,0.35964912280701755,2017-2018
+Willamette Primary School,1286,West Linn-Wilsonville SD 3J,1922,0.4161073825503356,2017-2018
+Oak Creek Elementary School,1288,Lake Oswego SD 7J,1923,0.4437869822485207,2017-2018
+North Lake School,1289,North Lake SD 14,2061,0.2916666666666667,2017-2018
+Territorial Elementary School,1297,Junction City SD 69,2091,0.4375,2017-2018
+Rieke Elementary School,1299,Portland SD 1J,2180,0.42696629213483145,2017-2018
+Tobias Elementary School,1302,Hillsboro SD 1J,2239,0.4017094017094017,2017-2018
+Nancy Ryles Elementary School,1303,Beaverton SD 48J,2243,0.425414364640884,2017-2018
+Cecile Trost Elementary School,1307,Canby SD 86,1929,0.16326530612244897,2017-2018
+Elk Meadow Elementary School,1308,Bend-LaPine Administrative SD 1,1976,0.4258064516129032,2017-2018
+Central Linn Elementary School,1311,Central Linn SD 552,2105,0.328125,2017-2018
+Kelly Creek Elementary School,1313,Gresham-Barlow SD 10J,2183,0.31666666666666665,2017-2018
+Lava Ridge Elementary School,1317,Bend-LaPine Administrative SD 1,1976,0.4011299435028249,2017-2018
+Monroe Grade School,1321,Monroe SD 1J,1898,0.07692307692307693,2017-2018
+Franklin School,1322,Corvallis SD 509J,1901,0.4444444444444444,2017-2018
+Amity Creek Elementary School,1324,Bend-LaPine Administrative SD 1,1976,0.41304347826086957,2017-2018
+Vern Patrick Elementary School,1325,Redmond SD 2J,1977,0.3173076923076923,2017-2018
+Archer Glen Elementary School,1334,Sherwood SD 88J,2244,0.43478260869565216,2017-2018
+Antonia Crater Elementary School,1335,Newberg SD 29J,2254,0.40601503759398494,2017-2018
+Family School,1339,Eugene SD 4J,2082,0.4,2017-2018
+Abraham Lincoln Elementary,1350,Medford SD 549C,2048,0.3691275167785235,2017-2018
+Parkside Elementary,1351,Grants Pass SD 7,2054,0.2765957446808511,2017-2018
+Riverbend Elementary School,1352,Springfield SD 19,2083,0.17391304347826086,2017-2018
+Heritage Elementary,1359,Woodburn SD 103,2146,0.2912621359223301,2017-2018
+Winterhaven School,1364,Portland SD 1J,2180,0.43478260869565216,2017-2018
+Woodland Elementary,1365,Reynolds SD 7,2182,0.27906976744186046,2017-2018
+Deer Creek Elementary School,1369,Tigard-Tualatin SD 23J,2242,0.32666666666666666,2017-2018
+Findley Elementary,1370,Beaverton SD 48J,2243,0.4798387096774194,2017-2018
+Edgewood Community Elementary School,1774,Eugene SD 4J,2082,0.34951456310679613,2017-2018
+Meadow View School,2264,Bethel SD 52,2088,0.3359375,2017-2018
+Forest Park Elementary School,2413,Portland SD 1J,2180,0.43703703703703706,2017-2018
+Sojourner School,2733,North Clackamas SD 12,1924,0.375,2017-2018
+Scholls Heights Elementary School,2781,Beaverton SD 48J,2243,0.4485294117647059,2017-2018
+Grandhaven Elementary School,2784,McMinnville SD 40,2256,0.40119760479041916,2017-2018
+Lourdes School,2994,Scio SD 95,2103,0.14285714285714285,2017-2018
+Lake Creek Learning Center,3147,Eagle Point SD 9,2043,0.375,2017-2018
+Paul L Patterson Elementary School,3159,Hillsboro SD 1J,2239,0.3645833333333333,2017-2018
+Orenco Elementary School,3160,Hillsboro SD 1J,2239,0.3382352941176471,2017-2018
+Spring Mountain Elementary School,3198,North Clackamas SD 12,1924,0.4276315789473684,2017-2018
+Miller Elementary School,3215,Salem-Keizer SD 24J,2142,0.2978723404255319,2017-2018
+High Lakes Elementary School,3218,Bend-LaPine Administrative SD 1,1976,0.44871794871794873,2017-2018
+Highland School at Kenwood Elementary School,3219,Bend-LaPine Administrative SD 1,1976,0.45871559633027525,2017-2018
+Westside Village Magnet School at Kingston Elementary School,3221,Bend-LaPine Administrative SD 1,1976,0.29411764705882354,2017-2018
+Middleton Elementary School,3222,Sherwood SD 88J,2244,0.4409937888198758,2017-2018
+Village School,3229,Eugene SD 4J,2082,0.42857142857142855,2017-2018
+Ridgeline Montessori,3233,Eugene SD 4J,2082,0.391304347826087,2017-2018
+Oak Grove Elementary,3342,North Clackamas SD 12,1924,0.32142857142857145,2017-2018
+Prairie City School,3349,Prairie City SD 4,2009,0.3333333333333333,2017-2018
+Jewell School,3352,Jewell SD 8,1934,0.21428571428571427,2017-2018
+Prospect Charter School,3356,Prospect SD 59,2045,0.21739130434782608,2017-2018
+Paisley School,3360,Paisley SD 11,2060,0.35,2017-2018
+Eddyville Charter School,3361,Lincoln County SD,2097,0.2,2017-2018
+Harper Charter School,3362,Harper SD 66,2114,0.4166666666666667,2017-2018
+Ione Community Charter School,3363,Ione SD R2,3997,0.24,2017-2018
+Helix School,3364,Helix SD 1,2201,0.2222222222222222,2017-2018
+North Powder Charter School,3365,North Powder SD 8J,2214,0.2727272727272727,2017-2018
+Cascade Locks School,3372,Hood River County SD,2024,0.06666666666666667,2017-2018
+Weddle Elementary School,3374,Salem-Keizer SD 24J,2142,0.1095890410958904,2017-2018
+Lamb Elementary School,3375,Salem-Keizer SD 24J,2142,0.20212765957446807,2017-2018
+Hammond Elementary School,3376,Salem-Keizer SD 24J,2142,0.2719298245614035,2017-2018
+Hallman Elementary School,3377,Salem-Keizer SD 24J,2142,0.10294117647058823,2017-2018
+Perrydale School,3378,Perrydale SD 21,2192,0.39473684210526316,2017-2018
+Camas Valley School,3400,Camas Valley SD 21J,1995,0.2,2017-2018
+Triangle Lake Charter School,3401,Blachly SD 90,2095,0.3333333333333333,2017-2018
+Dufur School,3402,Dufur SD 29,2229,0.4186046511627907,2017-2018
+Desert View Elementary School,3426,Hermiston SD 8,2206,0.35947712418300654,2017-2018
+Echo School,3433,Echo SD 5,2203,0.47058823529411764,2017-2018
+Cove Charter School,3434,Cove SD 15,2216,0.2857142857142857,2017-2018
+Kings Valley Charter School,3440,Philomath SD 17J,1900,0.2727272727272727,2017-2018
+Opal School of the Portland Children's Museum,3451,Portland SD 1J,2180,0.35714285714285715,2017-2018
+Bolton Primary School,3455,West Linn-Wilsonville SD 3J,1922,0.42016806722689076,2017-2018
+Luckiamute Valley Charter School,3461,Dallas SD 2,2190,0.23333333333333334,2017-2018
+Ash Creek Elementary School,3464,Central SD 13J,2191,0.2785714285714286,2017-2018
+Multnomah Learning Academy,3490,Reynolds SD 7,2182,0.2835820895522388,2017-2018
+Riverview School,3503,Lebanon Community SD 9,2101,0.24444444444444444,2017-2018
+Pioneer School,3504,Lebanon Community SD 9,2101,0.22857142857142856,2017-2018
+Sand Ridge Charter School,3505,Lebanon Community SD 9,2101,0.40350877192982454,2017-2018
+Earl Boyles Elementary,3525,David Douglas SD 40,2187,0.34615384615384615,2017-2018
+Lee Elementary School,3526,Salem-Keizer SD 24J,2142,0.23076923076923078,2017-2018
+Optimum Learning Environment Charter School,3528,Salem-Keizer SD 24J,2142,0.4,2017-2018
+Imlay Elementary School,3536,Hillsboro SD 1J,2239,0.3482142857142857,2017-2018
+Hogan Cedars Elementary School,3543,Gresham-Barlow SD 10J,2183,0.2781954887218045,2017-2018
+Prairie Mountain School,3567,Bethel SD 52,2088,0.33035714285714285,2017-2018
+Lewis & Clark Elementary School,3569,St Helens SD 502,1948,0.2777777777777778,2017-2018
+Multi-sensory Instruction Teaching Children Hands-On (MITCH),3579,Tigard-Tualatin SD 23J,2242,0.375,2017-2018
+Arthur Academy,3580,David Douglas SD 40,2187,0.4318181818181818,2017-2018
+Lighthouse Charter School,3615,Coos Bay SD 9,1965,0.24242424242424243,2017-2018
+Trillium,3616,Portland SD 1J,2180,0.21739130434782608,2017-2018
+Brockway Elementary School,3624,Winston-Dillard SD 116,2002,0.23,2017-2018
+Butler Creek Elementary School,3649,Centennial SD 28J,2185,0.3333333333333333,2017-2018
+Boones Ferry Primary School,3913,West Linn-Wilsonville SD 3J,1922,0.30612244897959184,2017-2018
+Pine Ridge Elementary,3947,Bend-LaPine Administrative SD 1,1976,0.4144144144144144,2017-2018
+Fern Hill Elementary School,3986,Forest Grove SD 15,2241,0.26732673267326734,2017-2018
+Salish Ponds Elementary School,3989,Reynolds SD 7,2182,0.14754098360655737,2017-2018
+Emerson School,3991,Portland SD 1J,2180,0.46808510638297873,2017-2018
+El Puente,4005,North Clackamas SD 12,1924,0.3333333333333333,2017-2018
+Eagle Rock Elementary School,4020,Eagle Point SD 9,2043,0.3048780487804878,2017-2018
+Coquille Valley Elementary,4025,Coquille SD 8,1964,0.32608695652173914,2017-2018
+Siletz Valley Schools,4038,Lincoln County SD,2097,0.15384615384615385,2017-2018
+Four Rivers Community School,4040,Oregon Department of Education,2336,0.358974358974359,2017-2018
+Harritt Elementary School,4068,Salem-Keizer SD 24J,2142,0.22727272727272727,2017-2018
+Ensworth Elementary School,4129,Bend-LaPine Administrative SD 1,1976,0.3953488372093023,2017-2018
+Cesar Chavez Elementary School,4146,Eugene SD 4J,2082,0.26373626373626374,2017-2018
+Holt Elementary School,4157,Eugene SD 4J,2082,0.3783783783783784,2017-2018
+City View Charter School,4206,Hillsboro SD 1J,2239,0.17857142857142858,2017-2018
+Reynolds Arthur Academy,4216,Reynolds SD 7,2182,0.3333333333333333,2017-2018
+Sherwood Charter School,4220,Sherwood SD 88J,2244,0.4358974358974359,2017-2018
+South Columbia Family School,4221,Scappoose SD 1J,1944,0.2,2017-2018
+Woodburn Arthur Academy,4230,Woodburn SD 103,2146,0.15625,2017-2018
+Joan Austin Elementary School,4342,Newberg SD 29J,2254,0.27906976744186046,2017-2018
+Alberta Rider Elementary School,4364,Tigard-Tualatin SD 23J,2242,0.44029850746268656,2017-2018
+Valley Inquiry Charter School,4390,Salem-Keizer SD 24J,2142,0.35,2017-2018
+Oregon Connections Academy,4399,Santiam Canyon SD 129J,2104,0.2684563758389262,2017-2018
+Portland Arthur Academy Charter School,4400,Portland SD 1J,2180,0.2222222222222222,2017-2018
+Tom McCall Elementary School,4429,Redmond SD 2J,1977,0.4097222222222222,2017-2018
+Philander Lee Elementary School,4435,Canby SD 86,1929,0.3387096774193548,2017-2018
+Cascade Heights Public Charter School,4475,North Clackamas SD 12,1924,0.3125,2017-2018
+John Muir Elementary School,4476,Ashland SD 5,2041,0.3125,2017-2018
+Springwater Environmental Sciences School,4480,Oregon City SD 62,1928,0.425,2017-2018
+Sweet Home Charter School,4484,Sweet Home SD 55,2102,0.32,2017-2018
+Portland Village School,4534,Portland SD 1J,2180,0.22058823529411764,2017-2018
+Alliance Charter Academy,4585,Oregon City SD 62,1928,0.2647058823529412,2017-2018
+Corbett School,4592,Corbett SD 39,2186,0.2982456140350877,2017-2018
+Madrone Trail Public Charter School,4593,Medford SD 549C,2048,0.20689655172413793,2017-2018
+Forest Grove Community School,4595,Forest Grove SD 15,2241,0.29411764705882354,2017-2018
+Gresham Arthur Academy,4601,Gresham-Barlow SD 10J,2183,0.3333333333333333,2017-2018
+St Helens Arthur Academy,4602,St Helens SD 502,1948,0.29411764705882354,2017-2018
+The Cottonwood School of Civics and Science,4604,Oregon Department of Education,2336,0.38461538461538464,2017-2018
+Inavale Community Partners dba Muddy Creek Charter School,4637,Corvallis SD 509J,1901,0.34615384615384615,2017-2018
+Sue Buel Elementary,4639,McMinnville SD 40,2256,0.3247863247863248,2017-2018
+Creative Science School,4640,Portland SD 1J,2180,0.2807017543859649,2017-2018
+Free Orchards Elementary School,4641,Hillsboro SD 1J,2239,0.29411764705882354,2017-2018
+Lincoln Street Elementary School,4642,Hillsboro SD 1J,2239,0.12307692307692308,2017-2018
+Quatama Elementary School,4643,Hillsboro SD 1J,2239,0.4351851851851852,2017-2018
+Ponderosa Elementary,4646,Bend-LaPine Administrative SD 1,1976,0.3253968253968254,2017-2018
+Lewis and Clark Montessori Charter School,4667,Gresham-Barlow SD 10J,2183,0.2727272727272727,2017-2018
+Summit Learning Charter,4670,Estacada SD 108,1930,0.17857142857142858,2017-2018
+Bonny Slope Elementary School,4671,Beaverton SD 48J,2243,0.4634146341463415,2017-2018
+William E Miller Elementary,4680,Bend-LaPine Administrative SD 1,1976,0.450261780104712,2017-2018
+Oregon Virtual Academy,4690,North Bend SD 13,1966,0.2222222222222222,2017-2018
+Silvies River Charter School,4702,Frenchglen SD 16,2020,0.2222222222222222,2017-2018
+Rosedale Elementary School,4703,Hillsboro SD 1J,2239,0.28125,2017-2018
+Springville K-8 School,4712,Beaverton SD 48J,2243,0.4301675977653631,2017-2018
+Scouters Mountain Elementary,4713,North Clackamas SD 12,1924,0.3695652173913043,2017-2018
+Verne A Duncan Elementary School,4714,North Clackamas SD 12,1924,0.3673469387755102,2017-2018
+The Ivy School,4720,Oregon Department of Education,2336,0.3333333333333333,2017-2018
+Baker Web Academy,4728,Baker SD 5J,1894,0.22972972972972974,2017-2018
+Edy Ridge Elementary School,4730,Sherwood SD 88J,2244,0.4564102564102564,2017-2018
+Camas Ridge Community Elementary,4739,Eugene SD 4J,2082,0.3194444444444444,2017-2018
+Timber Ridge School,4744,Greater Albany Public SD 8J,2100,0.2679738562091503,2017-2018
+Molalla River Academy,4745,Molalla River SD 35,1925,0.3333333333333333,2017-2018
+The Community Roots School,4746,Silver Falls SD 4J,2138,0.058823529411764705,2017-2018
+Ardenwald Elementary School,4762,North Clackamas SD 12,1924,0.20833333333333334,2017-2018
+Happy Valley Elementary School,4763,North Clackamas SD 12,1924,0.39344262295081966,2017-2018
+Lewelling Elementary School,4764,North Clackamas SD 12,1924,0.26582278481012656,2017-2018
+Linwood Elementary School,4765,North Clackamas SD 12,1924,0.23333333333333334,2017-2018
+Oregon Trail Elementary School,4766,North Clackamas SD 12,1924,0.38016528925619836,2017-2018
+Rosland Elementary,4793,Bend-LaPine Administrative SD 1,1976,0.2857142857142857,2017-2018
+Arco Iris Spanish Immersion School,4805,Beaverton SD 48J,2243,0.45555555555555555,2017-2018
+Oregon Trail  Academy,4820,Oregon Trail SD 46,1926,0.40425531914893614,2017-2018
+Logos Public Charter School,4821,Medford SD 549C,2048,0.24675324675324675,2017-2018
+Rockwood Preparatory Academy,4822,Reynolds SD 7,2182,0.12121212121212122,2017-2018
+Sunny Wolf Charter School,4823,Three Rivers/Josephine County SD,2055,0.4444444444444444,2017-2018
+Eagle Charter School,4850,Oregon Department of Education,2336,0.25,2017-2018
+Kalapuya Elementary School,4858,Salem-Keizer SD 24J,2142,0.42073170731707316,2017-2018
+Hope Chinese Charter School,4867,Beaverton SD 48J,2243,0.4583333333333333,2017-2018
+Hillsboro Online Academy,4973,Hillsboro SD 1J,2239,0.4166666666666667,2017-2018
+Lowrie Primary School,5056,West Linn-Wilsonville SD 3J,1922,0.39097744360902253,2017-2018
+Trillium Creek Primary School,5057,West Linn-Wilsonville SD 3J,1922,0.44,2017-2018
+Two Rivers Dos Rios Elementary,5059,Springfield SD 19,2083,0.23863636363636365,2017-2018
+Le Monde French Immersion Public Charter School,5060,Portland SD 1J,2180,0.4533333333333333,2017-2018
+Woodland Charter School,5063,Three Rivers/Josephine County SD,2055,0.1875,2017-2018
+Cesar E Chavez Elem,5064,Salem-Keizer SD 24J,2142,0.2366412213740458,2017-2018
+Battle Creek Elementary School,5066,Salem-Keizer SD 24J,2142,0.2589928057553957,2017-2018
+Kids Unlimited Academy,5205,Medford SD 549C,2048,0.25,2017-2018
+Kairos PDX,5218,Portland SD 1J,2180,0.3157894736842105,2017-2018
+Crater Lake Charter Academy,5251,Eagle Point SD 9,2043,0.1,2017-2018
+Mountain View Academy,5252,Lowell SD 71,2092,0.36363636363636365,2017-2018
+Silver Rail Elementary School,5293,Bend-LaPine Administrative SD 1,1976,0.3333333333333333,2017-2018
+Ferndale Elementary School,5297,Milton-Freewater Unified SD 7,2205,0.2874251497005988,2017-2018
+Dallas Community Charter,5298,Dallas SD 2,2190,0.2,2017-2018
+Barnes Butte Elementary,5302,Crook County SD,1970,0.2905405405405405,2017-2018
+Bend International School,5309,Bend-LaPine Administrative SD 1,1976,0.45161290322580644,2017-2018
+Bridge Charter Academy,5349,Lowell SD 71,2092,0.2222222222222222,2017-2018
+Sato Elementary School,5382,Beaverton SD 48J,2243,0.4503311258278146,2017-2018
+Desert Sky Montessori,5384,Bend-LaPine Administrative SD 1,1976,0.3,2017-2018
+Brooklyn Primary School,2,Baker SD 5J,1894,0.26865671641791045,2018-2019
+Haines Elementary School,4,Baker SD 5J,1894,0.46153846153846156,2018-2019
+Pine Eagle Charter School,15,Pine Eagle SD 61,1897,0.3333333333333333,2018-2019
+Philomath Elementary School,20,Philomath SD 17J,1900,0.288135593220339,2018-2019
+Adams Elementary School,27,Corvallis SD 509J,1901,0.3793103448275862,2018-2019
+Garfield Elementary School,30,Corvallis SD 509J,1901,0.27722772277227725,2018-2019
+Hoover Elementary School,33,Corvallis SD 509J,1901,0.4251968503937008,2018-2019
+Jefferson Elementary School,35,Corvallis SD 509J,1901,0.3925233644859813,2018-2019
+Lincoln Elementary School,36,Corvallis SD 509J,1901,0.2857142857142857,2018-2019
+Mt View Elementary School,37,Corvallis SD 509J,1901,0.32786885245901637,2018-2019
+Wilson Elementary School,39,Corvallis SD 509J,1901,0.37777777777777777,2018-2019
+Cedaroak Park Primary School,45,West Linn-Wilsonville SD 3J,1922,0.40625,2018-2019
+Stafford Primary School,47,West Linn-Wilsonville SD 3J,1922,0.3431372549019608,2018-2019
+Sunset Primary School,48,West Linn-Wilsonville SD 3J,1922,0.43157894736842106,2018-2019
+Forest Hills Elementary School,53,Lake Oswego SD 7J,1923,0.45454545454545453,2018-2019
+Hallinan Elementary School,54,Lake Oswego SD 7J,1923,0.44525547445255476,2018-2019
+Lake Grove Elementary School,55,Lake Oswego SD 7J,1923,0.4557823129251701,2018-2019
+River Grove Elementary School,56,Lake Oswego SD 7J,1923,0.4340659340659341,2018-2019
+Westridge Elementary School,58,Lake Oswego SD 7J,1923,0.4557823129251701,2018-2019
+Bilquist Elementary School,65,North Clackamas SD 12,1924,0.29591836734693877,2018-2019
+Whitcomb Elementary School,72,North Clackamas SD 12,1924,0.12307692307692308,2018-2019
+Milwaukie Elementary School,73,North Clackamas SD 12,1924,0.2857142857142857,2018-2019
+Riverside Elementary School,76,North Clackamas SD 12,1924,0.25301204819277107,2018-2019
+Sunnyside Elementary School,78,North Clackamas SD 12,1924,0.30434782608695654,2018-2019
+View Acres Elementary School,79,North Clackamas SD 12,1924,0.33707865168539325,2018-2019
+Welches Elementary School,88,Oregon Trail SD 46,1926,0.3125,2018-2019
+Deep Creek – Damascus K-8 School,90,Gresham-Barlow SD 10J,2183,0.3684210526315789,2018-2019
+Carus School,92,Canby SD 86,1929,0.3706896551724138,2018-2019
+Clarkes Elementary School,93,Molalla River SD 35,1925,0.375,2018-2019
+Molalla Elementary School,94,Molalla River SD 35,1925,0.29473684210526313,2018-2019
+Naas Elementary School,96,Oregon Trail SD 46,1926,0.37962962962962965,2018-2019
+Kelso Elementary School,99,Oregon Trail SD 46,1926,0.37349397590361444,2018-2019
+Sandy Grade School,100,Oregon Trail SD 46,1926,0.36904761904761907,2018-2019
+Firwood Elementary School,101,Oregon Trail SD 46,1926,0.37349397590361444,2018-2019
+Colton Elementary School,103,Colton SD 53,1927,0.20833333333333334,2018-2019
+Beavercreek Elementary School,105,Oregon City SD 62,1928,0.29310344827586204,2018-2019
+Candy Lane Elementary School,106,Oregon City SD 62,1928,0.19718309859154928,2018-2019
+Holcomb Elementary School,107,Oregon City SD 62,1928,0.23076923076923078,2018-2019
+Gaffney Lane Elementary School,109,Oregon City SD 62,1928,0.2773109243697479,2018-2019
+John McLoughlin Elementary School,114,Oregon City SD 62,1928,0.35802469135802467,2018-2019
+Butte Creek Elementary School,119,Silver Falls SD 4J,2138,0.1891891891891892,2018-2019
+Mulino Elementary School,121,Molalla River SD 35,1925,0.3333333333333333,2018-2019
+William Knight Elementary School,122,Canby SD 86,1929,0.37037037037037035,2018-2019
+Howard Eccles Elementary School,124,Canby SD 86,1929,0.3684210526315789,2018-2019
+Ninety-One School,127,Canby SD 86,1929,0.3582089552238806,2018-2019
+Rural Dell Elementary School,128,Molalla River SD 35,1925,0.359375,2018-2019
+Clackamas River Elementary School,131,Estacada SD 108,1930,0.25925925925925924,2018-2019
+River Mill Elementary School,132,Estacada SD 108,1930,0.2826086956521739,2018-2019
+John Wetten Elementary School,136,Gladstone SD 115,1931,0.3853211009174312,2018-2019
+Redland Elementary School,139,Oregon City SD 62,1928,0.2796610169491525,2018-2019
+Lewis & Clark Elementary School,147,Astoria SD 1,1933,0.3069306930693069,2018-2019
+Seaside Heights Elementary School,152,Seaside SD 10,1935,0.25471698113207547,2018-2019
+Gearhart Elementary School,153,Seaside SD 10,1935,0.22058823529411764,2018-2019
+Warrenton Grade School,156,Warrenton-Hammond SD 30,1936,0.28440366972477066,2018-2019
+Grant Watts Elementary School,158,Scappoose SD 1J,1944,0.31092436974789917,2018-2019
+Warren Elementary School,160,Scappoose SD 1J,1944,0.22580645161290322,2018-2019
+Clatskanie Elementary School,163,Clatskanie SD 6J,1945,0.24285714285714285,2018-2019
+Hilda Lahti Elementary School,166,Knappa SD 4,2262,0.24390243902439024,2018-2019
+Hudson Park Elementary School,171,Rainier SD 13,1946,0.28,2018-2019
+Vernonia Elementary School,177,Vernonia SD 47J,1947,0.20689655172413793,2018-2019
+Columbia City School,179,St Helens SD 502,1948,0.39473684210526316,2018-2019
+McBride Elementary School,182,St Helens SD 502,1948,0.24299065420560748,2018-2019
+Blossom Gulch Elementary School,192,Coos Bay SD 9,1965,0.2956989247311828,2018-2019
+Madison Elementary School,196,Coos Bay SD 9,1965,0.2727272727272727,2018-2019
+Hillcrest Elementary School,204,North Bend SD 13,1966,0.41935483870967744,2018-2019
+North Bay Elementary School,205,North Bend SD 13,1966,0.28421052631578947,2018-2019
+Myrtle Crest School,214,Myrtle Point SD 41,1968,0.20454545454545456,2018-2019
+Ocean Crest Elementary School,217,Bandon SD 54,1969,0.2878787878787879,2018-2019
+Crooked River Elementary School,219,Crook County SD,1970,0.29577464788732394,2018-2019
+Powell Butte Community Charter School,223,Crook County SD,1970,0.41025641025641024,2018-2019
+Driftwood Elementary School,228,Port Orford-Langlois SD 2CJ,1973,0.3333333333333333,2018-2019
+Riley Creek Elementary School,231,Central Curry SD 1,1972,0.3148148148148148,2018-2019
+Kalmiopsis Elementary School,236,Brookings-Harbor SD 17C,1974,0.26595744680851063,2018-2019
+Bear Creek Elementary School,241,Bend-LaPine Administrative SD 1,1976,0.3025210084033613,2018-2019
+LaPine Elementary School,245,Bend-LaPine Administrative SD 1,1976,0.2698412698412698,2018-2019
+Juniper Elementary School,246,Bend-LaPine Administrative SD 1,1976,0.38095238095238093,2018-2019
+R E Jewell Elementary School,247,Bend-LaPine Administrative SD 1,1976,0.3181818181818182,2018-2019
+Buckingham Elementary School,250,Bend-LaPine Administrative SD 1,1976,0.4678362573099415,2018-2019
+Sage Elementary School,256,Redmond SD 2J,1977,0.4090909090909091,2018-2019
+John Tuck Elementary School,258,Redmond SD 2J,1977,0.2111111111111111,2018-2019
+M A Lynch Elementary School,259,Redmond SD 2J,1977,0.32142857142857145,2018-2019
+Terrebonne Community School,260,Redmond SD 2J,1977,0.3707865168539326,2018-2019
+Tumalo Community School,261,Redmond SD 2J,1977,0.417910447761194,2018-2019
+Sisters Elementary School,264,Sisters SD 6,1978,0.3644859813084112,2018-2019
+Oakland Elementary School,267,Oakland SD 1,1990,0.3620689655172414,2018-2019
+Eastwood Elementary School,269,Douglas County SD 4,1991,0.2375,2018-2019
+Fir Grove Elementary School,270,Douglas County SD 4,1991,0.4189189189189189,2018-2019
+Fullerton IV Elementary School,271,Douglas County SD 4,1991,0.2857142857142857,2018-2019
+Green Elementary School,272,Douglas County SD 4,1991,0.2830188679245283,2018-2019
+Hucrest Elementary School,273,Douglas County SD 4,1991,0.29906542056074764,2018-2019
+Melrose Elementary School,274,Douglas County SD 4,1991,0.36585365853658536,2018-2019
+Sunnyslope Elementary School,276,Douglas County SD 4,1991,0.25925925925925924,2018-2019
+Winchester Elementary,277,Douglas County SD 4,1991,0.25396825396825395,2018-2019
+Glide Elementary School,282,Glide SD 12,1992,0.2625,2018-2019
+Canyonville School,289,South Umpqua SD 19,1994,0.2777777777777778,2018-2019
+Myrtle Creek Elementary School,290,South Umpqua SD 19,1994,0.2727272727272727,2018-2019
+Tri City Elementary School,292,South Umpqua SD 19,1994,0.25,2018-2019
+North Douglas Elementary School,296,North Douglas SD 22,1996,0.3142857142857143,2018-2019
+Yoncalla Elementary School,299,Yoncalla SD 32,1997,0.09090909090909091,2018-2019
+Elkton Charter School,302,Elkton SD 34,1998,0.3333333333333333,2018-2019
+Riddle Elementary School,304,Riddle SD 70,1999,0.30952380952380953,2018-2019
+Glendale Elementary School,306,Glendale SD 77,2000,0.058823529411764705,2018-2019
+Highland Elementary School,309,Reedsport SD 105,2001,0.234375,2018-2019
+Lookingglass Elementary School,313,Winston-Dillard SD 116,2002,0.1,2018-2019
+East Sutherlin Primary School,318,Sutherlin SD 130,2003,0.22330097087378642,2018-2019
+Arlington Community Charter School,323,Arlington SD 3,2005,0.391304347826087,2018-2019
+Condon Elementary School,325,Condon SD 25J,2006,0.36,2018-2019
+Humbolt Elementary School,327,John Day SD 3,2008,0.3484848484848485,2018-2019
+Henry L Slater Elementary School,342,Harney County SD 3,2014,0.27956989247311825,2018-2019
+May Street Elementary School,362,Hood River County SD,2024,0.34951456310679613,2018-2019
+Mid Valley Elementary School,363,Hood River County SD,2024,0.3392857142857143,2018-2019
+Parkdale Elementary School,364,Hood River County SD,2024,0.23684210526315788,2018-2019
+Westside Elementary School,366,Hood River County SD,2024,0.375,2018-2019
+Orchard Hill Elementary School,370,Phoenix-Talent SD 4,2039,0.32989690721649484,2018-2019
+Phoenix Elementary School,371,Phoenix-Talent SD 4,2039,0.1625,2018-2019
+Talent Elementary School,372,Phoenix-Talent SD 4,2039,0.14563106796116504,2018-2019
+Bellview Elementary School,375,Ashland SD 5,2041,0.4166666666666667,2018-2019
+Helman Elementary School,377,Ashland SD 5,2041,0.43023255813953487,2018-2019
+Walker Elementary School,379,Ashland SD 5,2041,0.37962962962962965,2018-2019
+Central Point Elementary School,382,Central Point SD 6,2042,0.2336448598130841,2018-2019
+Jewett Elementary School,383,Central Point SD 6,2042,0.2037037037037037,2018-2019
+Patrick Elementary School,384,Central Point SD 6,2042,0.3333333333333333,2018-2019
+Richardson Elementary School,385,Central Point SD 6,2042,0.2765957446808511,2018-2019
+Sams Valley Elementary School,386,Central Point SD 6,2042,0.26153846153846155,2018-2019
+Hillside Elementary,390,Eagle Point SD 9,2043,0.2376237623762376,2018-2019
+Shady Cove School,393,Eagle Point SD 9,2043,0.3170731707317073,2018-2019
+Table Rock Elementary,394,Eagle Point SD 9,2043,0.18,2018-2019
+Rogue River Elementary School,399,Rogue River SD 35,2044,0.3611111111111111,2018-2019
+Butte Falls Charter School,406,Butte Falls SD 91,2046,0.22580645161290322,2018-2019
+Griffin Creek Elementary School,408,Medford SD 549C,2048,0.25842696629213485,2018-2019
+Hoover Elementary School,409,Medford SD 549C,2048,0.38571428571428573,2018-2019
+Howard Elementary School,410,Medford SD 549C,2048,0.3125,2018-2019
+Jackson Elementary School,411,Medford SD 549C,2048,0.2191780821917808,2018-2019
+Jacksonville Elementary School,412,Medford SD 549C,2048,0.3614457831325301,2018-2019
+Jefferson Elementary School,413,Medford SD 549C,2048,0.28421052631578947,2018-2019
+Lone Pine Elementary School,414,Medford SD 549C,2048,0.3695652173913043,2018-2019
+Oak Grove Elementary School,415,Medford SD 549C,2048,0.23728813559322035,2018-2019
+Kennedy Elementary School,416,Medford SD 549C,2048,0.25510204081632654,2018-2019
+Roosevelt Elementary School,417,Medford SD 549C,2048,0.2413793103448276,2018-2019
+Ruch Elementary School,418,Medford SD 549C,2048,0.35,2018-2019
+Washington Elementary School,419,Medford SD 549C,2048,0.16666666666666666,2018-2019
+Wilson Elementary School,420,Medford SD 549C,2048,0.3153153153153153,2018-2019
+Culver Elementary School,425,Culver SD 4,2050,0.3333333333333333,2018-2019
+Buff Elementary School,429,Jefferson County SD 509J,2053,0.32051282051282054,2018-2019
+Madras Elementary School,430,Jefferson County SD 509J,2053,0.26506024096385544,2018-2019
+Metolius Elementary School,431,Jefferson County SD 509J,2053,0.40540540540540543,2018-2019
+Warm Springs K-8 Academy,432,Jefferson County SD 509J,2053,0.2708333333333333,2018-2019
+Allen Dale Elementary School,435,Grants Pass SD 7,2054,0.38461538461538464,2018-2019
+Highland Elementary School,436,Grants Pass SD 7,2054,0.37606837606837606,2018-2019
+Lincoln Elementary School,437,Grants Pass SD 7,2054,0.3106796116504854,2018-2019
+Redwood Elementary School,439,Grants Pass SD 7,2054,0.40476190476190477,2018-2019
+Riverside Elementary School,440,Grants Pass SD 7,2054,0.29347826086956524,2018-2019
+Evergreen Elementary School,443,Three Rivers/Josephine County SD,2055,0.16279069767441862,2018-2019
+Fruitdale Elementary School,445,Three Rivers/Josephine County SD,2055,0.3917525773195876,2018-2019
+Ft Vannoy Elementary School,446,Three Rivers/Josephine County SD,2055,0.2786885245901639,2018-2019
+Madrona Elementary School,450,Three Rivers/Josephine County SD,2055,0.36363636363636365,2018-2019
+Manzanita Elementary School,451,Three Rivers/Josephine County SD,2055,0.29473684210526313,2018-2019
+Williams Elementary School,453,Three Rivers/Josephine County SD,2055,0.38461538461538464,2018-2019
+Joseph Conger Elementary School,459,Klamath Falls City Schools,2056,0.24096385542168675,2018-2019
+Mills Elementary School,461,Klamath Falls City Schools,2056,0.15492957746478872,2018-2019
+Pelican Elementary School,462,Klamath Falls City Schools,2056,0.2682926829268293,2018-2019
+Roosevelt Elementary School,465,Klamath Falls City Schools,2056,0.3564356435643564,2018-2019
+Bonanza Elementary School,467,Klamath County SD,2057,0.37333333333333335,2018-2019
+Chiloquin Elementary School,468,Klamath County SD,2057,0.22580645161290322,2018-2019
+Ferguson Elementary School,470,Klamath County SD,2057,0.40350877192982454,2018-2019
+Gilchrist Elementary School,472,Klamath County SD,2057,0.3,2018-2019
+Henley Elementary School,473,Klamath County SD,2057,0.2545454545454545,2018-2019
+Keno Elementary School,474,Klamath County SD,2057,0.32075471698113206,2018-2019
+Malin Elementary School,475,Klamath County SD,2057,0.23076923076923078,2018-2019
+Merrill Elementary School,476,Klamath County SD,2057,0.2962962962962963,2018-2019
+Peterson Elementary School,477,Klamath County SD,2057,0.4015151515151515,2018-2019
+Shasta Elementary School,478,Klamath County SD,2057,0.375,2018-2019
+Stearns Elementary School,479,Klamath County SD,2057,0.21052631578947367,2018-2019
+Fremont/Hay Elementary School,490,Lake County SD 7,2059,0.2982456140350877,2018-2019
+Pleasant Hill Elementary School,500,Pleasant Hill SD 1,2081,0.30851063829787234,2018-2019
+Adams Elementary School,503,Eugene SD 4J,2082,0.42748091603053434,2018-2019
+Awbrey Park Elementary School,504,Eugene SD 4J,2082,0.36363636363636365,2018-2019
+Coburg Community Charter School,507,Eugene SD 4J,2082,0.3902439024390244,2018-2019
+Edison Elementary School,510,Eugene SD 4J,2082,0.3977272727272727,2018-2019
+Gilham Elementary School,513,Eugene SD 4J,2082,0.3333333333333333,2018-2019
+Howard Elementary School,515,Eugene SD 4J,2082,0.23157894736842105,2018-2019
+McCornack Elementary School,522,Eugene SD 4J,2082,0.3013698630136986,2018-2019
+River Road/El Camino del Rio Elementary School,525,Eugene SD 4J,2082,0.2028985507246377,2018-2019
+Spring Creek Elementary School,529,Eugene SD 4J,2082,0.3050847457627119,2018-2019
+Twin Oaks Elementary School,530,Eugene SD 4J,2082,0.36666666666666664,2018-2019
+Willagillespie Elementary School,534,Eugene SD 4J,2082,0.36036036036036034,2018-2019
+Centennial Elementary School,544,Springfield SD 19,2083,0.23880597014925373,2018-2019
+Douglas Gardens Elementary School,545,Springfield SD 19,2083,0.3,2018-2019
+Elizabeth Page Elementary School,546,Springfield SD 19,2083,0.37209302325581395,2018-2019
+Guy Lee Elementary School,548,Springfield SD 19,2083,0.1794871794871795,2018-2019
+Maple Elementary School,550,Springfield SD 19,2083,0.26666666666666666,2018-2019
+Ridgeview Elementary School,553,Springfield SD 19,2083,0.32653061224489793,2018-2019
+Mt Vernon Elementary School,554,Springfield SD 19,2083,0.30434782608695654,2018-2019
+Thurston Elementary School,556,Springfield SD 19,2083,0.37894736842105264,2018-2019
+Walterville Elementary School,558,Springfield SD 19,2083,0.28125,2018-2019
+Yolanda Elementary School,559,Springfield SD 19,2083,0.38636363636363635,2018-2019
+Elmira Elementary School,563,Fern Ridge SD 28J,2084,0.3620689655172414,2018-2019
+Veneta Elementary School,566,Fern Ridge SD 28J,2084,0.32926829268292684,2018-2019
+Mapleton Elementary School,568,Mapleton SD 32,2085,0.07142857142857142,2018-2019
+Creslane Elementary School,570,Creswell SD 40,2086,0.33548387096774196,2018-2019
+Bohemia Elementary School,573,South Lane SD 45J3,2087,0.2857142857142857,2018-2019
+Harrison Elementary School,576,South Lane SD 45J3,2087,0.2619047619047619,2018-2019
+Latham Elementary School,577,South Lane SD 45J3,2087,0.3333333333333333,2018-2019
+London School,578,South Lane SD 45J3,2087,0.2631578947368421,2018-2019
+Clear Lake Elementary School,582,Bethel SD 52,2088,0.1590909090909091,2018-2019
+Danebo Elementary School,583,Bethel SD 52,2088,0.22,2018-2019
+Fairfield Elementary School,584,Bethel SD 52,2088,0.19047619047619047,2018-2019
+Irving Elementary School,585,Bethel SD 52,2088,0.35135135135135137,2018-2019
+Malabon Elementary School,586,Bethel SD 52,2088,0.22857142857142856,2018-2019
+Applegate Elementary School,589,Crow-Applegate-Lorane SD 66,2089,0.38095238095238093,2018-2019
+McKenzie River Community School,594,McKenzie SD 68,2090,0.3181818181818182,2018-2019
+Laurel Elementary School,595,Junction City SD 69,2091,0.26717557251908397,2018-2019
+Lundy Elementary School,598,Lowell SD 71,2092,0.21428571428571427,2018-2019
+Oakridge Elementary School,600,Oakridge SD 76,2093,0.2608695652173913,2018-2019
+Marcola Elementary School,603,Marcola SD 79J,2094,0.3181818181818182,2018-2019
+Siuslaw Elementary School,609,Siuslaw SD 97J,2096,0.2845528455284553,2018-2019
+Toledo Elementary School,611,Lincoln County SD,2097,0.22857142857142856,2018-2019
+Taft Elementary School,620,Lincoln County SD,2097,0.2138364779874214,2018-2019
+Crestview Heights School,623,Lincoln County SD,2097,0.13636363636363635,2018-2019
+Sam Case Elementary,625,Lincoln County SD,2097,0.29292929292929293,2018-2019
+Central Elementary School,631,Greater Albany Public SD 8J,2100,0.21428571428571427,2018-2019
+Periwinkle Elementary School,636,Greater Albany Public SD 8J,2100,0.27722772277227725,2018-2019
+North Albany Elementary School,637,Greater Albany Public SD 8J,2100,0.3614457831325301,2018-2019
+Oak Grove Elementary School,639,Greater Albany Public SD 8J,2100,0.40860215053763443,2018-2019
+Lafayette Elementary School,640,Greater Albany Public SD 8J,2100,0.23880597014925373,2018-2019
+Liberty Elementary School,641,Greater Albany Public SD 8J,2100,0.39,2018-2019
+Oak Elementary School,643,Greater Albany Public SD 8J,2100,0.313953488372093,2018-2019
+Sunrise Elementary School,644,Greater Albany Public SD 8J,2100,0.23076923076923078,2018-2019
+South Shore Elementary School,645,Greater Albany Public SD 8J,2100,0.14473684210526316,2018-2019
+Tangent Elementary School,646,Greater Albany Public SD 8J,2100,0.18181818181818182,2018-2019
+Waverly Elementary School,648,Greater Albany Public SD 8J,2100,0.27586206896551724,2018-2019
+Cascades School,652,Lebanon Community SD 9,2101,0.22448979591836735,2018-2019
+Green Acres School,653,Lebanon Community SD 9,2101,0.2857142857142857,2018-2019
+Mari-Linn Elementary School,656,North Santiam SD 29J,2143,0.2894736842105263,2018-2019
+Hamilton Creek School,658,Lebanon Community SD 9,2101,0.2391304347826087,2018-2019
+Harrisburg Elementary School,659,Harrisburg SD 7J,2099,0.2808988764044944,2018-2019
+Foster Elementary School,662,Sweet Home SD 55,2102,0.2542372881355932,2018-2019
+Hawthorne Elementary School,663,Sweet Home SD 55,2102,0.2,2018-2019
+Holley Elementary School,664,Sweet Home SD 55,2102,0.14285714285714285,2018-2019
+Oak Heights Elementary School,666,Sweet Home SD 55,2102,0.2903225806451613,2018-2019
+Lacomb School,671,Lebanon Community SD 9,2101,0.21739130434782608,2018-2019
+Centennial Elementary School,676,Scio SD 95,2103,0.3037974683544304,2018-2019
+Santiam Elementary School,681,Santiam Canyon SD 129J,2104,0.21568627450980393,2018-2019
+Alameda Elementary School,692,Ontario SD 8C,2108,0.2972972972972973,2018-2019
+Cairo Elementary School,693,Ontario SD 8C,2108,0.21052631578947367,2018-2019
+Aiken Elementary School,694,Ontario SD 8C,2108,0.2602739726027397,2018-2019
+May Roberts Elementary School,696,Ontario SD 8C,2108,0.21739130434782608,2018-2019
+Pioneer Elementary School,697,Ontario SD 8C,2108,0.16129032258064516,2018-2019
+Vale Elementary School,701,Vale SD 84,2116,0.27941176470588236,2018-2019
+Nyssa Elementary School,702,Nyssa SD 26,2110,0.35555555555555557,2018-2019
+Annex Charter School,705,Annex SD 29,2111,0.38095238095238093,2018-2019
+Adrian Elementary School,707,Adrian SD 61,2113,0.3103448275862069,2018-2019
+Robert Frost Elementary School,716,Silver Falls SD 4J,2138,0.28994082840236685,2018-2019
+Sublimity Elementary School,717,North Santiam SD 29J,2143,0.42424242424242425,2018-2019
+Aumsville Elementary School,719,Cascade SD 5,2139,0.3333333333333333,2018-2019
+Jefferson Elementary School,721,Jefferson SD 14J,2140,0.21794871794871795,2018-2019
+North Marion Intermediate School,724,North Marion SD 15,2141,0.2215909090909091,2018-2019
+Auburn Elementary School,728,Salem-Keizer SD 24J,2142,0.18518518518518517,2018-2019
+Brush College Elementary School,731,Salem-Keizer SD 24J,2142,0.3114754098360656,2018-2019
+Bush Elementary School,732,Salem-Keizer SD 24J,2142,0.06,2018-2019
+Candalaria Elementary School,733,Salem-Keizer SD 24J,2142,0.38961038961038963,2018-2019
+Clear Lake Elementary School,734,Salem-Keizer SD 24J,2142,0.42857142857142855,2018-2019
+Cummings Elementary School,735,Salem-Keizer SD 24J,2142,0.22784810126582278,2018-2019
+Englewood Elementary School,736,Salem-Keizer SD 24J,2142,0.32673267326732675,2018-2019
+Wright Elementary School,737,Salem-Keizer SD 24J,2142,0.3645833333333333,2018-2019
+Four Corners Elementary School,738,Salem-Keizer SD 24J,2142,0.13043478260869565,2018-2019
+Grant Community School,740,Salem-Keizer SD 24J,2142,0.21348314606741572,2018-2019
+Scott Elementary School,741,Salem-Keizer SD 24J,2142,0.1981981981981982,2018-2019
+Highland Elementary School,743,Salem-Keizer SD 24J,2142,0.14492753623188406,2018-2019
+Hoover Elementary School,744,Salem-Keizer SD 24J,2142,0.2222222222222222,2018-2019
+Gubser Elementary School,745,Salem-Keizer SD 24J,2142,0.30405405405405406,2018-2019
+Kennedy Elementary School,746,Salem-Keizer SD 24J,2142,0.16901408450704225,2018-2019
+Keizer Elementary School,747,Salem-Keizer SD 24J,2142,0.1891891891891892,2018-2019
+Liberty Elementary School,749,Salem-Keizer SD 24J,2142,0.2465753424657534,2018-2019
+McKinley Elementary School,750,Salem-Keizer SD 24J,2142,0.32432432432432434,2018-2019
+Eyre Elementary School,751,Salem-Keizer SD 24J,2142,0.26515151515151514,2018-2019
+Morningside Elementary School,753,Salem-Keizer SD 24J,2142,0.3076923076923077,2018-2019
+Myers Elementary School,754,Salem-Keizer SD 24J,2142,0.3082191780821918,2018-2019
+Hayesville Elementary School,755,Salem-Keizer SD 24J,2142,0.16049382716049382,2018-2019
+Pringle Elementary School,756,Salem-Keizer SD 24J,2142,0.35766423357664234,2018-2019
+Richmond Elementary School,757,Salem-Keizer SD 24J,2142,0.15384615384615385,2018-2019
+Salem Heights Elementary School,759,Salem-Keizer SD 24J,2142,0.3484848484848485,2018-2019
+Schirle Elementary School,760,Salem-Keizer SD 24J,2142,0.3008130081300813,2018-2019
+Sumpter Elementary School,761,Salem-Keizer SD 24J,2142,0.38125,2018-2019
+Swegle Elementary School,762,Salem-Keizer SD 24J,2142,0.1864406779661017,2018-2019
+Washington Elementary School,763,Salem-Keizer SD 24J,2142,0.27380952380952384,2018-2019
+Yoshikai Elementary School,764,Salem-Keizer SD 24J,2142,0.3924050632911392,2018-2019
+Gervais Elementary School,776,Gervais SD 1,2137,0.25,2018-2019
+Victor Point Elementary School,777,Silver Falls SD 4J,2138,0.4634146341463415,2018-2019
+St Paul Elementary School,778,St Paul SD 45,2144,0.3125,2018-2019
+Bethany Charter School,784,Silver Falls SD 4J,2138,0.4482758620689655,2018-2019
+Scotts Mills Elementary School,785,Silver Falls SD 4J,2138,0.3333333333333333,2018-2019
+Stayton Elementary School,788,North Santiam SD 29J,2143,0.3418803418803419,2018-2019
+Turner Elementary School,790,Cascade SD 5,2139,0.3614457831325301,2018-2019
+St Marys Public School,793,Mt Angel SD 91,2145,0.297029702970297,2018-2019
+Silver Crest Elementary School,795,Silver Falls SD 4J,2138,0.2857142857142857,2018-2019
+Nellie Muir Elementary School,796,Woodburn SD 103,2146,0.1702127659574468,2018-2019
+Washington Elementary School,797,Woodburn SD 103,2146,0.11956521739130435,2018-2019
+Cloverdale Elementary School,806,Cascade SD 5,2139,0.38095238095238093,2018-2019
+Central Howell Elementary School,807,Silver Falls SD 4J,2138,0.3939393939393939,2018-2019
+A C Houghton Elementary School,813,Morrow SD 1,2147,0.32978723404255317,2018-2019
+Sam Boardman Elementary School,814,Morrow SD 1,2147,0.23,2018-2019
+Heppner Elementary School,815,Morrow SD 1,2147,0.3,2018-2019
+Abernethy Elementary School,822,Portland SD 1J,2180,0.4140127388535032,2018-2019
+Ainsworth Elementary School,823,Portland SD 1J,2180,0.4457831325301205,2018-2019
+Alameda Elementary School,824,Portland SD 1J,2180,0.4537037037037037,2018-2019
+Arleta Elementary School,826,Portland SD 1J,2180,0.2972972972972973,2018-2019
+Astor Elementary School,827,Portland SD 1J,2180,0.373134328358209,2018-2019
+Atkinson Elementary School,828,Portland SD 1J,2180,0.3368421052631579,2018-2019
+Rosa Parks Elementary School,829,Portland SD 1J,2180,0.12962962962962962,2018-2019
+Beach Elementary School,830,Portland SD 1J,2180,0.3611111111111111,2018-2019
+Boise-Eliot Elementary School,833,Portland SD 1J,2180,0.14893617021276595,2018-2019
+Bridger Elementary School,834,Portland SD 1J,2180,0.37623762376237624,2018-2019
+Bridlemile Elementary School,835,Portland SD 1J,2180,0.4057971014492754,2018-2019
+Buckman Elementary School,837,Portland SD 1J,2180,0.36065573770491804,2018-2019
+Capitol Hill Elementary School,838,Portland SD 1J,2180,0.39849624060150374,2018-2019
+Chapman Elementary School,839,Portland SD 1J,2180,0.4108527131782946,2018-2019
+Chief Joseph Elementary School,840,Portland SD 1J,2180,0.3372093023255814,2018-2019
+Cesar Chavez K-8 School,841,Portland SD 1J,2180,0.20634920634920634,2018-2019
+Harrison Park School,842,Portland SD 1J,2180,0.1411764705882353,2018-2019
+Creston Elementary School,843,Portland SD 1J,2180,0.3559322033898305,2018-2019
+Duniway Elementary School,844,Portland SD 1J,2180,0.41379310344827586,2018-2019
+Faubion Elementary School,847,Portland SD 1J,2180,0.17391304347826086,2018-2019
+Glencoe Elementary School,850,Portland SD 1J,2180,0.41007194244604317,2018-2019
+Grout Elementary School,854,Portland SD 1J,2180,0.3258426966292135,2018-2019
+Hayhurst Elementary School,855,Portland SD 1J,2180,0.4012738853503185,2018-2019
+Beverly Cleary School,857,Portland SD 1J,2180,0.4049586776859504,2018-2019
+Irvington Elementary School,861,Portland SD 1J,2180,0.391304347826087,2018-2019
+James John Elementary School,862,Portland SD 1J,2180,0.29508196721311475,2018-2019
+Kelly Elementary School,864,Portland SD 1J,2180,0.18947368421052632,2018-2019
+Martin Luther King Jr. School,866,Portland SD 1J,2180,0.08333333333333333,2018-2019
+Laurelhurst Elementary School,868,Portland SD 1J,2180,0.40476190476190477,2018-2019
+Lee Elementary School,869,Portland SD 1J,2180,0.18181818181818182,2018-2019
+Lent Elementary School,870,Portland SD 1J,2180,0.1,2018-2019
+Lewis Elementary School,871,Portland SD 1J,2180,0.35353535353535354,2018-2019
+Llewellyn Elementary School,872,Portland SD 1J,2180,0.4421768707482993,2018-2019
+Maplewood Elementary School,873,Portland SD 1J,2180,0.30434782608695654,2018-2019
+Marysville Elementary School,875,Portland SD 1J,2180,0.2,2018-2019
+Peninsula Elementary School,879,Portland SD 1J,2180,0.21428571428571427,2018-2019
+Richmond Elementary School,883,Portland SD 1J,2180,0.43783783783783786,2018-2019
+Rigler Elementary School,884,Portland SD 1J,2180,0.0625,2018-2019
+Sabin Elementary School,886,Portland SD 1J,2180,0.3826086956521739,2018-2019
+Scott Elementary School,887,Portland SD 1J,2180,0.2127659574468085,2018-2019
+Sitton Elementary School,889,Portland SD 1J,2180,0.12698412698412698,2018-2019
+Skyline Elementary School,890,Portland SD 1J,2180,0.3333333333333333,2018-2019
+Stephenson Elementary School,892,Portland SD 1J,2180,0.4444444444444444,2018-2019
+Sunnyside Environmental School,893,Portland SD 1J,2180,0.2839506172839506,2018-2019
+Vernon Elementary School,895,Portland SD 1J,2180,0.34375,2018-2019
+Vestal Elementary School,896,Portland SD 1J,2180,0.391304347826087,2018-2019
+Whitman Elementary School,900,Portland SD 1J,2180,0.2727272727272727,2018-2019
+Woodlawn Elementary School,902,Portland SD 1J,2180,0.3181818181818182,2018-2019
+Woodmere Elementary School,903,Portland SD 1J,2180,0.17543859649122806,2018-2019
+Woodstock Elementary School,904,Portland SD 1J,2180,0.41044776119402987,2018-2019
+Metropolitan Learning Center,916,Portland SD 1J,2180,0.3,2018-2019
+Prescott Elementary School,925,Parkrose SD 3,2181,0.16417910447761194,2018-2019
+Russell Elementary,926,Parkrose SD 3,2181,0.2857142857142857,2018-2019
+Sacramento Elementary School,927,Parkrose SD 3,2181,0.1111111111111111,2018-2019
+Shaver Elementary School,928,Parkrose SD 3,2181,0.2807017543859649,2018-2019
+East Gresham Elementary School,933,Gresham-Barlow SD 10J,2183,0.2077922077922078,2018-2019
+Highland Elementary School,935,Gresham-Barlow SD 10J,2183,0.18446601941747573,2018-2019
+Hall Elementary School,936,Gresham-Barlow SD 10J,2183,0.125,2018-2019
+Hollydale Elementary School,937,Gresham-Barlow SD 10J,2183,0.2268041237113402,2018-2019
+North Gresham Elementary School,938,Gresham-Barlow SD 10J,2183,0.20588235294117646,2018-2019
+Powell Valley Elementary School,939,Gresham-Barlow SD 10J,2183,0.25,2018-2019
+West Gresham Elementary School,940,Gresham-Barlow SD 10J,2183,0.3108108108108108,2018-2019
+East Orient Elementary School,941,Gresham-Barlow SD 10J,2183,0.4,2018-2019
+Fairview Elementary School,945,Reynolds SD 7,2182,0.28378378378378377,2018-2019
+Glenfair Elementary School,946,Reynolds SD 7,2182,0.21176470588235294,2018-2019
+Hartley Elementary School,947,Reynolds SD 7,2182,0.22826086956521738,2018-2019
+Margaret Scott Elementary School,948,Reynolds SD 7,2182,0.19767441860465115,2018-2019
+Davis Elementary School,949,Reynolds SD 7,2182,0.2345679012345679,2018-2019
+Sweetbriar Elementary School,950,Reynolds SD 7,2182,0.3333333333333333,2018-2019
+Troutdale Elementary School,951,Reynolds SD 7,2182,0.2767857142857143,2018-2019
+Wilkes Elementary School,952,Reynolds SD 7,2182,0.21739130434782608,2018-2019
+Sauvie Island School,958,Scappoose SD 1J,1944,0.4,2018-2019
+Meadows Elementary,959,Centennial SD 28J,2185,0.16,2018-2019
+Oliver Elementary School,962,Centennial SD 28J,2185,0.20754716981132076,2018-2019
+Parklane Elementary School,963,Centennial SD 28J,2185,0.1875,2018-2019
+Patrick Lynch Elementary,964,Centennial SD 28J,2185,0.2318840579710145,2018-2019
+Powell Butte Elementary School,965,Centennial SD 28J,2185,0.27358490566037735,2018-2019
+Pleasant Valley Elementary School,966,Centennial SD 28J,2185,0.2891566265060241,2018-2019
+Cherry Park Elementary School,972,David Douglas SD 40,2187,0.4,2018-2019
+Gilbert Heights Elementary School,973,David Douglas SD 40,2187,0.3,2018-2019
+Gilbert Park Elementary School,974,David Douglas SD 40,2187,0.18867924528301888,2018-2019
+Lincoln Park Elementary School,975,David Douglas SD 40,2187,0.2751677852348993,2018-2019
+Menlo Park Elementary School,976,David Douglas SD 40,2187,0.2616822429906542,2018-2019
+Mill Park Elementary School,977,David Douglas SD 40,2187,0.11904761904761904,2018-2019
+Ventura Park Elementary School,978,David Douglas SD 40,2187,0.28421052631578947,2018-2019
+West Powellhurst Elementary School,979,David Douglas SD 40,2187,0.22826086956521738,2018-2019
+Riverdale Grade School,985,Riverdale SD 51J,2188,0.4375,2018-2019
+Lyle Elementary School,989,Dallas SD 2,2190,0.24031007751937986,2018-2019
+Oakdale Heights Elementary School,990,Dallas SD 2,2190,0.21705426356589147,2018-2019
+Monmouth Elementary School,999,Central SD 13J,2191,0.328125,2018-2019
+Sherman County School,1010,Sherman County SD,2195,0.35294117647058826,2018-2019
+South Prairie Elementary School,1014,Tillamook SD 9,2197,0.25120772946859904,2018-2019
+Nestucca Valley Elementary,1019,Nestucca Valley SD 101J,2199,0.2962962962962963,2018-2019
+Garibaldi Elementary School,1020,Neah-Kah-Nie SD 56,2198,0.2571428571428571,2018-2019
+Nehalem Elementary School,1021,Neah-Kah-Nie SD 56,2198,0.24324324324324326,2018-2019
+Pilot Rock Elementary School,1027,Pilot Rock SD 2,2202,0.3103448275862069,2018-2019
+McNary Heights Elementary School,1032,Umatilla SD 6R,2204,0.24812030075187969,2018-2019
+Highland Hills Elementary School,1034,Hermiston SD 8,2206,0.3624161073825503,2018-2019
+Rocky Heights Elementary School,1036,Hermiston SD 8,2206,0.31666666666666665,2018-2019
+Sunset Elementary School,1037,Hermiston SD 8,2206,0.3023255813953488,2018-2019
+West Park Elementary School,1038,Hermiston SD 8,2206,0.35877862595419846,2018-2019
+McKay Creek Elementary School,1047,Pendleton SD 16,2207,0.3058823529411765,2018-2019
+Sherwood Heights Elementary School,1048,Pendleton SD 16,2207,0.3235294117647059,2018-2019
+Washington Elementary School,1049,Pendleton SD 16,2207,0.33070866141732286,2018-2019
+Athena Elementary School,1053,Athena-Weston SD 29RJ,2208,0.3050847457627119,2018-2019
+Stanfield Elementary School,1060,Stanfield SD 61,2209,0.2571428571428571,2018-2019
+Central Elementary School,1066,La Grande SD 1,2212,0.37037037037037035,2018-2019
+Greenwood Elementary School,1068,La Grande SD 1,2212,0.3424657534246575,2018-2019
+Island City Elementary School,1069,La Grande SD 1,2212,0.37349397590361444,2018-2019
+Union Elementary School,1074,Union SD 5,2213,0.32,2018-2019
+Imbler Charter School,1079,Imbler SD 11,2215,0.38636363636363635,2018-2019
+Stella Mayfield Elementary School,1082,Elgin SD 23,2217,0.2702702702702703,2018-2019
+Joseph Charter School,1087,Joseph SD 6,2219,0.41379310344827586,2018-2019
+Wallowa Elementary School,1088,Wallowa SD 12,2220,0.35294117647058826,2018-2019
+Enterprise Elementary School,1090,Enterprise SD 21,2221,0.34375,2018-2019
+Chenowith Elementary School,1093,North Wasco County SD 21,4131,0.11842105263157894,2018-2019
+Mosier Community School,1095,North Wasco County SD 21,4131,0.34375,2018-2019
+Colonel Wright Elementary School,1097,North Wasco County SD 21,4131,0.27419354838709675,2018-2019
+Dry Hollow Elementary School,1098,North Wasco County SD 21,4131,0.3008130081300813,2018-2019
+Maupin Elementary School,1108,South Wasco County SD 1,2225,0.36363636363636365,2018-2019
+Lenox Elementary School,1110,Hillsboro SD 1J,2239,0.36,2018-2019
+West Union Elementary School,1111,Hillsboro SD 1J,2239,0.273972602739726,2018-2019
+Brookwood Elementary School,1112,Hillsboro SD 1J,2239,0.2727272727272727,2018-2019
+W Verne McKinney Elementary School,1114,Hillsboro SD 1J,2239,0.24444444444444444,2018-2019
+Eastwood Elementary School,1115,Hillsboro SD 1J,2239,0.1746031746031746,2018-2019
+Minter Bridge Elementary School,1116,Hillsboro SD 1J,2239,0.18571428571428572,2018-2019
+Mooberry Elementary School,1117,Hillsboro SD 1J,2239,0.24324324324324326,2018-2019
+W L Henry Elementary School,1119,Hillsboro SD 1J,2239,0.23728813559322035,2018-2019
+Banks Elementary School,1120,Banks SD 13,2240,0.2803738317757009,2018-2019
+Cornelius Elementary School,1128,Forest Grove SD 15,2241,0.07792207792207792,2018-2019
+Dilley Elementary School,1129,Forest Grove SD 15,2241,0.3974358974358974,2018-2019
+Echo Shaw Elementary School,1130,Forest Grove SD 15,2241,0.30851063829787234,2018-2019
+Harvey Clarke Elementary School,1132,Forest Grove SD 15,2241,0.3987341772151899,2018-2019
+Joseph Gale Elementary School,1133,Forest Grove SD 15,2241,0.23893805309734514,2018-2019
+Bridgeport Elementary School,1135,Tigard-Tualatin SD 23J,2242,0.30701754385964913,2018-2019
+Charles F Tigard Elementary School,1136,Tigard-Tualatin SD 23J,2242,0.336283185840708,2018-2019
+Mary Woodward Elementary School,1137,Tigard-Tualatin SD 23J,2242,0.4293785310734463,2018-2019
+Durham Elementary School,1138,Tigard-Tualatin SD 23J,2242,0.41935483870967744,2018-2019
+James Templeton Elementary School,1139,Tigard-Tualatin SD 23J,2242,0.3263888888888889,2018-2019
+Metzger Elementary School,1140,Tigard-Tualatin SD 23J,2242,0.22302158273381295,2018-2019
+Edward Byrom Elementary School,1142,Tigard-Tualatin SD 23J,2242,0.42,2018-2019
+Tualatin Elementary School,1143,Tigard-Tualatin SD 23J,2242,0.3305785123966942,2018-2019
+Butternut Creek Elementary School,1147,Hillsboro SD 1J,2239,0.25,2018-2019
+Indian Hills Elementary School,1148,Hillsboro SD 1J,2239,0.3177570093457944,2018-2019
+Reedville Elementary School,1149,Hillsboro SD 1J,2239,0.15789473684210525,2018-2019
+Ladd Acres Elementary School,1150,Hillsboro SD 1J,2239,0.41044776119402987,2018-2019
+Witch Hazel Elementary School,1151,Hillsboro SD 1J,2239,0.2111111111111111,2018-2019
+Groner K-8,1152,Hillsboro SD 1J,2239,0.28,2018-2019
+Aloha-Huber Park School,1153,Beaverton SD 48J,2243,0.3072289156626506,2018-2019
+Barnes Elementary School,1154,Beaverton SD 48J,2243,0.18095238095238095,2018-2019
+Beaver Acres Elementary School,1155,Beaverton SD 48J,2243,0.3037974683544304,2018-2019
+Bethany Elementary School,1156,Beaverton SD 48J,2243,0.4588235294117647,2018-2019
+Greenway Elementary School,1157,Beaverton SD 48J,2243,0.2465753424657534,2018-2019
+Cedar Mill Elementary School,1158,Beaverton SD 48J,2243,0.4126984126984127,2018-2019
+Chehalem Elementary School,1159,Beaverton SD 48J,2243,0.31386861313868614,2018-2019
+Cooper Mountain Elementary School,1160,Beaverton SD 48J,2243,0.4094488188976378,2018-2019
+Errol Hassell Elementary School,1161,Beaverton SD 48J,2243,0.4036697247706422,2018-2019
+Elmonica Elementary School,1162,Beaverton SD 48J,2243,0.35678391959798994,2018-2019
+Fir Grove Elementary School,1163,Beaverton SD 48J,2243,0.3434343434343434,2018-2019
+Hazeldale Elementary School,1164,Beaverton SD 48J,2243,0.3629032258064516,2018-2019
+Hiteon Elementary School,1165,Beaverton SD 48J,2243,0.40804597701149425,2018-2019
+Kinnaman Elementary School,1166,Beaverton SD 48J,2243,0.31851851851851853,2018-2019
+McKay Elementary School,1168,Beaverton SD 48J,2243,0.2702702702702703,2018-2019
+McKinley Elementary School,1169,Beaverton SD 48J,2243,0.3103448275862069,2018-2019
+Montclair Elementary School,1170,Beaverton SD 48J,2243,0.4423076923076923,2018-2019
+Oak Hills Elementary School,1171,Beaverton SD 48J,2243,0.425,2018-2019
+Raleigh Hills Elementary School,1172,Beaverton SD 48J,2243,0.3793103448275862,2018-2019
+Raleigh Park Elementary School,1173,Beaverton SD 48J,2243,0.38613861386138615,2018-2019
+Ridgewood Elementary School,1174,Beaverton SD 48J,2243,0.4044943820224719,2018-2019
+Rock Creek Elementary School,1175,Beaverton SD 48J,2243,0.4176470588235294,2018-2019
+Terra Linda Elementary School,1176,Beaverton SD 48J,2243,0.39215686274509803,2018-2019
+Vose Elementary School,1177,Beaverton SD 48J,2243,0.3355263157894737,2018-2019
+West Tualatin View Elementary School,1178,Beaverton SD 48J,2243,0.43010752688172044,2018-2019
+William Walker Elementary School,1179,Beaverton SD 48J,2243,0.21782178217821782,2018-2019
+Farmington View Elementary School,1189,Hillsboro SD 1J,2239,0.3484848484848485,2018-2019
+North Plains Elementary School,1190,Hillsboro SD 1J,2239,0.39285714285714285,2018-2019
+J Clyde Hopkins Elementary School,1191,Sherwood SD 88J,2244,0.35344827586206895,2018-2019
+Gaston Elementary School,1194,Gaston SD 511J,2245,0.18518518518518517,2018-2019
+Fossil Charter School,1205,Fossil SD 21J,2248,0.2222222222222222,2018-2019
+Amity Elementary School,1208,Amity SD 4J,2252,0.34285714285714286,2018-2019
+Dayton Grade School,1211,Dayton SD 8,2253,0.31958762886597936,2018-2019
+Yamhill Carlton Elementary School,1213,Yamhill Carlton SD 1,2251,0.34782608695652173,2018-2019
+Dundee Elementary School,1216,Newberg SD 29J,2254,0.3050847457627119,2018-2019
+Edwards Elementary School,1217,Newberg SD 29J,2254,0.296,2018-2019
+Ewing Young Elementary School,1218,Newberg SD 29J,2254,0.4264705882352941,2018-2019
+Mabel Rush Elementary School,1219,Newberg SD 29J,2254,0.40476190476190477,2018-2019
+Willamina Elementary School,1224,Willamina SD 30J,2255,0.14492753623188406,2018-2019
+Columbus Elementary School,1228,McMinnville SD 40,2256,0.34444444444444444,2018-2019
+Memorial Elementary School,1230,McMinnville SD 40,2256,0.41040462427745666,2018-2019
+Newby Elementary School,1231,McMinnville SD 40,2256,0.410958904109589,2018-2019
+Wascher Elementary School,1232,McMinnville SD 40,2256,0.423728813559322,2018-2019
+Faulconer-Chapman School,1235,Sheridan SD 48J,2257,0.2698412698412698,2018-2019
+Charlemagne French Immersion Elementary School,1240,Eugene SD 4J,2082,0.4380952380952381,2018-2019
+Buena Vista Elementary School,1241,Eugene SD 4J,2082,0.3474576271186441,2018-2019
+Corridor Elementary School,1242,Eugene SD 4J,2082,0.20588235294117646,2018-2019
+Chapman Hill Elementary School,1244,Salem-Keizer SD 24J,2142,0.34444444444444444,2018-2019
+Yujin Gakuen Elementary School,1259,Eugene SD 4J,2082,0.41379310344827586,2018-2019
+Mount Scott Elementary School,1264,North Clackamas SD 12,1924,0.3707865168539326,2018-2019
+Three Rivers Elementary School,1266,Bend-LaPine Administrative SD 1,1976,0.410958904109589,2018-2019
+Lincoln Elementary School,1267,Woodburn SD 103,2146,0.15447154471544716,2018-2019
+Sexton Mountain Elementary School,1270,Beaverton SD 48J,2243,0.40397350993377484,2018-2019
+Boeckman Creek Primary School,1272,West Linn-Wilsonville SD 3J,1922,0.352,2018-2019
+Markham Elementary School,1278,Portland SD 1J,2180,0.4166666666666667,2018-2019
+Jackson Elementary School,1285,Hillsboro SD 1J,2239,0.3697478991596639,2018-2019
+Willamette Primary School,1286,West Linn-Wilsonville SD 3J,1922,0.44642857142857145,2018-2019
+Oak Creek Elementary School,1288,Lake Oswego SD 7J,1923,0.4050632911392405,2018-2019
+North Lake School,1289,North Lake SD 14,2061,0.125,2018-2019
+Territorial Elementary School,1297,Junction City SD 69,2091,0.4358974358974359,2018-2019
+Rieke Elementary School,1299,Portland SD 1J,2180,0.43,2018-2019
+Tobias Elementary School,1302,Hillsboro SD 1J,2239,0.296875,2018-2019
+Nancy Ryles Elementary School,1303,Beaverton SD 48J,2243,0.4129032258064516,2018-2019
+Cecile Trost Elementary School,1307,Canby SD 86,1929,0.19402985074626866,2018-2019
+Elk Meadow Elementary School,1308,Bend-LaPine Administrative SD 1,1976,0.3958333333333333,2018-2019
+Central Linn Elementary School,1311,Central Linn SD 552,2105,0.3728813559322034,2018-2019
+Kelly Creek Elementary School,1313,Gresham-Barlow SD 10J,2183,0.3700787401574803,2018-2019
+Lava Ridge Elementary School,1317,Bend-LaPine Administrative SD 1,1976,0.42771084337349397,2018-2019
+Monroe Grade School,1321,Monroe SD 1J,1898,0.23684210526315788,2018-2019
+Franklin School,1322,Corvallis SD 509J,1901,0.4,2018-2019
+Amity Creek Elementary School,1324,Bend-LaPine Administrative SD 1,1976,0.34146341463414637,2018-2019
+Vern Patrick Elementary School,1325,Redmond SD 2J,1977,0.2988505747126437,2018-2019
+Archer Glen Elementary School,1334,Sherwood SD 88J,2244,0.4536082474226804,2018-2019
+Antonia Crater Elementary School,1335,Newberg SD 29J,2254,0.4090909090909091,2018-2019
+Family School,1339,Eugene SD 4J,2082,0.32558139534883723,2018-2019
+Abraham Lincoln Elementary,1350,Medford SD 549C,2048,0.3851851851851852,2018-2019
+Parkside Elementary,1351,Grants Pass SD 7,2054,0.32323232323232326,2018-2019
+Riverbend Elementary School,1352,Springfield SD 19,2083,0.3103448275862069,2018-2019
+Heritage Elementary,1359,Woodburn SD 103,2146,0.20245398773006135,2018-2019
+Winterhaven School,1364,Portland SD 1J,2180,0.26666666666666666,2018-2019
+Woodland Elementary,1365,Reynolds SD 7,2182,0.18840579710144928,2018-2019
+Deer Creek Elementary School,1369,Tigard-Tualatin SD 23J,2242,0.26605504587155965,2018-2019
+Findley Elementary,1370,Beaverton SD 48J,2243,0.48695652173913045,2018-2019
+Edgewood Community Elementary School,1774,Eugene SD 4J,2082,0.3695652173913043,2018-2019
+Meadow View School,2264,Bethel SD 52,2088,0.29523809523809524,2018-2019
+Forest Park Elementary School,2413,Portland SD 1J,2180,0.4105263157894737,2018-2019
+Sojourner School,2733,North Clackamas SD 12,1924,0.425531914893617,2018-2019
+Scholls Heights Elementary School,2781,Beaverton SD 48J,2243,0.4528301886792453,2018-2019
+Grandhaven Elementary School,2784,McMinnville SD 40,2256,0.40869565217391307,2018-2019
+Paul L Patterson Elementary School,3159,Hillsboro SD 1J,2239,0.3626373626373626,2018-2019
+Orenco Elementary School,3160,Hillsboro SD 1J,2239,0.3881578947368421,2018-2019
+Spring Mountain Elementary School,3198,North Clackamas SD 12,1924,0.4267515923566879,2018-2019
+Miller Elementary School,3215,Salem-Keizer SD 24J,2142,0.1839080459770115,2018-2019
+High Lakes Elementary School,3218,Bend-LaPine Administrative SD 1,1976,0.45410628019323673,2018-2019
+Highland School at Kenwood Elementary School,3219,Bend-LaPine Administrative SD 1,1976,0.45689655172413796,2018-2019
+Westside Village Magnet School at Kingston Elementary School,3221,Bend-LaPine Administrative SD 1,1976,0.34615384615384615,2018-2019
+Middleton Elementary School,3222,Sherwood SD 88J,2244,0.4393063583815029,2018-2019
+Village School,3229,Eugene SD 4J,2082,0.2222222222222222,2018-2019
+Ridgeline Montessori,3233,Eugene SD 4J,2082,0.3333333333333333,2018-2019
+Oak Grove Elementary,3342,North Clackamas SD 12,1924,0.275,2018-2019
+Days Creek Charter School,3348,Douglas County SD 15,1993,0.17647058823529413,2018-2019
+Prospect Charter School,3356,Prospect SD 59,2045,0.16666666666666666,2018-2019
+Eddyville Charter School,3361,Lincoln County SD,2097,0.13636363636363635,2018-2019
+North Powder Charter School,3365,North Powder SD 8J,2214,0.21739130434782608,2018-2019
+Weddle Elementary School,3374,Salem-Keizer SD 24J,2142,0.13095238095238096,2018-2019
+Lamb Elementary School,3375,Salem-Keizer SD 24J,2142,0.1941747572815534,2018-2019
+Hammond Elementary School,3376,Salem-Keizer SD 24J,2142,0.31451612903225806,2018-2019
+Hallman Elementary School,3377,Salem-Keizer SD 24J,2142,0.17204301075268819,2018-2019
+Perrydale School,3378,Perrydale SD 21,2192,0.2647058823529412,2018-2019
+Triangle Lake Charter School,3401,Blachly SD 90,2095,0.2916666666666667,2018-2019
+Dufur School,3402,Dufur SD 29,2229,0.35294117647058826,2018-2019
+Desert View Elementary School,3426,Hermiston SD 8,2206,0.3708609271523179,2018-2019
+Echo School,3433,Echo SD 5,2203,0.40476190476190477,2018-2019
+Cove Charter School,3434,Cove SD 15,2216,0.41935483870967744,2018-2019
+Kings Valley Charter School,3440,Philomath SD 17J,1900,0.15,2018-2019
+Opal School of the Portland Children's Museum,3451,Portland SD 1J,2180,0.2222222222222222,2018-2019
+Bolton Primary School,3455,West Linn-Wilsonville SD 3J,1922,0.4019607843137255,2018-2019
+Luckiamute Valley Charter School,3461,Dallas SD 2,2190,0.2222222222222222,2018-2019
+Ash Creek Elementary School,3464,Central SD 13J,2191,0.2912621359223301,2018-2019
+Multnomah Learning Academy,3490,Reynolds SD 7,2182,0.3181818181818182,2018-2019
+Riverview School,3503,Lebanon Community SD 9,2101,0.2967032967032967,2018-2019
+Pioneer School,3504,Lebanon Community SD 9,2101,0.3582089552238806,2018-2019
+Sand Ridge Charter School,3505,Lebanon Community SD 9,2101,0.43283582089552236,2018-2019
+Earl Boyles Elementary,3525,David Douglas SD 40,2187,0.31746031746031744,2018-2019
+Lee Elementary School,3526,Salem-Keizer SD 24J,2142,0.3548387096774194,2018-2019
+Optimum Learning Environment Charter School,3528,Salem-Keizer SD 24J,2142,0.32432432432432434,2018-2019
+Forest Ridge Elementary School,3529,Salem-Keizer SD 24J,2142,0.3018867924528302,2018-2019
+Imlay Elementary School,3536,Hillsboro SD 1J,2239,0.35353535353535354,2018-2019
+Hogan Cedars Elementary School,3543,Gresham-Barlow SD 10J,2183,0.30275229357798167,2018-2019
+Prairie Mountain School,3567,Bethel SD 52,2088,0.3163265306122449,2018-2019
+Lewis & Clark Elementary School,3569,St Helens SD 502,1948,0.20454545454545456,2018-2019
+Multi-sensory Instruction Teaching Children Hands-On (MITCH),3579,Tigard-Tualatin SD 23J,2242,0.38333333333333336,2018-2019
+Arthur Academy,3580,David Douglas SD 40,2187,0.35,2018-2019
+Lighthouse Charter School,3615,Coos Bay SD 9,1965,0.32432432432432434,2018-2019
+Trillium,3616,Portland SD 1J,2180,0.2222222222222222,2018-2019
+Brockway Elementary School,3624,Winston-Dillard SD 116,2002,0.17117117117117117,2018-2019
+Butler Creek Elementary School,3649,Centennial SD 28J,2185,0.31092436974789917,2018-2019
+Boones Ferry Primary School,3913,West Linn-Wilsonville SD 3J,1922,0.3609467455621302,2018-2019
+Pine Ridge Elementary,3947,Bend-LaPine Administrative SD 1,1976,0.4074074074074074,2018-2019
+Fern Hill Elementary School,3986,Forest Grove SD 15,2241,0.23333333333333334,2018-2019
+Salish Ponds Elementary School,3989,Reynolds SD 7,2182,0.1,2018-2019
+Emerson School,3991,Portland SD 1J,2180,0.34285714285714286,2018-2019
+El Puente,4005,North Clackamas SD 12,1924,0.2647058823529412,2018-2019
+Eagle Rock Elementary School,4020,Eagle Point SD 9,2043,0.30985915492957744,2018-2019
+Coquille Valley Elementary,4025,Coquille SD 8,1964,0.3504273504273504,2018-2019
+Siletz Valley Schools,4038,Lincoln County SD,2097,0.15384615384615385,2018-2019
+Four Rivers Community School,4040,Oregon Department of Education,2336,0.2777777777777778,2018-2019
+Harritt Elementary School,4068,Salem-Keizer SD 24J,2142,0.29523809523809524,2018-2019
+Ensworth Elementary School,4129,Bend-LaPine Administrative SD 1,1976,0.36363636363636365,2018-2019
+Cesar Chavez Elementary School,4146,Eugene SD 4J,2082,0.25882352941176473,2018-2019
+Holt Elementary School,4157,Eugene SD 4J,2082,0.2830188679245283,2018-2019
+City View Charter School,4206,Hillsboro SD 1J,2239,0.35135135135135137,2018-2019
+Reynolds Arthur Academy,4216,Reynolds SD 7,2182,0.35555555555555557,2018-2019
+Sherwood Charter School,4220,Sherwood SD 88J,2244,0.40476190476190477,2018-2019
+South Columbia Family School,4221,Scappoose SD 1J,1944,0.23076923076923078,2018-2019
+Clackamas Web Academy,4223,North Clackamas SD 12,1924,0.16666666666666666,2018-2019
+Woodburn Arthur Academy,4230,Woodburn SD 103,2146,0.16666666666666666,2018-2019
+Joan Austin Elementary School,4342,Newberg SD 29J,2254,0.32,2018-2019
+Alberta Rider Elementary School,4364,Tigard-Tualatin SD 23J,2242,0.3974358974358974,2018-2019
+Valley Inquiry Charter School,4390,Salem-Keizer SD 24J,2142,0.34146341463414637,2018-2019
+Oregon Connections Academy,4399,Santiam Canyon SD 129J,2104,0.3032258064516129,2018-2019
+Portland Arthur Academy Charter School,4400,Portland SD 1J,2180,0.3,2018-2019
+Tom McCall Elementary School,4429,Redmond SD 2J,1977,0.38235294117647056,2018-2019
+Philander Lee Elementary School,4435,Canby SD 86,1929,0.29523809523809524,2018-2019
+Cascade Heights Public Charter School,4475,North Clackamas SD 12,1924,0.35,2018-2019
+John Muir Elementary School,4476,Ashland SD 5,2041,0.15384615384615385,2018-2019
+Springwater Environmental Sciences School,4480,Oregon City SD 62,1928,0.38461538461538464,2018-2019
+Sweet Home Charter School,4484,Sweet Home SD 55,2102,0.35294117647058826,2018-2019
+Portland Village School,4534,Portland SD 1J,2180,0.36065573770491804,2018-2019
+Academy for Character Education,4555,South Lane SD 45J3,2087,0.36363636363636365,2018-2019
+Alliance Charter Academy,4585,Oregon City SD 62,1928,0.34782608695652173,2018-2019
+Corbett School,4592,Corbett SD 39,2186,0.2949640287769784,2018-2019
+Madrone Trail Public Charter School,4593,Medford SD 549C,2048,0.2,2018-2019
+Forest Grove Community School,4595,Forest Grove SD 15,2241,0.35294117647058826,2018-2019
+Gresham Arthur Academy,4601,Gresham-Barlow SD 10J,2183,0.40816326530612246,2018-2019
+St Helens Arthur Academy,4602,St Helens SD 502,1948,0.35555555555555557,2018-2019
+The Cottonwood School of Civics and Science,4604,Oregon Department of Education,2336,0.22580645161290322,2018-2019
+Inavale Community Partners dba Muddy Creek Charter School,4637,Corvallis SD 509J,1901,0.45161290322580644,2018-2019
+Sue Buel Elementary,4639,McMinnville SD 40,2256,0.3069306930693069,2018-2019
+Creative Science School,4640,Portland SD 1J,2180,0.2727272727272727,2018-2019
+Free Orchards Elementary School,4641,Hillsboro SD 1J,2239,0.2878787878787879,2018-2019
+Lincoln Street Elementary School,4642,Hillsboro SD 1J,2239,0.17333333333333334,2018-2019
+Quatama Elementary School,4643,Hillsboro SD 1J,2239,0.4065040650406504,2018-2019
+Ponderosa Elementary,4646,Bend-LaPine Administrative SD 1,1976,0.3310344827586207,2018-2019
+Summit Learning Charter,4670,Estacada SD 108,1930,0.2727272727272727,2018-2019
+Bonny Slope Elementary School,4671,Beaverton SD 48J,2243,0.4371859296482412,2018-2019
+William E Miller Elementary,4680,Bend-LaPine Administrative SD 1,1976,0.45248868778280543,2018-2019
+Oregon Virtual Academy,4690,North Bend SD 13,1966,0.2396694214876033,2018-2019
+Silvies River Charter School,4702,Frenchglen SD 16,2020,0.20588235294117646,2018-2019
+Rosedale Elementary School,4703,Hillsboro SD 1J,2239,0.30864197530864196,2018-2019
+Springville K-8 School,4712,Beaverton SD 48J,2243,0.45789473684210524,2018-2019
+Scouters Mountain Elementary,4713,North Clackamas SD 12,1924,0.3624161073825503,2018-2019
+Verne A Duncan Elementary School,4714,North Clackamas SD 12,1924,0.3082706766917293,2018-2019
+The Ivy School,4720,Oregon Department of Education,2336,0.375,2018-2019
+Baker Web Academy,4728,Baker SD 5J,1894,0.22340425531914893,2018-2019
+Edy Ridge Elementary School,4730,Sherwood SD 88J,2244,0.44508670520231214,2018-2019
+Camas Ridge Community Elementary,4739,Eugene SD 4J,2082,0.3,2018-2019
+Timber Ridge School,4744,Greater Albany Public SD 8J,2100,0.3466666666666667,2018-2019
+Molalla River Academy,4745,Molalla River SD 35,1925,0.2,2018-2019
+The Community Roots School,4746,Silver Falls SD 4J,2138,0.3181818181818182,2018-2019
+Ardenwald Elementary School,4762,North Clackamas SD 12,1924,0.313953488372093,2018-2019
+Happy Valley Elementary School,4763,North Clackamas SD 12,1924,0.4098360655737705,2018-2019
+Lewelling Elementary School,4764,North Clackamas SD 12,1924,0.2236842105263158,2018-2019
+Linwood Elementary School,4765,North Clackamas SD 12,1924,0.125,2018-2019
+Oregon Trail Elementary School,4766,North Clackamas SD 12,1924,0.3,2018-2019
+Rosland Elementary,4793,Bend-LaPine Administrative SD 1,1976,0.35294117647058826,2018-2019
+Arco Iris Spanish Immersion School,4805,Beaverton SD 48J,2243,0.35135135135135137,2018-2019
+Oregon Trail  Academy,4820,Oregon Trail SD 46,1926,0.4716981132075472,2018-2019
+Logos Public Charter School,4821,Medford SD 549C,2048,0.2571428571428571,2018-2019
+Rockwood Preparatory Academy,4822,Reynolds SD 7,2182,0.24074074074074073,2018-2019
+Sunny Wolf Charter School,4823,Three Rivers/Josephine County SD,2055,0.3939393939393939,2018-2019
+Eagle Charter School,4850,Oregon Department of Education,2336,0.29411764705882354,2018-2019
+Kalapuya Elementary School,4858,Salem-Keizer SD 24J,2142,0.4189189189189189,2018-2019
+Hope Chinese Charter School,4867,Beaverton SD 48J,2243,0.45263157894736844,2018-2019
+Lowrie Primary School,5056,West Linn-Wilsonville SD 3J,1922,0.37037037037037035,2018-2019
+Trillium Creek Primary School,5057,West Linn-Wilsonville SD 3J,1922,0.4307692307692308,2018-2019
+Two Rivers Dos Rios Elementary,5059,Springfield SD 19,2083,0.18681318681318682,2018-2019
+Le Monde French Immersion Public Charter School,5060,Portland SD 1J,2180,0.45689655172413796,2018-2019
+Cesar E Chavez Elem,5064,Salem-Keizer SD 24J,2142,0.23728813559322035,2018-2019
+Battle Creek Elementary School,5066,Salem-Keizer SD 24J,2142,0.27702702702702703,2018-2019
+Kids Unlimited Academy,5205,Medford SD 549C,2048,0.3150684931506849,2018-2019
+Kairos PDX,5218,Portland SD 1J,2180,0.07407407407407407,2018-2019
+Crater Lake Charter Academy,5251,Eagle Point SD 9,2043,0.16666666666666666,2018-2019
+Mountain View Academy,5252,Lowell SD 71,2092,0.42857142857142855,2018-2019
+Silver Rail Elementary School,5293,Bend-LaPine Administrative SD 1,1976,0.28431372549019607,2018-2019
+Dallas Community Charter,5298,Dallas SD 2,2190,0.18518518518518517,2018-2019
+Barnes Butte Elementary,5302,Crook County SD,1970,0.24806201550387597,2018-2019
+Bend International School,5309,Bend-LaPine Administrative SD 1,1976,0.4666666666666667,2018-2019
+Bridge Charter Academy,5349,Lowell SD 71,2092,0.08333333333333333,2018-2019
+Sato Elementary School,5382,Beaverton SD 48J,2243,0.4635416666666667,2018-2019
+Rose City Park,5427,Portland SD 1J,2180,0.3873239436619718,2018-2019
+Gib Olinger Elementary School,5434,Milton-Freewater Unified SD 7,2205,0.25133689839572193,2018-2019
+Cascade Virtual Academy,5440,Mitchell SD 55,2249,0.125,2018-2019
+Oregon Family School,5446,Harney County SD 4,2015,0.10526315789473684,2018-2019

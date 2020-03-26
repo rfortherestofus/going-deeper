@@ -74,13 +74,13 @@ background-image:url("images/highlight.jpg")
 ## Reorder Plots to Highlight Findings
 
 ```{r eval = TRUE}
-math_scores_chronic_absenteeism <- read_rds("data/math_scores_chronic_absenteeism.rds")
+third_grade_math_proficiency <- read_rds("data/third_grade_math_proficiency.rds")
 ```
 
 ```{r eval = TRUE}
-math_scores_chronic_absenteeism %>% 
-  top_n(10, percent_not_proficient_math) %>% 
-  ggplot(aes(x = percent_not_proficient_math,
+third_grade_math_proficiency %>% 
+  top_n(10, percent_proficient) %>% 
+  ggplot(aes(x = percent_proficient,
              y = school)) +
   geom_col()
 ```
@@ -92,12 +92,13 @@ math_scores_chronic_absenteeism %>%
 
 
 ```{r eval = TRUE}
-math_scores_chronic_absenteeism %>% 
-  top_n(10, percent_not_proficient_math) %>% 
-  ggplot(aes(x = percent_not_proficient_math,
-             y = reorder(school, percent_not_proficient_math))) +
+third_grade_math_proficiency %>% 
+  top_n(10, percent_proficient) %>% 
+  ggplot(aes(x = percent_proficient,
+             y = reorder(school, percent_proficient))) +
   geom_col()
 ```
+
 
 ---
 
@@ -530,9 +531,7 @@ math_scores_chronic_absenteeism %>%
 ```{r}
 library(gghighlight)
 math_scores_chronic_absenteeism %>% 
-  ggplot(aes(x = percent_not_proficient_math,
-             y = percent_chronically_absent)) +
-  geom_bin2d()
+  ggplot(aes(x = percent_not_proficient_math)) +
   geom_histogram()
   geom_point(alpha = 0.5) +
   gghighlight(percent_chronically_absent == max(percent_chronically_absent)) +
@@ -550,7 +549,7 @@ Add FT tweet from 1/23/20 from John Murdoch to show it
 http://www.thefunctionalart.com/2020/01/an-example-of-how-to-annotate.html
 
 
-## ggrepel
+
 
 # Make it Sparkle
 
@@ -572,6 +571,7 @@ https://www.andrewheiss.com/blog/2017/09/27/working-with-r-cairo-graphics-custom
 
 ## ggplot extensions
 
+- ggrepel
 - gganimate
 - ggridges
 - https://github.com/corybrunson/ggalluvial
@@ -582,6 +582,7 @@ https://www.andrewheiss.com/blog/2017/09/27/working-with-r-cairo-graphics-custom
 - https://github.com/econandrew/ggtreemap
 - https://github.com/hrbrmstr/waffle
 - Patchwork
+- shadowtext
 
 Collections
 - http://www.ggplot2-exts.org/gallery/
