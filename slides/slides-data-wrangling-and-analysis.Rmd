@@ -68,13 +68,13 @@ data_frame <- read_excel(path = "directory_name/file_name.xlsx",
 
 
 ```{r eval = TRUE, echo = FALSE}
-german_speakers <- read_excel(path = here("data-raw", "German and French Speakers.xlsx"),
+german_speakers <- read_excel(path = here("data-raw", "german-and-french-speakers.xlsx"),
                               sheet = "German speakers") %>% 
   clean_names()
 ```
 
 ```{r eval = FALSE}
-german_speakers <- read_excel(path = "data-raw/German and French Speakers.xlsx",
+german_speakers <- read_excel(path = "data-raw/german-and-french-speakers.xlsx",
                               sheet = "German speakers") %>% 
   clean_names()
 ```
@@ -88,7 +88,6 @@ german_speakers
 
 
 ---
-
 
 ## Other Packages for Importing Data
 
@@ -127,6 +126,8 @@ class: my-turn
 Throughout, I'll be working with [data on third grade math proficiency in Oregon schools](https://www.oregon.gov/ode/educator-resources/assessment/Pages/Assessment-Group-Reports.aspx).
 
 I'll do the following:
+
+--
 
 1. Create a new project
 
@@ -180,10 +181,16 @@ background-image:url("images/berries.jpg")
 
 ---
 
+class: center, middle
+
+![](images/tidy-workflow.png)
+
+---
+
 ## Untidy Data
 
 ```{r eval = TRUE, echo = FALSE}
-german_speakers_numeric <- read_excel(path = here("data-raw", "German and French Speakers.xlsx"),
+german_speakers_numeric <- read_excel(path = here("data-raw", "german-and-french-speakers.xlsx"),
                               sheet = "German speakers",
                               na = "-") %>% 
   clean_names()
@@ -191,7 +198,7 @@ german_speakers_numeric <- read_excel(path = here("data-raw", "German and French
 
 
 ```{r echo = FALSE, eval = FALSE}
-german_speakers_numeric <- read_excel(path = "data-raw/German and French Speakers.xlsx",
+german_speakers_numeric <- read_excel(path = "data-raw/german-and-french-speakers.xlsx",
                               sheet = "German speakers",
                               na = "-") %>% 
   clean_names()
@@ -199,7 +206,7 @@ german_speakers_numeric <- read_excel(path = "data-raw/German and French Speaker
 
 --
 
-```{r eval = TRUE}
+```{r eval = TRUE, echo = FALSE}
 german_speakers_numeric
 ```
 
@@ -211,7 +218,6 @@ german_speakers_numeric
 
 ```{r eval = TRUE}
 german_speakers_numeric %>% 
-  group_by(state) %>% 
   mutate(total = number_of_german_speakers_2017 + number_of_german_speakers_2018 + number_of_german_speakers_2019) %>% 
   select(state, total)
 ```
@@ -228,15 +234,14 @@ But what if we have 10 or 20 years of data? Are we going to write out a all of t
 
 
 ```{r eval = TRUE, echo = FALSE}
-german_speakers_tidy <- german_speakers %>% 
-  pivot_longer(-state) %>% 
-  mutate(year = parse_number(name)) %>% 
-  mutate(number = parse_number(value)) %>% 
-  select(state, year, number)
+german_speakers_tidy <- german_speakers_numeric %>% 
+  pivot_longer(cols = -state,
+               names_to = "year",
+               values_to = "number")
 ```
 
 ```{r eval = TRUE, echo = FALSE}
-german_speakers_tidy
+german_speakers_tidy 
 ```
 
 ---
@@ -247,7 +252,7 @@ german_speakers_tidy
 ```{r eval = TRUE}
 german_speakers_tidy %>% 
   group_by(state) %>% 
-  summarize(total = sum(number))
+  summarize(total = sum(number, na.rm = TRUE))
 ```
 
 
@@ -310,7 +315,7 @@ background-image:url("images/shape.jpg")
 
 ## Reshaping Data: `pivot_longer()`
 
-The `pivot_longer()` function helps us in situations where column headers are values, not variable names.
+The `pivot_longer()` function helps us in situations where **column headers are values, not variable names**.
 
 --
 
@@ -380,7 +385,8 @@ german_speakers %>%
   pivot_longer(cols = -state,
                names_to = "year",
                values_to = "number") %>% 
-  pivot_wider(names_from = "state", #<<
+  pivot_wider(id_cols = year, #<<
+              names_from = "state", #<<
               values_from = "number") #<<
 ```
 
@@ -426,11 +432,11 @@ Do the following to create a new data frame called `enrollment_by_race_ethnicity
 
 --
 
-1. select() the `district_id` variable as well as those about race/ethnicity and get rid of all others (hint: use the [`contains()` helper function](https://dplyr.tidyverse.org/reference/select.html#useful-functions) within `select()`)
+1. select() the `district_id` variable as well as those about number of students by race/ethnicity and get rid of all others (hint: use the [`contains()` helper function](https://dplyr.tidyverse.org/reference/select.html#useful-functions) within `select()`)
 
 --
 
-1. Use `pivot_longer()` to convert all of the grade variables into one variable
+1. Use `pivot_longer()` to convert all of the race/ethnicity variables into one variable
 
 --
 
@@ -451,7 +457,7 @@ background-image:url("images/missing.jpg")
 
 ---
 
-## Dealing with Missing Data: `na_if()`
+## `na_if()`
 
 ```{r eval = TRUE}
 german_speakers %>% 
@@ -462,7 +468,7 @@ german_speakers %>%
 
 ---
 
-## Dealing with Missing Data: `na_if()`
+## `na_if()`
 
 ```{r german_speakers_na_if}
 german_speakers %>% 
@@ -474,7 +480,7 @@ german_speakers %>%
 
 ---
 
-## Dealing with Missing Data: `na_if()`
+## `na_if()`
 
 ```{r ref.label = "german_speakers_na_if", eval = TRUE, echo = FALSE}
 ```
@@ -488,7 +494,7 @@ You can also do this with na arguments in read_excel etc
 
 ---
 
-## Dealing with Missing Data: `replace_na()`
+## `replace_na()`
 
 
 ```{r replace_na_example}
@@ -508,7 +514,7 @@ The `replace_na()` function does the opposite: turns NAs into values.
 ---
 
 
-## Dealing with Missing Data: `replace_na()`
+## `replace_na()`
 
 
 ```{r ref.label = "replace_na_example", eval = TRUE, echo = FALSE}
@@ -520,7 +526,7 @@ class: my-turn
 
 ## My Turn
 
-1. Convert all of the missing values in the `number_proficient` variable to NA using `na_if()`
+I'll convert all of the missing values in the `number_proficient` variable to NA using `na_if()`
 
 *I don't have any values where using `replace_na()` makes sense, but you'll use it shortly!*
 
@@ -550,7 +556,32 @@ background-image:url("images/types.jpg")
 
 ## Changing Variable Types
 
-```{r error = TRUE, eval = TRUE}
+```{r eval = TRUE, echo = TRUE}
+german_speakers %>% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %>% 
+  mutate(number = na_if(number, "-")) %>% 
+  mutate(number = replace_na(number, 0))
+```
+
+---
+
+## Changing Variable Types
+
+```{r}
+german_speakers %>% 
+  pivot_longer(cols = -state,
+               names_to = "year", 
+               values_to = "number") %>% 
+  mutate(number = na_if(number, "-")) %>% 
+  mutate(number = replace_na(number, 0)) %>% 
+  summarize(total = sum(number)) #<<
+```
+
+--
+
+```{r error = TRUE, eval = TRUE, echo = FALSE}
 german_speakers %>% 
   pivot_longer(cols = -state,
                names_to = "year", 
@@ -621,7 +652,7 @@ background-image:url("images/throwing-pot.jpg")
 
 ```{r eval = FALSE}
 data_frame %>% 
-  mutate(new_variable = recode(existing_variable, "old_value" = "new_value"))
+  mutate(variable = recode(variable, "old_value" = "new_value"))
 ```
 
 ---
@@ -656,7 +687,9 @@ german_speakers %>%
 
 ```{r}
 data_frame %>% 
-  mutate(new_variable = if_else(existing_variable == "some_value", "if_true_value" = "else_value"))
+  mutate(variable = if_else(variable == "some_value", 
+                            "if_true_value", 
+                            "else_value"))
 ```
 
 ---
@@ -692,7 +725,7 @@ german_speakers %>%
 
 ```{r}
 data_frame %>% 
-  mutate(new_variable = str_remove(existing_variable, "text to remove"))
+  mutate(variable = str_remove(variable, "text to remove"))
 ```
 
 ---
@@ -739,7 +772,7 @@ Image courtesy of [Allison Horst](https://github.com/allisonhorst/stats-illustra
 
 ```{r}
 data_frame %>% 
-  mutate(new_numeric_variable = parse_number(character_variable_with_number_in_it))
+  mutate(variable = parse_number(variable))
 ```
 
 ---
@@ -771,10 +804,10 @@ german_speakers %>%
 
 ```{r}
 data_frame %>% 
-  mutate(new_variable = case_when(
-    existing_variable == "some_value" ~ "new_value",
-    existing_variable == "some_other_value" ~ "new_value_2",
-    existing_variable == "some_third_value" ~ "new_value_3",
+  mutate(variable = case_when(
+    variable == "some_value" ~ "new_value",
+    variable == "some_other_value" ~ "new_value_2",
+    variable == "some_third_value" ~ "new_value_3",
     TRUE ~ "value_for_all_observations_that_dont_match_any_above_criteria"
   ))
 ```
@@ -857,16 +890,21 @@ class: my-turn
 
 I'll convert all instances of the `proficiency_level` variable to more meaningful observations using: 
 
+--
+
 1. `recode()`
 
 1. `if_else()`
-
-1. `case_when()`
 
 1. `str_remove()`
 
 1. `parse_number()`
 
+1. `case_when()`
+
+--
+
+I'll then use `case_when()` to convert the proficiency level into a dichotomous (i.e. Proficient/Not Proficient).
 
 ---
 
@@ -880,9 +918,15 @@ class: inverse
 
 1. Convert all instances of the `race_ethnicity` variable to more meaningful observations (e.g. turn "american_indian_alaska_native" into "American Indian/Alaskan Native") using any of the following:
 
+--
+
   - `recode()`
+  
+--
 
   - `if_else()`
+
+--
 
   - `case_when()`
 
@@ -899,6 +943,8 @@ background-image:url("images/summarize.jpg")
 
 ## `group_by()` + `mutate()`
 
+--
+
 ```{r group_by_mutate_example}
 german_speakers %>% 
   pivot_longer(cols = -state,
@@ -909,7 +955,8 @@ german_speakers %>%
   mutate(number = as.numeric(number)) %>% 
   mutate(year = parse_number(year)) %>% 
   group_by(year) %>% #<<
-  mutate(pct = number / sum(number)) #<<
+  mutate(pct = number / sum(number)) %>% #<<
+  arrange(year, state)
 ```
 
 ---
@@ -923,6 +970,8 @@ german_speakers %>%
 
 ## `ungroup()`
 
+--
+
 ```{r group_by_mutate_no_ungroup}
 german_speakers %>% 
   pivot_longer(cols = -state,
@@ -934,7 +983,8 @@ german_speakers %>%
   mutate(year = parse_number(year)) %>% 
   group_by(year) %>% #<<
   mutate(pct = number / sum(number)) %>% #<<
-  top_n(1, pct) #<<
+  slice_max(pct, 1) %>% #<<
+  arrange(year, state)
 ```
 
 ---
@@ -960,7 +1010,7 @@ german_speakers %>%
   group_by(year) %>%
   mutate(pct = number / sum(number)) %>% 
   ungroup() %>% #<<
-  top_n(1, pct) 
+  slice_max(pct, 1) 
 ```
 
 ---
@@ -978,7 +1028,17 @@ class: my-turn
 
 ## My Turn
 
-I'll calculate the percent of students at each school who are proficient in math. 
+I'll calculate the percent of students at each school who are proficient in math. To do this, I'll need to use both:
+
+--
+
+- `group_by()` and `summarize()` 
+
+- `group_by()` and `mutate()` 
+
+--
+
+And I can't forget to `ungroup()`!
 
 ---
 
@@ -1003,7 +1063,7 @@ class: center, middle, dk-section-title
 
 background-image:url("images/bind.jpg")
 
-# Binding data frames together
+# Binding Data Frames
 
 
 
@@ -1082,14 +1142,36 @@ german_speakers_2018 <- german_speakers_2018 %>%
 german_speakers_2019 <- german_speakers_2019 %>% 
   mutate(year = 2019)
 
-german_speakers_2018_2019 <- german_speakers_2018 %>% 
-  mutate(year = 2018) %>% 
-  bind_rows(mutate(german_speakers_2019, year = 2019))
+german_speakers_2018_2019 <- bind_rows(german_speakers_2018,
+                                       german_speakers_2019)
 ```
 
 ---
 
 ## bind_rows()
+
+```{r eval = TRUE, include = TRUE}
+german_speakers_2018_2019
+```
+
+---
+
+## bind_cols()
+
+```{r eval = TRUE, include = TRUE}
+german_speakers_2018 <- german_speakers_2018 %>% 
+  mutate(year = 2018)
+
+german_speakers_2019 <- german_speakers_2019 %>% 
+  mutate(year = 2019)
+
+german_speakers_2018_2019 <- bind_cols(german_speakers_2018,
+                                       german_speakers_2019)
+```
+
+---
+
+## bind_cols()
 
 ```{r eval = TRUE, include = TRUE}
 german_speakers_2018_2019
@@ -1113,10 +1195,31 @@ class: inverse
 
 2. Use bind_rows() to make a `enrollment_by_race_ethnicity` data frame.
 
+Hint: You'll need to change some of your code from importing the 2018-2019 data to make the `race_ethnicity` variable get recoded correctly!
+
 ---
 
+class: center, middle, dk-section-title
+
+background-image:url("images/code-heart.jpg")
 
 # Functions
+
+---
+
+## When to Use Functions?
+
+You should consider writing a function whenever you’ve copied and pasted a block of code more than twice (i.e. you now have three copies of the same code).
+
+
+---
+
+## What is a Function?
+
+<iframe src="https://player.vimeo.com/video/365850546" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+Source: [R for the Rest of Us Blog](https://rfortherestofus.com/2019/10/how-to-make-functions-in-r/)
+
 
 ---
 
@@ -1136,33 +1239,30 @@ class: inverse
 Source: [R for Data Science, Chapter 19](https://r4ds.had.co.nz/functions.html)
 ]
 
-
 ---
 
-## When to Use Functions?
-
-You should consider writing a function whenever you’ve copied and pasted a block of code more than twice (i.e. you now have three copies of the same code).
-
---
-
-## Add in Video Here
-
-https://rfortherestofus.com/2019/10/how-to-make-functions-in-r/
-
----
-
+class: my-turn
 
 ## My Turn
 
-I'll create a function to import each year of data math proficiency data, then use `bind_rows()` to bind them together
+I'll create a function to clean each year of math proficiency data, then use `bind_rows()` to bind them together
+
+---
+
+class: inverse
 
 ## Your Turn
 
-1. Create a function to import each year of data enrollment data, then use `bind_rows()` to bind them together
+Create a function to clean each year of enrollment data, then use `bind_rows()` to bind them together
 
 --
 
-1. In addition to the argument for year, you'll need to use an argument to use in the `str_remove()` section of your code.
+Arguments you'll need to use:
+
+- Data year
+
+- Text to remove in the `str_remove()` line
+
 
 
 ---
@@ -1208,14 +1308,16 @@ german_speakers_2019
 ## Data Merging
 
 ```{r eval = TRUE, include = FALSE}
-french_speakers_2019 <- read_excel(path = here("data-raw", "German and French Speakers.xlsx"),
-                              sheet = "French speakers 2019")
+french_speakers_2019 <- read_excel(path = here("data-raw", "german-and-french-speakers.xlsx"),
+                                   sheet = "French speakers 2019")
 ```
 
 ```{r include = TRUE, eval = FALSE}
-french_speakers_2019 <- read_excel(path = "data-raw/German and French Speakers.xlsx",
-                              sheet = "French speakers 2019")
+french_speakers_2019 <- read_excel(path = "data-raw/german-and-french-speakers.xlsx",
+                                   sheet = "French speakers 2019")
 ```
+
+--
 
 ```{r eval = TRUE, echo = FALSE}
 french_speakers_2019
@@ -1225,9 +1327,15 @@ french_speakers_2019
 
 ## Joins
 
+![](images/original-dfs.png)
+
+---
+
+## Joins
+
 ```{r}
-type_of_join <- (x, y,
-                 by = "id_variable")
+ type_of_join(x, y,
+              by = "id_variable"))
 ```
 
 --
@@ -1237,8 +1345,8 @@ What if we don't have a variable with the same name in both data frames?
 --
 
 ```{r}
-type_of_join <- (x, y,
-                 by = c("id_variable_x" = "id_variable_y")
+type_of_join(x, y,
+             by = c("id_variable_x" = "id_variable_y"))
 ```
 
 --
@@ -1248,9 +1356,9 @@ What if we need to join on multiple variables with different names in both data 
 --
 
 ```{r}
-type_of_join <- (x, y,
-                 by = c("id_variable_a" = "id_variable_b",
-                        "id_variable_c" = "id_variable_d")
+ type_of_join(x, y,
+              by = c("id_variable_a" = "id_variable_b",
+                     "id_variable_c" = "id_variable_d"))
 ```
 
 ---
@@ -1272,6 +1380,10 @@ type_of_join <- (x, y,
 
 All rows from x, and all columns from x and y. Rows in x with no match in y will have NA values in the new columns.
 
+---
+
+### `left_join()`
+
 .center[
 ![](images/left-join.gif)
 ]
@@ -1282,7 +1394,15 @@ All rows from x, and all columns from x and y. Rows in x with no match in y will
 
 ### `left_join()`
 
-```{r eval = TRUE}
+```{r eval = FALSE}
+left_join(german_speakers_2019,
+          french_speakers_2019,
+          by = "state")
+```
+
+--
+
+```{r eval = TRUE, echo = FALSE}
 left_join(german_speakers_2019,
           french_speakers_2019,
           by = "state")
@@ -1293,6 +1413,11 @@ left_join(german_speakers_2019,
 ### `right_join()`
 
 All rows from y, and all columns from x and y. Rows in y with no match in x will have NA values in the new columns.
+
+---
+
+### `right_join()`
+
 .center[
 ![](images/right-join.gif)
 ]
@@ -1314,6 +1439,11 @@ right_join(german_speakers_2019,
 ### `full_join()`
 
 All rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing.
+
+---
+
+### `full_join()`
+
 .center[
 ![](images/full-join.gif)
 ]
@@ -1334,6 +1464,11 @@ full_join(german_speakers_2019,
 ### `inner_join()`
 
 All rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing.
+
+---
+
+### `inner_join()`
+
 .center[
 ![](images/inner-join.gif)
 ]
@@ -1359,6 +1494,11 @@ inner_join(german_speakers_2019,
 ### `semi_join()`
 
 All rows from x where there are matching values in y, keeping just columns from x.
+
+---
+
+### `semi_join()`
+
 .center[
 ![](images/semi-join.gif)
 ]
@@ -1378,6 +1518,11 @@ semi_join(german_speakers_2019,
 ### `anti_join()`
 
 All rows from x where there are not matching values in y, keeping just columns from x.
+
+---
+
+### `anti_join()`
+
 .center[
 ![](images/anti-join.gif)
 ]
@@ -1417,15 +1562,15 @@ class: inverse
 
 ## Your Turn
 
-1. Download the oregon-districts-and-schools.xlsx file into the data-raw folder. 
+1. Download the oregon-districts.xlsx file into the data-raw folder. 
 
 --
 
-1. Import a new data frame called `oregon_districts_and_schools` from oregon-districts-and-schools.xlsx
+1. Import a new data frame called `oregon_districts` from oregon-districts.xlsx
 
 --
 
-1. Merge the `oregon_districts_and_schools` data frame into the `enrollment_by_race_ethnicity` data frame so you can see the names of the districts
+1. Merge the `oregon_districts` data frame into the `enrollment_by_race_ethnicity` data frame so you can see the names of the districts
 
 
 
@@ -1457,7 +1602,7 @@ french_and_german_speakers_2019
 
 ```{r}
 data_frame %>% 
-  rename("new_variable_name" = "old_variable_name")
+  rename(new_variable_name = old_variable_name)
 ```
 
 
@@ -1465,32 +1610,35 @@ data_frame %>%
 
 ## `rename()`
 
-```{r rename_example}
+```{r eval = TRUE}
 french_and_german_speakers_2019 <- left_join(german_speakers_2019,
                                              french_speakers_2019,
                                              by = "state") %>% 
-  rename("german_speakers" = "number") #<<
+  rename(german_speakers = number) #<<
 ```
 
 --
 
-```{r ref.label = "rename_example", eval = TRUE, echo = FALSE}
+```{r eval = TRUE, include = TRUE}
+french_and_german_speakers_2019
 ```
+
 
 ---
 
 ## `set_names()`
 
-```{r set_names_example}
+```{r eval = TRUE}
 french_and_german_speakers_2019 <- left_join(german_speakers_2019,
                                              french_speakers_2019,
                                              by = "state") %>% 
-  set_names(c("state", "german_speakers", "french_speakers")) #<<
+  set_names("state", "german_speakers", "french_speakers") #<<
 ```
 
 --
 
-```{r ref.label = "set_names_example", eval = TRUE, echo = FALSE}
+```{r eval = TRUE, include = TRUE}
+french_and_german_speakers_2019
 ```
 
 
@@ -1509,7 +1657,7 @@ class: inverse
 
 ## Your Turn
 
-Use either `rename()` or `set_names()` to give the `enrollment_and_reading_scores_by_race` data frame more meaningful names. In particular, change the `pct` variable to something more descriptive.
+Use either `rename()` or `set_names()` to give the `enrollment_by_race_ethnicity` data frame more meaningful variable names. In particular, change the `pct` variable to something more descriptive.
 
 
 ---
@@ -1549,7 +1697,7 @@ write_csv(french_and_german_speakers_2019,
 
 ```{r}
 write_csv(french_and_german_speakers_2019,
-          "data/french_and_german_speakers_2019.csv")
+          path = "data/french_and_german_speakers_2019.csv")
 ```
 
 ---
@@ -1563,7 +1711,7 @@ write_rds(french_and_german_speakers_2019,
 
 ```{r}
 write_rds(french_and_german_speakers_2019,
-          "data/french_and_german_speakers_2019.rds")
+          path = "data/french_and_german_speakers_2019.rds")
 ```
 
 
@@ -1588,5 +1736,5 @@ class: inverse
 
 ## Your Turn
 
-1. Export the `enrollment_by_race_ethnicity` data frame as an RDS file in the data directory (you'll need to make this directory)
+Export the `enrollment_by_race_ethnicity` data frame as an RDS file in the data directory (you'll need to make this directory)
 

@@ -21,6 +21,7 @@ library(tidyverse)
 library(readxl)
 library(janitor)
 library(knitr)
+library(here)
 ```
 
 class: center, middle, dk-section-title
@@ -49,6 +50,12 @@ background-image:url("images/highlight.jpg")
 
 ---
 
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+---
+
 class: center, middle, dk-section-title
 
 background-image:url("images/declutter.jpg")
@@ -57,6 +64,13 @@ background-image:url("images/declutter.jpg")
 
 
 ---
+
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+---
+
 
 class: center, middle, dk-section-title
 
@@ -67,20 +81,100 @@ background-image:url("images/explain.jpg")
 
 ---
 
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+---
+
 class: center, middle, dk-section-title
 
 background-image:url("images/sparkle.jpg")
 
 ## Sparkle
 
+---
+
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
 
 ---
 
 class: center, middle, dk-section-title
 
-background-image:url("images/highlight.jpg")
+background-image:url("images/messy.jpg")
 
-# Highlight
+# Tidy Data
+
+
+---
+
+## Can We Plot Untidy Data?
+
+```{r eval = TRUE, echo = FALSE}
+german_speakers_numeric <- read_excel(path = here("data-raw", "german-and-french-speakers.xlsx"),
+                                      sheet = "German speakers",
+                                      na = "-") %>% 
+  clean_names()
+```
+
+
+```{r echo = TRUE, eval = FALSE}
+german_speakers_numeric <- read_excel(path = "data-raw/german-and-french-speakers.xlsx",
+                                      sheet = "German speakers",
+                                      na = "-") %>% 
+  clean_names()
+```
+
+--
+
+```{r echo = TRUE, eval = TRUE, include = TRUE}
+german_speakers_numeric
+```
+
+---
+
+## Can We Plot Untidy Data?
+
+```{r}
+ggplot(data = german_speakers_numeric,
+       mapping = aes(x = ???,  #<<
+                     y = state))
+```
+
+---
+
+## Can We Plot Untidy Data?
+
+```{r eval = TRUE, include = TRUE}
+german_speakers_tidy <- german_speakers_numeric %>% 
+  pivot_longer(cols = -state,
+               names_to = "year",
+               values_to = "number") %>% 
+  mutate(year = parse_number(year))
+```
+
+--
+
+```{r echo = TRUE, eval = TRUE, include = TRUE}
+german_speakers_tidy
+```
+
+---
+
+## Can We Plot Untidy Data?
+
+```{r eval = TRUE, include = TRUE}
+ggplot(data = german_speakers_tidy,
+       mapping = aes(x = number,
+                     y = state)) +
+  geom_col() +
+  facet_wrap(~year)
+```
+
+
+
 
 ---
 
@@ -88,11 +182,11 @@ class: center, middle, dk-section-title
 
 background-image:url("images/pipes.jpg")
 
-## Pipe Data Into ggplot
+# Pipe Data Into ggplot
 
 ---
 
-### Load Data
+## Load Data
 
 ```{r eval = TRUE, echo = FALSE}
 third_grade_math_proficiency <- read_rds("../data/third_grade_math_proficiency.rds")
@@ -112,12 +206,12 @@ third_grade_math_proficiency
 
 ---
 
-### Pipe Data Into ggplot
+## Pipe Data Into ggplot
 
 ```{r pipe_data}
 third_grade_math_proficiency %>% 
-  filter(district == "Baker SD 5J") %>% 
-  filter(year == "2018-2019")
+  filter(year == "2018-2019") %>% 
+  filter(district == "Portland SD 1J")
 ```
 
 --
@@ -127,7 +221,7 @@ third_grade_math_proficiency %>%
 
 ---
 
-### Pipe Data Into ggplot
+## Pipe Data Into ggplot
 
 ```{r pipe_data_into_ggplot}
 third_grade_math_proficiency %>% 
@@ -135,23 +229,22 @@ third_grade_math_proficiency %>%
   filter(district == "Portland SD 1J") %>% 
   ggplot(aes(x = school, y = percent_proficient)) + #<<
   geom_col() + #<<
-  coord_flip()
+  coord_flip() #<<
 ```
 
 ---
 
-### Pipe Data Into ggplot
+## Pipe Data Into ggplot
 
 ```{r fig.height = 5, fig.width = 11, ref.label = "pipe_data_into_ggplot", echo = FALSE, include = TRUE, eval = TRUE}
 ```
-
 
 
 ---
 
 class: inverse
 
-### Your Turn
+## Your Turn
 
 1. Create a new RMarkdown document
 
@@ -171,13 +264,22 @@ class: inverse
 enrollment_by_race_ethnicity <- read_rds("../data/enrollment_by_race_ethnicity.rds")
 ```
 
-
-
 ---
 
 class: center, middle, dk-section-title
 
+background-image:url("images/highlight.jpg")
+
+# Highlight
+
+
+---
+
+
+class: center, middle, dk-section-title
+
 background-image:url("images/goya-cans.jpg")
+
 
 
 ## Reorder Plots to Highlight Findings
@@ -275,7 +377,8 @@ background-image:url("images/lines.jpg")
 ```{r points_only}
 third_grade_math_proficiency %>% 
   filter(district == "Portland SD 1J") %>% 
-  ggplot(aes(x = year, y = percent_proficient)) + #<<
+  ggplot(aes(x = year, 
+             y = percent_proficient)) +
   geom_line() #<<
 ```
 
@@ -293,7 +396,8 @@ third_grade_math_proficiency %>%
 ```{r first_line_chart}
 third_grade_math_proficiency %>% 
   filter(district == "Portland SD 1J") %>% 
-  ggplot(aes(x = year, y = percent_proficient,
+  ggplot(aes(x = year, 
+             y = percent_proficient,
              group = school)) + #<<
   geom_line()
 ```
@@ -306,16 +410,6 @@ third_grade_math_proficiency %>%
 ```
 
 
----
-
-class: center, middle
-
-![](images/jbm-covid-plot.jpeg)
-
-.small[
-Source: [Financial Times, March 11, 2020](https://twitter.com/jburnmurdoch/status/1237737352879112194)
-]
-
 
 ---
 
@@ -323,7 +417,7 @@ class: inverse
 
 ### Your Turn
 
-1. Make a line chart that shows the growth in the Hispanic/Latino population in school districts from 2017-2018 to 2018-2019
+Make a line chart that shows the growth in the Hispanic/Latino population in school districts from 2017-2018 to 2018-2019
 
 
 ???
@@ -344,6 +438,26 @@ class: center, middle, dk-section-title
 background-image:url("images/color.jpg")
 
 ## Use Color to Highlight Findings
+
+---
+
+
+
+
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+.small[
+Source: [Financial Times, March 11, 2020](https://twitter.com/jburnmurdoch/status/1237737352879112194)
+]
+
+---
+
+### Use Color to Highlight Findings
+
+```{r fig.height = 5, fig.width = 11, ref.label = "first_line_chart", echo = FALSE, include = TRUE, eval = TRUE}
+```
 
 ---
 
@@ -397,7 +511,7 @@ class: inverse
 
 --
 
-1. Create a new data frame called `highlight_district` and only include this school in it
+1. Create a new data frame called `highlight_district` and only include this district in it
 
 --
 
@@ -436,6 +550,39 @@ background-image:url("images/declutter.jpg")
 
 ---
 
+## Remove the Default Gray Background
+
+```{r remove_axis_titles_theme_minimal}
+third_grade_math_proficiency %>% 
+  filter(district == "Portland SD 1J") %>% 
+  ggplot(aes(x = year, y = percent_proficient,
+             group = school)) +
+  geom_line(color = rru_gray) + 
+  geom_line(data = highlight_school, 
+            inherit.aes = TRUE,
+            color = rru_orange) +
+  theme_minimal() #<<
+```
+
+---
+
+## Remove Axis Titles
+
+```{r fig.height = 5, fig.width = 11, ref.label = "remove_axis_titles_theme_minimal", echo = FALSE, include = TRUE, eval = TRUE}
+```
+
+---
+
+## `theme()`
+
+![](images/theme.gif)
+
+.small[
+Source: [`ggplot2` documentation](https://ggplot2.tidyverse.org/reference/theme.html)
+]
+
+---
+
 ## Remove Axis Titles
 
 ```{r remove_axis_titles}
@@ -447,11 +594,9 @@ third_grade_math_proficiency %>%
   geom_line(data = highlight_school, 
             inherit.aes = TRUE,
             color = rru_orange) +
-  theme_minimal() + #<<
+  theme_minimal() + 
   theme(axis.title = element_blank()) #<<
 ```
-
-
 
 ---
 
@@ -532,7 +677,7 @@ Use some combination of:
 
 --
 
-- Themes — e.g. `theme_minimal()` or `theme_ipsum()` from `hrbrthemes`
+- Complete themes: e.g. `theme_minimal()` or `theme_ipsum()` from `hrbrthemes`
 
 --
 
@@ -601,7 +746,8 @@ highlight_school <- third_grade_math_proficiency %>%
 --
 
 ```{r include = TRUE, eval = TRUE}
-highlight_school
+highlight_school %>% 
+  select(school, percent_proficient_display)
 ```
 
 
@@ -1089,7 +1235,7 @@ class: center, middle
 
 ---
 
-### TK: Something about removing gaps
+### Tweak Spacing Around Your Plot
 
 .small[
 ```{r remove_gaps}
@@ -1120,13 +1266,12 @@ third_grade_math_proficiency %>%
         panel.grid.minor = element_blank(),
         plot.title = element_markdown()) +
   scale_x_discrete(expand = expansion(add = c(0.1, 0.5))) #<<
-
 ```
 ]
 
 ---
 
-### TK: Something about removing gaps
+### Tweak Spacing Around Your Plot
 
 ```{r fig.height = 5, fig.width = 11, ref.label = "remove_gaps", echo = FALSE, include = TRUE, eval = TRUE}
 ```
@@ -1137,7 +1282,7 @@ class: inverse
 
 ### Your Turn
 
-TK
+Use the expand argument within the `scale_x_discrete()` function to remove any gaps in your plot
 
 ???
 
@@ -1198,6 +1343,37 @@ theme_dk <- function() {
 
 .small[
 ```{r theme_dk_plot}
+third_grade_math_proficiency %>% 
+  filter(district == "Portland SD 1J") %>% 
+  ggplot(aes(x = year, y = percent_proficient,
+             group = school)) +
+  geom_line(color = rru_gray) + 
+  geom_line(data = highlight_school, 
+            inherit.aes = TRUE,
+            color = rru_orange) +
+  geom_text(data = highlight_school, 
+            inherit.aes = TRUE,
+            aes(label = percent_proficient_display), 
+            color = rru_orange,
+            hjust = c(1.05, -0.05)) + 
+  scale_y_continuous(labels = percent_format(accuracy = 1)) + 
+  labs(title = "<span style = 'color: #FF7400;'>Vestal Elementary School</span> showed large gains in<br>third grade math proficiency scores from 2017-2018 to 2018-2019") +
+  annotate("text", 
+           x = 2.02, 
+           y = 0.4, 
+           label = "Gray lines show other\nPortland Public Schools\nfor comparison",
+           hjust = 0,
+           size = 3, 
+           color = "#A0A0A0") + 
+  scale_x_discrete(expand = expansion(add = c(0.1, 0.5))) +
+  theme_dk() #<<
+```
+]
+
+???
+
+.small[
+```{r}
 enrollment_by_race_ethnicity %>% 
   filter(race_ethnicity == "Hispanic/Latino") %>% 
   ggplot(aes(year, percent_of_total_enrollment,

@@ -60,6 +60,12 @@ background-image:url("images/highlight.jpg")
 
 ---
 
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+---
+
 class: center, middle, dk-section-title
 
 background-image:url("images/declutter.jpg")
@@ -68,6 +74,13 @@ background-image:url("images/declutter.jpg")
 
 
 ---
+
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+---
+
 
 class: center, middle, dk-section-title
 
@@ -78,20 +91,115 @@ background-image:url("images/explain.jpg")
 
 ---
 
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+---
+
 class: center, middle, dk-section-title
 
 background-image:url("images/sparkle.jpg")
 
 ## Sparkle
 
+---
+
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
 
 ---
 
 class: center, middle, dk-section-title
 
-background-image:url("images/highlight.jpg")
+background-image:url("images/messy.jpg")
 
-# Highlight
+# Tidy Data
+
+
+---
+
+## Can We Plot Untidy Data?
+
+
+
+
+
+```r
+german_speakers_numeric &lt;- read_excel(path = "data-raw/german-and-french-speakers.xlsx",
+                                      sheet = "German speakers",
+                                      na = "-") %&gt;% 
+  clean_names()
+```
+
+--
+
+
+```r
+german_speakers_numeric
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["number_of_german_speakers_2017"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["number_of_german_speakers_2018"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["number_of_german_speakers_2019"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"426","3":"395","4":"711"},{"1":"Alaska","2":"331","3":"201","4":"131"},{"1":"Arizona","2":"636","3":"858","4":"136"},{"1":"Arkansas","2":"NA","3":"635","4":"557"},{"1":"California","2":"440","3":"318","4":"854"},{"1":"Colorado","2":"251","3":"498","4":"768"},{"1":"Connecticut","2":"187","3":"334","4":"586"},{"1":"Delaware","2":"NA","3":"998","4":"453"},{"1":"District of Columbia","2":"799","3":"745","4":"180"},{"1":"Florida","2":"399","3":"924","4":"958"},{"1":"Georgia","2":"910","3":"293","4":"821"},{"1":"Hawaii","2":"NA","3":"303","4":"931"},{"1":"Idaho","2":"301","3":"349","4":"NA"},{"1":"Illinois","2":"156","3":"573","4":"827"},{"1":"Indiana","2":"469","3":"188","4":"728"},{"1":"Iowa","2":"816","3":"330","4":"657"},{"1":"Kansas","2":"328","3":"546","4":"501"},{"1":"Kentucky","2":"299","3":"976","4":"332"},{"1":"Louisiana","2":"266","3":"NA","4":"490"},{"1":"Maine","2":"376","3":"127","4":"206"},{"1":"Montana","2":"598","3":"296","4":"527"},{"1":"Nebraska","2":"252","3":"726","4":"232"},{"1":"Nevada","2":"910","3":"526","4":"647"},{"1":"New Hampshire","2":"896","3":"109","4":"818"},{"1":"New Jersey","2":"380","3":"961","4":"168"},{"1":"New Mexico","2":"574","3":"771","4":"336"},{"1":"New York","2":"135","3":"637","4":"207"},{"1":"North Carolina","2":"609","3":"970","4":"508"},{"1":"North Dakota","2":"891","3":"307","4":"652"},{"1":"Ohio","2":"960","3":"900","4":"186"},{"1":"Oklahoma","2":"769","3":"699","4":"621"},{"1":"Oregon","2":"864","3":"762","4":"471"},{"1":"Maryland","2":"247","3":"106","4":"507"},{"1":"Massachusetts","2":"775","3":"507","4":"859"},{"1":"Michigan","2":"776","3":"503","4":"467"},{"1":"Minnesota","2":"752","3":"344","4":"251"},{"1":"Mississippi","2":"945","3":"246","4":"372"},{"1":"Missouri","2":"699","3":"250","4":"972"},{"1":"Pennsylvania","2":"930","3":"475","4":"956"},{"1":"Rhode Island","2":"529","3":"852","4":"900"},{"1":"South Carolina","2":"617","3":"815","4":"182"},{"1":"South Dakota","2":"262","3":"601","4":"584"},{"1":"Tennessee","2":"153","3":"568","4":"476"},{"1":"Texas","2":"732","3":"571","4":"292"},{"1":"Utah","2":"669","3":"486","4":"758"},{"1":"Vermont","2":"698","3":"470","4":"158"},{"1":"Virginia","2":"125","3":"105","4":"432"},{"1":"Washington","2":"495","3":"474","4":"615"},{"1":"West Virginia","2":"603","3":"600","4":"974"},{"1":"Wisconsin","2":"582","3":"997","4":"842"},{"1":"Wyoming","2":"451","3":"593","4":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## Can We Plot Untidy Data?
+
+
+```r
+ggplot(data = german_speakers_numeric,
+*      mapping = aes(x = ???,
+                     y = state))
+```
+
+---
+
+## Can We Plot Untidy Data?
+
+
+```r
+german_speakers_tidy &lt;- german_speakers_numeric %&gt;% 
+  pivot_longer(cols = -state,
+               names_to = "year",
+               values_to = "number") %&gt;% 
+  mutate(year = parse_number(year))
+```
+
+--
+
+
+```r
+german_speakers_tidy
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["state"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["number"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Alabama","2":"2017","3":"426"},{"1":"Alabama","2":"2018","3":"395"},{"1":"Alabama","2":"2019","3":"711"},{"1":"Alaska","2":"2017","3":"331"},{"1":"Alaska","2":"2018","3":"201"},{"1":"Alaska","2":"2019","3":"131"},{"1":"Arizona","2":"2017","3":"636"},{"1":"Arizona","2":"2018","3":"858"},{"1":"Arizona","2":"2019","3":"136"},{"1":"Arkansas","2":"2017","3":"NA"},{"1":"Arkansas","2":"2018","3":"635"},{"1":"Arkansas","2":"2019","3":"557"},{"1":"California","2":"2017","3":"440"},{"1":"California","2":"2018","3":"318"},{"1":"California","2":"2019","3":"854"},{"1":"Colorado","2":"2017","3":"251"},{"1":"Colorado","2":"2018","3":"498"},{"1":"Colorado","2":"2019","3":"768"},{"1":"Connecticut","2":"2017","3":"187"},{"1":"Connecticut","2":"2018","3":"334"},{"1":"Connecticut","2":"2019","3":"586"},{"1":"Delaware","2":"2017","3":"NA"},{"1":"Delaware","2":"2018","3":"998"},{"1":"Delaware","2":"2019","3":"453"},{"1":"District of Columbia","2":"2017","3":"799"},{"1":"District of Columbia","2":"2018","3":"745"},{"1":"District of Columbia","2":"2019","3":"180"},{"1":"Florida","2":"2017","3":"399"},{"1":"Florida","2":"2018","3":"924"},{"1":"Florida","2":"2019","3":"958"},{"1":"Georgia","2":"2017","3":"910"},{"1":"Georgia","2":"2018","3":"293"},{"1":"Georgia","2":"2019","3":"821"},{"1":"Hawaii","2":"2017","3":"NA"},{"1":"Hawaii","2":"2018","3":"303"},{"1":"Hawaii","2":"2019","3":"931"},{"1":"Idaho","2":"2017","3":"301"},{"1":"Idaho","2":"2018","3":"349"},{"1":"Idaho","2":"2019","3":"NA"},{"1":"Illinois","2":"2017","3":"156"},{"1":"Illinois","2":"2018","3":"573"},{"1":"Illinois","2":"2019","3":"827"},{"1":"Indiana","2":"2017","3":"469"},{"1":"Indiana","2":"2018","3":"188"},{"1":"Indiana","2":"2019","3":"728"},{"1":"Iowa","2":"2017","3":"816"},{"1":"Iowa","2":"2018","3":"330"},{"1":"Iowa","2":"2019","3":"657"},{"1":"Kansas","2":"2017","3":"328"},{"1":"Kansas","2":"2018","3":"546"},{"1":"Kansas","2":"2019","3":"501"},{"1":"Kentucky","2":"2017","3":"299"},{"1":"Kentucky","2":"2018","3":"976"},{"1":"Kentucky","2":"2019","3":"332"},{"1":"Louisiana","2":"2017","3":"266"},{"1":"Louisiana","2":"2018","3":"NA"},{"1":"Louisiana","2":"2019","3":"490"},{"1":"Maine","2":"2017","3":"376"},{"1":"Maine","2":"2018","3":"127"},{"1":"Maine","2":"2019","3":"206"},{"1":"Montana","2":"2017","3":"598"},{"1":"Montana","2":"2018","3":"296"},{"1":"Montana","2":"2019","3":"527"},{"1":"Nebraska","2":"2017","3":"252"},{"1":"Nebraska","2":"2018","3":"726"},{"1":"Nebraska","2":"2019","3":"232"},{"1":"Nevada","2":"2017","3":"910"},{"1":"Nevada","2":"2018","3":"526"},{"1":"Nevada","2":"2019","3":"647"},{"1":"New Hampshire","2":"2017","3":"896"},{"1":"New Hampshire","2":"2018","3":"109"},{"1":"New Hampshire","2":"2019","3":"818"},{"1":"New Jersey","2":"2017","3":"380"},{"1":"New Jersey","2":"2018","3":"961"},{"1":"New Jersey","2":"2019","3":"168"},{"1":"New Mexico","2":"2017","3":"574"},{"1":"New Mexico","2":"2018","3":"771"},{"1":"New Mexico","2":"2019","3":"336"},{"1":"New York","2":"2017","3":"135"},{"1":"New York","2":"2018","3":"637"},{"1":"New York","2":"2019","3":"207"},{"1":"North Carolina","2":"2017","3":"609"},{"1":"North Carolina","2":"2018","3":"970"},{"1":"North Carolina","2":"2019","3":"508"},{"1":"North Dakota","2":"2017","3":"891"},{"1":"North Dakota","2":"2018","3":"307"},{"1":"North Dakota","2":"2019","3":"652"},{"1":"Ohio","2":"2017","3":"960"},{"1":"Ohio","2":"2018","3":"900"},{"1":"Ohio","2":"2019","3":"186"},{"1":"Oklahoma","2":"2017","3":"769"},{"1":"Oklahoma","2":"2018","3":"699"},{"1":"Oklahoma","2":"2019","3":"621"},{"1":"Oregon","2":"2017","3":"864"},{"1":"Oregon","2":"2018","3":"762"},{"1":"Oregon","2":"2019","3":"471"},{"1":"Maryland","2":"2017","3":"247"},{"1":"Maryland","2":"2018","3":"106"},{"1":"Maryland","2":"2019","3":"507"},{"1":"Massachusetts","2":"2017","3":"775"},{"1":"Massachusetts","2":"2018","3":"507"},{"1":"Massachusetts","2":"2019","3":"859"},{"1":"Michigan","2":"2017","3":"776"},{"1":"Michigan","2":"2018","3":"503"},{"1":"Michigan","2":"2019","3":"467"},{"1":"Minnesota","2":"2017","3":"752"},{"1":"Minnesota","2":"2018","3":"344"},{"1":"Minnesota","2":"2019","3":"251"},{"1":"Mississippi","2":"2017","3":"945"},{"1":"Mississippi","2":"2018","3":"246"},{"1":"Mississippi","2":"2019","3":"372"},{"1":"Missouri","2":"2017","3":"699"},{"1":"Missouri","2":"2018","3":"250"},{"1":"Missouri","2":"2019","3":"972"},{"1":"Pennsylvania","2":"2017","3":"930"},{"1":"Pennsylvania","2":"2018","3":"475"},{"1":"Pennsylvania","2":"2019","3":"956"},{"1":"Rhode Island","2":"2017","3":"529"},{"1":"Rhode Island","2":"2018","3":"852"},{"1":"Rhode Island","2":"2019","3":"900"},{"1":"South Carolina","2":"2017","3":"617"},{"1":"South Carolina","2":"2018","3":"815"},{"1":"South Carolina","2":"2019","3":"182"},{"1":"South Dakota","2":"2017","3":"262"},{"1":"South Dakota","2":"2018","3":"601"},{"1":"South Dakota","2":"2019","3":"584"},{"1":"Tennessee","2":"2017","3":"153"},{"1":"Tennessee","2":"2018","3":"568"},{"1":"Tennessee","2":"2019","3":"476"},{"1":"Texas","2":"2017","3":"732"},{"1":"Texas","2":"2018","3":"571"},{"1":"Texas","2":"2019","3":"292"},{"1":"Utah","2":"2017","3":"669"},{"1":"Utah","2":"2018","3":"486"},{"1":"Utah","2":"2019","3":"758"},{"1":"Vermont","2":"2017","3":"698"},{"1":"Vermont","2":"2018","3":"470"},{"1":"Vermont","2":"2019","3":"158"},{"1":"Virginia","2":"2017","3":"125"},{"1":"Virginia","2":"2018","3":"105"},{"1":"Virginia","2":"2019","3":"432"},{"1":"Washington","2":"2017","3":"495"},{"1":"Washington","2":"2018","3":"474"},{"1":"Washington","2":"2019","3":"615"},{"1":"West Virginia","2":"2017","3":"603"},{"1":"West Virginia","2":"2018","3":"600"},{"1":"West Virginia","2":"2019","3":"974"},{"1":"Wisconsin","2":"2017","3":"582"},{"1":"Wisconsin","2":"2018","3":"997"},{"1":"Wisconsin","2":"2019","3":"842"},{"1":"Wyoming","2":"2017","3":"451"},{"1":"Wyoming","2":"2018","3":"593"},{"1":"Wyoming","2":"2019","3":"431"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+## Can We Plot Untidy Data?
+
+
+```r
+ggplot(data = german_speakers_tidy,
+       mapping = aes(x = number,
+                     y = state)) +
+  geom_col() +
+  facet_wrap(~year)
+```
+
+![](slides-data-visualization_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+
+
 
 ---
 
@@ -99,11 +207,11 @@ class: center, middle, dk-section-title
 
 background-image:url("images/pipes.jpg")
 
-## Pipe Data Into ggplot
+# Pipe Data Into ggplot
 
 ---
 
-### Load Data
+## Load Data
 
 
 
@@ -129,26 +237,26 @@ third_grade_math_proficiency
 
 ---
 
-### Pipe Data Into ggplot
+## Pipe Data Into ggplot
 
 
 ```r
 third_grade_math_proficiency %&gt;% 
-  filter(district == "Baker SD 5J") %&gt;% 
-  filter(year == "2018-2019")
+  filter(year == "2018-2019") %&gt;% 
+  filter(district == "Portland SD 1J")
 ```
 
 --
 
 &lt;div data-pagedtable="false"&gt;
   &lt;script data-pagedtable-source type="application/json"&gt;
-{"columns":[{"label":["school"],"name":[1],"type":["chr"],"align":["left"]},{"label":["school_id"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["district"],"name":[3],"type":["chr"],"align":["left"]},{"label":["district_id"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["percent_proficient"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"Brooklyn Primary School","2":"2","3":"Baker SD 5J","4":"1894","5":"0.3673469","6":"2018-2019"},{"1":"Haines Elementary School","2":"4","3":"Baker SD 5J","4":"1894","5":"0.8571429","6":"2018-2019"},{"1":"Baker Web Academy","2":"4728","3":"Baker SD 5J","4":"1894","5":"0.2876712","6":"2018-2019"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+{"columns":[{"label":["school"],"name":[1],"type":["chr"],"align":["left"]},{"label":["school_id"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["district"],"name":[3],"type":["chr"],"align":["left"]},{"label":["district_id"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["percent_proficient"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"Abernethy Elementary School","2":"822","3":"Portland SD 1J","4":"2180","5":"0.70652174","6":"2018-2019"},{"1":"Ainsworth Elementary School","2":"823","3":"Portland SD 1J","4":"2180","5":"0.80434783","6":"2018-2019"},{"1":"Alameda Elementary School","2":"824","3":"Portland SD 1J","4":"2180","5":"0.83050847","6":"2018-2019"},{"1":"Arleta Elementary School","2":"826","3":"Portland SD 1J","4":"2180","5":"0.42307692","6":"2018-2019"},{"1":"Astor Elementary School","2":"827","3":"Portland SD 1J","4":"2180","5":"0.59523810","6":"2018-2019"},{"1":"Atkinson Elementary School","2":"828","3":"Portland SD 1J","4":"2180","5":"0.50793651","6":"2018-2019"},{"1":"Rosa Parks Elementary School","2":"829","3":"Portland SD 1J","4":"2180","5":"0.14893617","6":"2018-2019"},{"1":"Beach Elementary School","2":"830","3":"Portland SD 1J","4":"2180","5":"0.56521739","6":"2018-2019"},{"1":"Boise-Eliot Elementary School","2":"833","3":"Portland SD 1J","4":"2180","5":"0.17500000","6":"2018-2019"},{"1":"Bridger Elementary School","2":"834","3":"Portland SD 1J","4":"2180","5":"0.60317460","6":"2018-2019"},{"1":"Bridlemile Elementary School","2":"835","3":"Portland SD 1J","4":"2180","5":"0.68292683","6":"2018-2019"},{"1":"Buckman Elementary School","2":"837","3":"Portland SD 1J","4":"2180","5":"0.56410256","6":"2018-2019"},{"1":"Capitol Hill Elementary School","2":"838","3":"Portland SD 1J","4":"2180","5":"0.66250000","6":"2018-2019"},{"1":"Chapman Elementary School","2":"839","3":"Portland SD 1J","4":"2180","5":"0.69736842","6":"2018-2019"},{"1":"Chief Joseph Elementary School","2":"840","3":"Portland SD 1J","4":"2180","5":"0.50877193","6":"2018-2019"},{"1":"Cesar Chavez K-8 School","2":"841","3":"Portland SD 1J","4":"2180","5":"0.26000000","6":"2018-2019"},{"1":"Harrison Park School","2":"842","3":"Portland SD 1J","4":"2180","5":"0.16438356","6":"2018-2019"},{"1":"Creston Elementary School","2":"843","3":"Portland SD 1J","4":"2180","5":"0.55263158","6":"2018-2019"},{"1":"Duniway Elementary School","2":"844","3":"Portland SD 1J","4":"2180","5":"0.70588235","6":"2018-2019"},{"1":"Faubion Elementary School","2":"847","3":"Portland SD 1J","4":"2180","5":"0.21052632","6":"2018-2019"},{"1":"Glencoe Elementary School","2":"850","3":"Portland SD 1J","4":"2180","5":"0.69512195","6":"2018-2019"},{"1":"Grout Elementary School","2":"854","3":"Portland SD 1J","4":"2180","5":"0.48333333","6":"2018-2019"},{"1":"Hayhurst Elementary School","2":"855","3":"Portland SD 1J","4":"2180","5":"0.67021277","6":"2018-2019"},{"1":"Beverly Cleary School","2":"857","3":"Portland SD 1J","4":"2180","5":"0.68055556","6":"2018-2019"},{"1":"Irvington Elementary School","2":"861","3":"Portland SD 1J","4":"2180","5":"0.64285714","6":"2018-2019"},{"1":"James John Elementary School","2":"862","3":"Portland SD 1J","4":"2180","5":"0.41860465","6":"2018-2019"},{"1":"Kelly Elementary School","2":"864","3":"Portland SD 1J","4":"2180","5":"0.23376623","6":"2018-2019"},{"1":"Martin Luther King Jr. School","2":"866","3":"Portland SD 1J","4":"2180","5":"0.09090909","6":"2018-2019"},{"1":"Laurelhurst Elementary School","2":"868","3":"Portland SD 1J","4":"2180","5":"0.68000000","6":"2018-2019"},{"1":"Lee Elementary School","2":"869","3":"Portland SD 1J","4":"2180","5":"0.22222222","6":"2018-2019"},{"1":"Lent Elementary School","2":"870","3":"Portland SD 1J","4":"2180","5":"0.11111111","6":"2018-2019"},{"1":"Lewis Elementary School","2":"871","3":"Portland SD 1J","4":"2180","5":"0.54687500","6":"2018-2019"},{"1":"Llewellyn Elementary School","2":"872","3":"Portland SD 1J","4":"2180","5":"0.79268293","6":"2018-2019"},{"1":"Maplewood Elementary School","2":"873","3":"Portland SD 1J","4":"2180","5":"0.43750000","6":"2018-2019"},{"1":"Marysville Elementary School","2":"875","3":"Portland SD 1J","4":"2180","5":"0.25000000","6":"2018-2019"},{"1":"Peninsula Elementary School","2":"879","3":"Portland SD 1J","4":"2180","5":"0.27272727","6":"2018-2019"},{"1":"Richmond Elementary School","2":"883","3":"Portland SD 1J","4":"2180","5":"0.77884615","6":"2018-2019"},{"1":"Rigler Elementary School","2":"884","3":"Portland SD 1J","4":"2180","5":"0.06666667","6":"2018-2019"},{"1":"Sabin Elementary School","2":"886","3":"Portland SD 1J","4":"2180","5":"0.61971831","6":"2018-2019"},{"1":"Scott Elementary School","2":"887","3":"Portland SD 1J","4":"2180","5":"0.27027027","6":"2018-2019"},{"1":"Sitton Elementary School","2":"889","3":"Portland SD 1J","4":"2180","5":"0.14545455","6":"2018-2019"},{"1":"Skyline Elementary School","2":"890","3":"Portland SD 1J","4":"2180","5":"0.50000000","6":"2018-2019"},{"1":"Stephenson Elementary School","2":"892","3":"Portland SD 1J","4":"2180","5":"0.80000000","6":"2018-2019"},{"1":"Sunnyside Environmental School","2":"893","3":"Portland SD 1J","4":"2180","5":"0.39655172","6":"2018-2019"},{"1":"Vernon Elementary School","2":"895","3":"Portland SD 1J","4":"2180","5":"0.52380952","6":"2018-2019"},{"1":"Vestal Elementary School","2":"896","3":"Portland SD 1J","4":"2180","5":"0.64285714","6":"2018-2019"},{"1":"Whitman Elementary School","2":"900","3":"Portland SD 1J","4":"2180","5":"0.37500000","6":"2018-2019"},{"1":"Woodlawn Elementary School","2":"902","3":"Portland SD 1J","4":"2180","5":"0.46666667","6":"2018-2019"},{"1":"Woodmere Elementary School","2":"903","3":"Portland SD 1J","4":"2180","5":"0.21276596","6":"2018-2019"},{"1":"Woodstock Elementary School","2":"904","3":"Portland SD 1J","4":"2180","5":"0.69620253","6":"2018-2019"},{"1":"Metropolitan Learning Center","2":"916","3":"Portland SD 1J","4":"2180","5":"0.42857143","6":"2018-2019"},{"1":"Markham Elementary School","2":"1278","3":"Portland SD 1J","4":"2180","5":"0.71428571","6":"2018-2019"},{"1":"Rieke Elementary School","2":"1299","3":"Portland SD 1J","4":"2180","5":"0.75438596","6":"2018-2019"},{"1":"Winterhaven School","2":"1364","3":"Portland SD 1J","4":"2180","5":"0.36363636","6":"2018-2019"},{"1":"Forest Park Elementary School","2":"2413","3":"Portland SD 1J","4":"2180","5":"0.69642857","6":"2018-2019"},{"1":"Opal School of the Portland Children's Museum","2":"3451","3":"Portland SD 1J","4":"2180","5":"0.28571429","6":"2018-2019"},{"1":"Trillium","2":"3616","3":"Portland SD 1J","4":"2180","5":"0.28571429","6":"2018-2019"},{"1":"Emerson School","2":"3991","3":"Portland SD 1J","4":"2180","5":"0.52173913","6":"2018-2019"},{"1":"Portland Arthur Academy Charter School","2":"4400","3":"Portland SD 1J","4":"2180","5":"0.42857143","6":"2018-2019"},{"1":"Portland Village School","2":"4534","3":"Portland SD 1J","4":"2180","5":"0.56410256","6":"2018-2019"},{"1":"Creative Science School","2":"4640","3":"Portland SD 1J","4":"2180","5":"0.37500000","6":"2018-2019"},{"1":"Le Monde French Immersion Public Charter School","2":"5060","3":"Portland SD 1J","4":"2180","5":"0.84126984","6":"2018-2019"},{"1":"Kairos PDX","2":"5218","3":"Portland SD 1J","4":"2180","5":"0.08000000","6":"2018-2019"},{"1":"Rose City Park","2":"5427","3":"Portland SD 1J","4":"2180","5":"0.63218391","6":"2018-2019"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
   &lt;/script&gt;
 &lt;/div&gt;
 
 ---
 
-### Pipe Data Into ggplot
+## Pipe Data Into ggplot
 
 
 ```r
@@ -157,22 +265,21 @@ third_grade_math_proficiency %&gt;%
   filter(district == "Portland SD 1J") %&gt;% 
 * ggplot(aes(x = school, y = percent_proficient)) +
 * geom_col() +
-  coord_flip()
+* coord_flip()
 ```
 
 ---
 
-### Pipe Data Into ggplot
+## Pipe Data Into ggplot
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
-
+![](slides-data-visualization_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
 
 
 ---
 
 class: inverse
 
-### Your Turn
+## Your Turn
 
 1. Create a new RMarkdown document
 
@@ -193,13 +300,22 @@ class: inverse
 enrollment_by_race_ethnicity &lt;- read_rds("../data/enrollment_by_race_ethnicity.rds")
 ```
 
-
-
 ---
 
 class: center, middle, dk-section-title
 
+background-image:url("images/highlight.jpg")
+
+# Highlight
+
+
+---
+
+
+class: center, middle, dk-section-title
+
 background-image:url("images/goya-cans.jpg")
+
 
 
 ## Reorder Plots to Highlight Findings
@@ -227,7 +343,7 @@ Example: https://yougov.co.uk/topics/politics/articles-reports/2020/04/09/covid-
 
 ### Reorder Plots to Highlight Findings
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -249,7 +365,7 @@ third_grade_math_proficiency %&gt;%
 
 ### Reorder Plots to Highlight Findings
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -299,7 +415,8 @@ background-image:url("images/lines.jpg")
 ```r
 third_grade_math_proficiency %&gt;% 
   filter(district == "Portland SD 1J") %&gt;% 
-* ggplot(aes(x = year, y = percent_proficient)) +
+  ggplot(aes(x = year, 
+             y = percent_proficient)) +
 * geom_line()
 ```
 
@@ -307,7 +424,7 @@ third_grade_math_proficiency %&gt;%
 
 ### Line Charts
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -317,7 +434,8 @@ third_grade_math_proficiency %&gt;%
 ```r
 third_grade_math_proficiency %&gt;% 
   filter(district == "Portland SD 1J") %&gt;% 
-  ggplot(aes(x = year, y = percent_proficient,
+  ggplot(aes(x = year, 
+             y = percent_proficient,
 *            group = school)) +
   geom_line()
 ```
@@ -326,18 +444,8 @@ third_grade_math_proficiency %&gt;%
 
 ### Line Charts
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-20-1.png)&lt;!-- --&gt;
 
-
----
-
-class: center, middle
-
-![](images/jbm-covid-plot.jpeg)
-
-.small[
-Source: [Financial Times, March 11, 2020](https://twitter.com/jburnmurdoch/status/1237737352879112194)
-]
 
 
 ---
@@ -346,7 +454,7 @@ class: inverse
 
 ### Your Turn
 
-1. Make a line chart that shows the growth in the Hispanic/Latino population in school districts from 2017-2018 to 2018-2019
+Make a line chart that shows the growth in the Hispanic/Latino population in school districts from 2017-2018 to 2018-2019
 
 
 ???
@@ -368,6 +476,25 @@ class: center, middle, dk-section-title
 background-image:url("images/color.jpg")
 
 ## Use Color to Highlight Findings
+
+---
+
+
+
+
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+.small[
+Source: [Financial Times, March 11, 2020](https://twitter.com/jburnmurdoch/status/1237737352879112194)
+]
+
+---
+
+### Use Color to Highlight Findings
+
+![](slides-data-visualization_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -416,7 +543,7 @@ third_grade_math_proficiency %&gt;%
 
 ### Use Color to Highlight Findings
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-25-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -429,7 +556,7 @@ class: inverse
 
 --
 
-1. Create a new data frame called `highlight_district` and only include this school in it
+1. Create a new data frame called `highlight_district` and only include this district in it
 
 --
 
@@ -457,7 +584,7 @@ enrollment_by_race_ethnicity %&gt;%
             color = "red")
 ```
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -483,23 +610,49 @@ third_grade_math_proficiency %&gt;%
   geom_line(data = highlight_school, 
             inherit.aes = TRUE,
             color = rru_orange) +
-* theme_minimal() +
-* theme(axis.title = element_blank())
+* theme_minimal()
 ```
-
-
 
 ---
 
 ## Remove Axis Titles
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-27-1.png)&lt;!-- --&gt;
 
 ---
 
-## Remove Legends
+## `theme()`
 
-TK: remove?
+![](images/theme.gif)
+
+.small[
+Source: [`ggplot2` documentation](https://ggplot2.tidyverse.org/reference/theme.html)
+]
+
+---
+
+## Remove Axis Titles
+
+
+```r
+third_grade_math_proficiency %&gt;% 
+  filter(district == "Portland SD 1J") %&gt;% 
+  ggplot(aes(x = year, y = percent_proficient,
+             group = school)) +
+  geom_line(color = rru_gray) + 
+  geom_line(data = highlight_school, 
+            inherit.aes = TRUE,
+            color = rru_orange) +
+  theme_minimal() + 
+* theme(axis.title = element_blank())
+```
+
+---
+
+## Remove Axis Titles
+
+![](slides-data-visualization_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
+
 
 ---
 
@@ -525,7 +678,7 @@ third_grade_math_proficiency %&gt;%
 
 ## Remove or Minimize Grid Lines
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-20-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-29-1.png)&lt;!-- --&gt;
 
 
 
@@ -553,7 +706,7 @@ third_grade_math_proficiency %&gt;%
 
 ## Work with Existing Themes
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-21-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
 
 ???
 
@@ -572,7 +725,7 @@ Use some combination of:
 
 --
 
-- Themes — e.g. `theme_minimal()` or `theme_ipsum()` from `hrbrthemes`
+- Complete themes: e.g. `theme_minimal()` or `theme_ipsum()` from `hrbrthemes`
 
 --
 
@@ -644,12 +797,13 @@ highlight_school &lt;- third_grade_math_proficiency %&gt;%
 
 
 ```r
-highlight_school
+highlight_school %&gt;% 
+  select(school, percent_proficient_display)
 ```
 
 &lt;div data-pagedtable="false"&gt;
   &lt;script data-pagedtable-source type="application/json"&gt;
-{"columns":[{"label":["school"],"name":[1],"type":["chr"],"align":["left"]},{"label":["school_id"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["district"],"name":[3],"type":["chr"],"align":["left"]},{"label":["district_id"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["percent_proficient"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[6],"type":["chr"],"align":["left"]},{"label":["percent_proficient_display"],"name":[7],"type":["chr"],"align":["left"]}],"data":[{"1":"Vestal Elementary School","2":"896","3":"Portland SD 1J","4":"2180","5":"0.2820513","6":"2017-2018","7":"28%"},{"1":"Vestal Elementary School","2":"896","3":"Portland SD 1J","4":"2180","5":"0.6428571","6":"2018-2019","7":"64%"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+{"columns":[{"label":["school"],"name":[1],"type":["chr"],"align":["left"]},{"label":["percent_proficient_display"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"Vestal Elementary School","2":"28%"},{"1":"Vestal Elementary School","2":"64%"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
   &lt;/script&gt;
 &lt;/div&gt;
 
@@ -714,7 +868,7 @@ third_grade_math_proficiency %&gt;%
 
 ### Use Direct Labeling
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -759,7 +913,7 @@ third_grade_math_proficiency %&gt;%
 
 ### Use Direct Labeling
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -831,7 +985,7 @@ third_grade_math_proficiency %&gt;%
 
 ### Use Axis Text Wisely
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -906,7 +1060,7 @@ third_grade_math_proficiency %&gt;%
 
 ### Use Titles to Highlight Findings
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -984,7 +1138,7 @@ third_grade_math_proficiency %&gt;%
 
 ### Use Color in Titles to Highlight Findings
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-34-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -1080,7 +1234,7 @@ http://www.thefunctionalart.com/2020/01/an-example-of-how-to-annotate.html
 
 ### Use Annotations to Explain
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-45-1.png)&lt;!-- --&gt;
 
 ???
 
@@ -1145,7 +1299,7 @@ class: center, middle
 
 ---
 
-### TK: Something about removing gaps
+### Tweak Spacing Around Your Plot
 
 .small[
 
@@ -1176,15 +1330,15 @@ third_grade_math_proficiency %&gt;%
   theme(axis.title = element_blank(),
         panel.grid.minor = element_blank(),
         plot.title = element_markdown()) +
-* scale_x_discrete(expand = c(0, 0.1, 0, 0.5))
+* scale_x_discrete(expand = expansion(add = c(0.1, 0.5)))
 ```
 ]
 
 ---
 
-### TK: Something about removing gaps
+### Tweak Spacing Around Your Plot
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-47-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1192,7 +1346,7 @@ class: inverse
 
 ### Your Turn
 
-TK
+Use the expand argument within the `scale_x_discrete()` function to remove any gaps in your plot
 
 ???
 
@@ -1256,6 +1410,38 @@ theme_dk &lt;- function() {
 .small[
 
 ```r
+third_grade_math_proficiency %&gt;% 
+  filter(district == "Portland SD 1J") %&gt;% 
+  ggplot(aes(x = year, y = percent_proficient,
+             group = school)) +
+  geom_line(color = rru_gray) + 
+  geom_line(data = highlight_school, 
+            inherit.aes = TRUE,
+            color = rru_orange) +
+  geom_text(data = highlight_school, 
+            inherit.aes = TRUE,
+            aes(label = percent_proficient_display), 
+            color = rru_orange,
+            hjust = c(1.05, -0.05)) + 
+  scale_y_continuous(labels = percent_format(accuracy = 1)) + 
+  labs(title = "&lt;span style = 'color: #FF7400;'&gt;Vestal Elementary School&lt;/span&gt; showed large gains in&lt;br&gt;third grade math proficiency scores from 2017-2018 to 2018-2019") +
+  annotate("text", 
+           x = 2.02, 
+           y = 0.4, 
+           label = "Gray lines show other\nPortland Public Schools\nfor comparison",
+           hjust = 0,
+           size = 3, 
+           color = "#A0A0A0") + 
+  scale_x_discrete(expand = expansion(add = c(0.1, 0.5))) +
+* theme_dk()
+```
+]
+
+???
+
+.small[
+
+```r
 enrollment_by_race_ethnicity %&gt;% 
   filter(race_ethnicity == "Hispanic/Latino") %&gt;% 
   ggplot(aes(year, percent_of_total_enrollment,
@@ -1293,7 +1479,7 @@ enrollment_by_race_ethnicity %&gt;%
 ### Make Your Own Custom Theme
 
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1464,7 +1650,7 @@ class: inverse
 
 --
 
-1. Run the `import_fonts()` function to make all fonts on your computer available in R
+1. Run the `import_fonts()` function to make all fonts on your computer available in R (it will take a few minutes)
 
 --
 
@@ -1509,33 +1695,6 @@ enrollment_by_race_ethnicity %&gt;%
            size = 3,
            color = "gray")
 ```
-
----
-
-## TK: Use Effective Color Palettes
-
-
----
-
-### Use Effective Color Palettes
-
-TK: https://emilhvitfeldt.github.io/paletteer/
-
-
-
-```r
-library(paletteer)
-
-third_grade_math_proficiency %&gt;% 
-  group_by(year) %&gt;% 
-  mutate(quartile = ntile(percent_proficient, 4)) %&gt;% 
-  mutate(quartile = as.character(quartile)) %&gt;% 
-  ungroup() %&gt;% 
-  ggplot(aes(percent_proficient, year,
-             color = quartile)) +
-  geom_jitter()
-```
-
 
 ---
 
@@ -1617,12 +1776,6 @@ background-image:url("images/ggridges.png")
 ### `patchwork`
 
 ![](images/patchwork-twitter-post.png)
-
----
-
-### `gghighlight`
-
-TK
 
 
 ---
