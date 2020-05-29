@@ -8,12 +8,14 @@ library(magick)
 
 # HTML > PDF --------------------------------------------------------------
 
-chrome_print("slides/slides-data-wrangling-and-analysis.html")
-
-chrome_print("slides/slides-data-visualization.html",
+chrome_print("slides/slides-data-wrangling-and-analysis.html",
              timeout = 180)
 
-chrome_print("slides/slides-rmarkdown.html")
+chrome_print("slides/slides-data-visualization.html",
+             timeout = 360)
+
+chrome_print("slides/slides-rmarkdown.html",
+             timeout = 180)
 
 
 # PDF > GIF ---------------------------------------------------------------

@@ -552,7 +552,25 @@ background-image:url("images/declutter.jpg")
 
 ## Remove the Default Gray Background
 
-```{r remove_axis_titles_theme_minimal}
+--
+
+```{r eval = TRUE, include = TRUE, echo = FALSE, fig.height = 5, fig.width = 11}
+third_grade_math_proficiency %>% 
+  filter(district == "Portland SD 1J") %>% 
+  ggplot(aes(x = year, y = percent_proficient,
+             group = school)) +
+  geom_line(color = rru_gray) + 
+  geom_line(data = highlight_school, 
+            inherit.aes = TRUE,
+            color = rru_orange)
+```
+
+
+---
+
+## Remove the Default Gray Background
+
+```{r remove_gray_background}
 third_grade_math_proficiency %>% 
   filter(district == "Portland SD 1J") %>% 
   ggplot(aes(x = year, y = percent_proficient,
@@ -566,14 +584,16 @@ third_grade_math_proficiency %>%
 
 ---
 
-## Remove Axis Titles
+## Remove the Default Gray Background
 
-```{r fig.height = 5, fig.width = 11, ref.label = "remove_axis_titles_theme_minimal", echo = FALSE, include = TRUE, eval = TRUE}
+```{r fig.height = 5, fig.width = 11, ref.label = "remove_gray_background", echo = FALSE, include = TRUE, eval = TRUE}
 ```
 
 ---
 
-## `theme()`
+## Remove Axis Titles
+
+--
 
 ![](images/theme.gif)
 
@@ -610,6 +630,8 @@ third_grade_math_proficiency %>%
 
 ## Remove or Minimize Grid Lines
 
+--
+
 ```{r remove_minor_grid_lines}
 third_grade_math_proficiency %>% 
   filter(district == "Portland SD 1J") %>% 
@@ -638,8 +660,10 @@ third_grade_math_proficiency %>%
 
 ## Work with Existing Themes
 
+--
+
 ```{r hrbrthemes_example}
-library(hrbrthemes)
+library(hrbrthemes) #<<
 
 third_grade_math_proficiency %>% 
   filter(district == "Portland SD 1J") %>% 
@@ -649,8 +673,8 @@ third_grade_math_proficiency %>%
   geom_line(data = highlight_school, 
             inherit.aes = TRUE,
             color = rru_orange) +
-  theme_ipsum(axis_title_size = 0) + #<<
-  theme(panel.grid.minor = element_blank())
+  theme_ipsum(axis_title_size = 0, #<<
+              grid = "XY") #<<
 ```
 
 ---
@@ -686,6 +710,10 @@ Use some combination of:
 --
 
 Do the following:
+
+--
+
+1. Remove gray background
 
 --
 
@@ -735,6 +763,14 @@ background-image:url("images/scales.jpg")
 
 ### `scales`
 
+```{r eval = TRUE, include = TRUE}
+highlight_school
+```
+
+---
+
+### `scales`
+
 ```{r eval = TRUE}
 library(scales)
 
@@ -747,7 +783,7 @@ highlight_school <- third_grade_math_proficiency %>%
 
 ```{r include = TRUE, eval = TRUE}
 highlight_school %>% 
-  select(school, percent_proficient_display)
+  select(school, percent_proficient, percent_proficient_display)
 ```
 
 
@@ -781,6 +817,12 @@ background-image:url("images/card-catalog.jpg")
 ---
 
 
+
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+---
 
 ### Use Direct Labeling
 
@@ -895,6 +937,14 @@ background-image:url("images/wise.jpg")
 ## Use Axis Text Wisely
 
 
+---
+
+### Use Axis Text Wisely
+
+
+```{r fig.height = 5, fig.width = 11, ref.label = "direct_labeling_again", echo = FALSE, include = TRUE, eval = TRUE}
+```
+
 
 ---
 
@@ -914,10 +964,10 @@ third_grade_math_proficiency %>%
             aes(label = percent_proficient_display),
             color = rru_orange, 
             hjust = c(1.05, -0.05)) + 
-  scale_y_continuous(labels = percent_format(accuracy = 1)) + #<<
-  theme_ipsum(axis_title_size = 0) + 
-  theme(axis.title = element_blank(),
-        panel.grid.minor = element_blank())
+  scale_y_continuous(labels = percent_format(), #<<
+                     limits = c(0, 1)) + 
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY")
 ```
 
 ---
@@ -969,8 +1019,15 @@ background-image:url("images/coronavirus-billboard.jpg")
 
 ---
 
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+---
+
 ### Use Titles to Highlight Findings
 
+.small[
 ```{r title_no_color}
 third_grade_math_proficiency %>% 
   filter(district == "Portland SD 1J") %>% 
@@ -987,11 +1044,12 @@ third_grade_math_proficiency %>%
             hjust = c(1.05, -0.05)) + 
   scale_y_continuous(labels = percent_format(accuracy = 1)) + 
   labs(title = "Vestal Elementary School showed large gains in\nthird grade math proficiency scores from 2017-2018 to 2018-2019") + #<<
-  theme_ipsum(axis_title_size = 0) + 
-  theme(axis.title = element_blank(),
-        panel.grid.minor = element_blank())
+  scale_y_continuous(labels = percent_format(), 
+                     limits = c(0, 1)) + 
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY")
 ```
-
+]
 
 ---
 
@@ -1045,6 +1103,7 @@ background-image:url("images/colors.jpg")
 
 ### Use Color in Titles to Highlight Findings
 
+.small[
 ```{r title_with_color}
 library(ggtext)
 
@@ -1061,14 +1120,14 @@ third_grade_math_proficiency %>%
             aes(label = percent_proficient_display), 
             color = rru_orange,
             hjust = c(1.05, -0.05)) + 
-  scale_y_continuous(labels = percent_format(accuracy = 1)) + 
   labs(title = "<span style = 'color: #FF7400;'>Vestal Elementary School</span> showed large gains in<br>third grade math proficiency scores from 2017-2018 to 2018-2019") + #<<
-  theme_ipsum(axis_title_size = 0) + 
-  theme(axis.title = element_blank(),
-        panel.grid.minor = element_blank(),
-        plot.title = element_markdown()) #<<
+  scale_y_continuous(labels = percent_format(), 
+                     limits = c(0, 1)) + 
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY") +
+  theme(plot.title = element_markdown()) #<<
 ```
-
+]
 
 ---
 
@@ -1128,6 +1187,16 @@ background-image:url("images/ft-annotation-example.jpeg")
 ## Use Annotations to Explain
 
 ---
+class: center, middle
+
+
+![](images/ft-annotation-example-small.png)
+
+.small[
+Source: [Financial Times](https://www.ft.com/content/662cedac-e4b2-4cbf-b257-664ea3ce250c)
+]
+
+---
 
 ### Use Annotations to Explain
 
@@ -1146,19 +1215,17 @@ third_grade_math_proficiency %>%
             aes(label = percent_proficient_display), 
             color = rru_orange,
             hjust = c(1.05, -0.05)) + 
-  scale_y_continuous(labels = percent_format(accuracy = 1)) + 
-  labs(title = "<span style = 'color: #FF7400;'>Vestal Elementary School</span> showed large gains in<br>third grade math proficiency scores from 2017-2018 to 2018-2019") +
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY") +
+  labs(title = "<span style = 'color: #FF7400'>Vestal Elementary School</span> showed large gains in<br>third grade math proficiency scores between 2017-2018 and 2018-2019") +
+  theme(plot.title = element_markdown()) +
   annotate("text", #<<
            x = 2.02, #<<
-           y = 0.4, #<<
-           label = "Gray lines show other\nPortland Public Schools\nfor comparison", #<<
-           hjust = 0, #<<
-           size = 3, #<<
-           color = "#A0A0A0") + #<<
-  theme_ipsum(axis_title_size = 0) +
-  theme(axis.title = element_blank(),
-        panel.grid.minor = element_blank(),
-        plot.title = element_markdown()) 
+           y = .37, #<<
+           label = "Gray lines repesent\nall schools in Portland", #<<
+           color = "#A0A0A0", #<<
+           hjust = 0) #<<
 ```
 ]
 
@@ -1235,6 +1302,21 @@ class: center, middle
 
 ---
 
+### Don't Use Defaults
+
+```{r fig.height = 5, fig.width = 11, ref.label = "pipe_data_into_ggplot", echo = FALSE, include = TRUE, eval = TRUE}
+```
+
+---
+
+
+### Tweak Spacing Around Your Plot
+
+```{r fig.height = 5, fig.width = 11, ref.label = "annotations_example", echo = FALSE, include = TRUE, eval = TRUE}
+```
+
+---
+
 ### Tweak Spacing Around Your Plot
 
 .small[
@@ -1248,23 +1330,22 @@ third_grade_math_proficiency %>%
             inherit.aes = TRUE,
             color = rru_orange) +
   geom_text(data = highlight_school, 
-            inherit.aes = TRUE,
-            aes(label = percent_proficient_display), 
-            color = rru_orange,
+            inherit.aes = TRUE, 
+            aes(label = percent_proficient_display),
+            color = rru_orange, 
             hjust = c(1.05, -0.05)) + 
-  scale_y_continuous(labels = percent_format(accuracy = 1)) + 
-  labs(title = "<span style = 'color: #FF7400;'>Vestal Elementary School</span> showed large gains in<br>third grade math proficiency scores from 2017-2018 to 2018-2019") +
-  annotate("text", 
-           x = 2.02, 
-           y = 0.4, 
-           label = "Gray lines show other\nPortland Public Schools\nfor comparison",
-           hjust = 0,
-           size = 3, 
-           color = "#A0A0A0") + 
-  theme_ipsum(axis_title_size = 0) +
-  theme(axis.title = element_blank(),
-        panel.grid.minor = element_blank(),
-        plot.title = element_markdown()) +
+  scale_y_continuous(label = percent_format(),
+                     limits = c(0, 1)) +
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY") +
+  labs(title = "<span style = 'color: #FF7400'>Vestal Elementary School</span> showed large gains in<br>third grade math proficiency scores between 2017-2018 and 2018-2019") +
+  theme(plot.title = element_markdown()) +
+  annotate("text",
+           x = 2.02,
+           y = .37,
+           label = "Gray lines repesent\nall schools in Portland",
+           color = "#A0A0A0",
+           hjust = 0) +
   scale_x_discrete(expand = expansion(add = c(0.1, 0.5))) #<<
 ```
 ]
@@ -1330,10 +1411,9 @@ background-image:url("images/ggpomological.png")
 
 ```{r eval = TRUE}
 theme_dk <- function() {
-  theme_ipsum(axis_title_size = 0) +
-    theme(axis.title = element_blank(),
-          panel.grid.minor = element_blank(),
-          plot.title = element_markdown()) 
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY") + 
+    theme(plot.title = element_markdown())
 }
 ```
 
@@ -1484,83 +1564,64 @@ library(extrafont)
 font_import(pattern = "Karla")
 ```
 
+
+
+---
+
+
+### Load Fonts
+
+```{r}
+loadfonts()
+```
+
 --
 
 ```{r}
 fonts()
 ```
 
----
-
-### Use Custom Fonts
-
-```{r include = TRUE}
-third_grade_math_proficiency %>% 
-  filter(district == "Portland SD 1J") %>% 
-  slice_max(percent_proficient, n = 3) %>% 
-  ggplot(aes(x = percent_proficient, y = school)) +
-  geom_col() +
-  scale_x_continuous(labels = percent_format(accuracy = 1)) + 
-  theme_minimal(base_family = "Karla") #<<
-```
 
 ---
 
-
-### Use Custom Fonts
-
+.small[
 ```{r}
+theme_dk <- function() {
+  theme_ipsum(axis_title_size = 0,
+              base_family = "Karla", #<<
+              grid = "XY") +
+    theme(plot.title = element_markdown())
+}
+
 third_grade_math_proficiency %>% 
   filter(district == "Portland SD 1J") %>% 
-  slice_max(percent_proficient, n = 3) %>% 
-  ggplot(aes(x = percent_proficient, y = school)) +
-  geom_col() +
-  geom_text(aes(label = percent(percent_proficient, accuracy = 1))) +
-  scale_x_continuous(labels = percent_format(accuracy = 1)) + 
-  theme_minimal(base_family = "Karla") +
-  theme(axis.title = element_blank())
+  ggplot(aes(x = year, y = percent_proficient,
+             group = school)) +
+  geom_line(color = rru_gray) + 
+  geom_line(data = highlight_school, 
+            inherit.aes = TRUE,
+            color = rru_orange) +
+  geom_text(data = highlight_school, 
+            inherit.aes = TRUE, 
+            aes(label = percent_proficient_display),
+            color = rru_orange, 
+            family = "Karla", #<<
+            hjust = c(1.05, -0.05)) + 
+  scale_y_continuous(label = percent_format(),
+                     limits = c(0, 1)) +
+  labs(title = "<span style = 'color: #FF7400'>Vestal Elementary School</span> showed large gains in<br>third grade math proficiency scores between 2017-2018 and 2018-2019") +
+  annotate("text",
+           x = 2.02,
+           y = .37,
+           label = "Gray lines repesent\nall schools in Portland",
+           color = "#A0A0A0",
+           family = "Karla", #<<
+           hjust = 0) +
+  scale_x_discrete(expand = expansion(add = c(0.1, 0.5))) +
+  theme_dk()
 ```
+]
 
----
-
-### Use Custom Fonts
-
-```{r}
-third_grade_math_proficiency %>% 
-  filter(district == "Portland SD 1J") %>% 
-  slice_max(percent_proficient, n = 3) %>% 
-  ggplot(aes(x = percent_proficient, y = school)) +
-  geom_col() +
-  geom_text(aes(label = percent(percent_proficient, accuracy = 1)),
-            hjust = 1.5,
-            color = "white",
-            family = "Karla") + #<<
-  scale_x_continuous(labels = percent_format(accuracy = 1)) + 
-  theme_minimal(base_family = "Karla") +
-  theme(axis.title = element_blank())
-```
-
----
-
-### Use Custom Fonts
-
-```{r}
-third_grade_math_proficiency %>% 
-  filter(district == "Portland SD 1J") %>% 
-  slice_max(percent_proficient, n = 3) %>% 
-  ggplot(aes(x = percent_proficient, y = school)) +
-  geom_col() +
-  geom_text(aes(label = percent(percent_proficient, accuracy = 1)),
-            hjust = 1.5,
-            color = "white",
-            family = "Karla") +
-  annotate("text", x = 0.5, y = 2, label = "This is an annotation",
-           color = "white",
-           family = "Karla") + #<<
-  scale_x_continuous(labels = percent_format(accuracy = 1)) + 
-  theme_minimal(base_family = "Karla") +
-  theme(axis.title = element_blank())
-```
 
 ???
 
@@ -1574,11 +1635,17 @@ class: inverse
 
 ### Your Turn
 
+--
+
 1. Install the `extrafonts` package
 
 --
 
 1. Run the `import_fonts()` function to make all fonts on your computer available in R (it will take a few minutes)
+
+--
+
+1. Run the `loadfonts()` function to make sure all fonts are available to R
 
 --
 
@@ -1633,94 +1700,107 @@ background-image:url("images/ggridges.png")
 
 ---
 
+.center[
+![](images/ggrepel-allison-horst.jpg)
+]
+
+---
+
 ### `ggrepel`
 
---
+.center[
+[![](images/ggrepel.gif)](https://ggrepel.slowkow.com/)
+]
+
+---
 
 .center[
-![](images/ggrepel.gif)
+![](images/gganimate-allison-horst.png)
 ]
+
 
 ---
 
 ### `gganimate`
 
---
-
 .center[
-![](images/claimsratio_2020_04_03.gif)
+[![](images/claimsratio_2020_04_03.gif)](http://lenkiefer.com/2020/04/03/us-labor-market-update-april-2020/)
 ]
 
 ---
 
 ### `ggridges`
 
---
-
-![](images/ggridges.png)
+[![](images/ggridges.png)](https://wilkelab.org/ggridges)
 
 ---
 
 ### `ggalt`
 
---
-
-![](images/dumbell.png)
+[![](images/dumbell.png)](https://github.com/hrbrmstr/ggalt)
 
 ---
 
 ### `ggbeeswarm`
 
---
-
-![](images/ggbeeswarm.jpeg)
+[![](images/ggbeeswarm.jpeg)](https://github.com/eclarke/ggbeeswarm)
 
 ---
 
 ### `ggraph`
 
---
+[![](images/ggraph.png)](https://ggraph.data-imaginist.com/index.html)
 
-![](images/ggraph.png)
-(https://ggraph.data-imaginist.com/)
+---
 
---- 
+### `ggraph`
 
-### `treemapify`
+![](images/ggraph-network.png)
 
-![](images/treemapify.png)
+---
+
+### `ggraph`
+
+![](images/ggraph-treemap.png)
 
 
 ---
 
 ### `waffle`
 
-![](images/waffle-bars.png)
+[![](images/waffle-bars.png)](https://github.com/hrbrmstr/waffle)
 
+---
+
+.center[
+[![](images/patchwork-allison-horst.jpg)](https://patchwork.data-imaginist.com/)
+]
 
 ---
 
 ### `patchwork`
 
-![](images/patchwork-twitter-post.png)
+[![](images/patchwork-twitter-post.png)](https://twitter.com/littlemissdata/status/1229176433123168256)
+
+---
+
+[![](images/scherer-spotify.gif)](https://github.com/Z3tt/TidyTuesday#week-202004--spotify-songs-by-spotify-via-spotifyr)
 
 
 ---
 
 ### `shadowtext`
 
-![](images/jbm-covid-plot.jpeg)
+[![](images/jbm-covid-plot.jpeg)](https://twitter.com/dgkeyes/status/1237812892189093888)
 
 ???
 
 TK: Add to end 
 
-https://www.williamrchase.com/slides/assets/player/KeynoteDHTMLPlayer.html
-Malcolm Barrett slides
 https://www.data-to-viz.com/
 https://github.com/erikgahner/awesome-ggplot2
-Data Visualization: A practical introduction
-Fundamentals of Data Visualization
+People to follow for Tidy Tuesday
+
 
 
 ---
@@ -1728,6 +1808,8 @@ Fundamentals of Data Visualization
 class: inverse
 
 ### Your Turn
+
+--
 
 1. Use one of the packages above to make a unique plot. For example, you might use dumbell plots in the `ggalt` package to show change in the Hispanic/Latino population from 2017-2018 to 2018-2019 for all districts.
 

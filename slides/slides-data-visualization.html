@@ -598,7 +598,16 @@ background-image:url("images/declutter.jpg")
 
 ---
 
-## Remove Axis Titles
+## Remove the Default Gray Background
+
+--
+
+![](slides-data-visualization_files/figure-html/unnamed-chunk-27-1.png)&lt;!-- --&gt;
+
+
+---
+
+## Remove the Default Gray Background
 
 
 ```r
@@ -615,13 +624,15 @@ third_grade_math_proficiency %&gt;%
 
 ---
 
-## Remove Axis Titles
+## Remove the Default Gray Background
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-27-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
 
 ---
 
-## `theme()`
+## Remove Axis Titles
+
+--
 
 ![](images/theme.gif)
 
@@ -651,12 +662,14 @@ third_grade_math_proficiency %&gt;%
 
 ## Remove Axis Titles
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-29-1.png)&lt;!-- --&gt;
 
 
 ---
 
 ## Remove or Minimize Grid Lines
+
+--
 
 
 ```r
@@ -678,7 +691,7 @@ third_grade_math_proficiency %&gt;%
 
 ## Remove or Minimize Grid Lines
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-29-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
 
 
 
@@ -686,9 +699,11 @@ third_grade_math_proficiency %&gt;%
 
 ## Work with Existing Themes
 
+--
+
 
 ```r
-library(hrbrthemes)
+*library(hrbrthemes)
 
 third_grade_math_proficiency %&gt;% 
   filter(district == "Portland SD 1J") %&gt;% 
@@ -698,15 +713,15 @@ third_grade_math_proficiency %&gt;%
   geom_line(data = highlight_school, 
             inherit.aes = TRUE,
             color = rru_orange) +
-* theme_ipsum(axis_title_size = 0) +
-  theme(panel.grid.minor = element_blank())
+* theme_ipsum(axis_title_size = 0,
+*             grid = "XY")
 ```
 
 ---
 
 ## Work with Existing Themes
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-31-1.png)&lt;!-- --&gt;
 
 ???
 
@@ -734,6 +749,10 @@ Use some combination of:
 --
 
 Do the following:
+
+--
+
+1. Remove gray background
 
 --
 
@@ -786,6 +805,21 @@ background-image:url("images/scales.jpg")
 
 
 ```r
+highlight_school
+```
+
+&lt;div data-pagedtable="false"&gt;
+  &lt;script data-pagedtable-source type="application/json"&gt;
+{"columns":[{"label":["school"],"name":[1],"type":["chr"],"align":["left"]},{"label":["school_id"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["district"],"name":[3],"type":["chr"],"align":["left"]},{"label":["district_id"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["percent_proficient"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"Vestal Elementary School","2":"896","3":"Portland SD 1J","4":"2180","5":"0.2820513","6":"2017-2018"},{"1":"Vestal Elementary School","2":"896","3":"Portland SD 1J","4":"2180","5":"0.6428571","6":"2018-2019"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+
+---
+
+### `scales`
+
+
+```r
 library(scales)
 
 highlight_school &lt;- third_grade_math_proficiency %&gt;% 
@@ -798,12 +832,12 @@ highlight_school &lt;- third_grade_math_proficiency %&gt;%
 
 ```r
 highlight_school %&gt;% 
-  select(school, percent_proficient_display)
+  select(school, percent_proficient, percent_proficient_display)
 ```
 
 &lt;div data-pagedtable="false"&gt;
   &lt;script data-pagedtable-source type="application/json"&gt;
-{"columns":[{"label":["school"],"name":[1],"type":["chr"],"align":["left"]},{"label":["percent_proficient_display"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"Vestal Elementary School","2":"28%"},{"1":"Vestal Elementary School","2":"64%"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
+{"columns":[{"label":["school"],"name":[1],"type":["chr"],"align":["left"]},{"label":["percent_proficient"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["percent_proficient_display"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"Vestal Elementary School","2":"0.2820513","3":"28%"},{"1":"Vestal Elementary School","2":"0.6428571","3":"64%"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[5],"max":[5]},"pages":{}}}
   &lt;/script&gt;
 &lt;/div&gt;
 
@@ -840,6 +874,12 @@ background-image:url("images/card-catalog.jpg")
 
 
 
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+---
+
 ### Use Direct Labeling
 
 
@@ -868,7 +908,7 @@ third_grade_math_proficiency %&gt;%
 
 ### Use Direct Labeling
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -913,7 +953,7 @@ third_grade_math_proficiency %&gt;%
 
 ### Use Direct Labeling
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -955,6 +995,13 @@ background-image:url("images/wise.jpg")
 ## Use Axis Text Wisely
 
 
+---
+
+### Use Axis Text Wisely
+
+
+![](slides-data-visualization_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
+
 
 ---
 
@@ -975,17 +1022,17 @@ third_grade_math_proficiency %&gt;%
             aes(label = percent_proficient_display),
             color = rru_orange, 
             hjust = c(1.05, -0.05)) + 
-* scale_y_continuous(labels = percent_format(accuracy = 1)) +
-  theme_ipsum(axis_title_size = 0) + 
-  theme(axis.title = element_blank(),
-        panel.grid.minor = element_blank())
+* scale_y_continuous(labels = percent_format(),
+                     limits = c(0, 1)) + 
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY")
 ```
 
 ---
 
 ### Use Axis Text Wisely
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-42-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -1030,8 +1077,15 @@ background-image:url("images/coronavirus-billboard.jpg")
 
 ---
 
+class: center, middle
+
+![](images/jbm-covid-plot.jpeg)
+
+---
+
 ### Use Titles to Highlight Findings
 
+.small[
 
 ```r
 third_grade_math_proficiency %&gt;% 
@@ -1049,18 +1103,19 @@ third_grade_math_proficiency %&gt;%
             hjust = c(1.05, -0.05)) + 
   scale_y_continuous(labels = percent_format(accuracy = 1)) + 
 * labs(title = "Vestal Elementary School showed large gains in\nthird grade math proficiency scores from 2017-2018 to 2018-2019") +
-  theme_ipsum(axis_title_size = 0) + 
-  theme(axis.title = element_blank(),
-        panel.grid.minor = element_blank())
+  scale_y_continuous(labels = percent_format(), 
+                     limits = c(0, 1)) + 
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY")
 ```
-
+]
 
 ---
 
 
 ### Use Titles to Highlight Findings
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-44-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -1107,6 +1162,7 @@ background-image:url("images/colors.jpg")
 
 ### Use Color in Titles to Highlight Findings
 
+.small[
 
 ```r
 library(ggtext)
@@ -1124,21 +1180,21 @@ third_grade_math_proficiency %&gt;%
             aes(label = percent_proficient_display), 
             color = rru_orange,
             hjust = c(1.05, -0.05)) + 
-  scale_y_continuous(labels = percent_format(accuracy = 1)) + 
 * labs(title = "&lt;span style = 'color: #FF7400;'&gt;Vestal Elementary School&lt;/span&gt; showed large gains in&lt;br&gt;third grade math proficiency scores from 2017-2018 to 2018-2019") +
-  theme_ipsum(axis_title_size = 0) + 
-  theme(axis.title = element_blank(),
-        panel.grid.minor = element_blank(),
-*       plot.title = element_markdown())
+  scale_y_continuous(labels = percent_format(), 
+                     limits = c(0, 1)) + 
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY") +
+* theme(plot.title = element_markdown())
 ```
-
+]
 
 ---
 
 
 ### Use Color in Titles to Highlight Findings
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-46-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -1191,6 +1247,16 @@ background-image:url("images/ft-annotation-example.jpeg")
 ## Use Annotations to Explain
 
 ---
+class: center, middle
+
+
+![](images/ft-annotation-example-small.png)
+
+.small[
+Source: [Financial Times](https://www.ft.com/content/662cedac-e4b2-4cbf-b257-664ea3ce250c)
+]
+
+---
 
 ### Use Annotations to Explain
 
@@ -1210,19 +1276,17 @@ third_grade_math_proficiency %&gt;%
             aes(label = percent_proficient_display), 
             color = rru_orange,
             hjust = c(1.05, -0.05)) + 
-  scale_y_continuous(labels = percent_format(accuracy = 1)) + 
-  labs(title = "&lt;span style = 'color: #FF7400;'&gt;Vestal Elementary School&lt;/span&gt; showed large gains in&lt;br&gt;third grade math proficiency scores from 2017-2018 to 2018-2019") +
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY") +
+  labs(title = "&lt;span style = 'color: #FF7400'&gt;Vestal Elementary School&lt;/span&gt; showed large gains in&lt;br&gt;third grade math proficiency scores between 2017-2018 and 2018-2019") +
+  theme(plot.title = element_markdown()) +
 * annotate("text",
 *          x = 2.02,
-*          y = 0.4,
-*          label = "Gray lines show other\nPortland Public Schools\nfor comparison",
-*          hjust = 0,
-*          size = 3,
-*          color = "#A0A0A0") +
-  theme_ipsum(axis_title_size = 0) +
-  theme(axis.title = element_blank(),
-        panel.grid.minor = element_blank(),
-        plot.title = element_markdown()) 
+*          y = .37,
+*          label = "Gray lines repesent\nall schools in Portland",
+*          color = "#A0A0A0",
+*          hjust = 0)
 ```
 ]
 
@@ -1234,7 +1298,7 @@ http://www.thefunctionalart.com/2020/01/an-example-of-how-to-annotate.html
 
 ### Use Annotations to Explain
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-45-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-48-1.png)&lt;!-- --&gt;
 
 ???
 
@@ -1299,6 +1363,19 @@ class: center, middle
 
 ---
 
+### Don't Use Defaults
+
+![](slides-data-visualization_files/figure-html/unnamed-chunk-50-1.png)&lt;!-- --&gt;
+
+---
+
+
+### Tweak Spacing Around Your Plot
+
+![](slides-data-visualization_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
+
+---
+
 ### Tweak Spacing Around Your Plot
 
 .small[
@@ -1313,23 +1390,22 @@ third_grade_math_proficiency %&gt;%
             inherit.aes = TRUE,
             color = rru_orange) +
   geom_text(data = highlight_school, 
-            inherit.aes = TRUE,
-            aes(label = percent_proficient_display), 
-            color = rru_orange,
+            inherit.aes = TRUE, 
+            aes(label = percent_proficient_display),
+            color = rru_orange, 
             hjust = c(1.05, -0.05)) + 
-  scale_y_continuous(labels = percent_format(accuracy = 1)) + 
-  labs(title = "&lt;span style = 'color: #FF7400;'&gt;Vestal Elementary School&lt;/span&gt; showed large gains in&lt;br&gt;third grade math proficiency scores from 2017-2018 to 2018-2019") +
-  annotate("text", 
-           x = 2.02, 
-           y = 0.4, 
-           label = "Gray lines show other\nPortland Public Schools\nfor comparison",
-           hjust = 0,
-           size = 3, 
-           color = "#A0A0A0") + 
-  theme_ipsum(axis_title_size = 0) +
-  theme(axis.title = element_blank(),
-        panel.grid.minor = element_blank(),
-        plot.title = element_markdown()) +
+  scale_y_continuous(label = percent_format(),
+                     limits = c(0, 1)) +
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY") +
+  labs(title = "&lt;span style = 'color: #FF7400'&gt;Vestal Elementary School&lt;/span&gt; showed large gains in&lt;br&gt;third grade math proficiency scores between 2017-2018 and 2018-2019") +
+  theme(plot.title = element_markdown()) +
+  annotate("text",
+           x = 2.02,
+           y = .37,
+           label = "Gray lines repesent\nall schools in Portland",
+           color = "#A0A0A0",
+           hjust = 0) +
 * scale_x_discrete(expand = expansion(add = c(0.1, 0.5)))
 ```
 ]
@@ -1338,7 +1414,7 @@ third_grade_math_proficiency %&gt;%
 
 ### Tweak Spacing Around Your Plot
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-47-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-52-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1396,10 +1472,9 @@ background-image:url("images/ggpomological.png")
 
 ```r
 theme_dk &lt;- function() {
-  theme_ipsum(axis_title_size = 0) +
-    theme(axis.title = element_blank(),
-          panel.grid.minor = element_blank(),
-          plot.title = element_markdown()) 
+  theme_ipsum(axis_title_size = 0,
+              grid = "XY") + 
+    theme(plot.title = element_markdown())
 }
 ```
 
@@ -1479,7 +1554,7 @@ enrollment_by_race_ethnicity %&gt;%
 ### Make Your Own Custom Theme
 
 
-![](slides-data-visualization_files/figure-html/unnamed-chunk-51-1.png)&lt;!-- --&gt;
+![](slides-data-visualization_files/figure-html/unnamed-chunk-56-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1551,6 +1626,18 @@ library(extrafont)
 font_import(pattern = "Karla")
 ```
 
+
+
+---
+
+
+### Load Fonts
+
+
+```r
+loadfonts()
+```
+
 --
 
 
@@ -1558,81 +1645,48 @@ font_import(pattern = "Karla")
 fonts()
 ```
 
----
-
-### Use Custom Fonts
-
-
-```r
-third_grade_math_proficiency %&gt;% 
-  filter(district == "Portland SD 1J") %&gt;% 
-  slice_max(percent_proficient, n = 3) %&gt;% 
-  ggplot(aes(x = percent_proficient, y = school)) +
-  geom_col() +
-  scale_x_continuous(labels = percent_format(accuracy = 1)) + 
-* theme_minimal(base_family = "Karla")
-```
 
 ---
 
-
-### Use Custom Fonts
-
+.small[
 
 ```r
+theme_dk &lt;- function() {
+  theme_ipsum(axis_title_size = 0,
+*             base_family = "Karla",
+              grid = "XY") +
+    theme(plot.title = element_markdown())
+}
+
 third_grade_math_proficiency %&gt;% 
   filter(district == "Portland SD 1J") %&gt;% 
-  slice_max(percent_proficient, n = 3) %&gt;% 
-  ggplot(aes(x = percent_proficient, y = school)) +
-  geom_col() +
-  geom_text(aes(label = percent(percent_proficient, accuracy = 1))) +
-  scale_x_continuous(labels = percent_format(accuracy = 1)) + 
-  theme_minimal(base_family = "Karla") +
-  theme(axis.title = element_blank())
+  ggplot(aes(x = year, y = percent_proficient,
+             group = school)) +
+  geom_line(color = rru_gray) + 
+  geom_line(data = highlight_school, 
+            inherit.aes = TRUE,
+            color = rru_orange) +
+  geom_text(data = highlight_school, 
+            inherit.aes = TRUE, 
+            aes(label = percent_proficient_display),
+            color = rru_orange, 
+*           family = "Karla",
+            hjust = c(1.05, -0.05)) + 
+  scale_y_continuous(label = percent_format(),
+                     limits = c(0, 1)) +
+  labs(title = "&lt;span style = 'color: #FF7400'&gt;Vestal Elementary School&lt;/span&gt; showed large gains in&lt;br&gt;third grade math proficiency scores between 2017-2018 and 2018-2019") +
+  annotate("text",
+           x = 2.02,
+           y = .37,
+           label = "Gray lines repesent\nall schools in Portland",
+           color = "#A0A0A0",
+*          family = "Karla",
+           hjust = 0) +
+  scale_x_discrete(expand = expansion(add = c(0.1, 0.5))) +
+  theme_dk()
 ```
+]
 
----
-
-### Use Custom Fonts
-
-
-```r
-third_grade_math_proficiency %&gt;% 
-  filter(district == "Portland SD 1J") %&gt;% 
-  slice_max(percent_proficient, n = 3) %&gt;% 
-  ggplot(aes(x = percent_proficient, y = school)) +
-  geom_col() +
-  geom_text(aes(label = percent(percent_proficient, accuracy = 1)),
-            hjust = 1.5,
-            color = "white",
-*           family = "Karla") +
-  scale_x_continuous(labels = percent_format(accuracy = 1)) + 
-  theme_minimal(base_family = "Karla") +
-  theme(axis.title = element_blank())
-```
-
----
-
-### Use Custom Fonts
-
-
-```r
-third_grade_math_proficiency %&gt;% 
-  filter(district == "Portland SD 1J") %&gt;% 
-  slice_max(percent_proficient, n = 3) %&gt;% 
-  ggplot(aes(x = percent_proficient, y = school)) +
-  geom_col() +
-  geom_text(aes(label = percent(percent_proficient, accuracy = 1)),
-            hjust = 1.5,
-            color = "white",
-            family = "Karla") +
-  annotate("text", x = 0.5, y = 2, label = "This is an annotation",
-           color = "white",
-*          family = "Karla") +
-  scale_x_continuous(labels = percent_format(accuracy = 1)) + 
-  theme_minimal(base_family = "Karla") +
-  theme(axis.title = element_blank())
-```
 
 ???
 
@@ -1646,11 +1700,17 @@ class: inverse
 
 ### Your Turn
 
+--
+
 1. Install the `extrafonts` package
 
 --
 
 1. Run the `import_fonts()` function to make all fonts on your computer available in R (it will take a few minutes)
+
+--
+
+1. Run the `loadfonts()` function to make sure all fonts are available to R
 
 --
 
@@ -1706,83 +1766,98 @@ background-image:url("images/ggridges.png")
 
 ---
 
+.center[
+![](images/ggrepel-allison-horst.jpg)
+]
+
+---
+
 ### `ggrepel`
 
---
+.center[
+[![](images/ggrepel.gif)](https://ggrepel.slowkow.com/)
+]
+
+---
 
 .center[
-![](images/ggrepel.gif)
+![](images/gganimate-allison-horst.png)
 ]
+
 
 ---
 
 ### `gganimate`
 
---
-
 .center[
-![](images/claimsratio_2020_04_03.gif)
+[![](images/claimsratio_2020_04_03.gif)](http://lenkiefer.com/2020/04/03/us-labor-market-update-april-2020/)
 ]
 
 ---
 
 ### `ggridges`
 
---
-
-![](images/ggridges.png)
+[![](images/ggridges.png)](https://wilkelab.org/ggridges)
 
 ---
 
 ### `ggalt`
 
---
-
-![](images/dumbell.png)
+[![](images/dumbell.png)](https://github.com/hrbrmstr/ggalt)
 
 ---
 
 ### `ggbeeswarm`
 
---
-
-![](images/ggbeeswarm.jpeg)
+[![](images/ggbeeswarm.jpeg)](https://github.com/eclarke/ggbeeswarm)
 
 ---
 
 ### `ggraph`
 
---
+[![](images/ggraph.png)](https://ggraph.data-imaginist.com/index.html)
 
-![](images/ggraph.png)
-(https://ggraph.data-imaginist.com/)
+---
 
---- 
+### `ggraph`
 
-### `treemapify`
+![](images/ggraph-network.png)
 
-![](images/treemapify.png)
+---
+
+### `ggraph`
+
+![](images/ggraph-treemap.png)
 
 
 ---
 
 ### `waffle`
 
-![](images/waffle-bars.png)
+[![](images/waffle-bars.png)](https://github.com/hrbrmstr/waffle)
 
+---
+
+.center[
+[![](images/patchwork-allison-horst.jpg)](https://patchwork.data-imaginist.com/)
+]
 
 ---
 
 ### `patchwork`
 
-![](images/patchwork-twitter-post.png)
+[![](images/patchwork-twitter-post.png)](https://twitter.com/littlemissdata/status/1229176433123168256)
+
+---
+
+[![](images/scherer-spotify.gif)](https://github.com/Z3tt/TidyTuesday#week-202004--spotify-songs-by-spotify-via-spotifyr)
 
 
 ---
 
 ### `shadowtext`
 
-![](images/jbm-covid-plot.jpeg)
+[![](images/jbm-covid-plot.jpeg)](https://twitter.com/dgkeyes/status/1237812892189093888)
 
 ???
 
@@ -1801,6 +1876,8 @@ Fundamentals of Data Visualization
 class: inverse
 
 ### Your Turn
+
+--
 
 1. Use one of the packages above to make a unique plot. For example, you might use dumbell plots in the `ggalt` package to show change in the Hispanic/Latino population from 2017-2018 to 2018-2019 for all districts.
 

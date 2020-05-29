@@ -92,7 +92,7 @@ class: center, middle
 &lt;img src="images/remedy-logo.png" width="300px" /&gt;
 
 
-.button[ [Learn more about remedy](https://github.com/ThinkR-open/remedy) ]
+.button[ [Learn more about remedy](https://thinkr-open.github.io/remedy/) ]
 
 ---
 
@@ -117,11 +117,11 @@ class: inverse
 
 ## Your Turn
 
-1. Add the Oregon Department of Education logo to the top of your report. You can find it at https://github.com/rfortherestofus/going-deeper/raw/master/slides/images/ode-logo.jpg
+- Add the Oregon Department of Education logo to the top of your report. You can find it at https://github.com/rfortherestofus/going-deeper/raw/master/slides/images/ode-logo.jpg
 
-1. Add the following text (make sure you include the link, which points to https://www.oregon.gov/ode/pages/default.aspx):
+- Add the following text (make sure you include the link, which points to https://www.oregon.gov/ode/pages/default.aspx):
 
-  This is a report for the [Oregon Department of Education](https://www.oregon.gov/ode/pages/default.aspx) on diversity in Oregon school districts. 
+This is a report for the [Oregon Department of Education](https://www.oregon.gov/ode/pages/default.aspx) on diversity in Oregon school districts. 
   
 ---
 
@@ -129,11 +129,11 @@ class: inverse
 
 ## Your Turn (continued)
 
-1. Add the following text as a block quote:
+- Add the following text as a block quote:
 
-  The Oregon Department of Education fosters equity and excellence for every learner through collaboration with educators, partners, and communities.
+&gt; The Oregon Department of Education fosters equity and excellence for every learner through collaboration with educators, partners, and communities.
 
-1. Add a link to the source for mission statement above (https://www.oregon.gov/ode/about-us/Pages/default.aspx) as a footnote.
+- Add a link to the source for mission statement above (https://www.oregon.gov/ode/about-us/Pages/default.aspx) as a footnote.
 
 
 ---
@@ -151,25 +151,6 @@ background-image:url("images/table.jpg")
 .center[
 ![](images/default-table-output.png)
 ]
-
----
-
-## Data Frame Printing
-
-
-```r
----
-title: "Snazzy Report"
-output:
-  html_document:
-*   df_print: kable
----
-```
-
---
-
-
-![](images/kable.png)
 
 
 
@@ -190,6 +171,25 @@ output:
 
 
 ![](images/tibble.png)
+
+---
+
+## Data Frame Printing
+
+
+```r
+---
+title: "Snazzy Report"
+output:
+  html_document:
+*   df_print: kable
+---
+```
+
+--
+
+
+![](images/kable.png)
 
 
 ---
@@ -297,11 +297,17 @@ class: my-turn
 
 ## My Turn
 
-I'll do the following:
+I'll demonstrate making an effective table using `gt`
 
-1. Change the default data frame printing method to use paged tables
+???
 
-1. Demonstrate all of the table packages
+- Title
+- Set Names (cols_label)
+- Align
+- Width
+- Formatting numbers
+- Color shading
+- Source
 
 ---
 
@@ -313,7 +319,7 @@ Do the following:
 
 1. Change the default data frame printing method to use kable
 
-1. Choose one of the table packages and make an attractive table that shows the top 10 districts with the highest percentage of Hispanic/Latino students (hint: use the `slice_max()` function to get the top 10 and the `percent()` function to display the percentage of Hispanic/Latino students in each)
+1. Choose one of the table packages and make an attractive table that shows the top 10 districts with the highest percentage of Hispanic/Latino students (hint: use the `slice_max()` function to get the top 10 and the `fmt_percent()` function if you're using `gt` or the `percent()` function otherwise to display the percentage of Hispanic/Latino students in each)
 
 
 
@@ -590,11 +596,13 @@ class: center, middle, dk-section-title
 
 background-image:url("images/microsoft-word.jpg")
 
-# Making Your Reports Shine: Word edition
+# Making Your Reports Shine: Word Edition
 
 ---
 
-## Making Your Reports Shine: Word edition
+## Making Your Reports Shine: Word Edition
+
+--
 
 
 ```r
@@ -610,6 +618,9 @@ output:
 
 &lt;img src="images/docx-not-dotx.svg" width="60%" /&gt;
 
+???
+
+https://templates.office.com/en-us/team-report-tm00002118
 
 ---
 
@@ -627,17 +638,14 @@ class: inverse
 
 ## Your Turn
 
-Do the following:
+Use a reference document to change the look and feel of your report when knitted to Word
 
-1. Use a reference document to change the look and feel of my reports that are knitted to Word
-
-TK: Give them a Word doc to use?
 
 
 
 ---
 
-## Making Your Reports Shine: HTML edition
+## Making Your Reports Shine: HTML Edition
 
 ![](images/rmarkdown-html-themes.png)
 
@@ -677,6 +685,8 @@ Change the theme of your report by adding a theme option to your YAML. Use any o
 
 ## Making Your Reports Shine: PDF Edition
 
+--
+
 .center[
 [![](images/sam-tyner-latex.png)](https://sctyner.github.io/static/presentations/Conferences/dcr19/slides.html#12)
 ]
@@ -713,6 +723,47 @@ Change the theme of your report by adding a theme option to your YAML. Use any o
 [![](images/latex-book-tweet.png)](https://twitter.com/thattommyhall/status/1248679614337241089)
 ]
 
+
+---
+
+## Making Your Reports Shine: PDF Edition
+
+--
+
+![](images/pagedown.gif)
+
+---
+
+## Making Your Reports Shine: PDF Edition
+
+
+```r
+---
+title: "Snazzy Report"
+output:
+  pagedown::html_paged: 
+    toc: TRUE
+    number_sections: FALSE
+---
+```
+
+---
+
+## Making Your Reports Shine: PDF Edition
+
+
+```r
+---
+title: "Snazzy Report"
+*knit: pagedown::chrome_print
+output:
+  pagedown::html_paged: 
+    toc: TRUE
+    number_sections: FALSE
+---
+```
+
+
 ---
 
 ## Making Your Reports Shine: PDF Edition
@@ -726,11 +777,7 @@ library(pagedown)
 chrome_print("slides.html")
 ```
 
----
 
-## Making Your Reports Shine: PDF Edition
-
-![](images/pagedown.gif)
 
 ---
 
@@ -754,7 +801,7 @@ class: center, middle, dk-section-title
 
 background-image:url("images/projector.jpg")
 
-# Presenations
+# Presentations
 
 
 ---
