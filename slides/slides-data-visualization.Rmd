@@ -1641,7 +1641,7 @@ class: inverse
 
 --
 
-1. Run the `import_fonts()` function to make all fonts on your computer available in R (it will take a few minutes)
+1. Run the `font_import()` function to make all fonts on your computer available in R (it will take a few minutes)
 
 --
 

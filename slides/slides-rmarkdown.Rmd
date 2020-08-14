@@ -3,7 +3,7 @@ title: "Advanced RMarkdown"
 subtitle: "Going Deeper with R"
 output:
   xaringan::moon_reader:
-    css: ["style.css", "default"]
+    css: ["../../css/style.css", "default"]
     lib_dir: libs
     df_print: paged
     nature:
