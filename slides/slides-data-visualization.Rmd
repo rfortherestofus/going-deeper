@@ -1555,15 +1555,9 @@ background-image:url("images/fonts.jpg")
 ### Import Custom Fonts
 
 ```{r eval = TRUE, echo = FALSE}
-library(extrafont)
+library(ragg)
+library(systemfonts)
 ```
-
-```{r eval = FALSE}
-library(extrafont)
-
-font_import(pattern = "Karla")
-```
-
 
 
 ---
