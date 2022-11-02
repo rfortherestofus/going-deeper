@@ -1623,25 +1623,21 @@ background-image:url("images/fonts.jpg")
 ### Import Custom Fonts
 
 
-
+```r
+library(ragg)
+library(systemfonts)
+```
 
 ---
 
-
-### Load Fonts
-
-
-```r
-loadfonts()
-```
-
---
+### See Your Fonts
 
 
 ```r
-fonts()
-```
+library(systemfonts)
 
+system_fonts()
+```
 
 ---
 
@@ -1649,10 +1645,10 @@ fonts()
 
 ```r
 theme_dk &lt;- function() {
-  theme_ipsum(axis_title_size = 0,
-*             base_family = "Karla",
-              grid = "XY") +
-    theme(plot.title = element_markdown())
+* theme_minimal(base_family = "Inter") +
+    theme(plot.title = element_markdown(face = "bold"),
+          axis.title = element_blank(),
+          panel.grid.minor = element_blank())
 }
 
 third_grade_math_proficiency %&gt;% 
@@ -1667,7 +1663,7 @@ third_grade_math_proficiency %&gt;%
             inherit.aes = TRUE, 
             aes(label = percent_proficient_display),
             color = rru_orange, 
-*           family = "Karla",
+*           family = "Inter",
             hjust = c(1.05, -0.05)) + 
   scale_y_continuous(label = percent_format(),
                      limits = c(0, 1)) +
@@ -1677,7 +1673,7 @@ third_grade_math_proficiency %&gt;%
            y = .37,
            label = "Gray lines repesent\nall schools in Portland",
            color = "#A0A0A0",
-*          family = "Karla",
+*          family = "Inter",
            hjust = 0) +
   scale_x_discrete(expand = expansion(add = c(0.1, 0.5))) +
   theme_dk()
@@ -1685,11 +1681,35 @@ third_grade_math_proficiency %&gt;%
 ]
 
 
-???
+---
 
-Plotting + saving (i.e. use device = cairo_pdf). Point people to Heiss article below.
+### Use Custom Fonts in RStudio
 
-https://www.andrewheiss.com/blog/2017/09/27/working-with-r-cairo-graphics-custom-fonts-and-ggplot/
+![](images/graphics-device.png)
+
+---
+
+### Use Custom Fonts with `ggsave()`
+
+
+```r
+ggsave("myplot.png", device = agg_png)
+```
+
+--
+
+Make sure you load the `ragg` package first
+
+---
+
+### Use Custom Fonts when Knitting an RMarkdown File
+
+
+```r
+knitr::opts_chunk$set(dev = "ragg_png")
+```
+
+
 
 ---
 
@@ -1699,19 +1719,19 @@ class: inverse
 
 --
 
-1. Install the `extrafonts` package
+1. Install the `ragg` and `systemfonts` package
 
 --
 
-1. Run the `font_import()` function to make all fonts on your computer available in R (it will take a few minutes)
+1. Change your settings in RStudio so you can render with AGG
 
 --
 
-1. Run the `loadfonts()` function to make sure all fonts are available to R
+1. Change all text in your last plot to use a custom font (you'll have to do this in a few different places)
 
 --
 
-1. Change all text to use a custom font (you'll have to do this in a few different places)
+1. Save your plot using `ggsave()`
 
 ???
 
